@@ -14,6 +14,6 @@
 
     - Abstract: GPU 上多任务混跑时的 slowdown 影响预测
 
-    - Link: [Notes for HSM]()
+    - Link: [Notes for HSM](https://github.com/DicardoX/Notes_for_Papers/blob/main/Notes/HSM.md)
 
         
