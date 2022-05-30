@@ -129,7 +129,12 @@
 
 - METHOD 3: ***Rate Control and Adaptive Batching*** —— **如何自适应地进行批处理**
 
-    - **模型服务系统需要根据收到的请求数量进行自适应批处理**，即需要丢弃某些 requests，来在 latency SLO 内服务其他的 requests。一种方法是 Clipper 采用的 *Lazy Dropping*，即仅当超过 ddl 时丢弃 request，同时根据 queue 中某一 model 最早的 request 的 time budget 来决定该 model 对应 task 的 batch size。然而，作者通过实验表明该方案在 fixed cost $\beta$ 很大，extra cost $\alpha$ 很小，泊松分布模拟 workload，依据公式 $\text{batch\_lat}(b) = \alpha b + \beta$ 的时候会造成很大的 request missing，原因是由于系统总是尝试执行最早收到的请求，它通常不得不使用小 batch 以满足最后期限，高昂的 fixed cost 并没有被很好地均摊。
+    - **模型服务系统需要根据收到的请求数量进行自适应批处理**，即需要丢弃某些 requests，来在 latency SLO 内服务其他的 requests。一种方法是 Clipper 采用的 *Lazy Dropping*，即仅当超过 ddl 时丢弃 request，同时根据 queue 中某一 model 最早的 request 的 time budget 来决定该 model 对应 task 的 batch size。然而，作者通过实验表明该方案在 fixed cost $\beta$ 很大，extra cost $\alpha$ 很小，泊松分布模拟 workload，依据公式：
+        $$
+        \text{batch\_lat}(b) = \alpha b + \beta
+        $$
+        的时候会造成很大的 request missing，原因是由于系统总是尝试执行最早收到的请求，它通常不得不使用小 batch 以满足最后期限，高昂的 fixed cost 并没有被很好地均摊。
+    
     - 这个实验表明，**即使是运行时也需要考虑批处理效率来确定要分派的任务**。
 
 ------
