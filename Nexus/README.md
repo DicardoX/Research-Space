@@ -2,8 +2,6 @@
 
 [[Ref] Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis](https://dl.acm.org/doi/abs/10.1145/3341301.3359658)
 
-[]
-
 ----------
 
 

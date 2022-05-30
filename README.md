@@ -2,18 +2,21 @@
 
 [https://github.com/DicardoX/Notes_for_Papers](https://github.com/DicardoX/Notes_for_Papers)
 
-> This repository is designed to record personal notes for read papers.
+> This repository is designed to record personal notes for reading papers.
 
 -----
 
 ## Available Notes
 
-#### Section 1: Performance Prediction
+### 1. Deployment of DNN Service
 
-- ***HSM: A Hybrid Slowdown Model for Multitasking GPUs***
+#### 1.1 Cluster-level & Co-location
 
-    - Abstract: GPU 上多任务混跑时的 slowdown 影响预测
+- ***Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis***
 
-    - Link: [Notes for HSM](https://github.com/DicardoX/Notes_for_Papers/blob/main/Notes/HSM.md)
+    - Abstract: GPU 集群层面的 DNN 服务调度，考虑混布，在满足低时延的同时实现高利用率
 
-        
+
+    - Link: [Notes for Nexus](https://github.com/DicardoX/Notes_for_Papers/tree/main/Nexus)
+
+  
