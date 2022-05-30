@@ -113,6 +113,8 @@
 
     - **应用程序通常包含多个 DNN 模型的相关计算**。我们一般设置应用程序级别的 latency SLO，但由于其调用的 DNN 模型会分布在不同的节点上，必须为分别它们生成新的 latency SLO。
 
+        <img src="./figure/fig_2.png" alt="avatar" style="zoom:50%;" />
+
         <img src="./figure/fig_3.png" alt="avatar" style="zoom:50%;" />
 
     - 假设某个应用程序依次调用了 Model X 和 Y，Model X 的输出作为 Y 的输入，且整体的 latency SLO 为 100ms。每个 X 的输入平均会获得 $\gamma$ 个输出。 则按照 Figure 3 所示，lat_X = 40ms 和 lat_Y = 60ms 能获得最大的共同吞吐。然而，一个更加详细的实验将揭示有趣的现象。
