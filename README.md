@@ -15,8 +15,18 @@
 - ***Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis***
 
     - Abstract: GPU 集群层面的 DNN 服务调度，考虑混布，在满足低时延的同时实现高利用率
-
-
     - Link: [Notes for Nexus](https://github.com/DicardoX/Notes_for_Papers/tree/main/Nexus)
 
   
+
+--------
+
+
+
+### 2. Distributed Deep Learning
+
+#### 2.1 Parameter Server
+
+- ***Scaling Distributed Machine Learning with the Parameter Server***
+    - Abstract: 第三代参数服务器架构，支持 scale 和 fault tolerance，异步通信，网络参数切分，灵活的一致性模型
+    - Link: [Notes for Parameter Server (3rd)](https://github.com/DicardoX/Notes_for_Papers/tree/main/Parameter_Server_3rd)
