@@ -23,7 +23,7 @@
 
 ### 2. Distributed Deep Learning
 
-#### 2.1 Parameter Server
+#### 2.1 Data Parallelism: Parameter Server
 
 ##### 2.1.1 第三代参数服务器架构
 
@@ -35,10 +35,15 @@
 
 - ***Optimus: An Efficient Dynamic Resource Scheduler for Deep Learning Clusters***
 
-    - Abstract: Optimus 是一个面向分布式训练 job 的调度器，主要目标是最小化 JCT，主要分为对 DL 模型收敛时间的预测，对模型训练速度的评估，以及一个考虑资源分配和 task（相较于 job 的更小级别）放置三个部分。Optimus 对 DL 模型收敛时间的预测基于 SGD 收敛速率为 O (1 / k) 的事实（该结论对学习率的变化有要求），使用 non-negative least squares (NNLS) 求解器来进行在线的拟合。为了建立性能评估模型，Optimus 建立了数学化分布式训练任务和资源的系统模型，并分析了包括 worker 前向（与 bs 相关） & 后向（与 bs 无关）时间，数据传输时间（部分模型大小 / 带宽），parameter server (ps) 的参数更新时间，以及通信开销（与 worker 和 ps 的数目成线性关系）在内的总时间 T。基于上述分析，Optimus 构造了一个表示训练速度 f = 1 / T 的函数，注意该函数以 worker 和 ps 的数目为自变量，对于同步和异步训练有些许区别（前者需要进一步考虑用户对 overall batch size M 的输入），并以 NNLS 拟合的方式，通过预训练和在线收集训练数据建立和不断改进模型。最后，基于任务剩余的代数以及上面得到的训练速度函数 f，Optimus 定义了边际收益，来以启发式（贪心）的方式进行资源分配（不用整数规划是因为非线性甚至非凸，且 NP-hard）。对于 task 放置（实际上是对 job 所被分配的 workers 和 ps 进行 servers 资源的分配，分配完后均衡地放在这些 servers 上），Optimus 分析了达到最小化最大数据传输的方式，包括使用最少的 servers 来部署以及均衡地在这些 servers 上面放置 workers 和 ps，并以此提出了基于贪心的分布式策略。此外，为了解决 stragglers 的问题，Optimus 分别对 workers 的训练速度进行均衡，并提出了对 ps 负载进行均衡的方法。
+    - Abstract: Optimus 是一个面向分布式训练 job 的调度器，主要目标是最小化 JCT，主要分为对 DL 模型收敛时间的预测，对模型训练速度的评估，以及一个考虑资源分配和 task（相较于 job 的更小级别）放置三个部分。
 
+        - Optimus 对 DL 模型收敛时间的预测基于 SGD 收敛速率为 O (1 / k) 的事实（该结论对学习率的变化有要求），使用 non-negative least squares (NNLS) 求解器来进行在线的拟合。
+        - 为了建立性能评估模型，Optimus 建立了数学化分布式训练任务和资源的系统模型，并分析了包括 worker 前向（与 bs 相关） & 后向（与 bs 无关）时间，数据传输时间（部分模型大小 / 带宽），parameter server (ps) 的参数更新时间，以及通信开销（与 worker 和 ps 的数目成线性关系）在内的总时间 T。基于上述分析，Optimus 构造了一个表示训练速度 f = 1 / T 的函数，注意该函数以 worker 和 ps 的数目为自变量，对于同步和异步训练有些许区别（前者需要进一步考虑用户对 overall batch size M 的输入），并以 NNLS 拟合的方式，通过预训练和在线收集训练数据建立和不断改进模型。
+        - 最后，基于任务剩余的代数以及上面得到的训练速度函数 f，Optimus 定义了边际收益，来以启发式（贪心）的方式进行资源分配（不用整数规划是因为非线性甚至非凸，且 NP-hard）。
+        - 对于 task 放置（实际上是对 job 所被分配的 workers 和 ps 进行 servers 资源的分配，分配完后均衡地放在这些 servers 上），Optimus 分析了达到最小化最大数据传输的方式，包括使用最少的 servers 来部署以及均衡地在这些 servers 上面放置 workers 和 ps，并以此提出了基于贪心的分布式策略。此外，为了解决 stragglers 的问题，Optimus 分别对 workers 的训练速度进行均衡，并提出了对 ps 负载进行均衡的方法。
+    
         然而，Optimus 对模型训练时间的预测在其他工作中被证明为过分简化了损失函数的变化曲线，在实际集群中并不总是适用的。
-
+    
     - Link: [Notes for Optimus](https://github.com/DicardoX/Notes_for_Papers/tree/main/Optimus)
 
 ##### 2.1.3 面向无信息和部分信息场景的离散优先级抢占式调度算法及合并放置约束的深入讨论
@@ -53,7 +58,11 @@
 
         整篇 paper 最 fancy 的地方在于面向无 JCT 分布信息和部分信息抢占式 2D 调度算法设计，参考多级反馈队列设计的优先级离散化架构，以及基于网络通信对模型 tensors 倾斜信息的监控方法。
 
-#### 2.2 Ring All-reduce
+--------
+
+
+
+#### 2.2 Data Parallelism: Ring All-reduce
 
 ##### 2.2.1 Ring All-reduce 工具
 
@@ -67,7 +76,11 @@
     - Abstract: Facebook 提出的分布式训练下 Distributed SGD 过程在应用大的 minibatch 的同时，保证训练准确性的方法，建立学习率与 batch size 的线性函数关系，每个 GPU/worker 的 bs 确定，通过调整 GPU 数目来改变整体的 minibatch size。由于将求梯度时的 average 操作限制在 per-worker 级别，可以集成到 ring allreduce 等仅支持加法操作的梯度聚合方法上。一点启发是，可以通过 profile 小的 minibatch，来评估大的 minibatch。
     - Link: [Notes for Large Minibatch Distributed SGD](https://github.com/DicardoX/Notes_for_Papers/tree/main/Large_Minibatch_Distributed_SGD)
 
-#### 2.3 Combination of PS and Ring All-reduce
+----------
+
+
+
+#### 2.3 Data Parallelism: Combination of PS and Ring All-reduce
 
 ##### 2.3.1 PS 和 Ring All-reduce 算法的统一架构
 
@@ -75,7 +88,11 @@
     - Abstract: ByteDance 提出的将 PS 和 Ring All-reduce 两种架构综合考虑的一种统一集群内通信架构，利用集群中空闲的 CPU 和带宽资源，并将 PS 和 Ring All-reduce 成功表述为统一架构下的特殊情况。SS（Summation Service）只运行在 CPU 中（包括 CPU 机器和 GPU 机器），负责从 CS 侧接收 tensors，把 tensors 加起来，再返回给 CS；CS (Communication Service) 只运行在 GPU 中，负责同步多个局部 GPU 之间的 tensors。该架构能够根据集群中可用 CPU 和 GPU 的相对数目，通过硬件 profile 动态决定 SS 中分配在 CPU / GPU 的数据的比例，这样得到的机器间通信是延迟最优的。同时，BytePS 研究了机器内拓扑结构对通信效率的影响，针对 PCIe-only 拓扑提出了 CPU-assisted aggregation 策略（可 pipeline），针对 NVLink-based 拓扑使用 reduce and broadcast 策略。BytePS 使 CPU 仅负责 sum（SS），而 GPU 负责 FP、BP 和 parameter update。由于在 sum 之前 GPU 就要 update 参数，因此破坏了 PS 原有对异步并行的支持性， BytePS 因此提出支持异步的参数更新算法，即向 CPU 传输 delta w，并证明了其和 PS 异步并行的等效性。
     - Link: [Notes for BytePS](https://github.com/DicardoX/Notes_for_Papers/tree/main/BytePS)
 
-#### 2.4 Co-optimizing at job-level and cluster-level
+--------
+
+
+
+#### 2.4 Data Parallelism: Co-optimizing at Job-level and Cluster-level
 
 ##### 2.4.1 Job-level (bs, lr) 和 cluster-level (resource allocation) 的 modeling 和 co-optimization
 
@@ -83,10 +100,34 @@
 
     - Abstract: Petuum 提出的将分布式训练中的 metric modeling 和 resource scheduling 结合起来 co-optimize 的分布式训练和调度架构。Pollux 可以同时用在 parameter server 和 all-reduce 两类分布式架构，原因是重点关注 goodput 为主的性能指标，而非 ps 和 all-reduce 等架构中最重要的通信量的优化，这也是 Pollux 可以优化（考虑不足）的一个点。考虑的主要 metrics 为 statistical efficiency（表征每一轮迭代模型精度能够进步多少） 和 throughput，并分别对这两个 metric 的 estimate 进行了 modeling。Pollux 使用 gradient accumulation 来进一步扩大 batch size，经过 s 轮的 GPU 本地梯度聚合后再进行全局的梯度聚合。基于这两个 metric，Pollux 提出了自己的调度和优化 metric，即每个job 的 goodput。整个 Pollux 的架构分为两层：
 
-        -  job 层面，PolluxAgent 动态调整 bs 和 lr 以更好地利用资源，收集 bs 和 $T_{iter}$ 等信息，基于信息拟合 efficiency 和 throughput 的函数，进而获取每个 job 的 goodput 函数。最后，周期性地向 PolluxSched 报告 goodput 函数，并等待新一轮资源分配后再调整 bs 和 lr
+        -  job 层面，PolluxAgent 收集 bs 和 $T_{iter}$ 等信息，基于信息拟合 efficiency 和 throughput 的函数，进而获取每个 job 的 goodput 函数；通过最大化 job 的 goodput 来动态调整 bs 和 lr，以更好地利用资源。最后，周期地向 PolluxSched 报告 goodput 函数，等待新一轮资源分配后再调整 bs 和 lr。
         - Cluster 层面：PolluxSched 基于 jobs 的 goodput 动态重分配资源，通过最大化 fitness 函数来获取理论最优的分配，并考虑多个集群层面的目标，包括 fairness，goodput，reallocataion overhead，inference slowdown 等
 
         整篇 paper 最 fancy 的地方在于它的建模过程，包括 metric modeling 和 scheduling (optimization) modeling。
 
     - Link: [Notes for Pollux](https://github.com/DicardoX/Notes_for_Papers/tree/main/Pollux)
+
+---------
+
+
+
+#### 2.5 Model Parallelism: The Foundation of Model Parallelism
+
+- ***(DistBelief) Large Scale Distributed Deep Networks***
+
+    - Abstract: DistBelief 是 Google 在 2012 年提出的一个支持多机分布式训练的软件框架，第一次对大模型提出了模型并行（Model Parallelism）的方法，包括不同 layers 分布在不同 machines 上，以及相同 layer 中的不同子 tensors 分布在不同 machines 上，只有包含跨越 machines 的边的 nodes 才需要在 machines 间传输状态。注意，DistBelief 框架也能够支持数据并行，且揭示了异步 SGD（之前很少用在非凸问题）在分布式训练中表现良好，特别是和 Adagrad 自适应学习率方法结合时。
+
+        DistBelief 主要由两个算法构成。算法一是 Downpour SGD，一个异步 SGD 过程，能自适应学习率，支持大规模模型副本；算法二是 Sandblaster L-BFGS，L-BFGS 的分布式实现，同时使用数据和模型并行。
+
+        - Downpour SGD 算法：在线场景。SGD的传统公式本质上是顺序的，因此不适用非常大的数据集。Downpour SGD 就是异步 parameter server (PS) 架构的模型并行版本。不同的 workers（都保存一份独立的 replica，用独立的数据集进行 fp 和 bp）之间和不同的 parameter server shards 之间都是异步的。对于 workers 被划分到不同 machines 上，因此每个 machine 只需跟一部分 ps 通信。注意，machine 发送和接收时需要进行同步，以 replica 为单位，尽量避免（但没有保证）算力差别导致的异步累积，即 ps shards 之间的参数更新代数不同，这会带来更多的随机性。放宽一致性在非凸问题中并无理论依据，但在实际中非常有效。对于 ps shards，异步体现在更新更快的 shards 先把这部分更新后的参数返回给 worker 中特定的 machine。Adagrad 自适应学习率策略直接在 ps shard 中，用梯度来算学习率，易实现。该策略能够扩展 model replicas 能实际使用的个数，且与 “少数几个 replicas warmstarting，再逐步加入其他 replicas” 策略结合使用时，能够很好地解决 Downpour SGD 训练时的稳定性问题。
+
+        - Sandblaster L-BFGS 算法：批处理场景。Sandblaster 框架下，优化算法（如 L-BFGS）在协调进程中，该进程并不直接访问模型参数，而是向 ps shards 发送一系列子操作（点积，放缩，考虑系数的加，乘等），依次进行一个个 batch 处理的优化，计算结果保存在 shard 本地。这样做可以避免需要把所有参数和梯度都汇聚到一个中心 server 上，这也是模型并行和数据并行 replica machines 和 ps shards  “多对多” 的优势。
+
+            为了缓解短板效应，提出了一个负载均衡策略：协调器给每个 replica 分配一个很小比例的工作（相较于 1/N batch），并给那些完成比较快的 replicas 分配新的更多工作。对于 batch 最后的工作，协调器会让多个 replicas 同时运算，并采用完成最快的那个。
+
+            上述策略意味着，Sandblaster L-BFGS 无需像 Downpour SGD 那样将 dataset 划分为多个独立的 subset，而是以一个个 batch 的形式，在协调器的指挥下，供多个 replicas 进行处理。
+
+        整篇 paper 最 fancy 的地方在于第一个提出了模型并行的设计，并与数据并行相结合（优势在于避免把所有参数和梯度都汇聚到一个中心 server 上），且分别对在线和批处理两类情景提出了两类算法。
+
+    - Link: [Notes for DistBelief](https://github.com/DicardoX/Notes_for_Papers/tree/main/DistBelief)
 
