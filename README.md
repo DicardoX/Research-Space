@@ -33,9 +33,10 @@
 #### 2.1.2 面向对分布式训练任务收敛时间及速度的在线预测
 
 - ***Optimus: An Efficient Dynamic Resource Scheduler for Deep Learning Clusters***
-- Abstract: Optimus 是一个面向分布式训练 job 的调度器，主要目标是最小化 JCT，主要分为对 DL 模型收敛时间的预测，对模型训练速度的评估，以及一个考虑资源分配和 task（相较于 job 的更小级别）放置三个部分。
-    
-- Link: [Note for Optimus](https://github.com/DicardoX/Notes_for_Papers/tree/main/Optimus)
+
+    - Abstract: Optimus 是一个面向分布式训练 job 的调度器，主要目标是最小化 JCT，主要分为对 DL 模型收敛时间的预测，对模型训练速度的评估，以及一个考虑资源分配和 task（相较于 job 的更小级别）放置三个部分。
+
+    - Link: [Note for Optimus](https://github.com/DicardoX/Notes_for_Papers/tree/main/Optimus)
 
 #### 2.1.3 面向无信息和部分信息场景的离散优先级抢占式调度算法及合并放置约束的深入讨论
 
