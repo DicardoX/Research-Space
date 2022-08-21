@@ -84,15 +84,8 @@
 #### 2.4.1 Job-level (bs, lr) 和 cluster-level (resource allocation) 的 modeling 和 co-optimization
 
 - ***Pollux: Co-adaptive Cluster Scheduling for Goodput-Optimized Deep Learning***
-
-    - Abstract: Petuum 提出的将分布式训练中的 metric modeling 和 resource scheduling 结合起来 co-optimize 的分布式训练和调度架构。Pollux 可以同时用在 parameter server 和 all-reduce 两类分布式架构，原因是重点关注 goodput 为主的性能指标，而非 ps 和 all-reduce 等架构中最重要的通信量的优化，这也是 Pollux 可以优化（考虑不足）的一个点。考虑的主要 metrics 为 statistical efficiency（表征每一轮迭代模型精度能够进步多少） 和 throughput，并分别对这两个 metric 的 estimate 进行了 modeling。Pollux 使用 gradient accumulation 来进一步扩大 batch size，经过 s 轮的 GPU 本地梯度聚合后再进行全局的梯度聚合。基于这两个 metric，Pollux 提出了自己的调度和优化 metric，即每个job 的 goodput。整个 Pollux 的架构分为两层：
-
-        -  job 层面，PolluxAgent 收集 bs 和 $T_{iter}$ 等信息，基于信息拟合 efficiency 和 throughput 的函数，进而获取每个 job 的 goodput 函数；通过最大化 job 的 goodput 来动态调整 bs 和 lr，以更好地利用资源。最后，周期地向 PolluxSched 报告 goodput 函数，等待新一轮资源分配后再调整 bs 和 lr。
-        - Cluster 层面：PolluxSched 基于 jobs 的 goodput 动态重分配资源，通过最大化 fitness 函数来获取理论最优的分配，并考虑多个集群层面的目标，包括 fairness，goodput，reallocataion overhead，inference slowdown 等
-
-        整篇 paper 最 fancy 的地方在于它的建模过程，包括 metric modeling 和 scheduling (optimization) modeling。
-
-    - Link: [Notes for Pollux](https://github.com/DicardoX/Notes_for_Papers/tree/main/Pollux)
+    - Abstract: Petuum 提出的将分布式训练中的 metric modeling 和 resource scheduling 结合起来 co-optimize 的分布式训练和调度架构。
+    - Link: [Note for Pollux](https://github.com/DicardoX/Notes_for_Papers/tree/main/Pollux)
 
 ---------
 
