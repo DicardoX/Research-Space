@@ -132,9 +132,10 @@
 #### 2.6.3 代数变换和并行化在并行计算图中的统一表示及作为图替代的共优化（设备映射独立底层优化）
 
 - ***Unity: Accelerating DNN Training Through Joint Optimization of Algebraic Transformations and Parallelization***
-- Abstract: Unity 在 FlexFlow、TASO 和 MetaFlow 的基础上，提出在并行计算图（PCG）中代数变换和并行化的统一表示（OP，Operator）和共优化（图替代，Substitution）方法，可以同时考虑分布式训练中的计算、并行和通信过程。对于共优化，Unity 使用一个多级搜索算法来高效搜索性能最好的图替代组合以及相应的硬件放置策略。此外，Unity 基于先前工作定义了 DNN 并行系统中常见的六类基本形式。
-    
-- Link: [Note for Unity](https://github.com/DicardoX/Notes_for_Papers/tree/main/Unity)
+
+    - Abstract: Unity 在 FlexFlow、TASO 和 MetaFlow 的基础上，提出在并行计算图（PCG）中代数变换和并行化的统一表示（OP，Operator）和共优化（图替代，Substitution）方法，可以同时考虑分布式训练中的计算、并行和通信过程。对于共优化，Unity 使用一个多级搜索算法来高效搜索性能最好的图替代组合以及相应的硬件放置策略。此外，Unity 基于先前工作定义了 DNN 并行系统中常见的六类基本形式。
+
+    - Link: [Note for Unity](https://github.com/DicardoX/Notes_for_Papers/tree/main/Unity)
 
 #### 2.6.4 图替代的生成、验证和剪枝，以及  (MetaFlow) 基于开销的回溯搜索算法
 
