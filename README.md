@@ -14,6 +14,7 @@
 
 - ***Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis***
     - Abstract: GPU 集群层面的 DNN 服务调度，考虑混布，在满足低时延的同时实现高利用率
+    
     - Link: [Note for Nexus](https://github.com/DicardoX/Notes_for_Papers/tree/main/Nexus)
 
 --------
@@ -28,6 +29,7 @@
 
 - ***Scaling Distributed Machine Learning with the Parameter Server***
     - Abstract: 第三代参数服务器架构，支持 scale 和 fault tolerance，异步通信，网络参数切分，灵活的一致性模型
+    
     - Link: [Note for Parameter Server (3rd)](https://github.com/DicardoX/Notes_for_Papers/tree/main/Parameter_Server_3rd)
 
 #### 2.1.2 面向对分布式训练任务收敛时间及速度的在线预测
@@ -42,6 +44,7 @@
 
 - ***Tiresias: A GPU Cluster Manager for Distributed Deep Learning***
     - Abstract: Tiresias 是一个面向参数服务器（Parameter Server）架构下分布式训练 job 的调度器，主要包括一个 2DAS 调度器，以及基于模型结构对合并放置约束的放宽策略。
+    
     - Link: [Note for Tiresias](https://github.com/DicardoX/Notes_for_Papers/tree/main/Tiresias)
 
 --------
@@ -54,6 +57,7 @@
 
 - ***Horovod: fast and easy distributed deep learning in TensorFlow***
     - Abstract: 基于 Baidu Ring Allreduce 框架进行代码实现和改进，python package，使用 Nvidia NCCL 内置的优化版本 ring allreduce，支持单模型在单服务器上的多 GPU 部署，部分 API 改进
+    
     - Link: [Note for Horovod](https://github.com/DicardoX/Notes_for_Papers/tree/main/Horovod)
 
 #### 2.2.2 分布式训练时 SGD 的 Large Minibatch 实现，可集成到 Ring All-reduce 方法
@@ -73,6 +77,7 @@
 
 - ***(BytePS) A Unified Architecture for Accelerating Distributed DNN Training in Heterogeneous GPU/CPU Clusters***
     - Abstract: ByteDance 提出的将 PS 和 Ring All-reduce 两种架构综合考虑的一种统一集群内通信架构，利用集群中空闲的 CPU 和带宽资源，并将 PS 和 Ring All-reduce 成功表述为统一架构下的特殊情况。
+    
     - Link: [Note for BytePS](https://github.com/DicardoX/Notes_for_Papers/tree/main/BytePS)
 
 --------
@@ -85,6 +90,7 @@
 
 - ***Pollux: Co-adaptive Cluster Scheduling for Goodput-Optimized Deep Learning***
     - Abstract: Petuum 提出的将分布式训练中的 metric modeling 和 resource scheduling 结合起来 co-optimize 的分布式训练和调度架构。
+    
     - Link: [Note for Pollux](https://github.com/DicardoX/Notes_for_Papers/tree/main/Pollux)
 
 ---------
@@ -110,7 +116,9 @@
 #### 2.6.1 Layer-wise Parallelism Based on Reduction & Search in Computation Graph
 
 - ***(OptCNN) Exploring Hidden Dimensions in Parallelizing Convolutional Neural Networks***
+
     - Abstract: OptCNN 提出 layer 内部级别的并行，允许每个 layer 有各自的并行策略，通过解决图搜索问题来共优化。OptCNN 能够提高训练吞吐，减少通信开销并达到更好的扩展性。
+
     - Link: [Note for OptCNN](https://github.com/DicardoX/Notes_for_Papers/tree/main/OptCNN)
 
 #### 2.6.2 SOAP 并行策略搜索空间及基于引导随机和 MCMC 采样实现的增量搜索算法
