@@ -148,5 +148,7 @@
 #### 2.6.5 面向 OP 粒度的 tensor partion-n-reduce 划分，基于 TDL 的 OP 描述，以及最小化通信开销的 recursive DP 搜索算法
 
 - ***(Tofu) Supporting Very Large Models using AutomaticDataflow Graph Partitioning***
+
     - Abstract: *(2019 EuroSys)*. Tofu 和 OptCNN 及 FlexFlow 想解决的问题一样，是同时期对自动化并行的探索。相较于 layer-wise，Tofu 以 OP 级别的 tensor 为粒度，将大模型的数据流图以 partition-n-reduce 的方式，等分划分到多个 GPU（仅划分各类 tensor，每个 GPU 都拷贝一份完整的图 OP），以减少 GPU 的内存足迹，同时达到并行化的效果；Tofu 使用一个简单的 Halide-like 语言 TDL 来描述 OP 的语义；在划分 OP 时，Tofu 使用一个 DP 套递归的搜索算法来最小化通信开销。
+
     - Link: [Note for Tofu](https://github.com/DicardoX/Notes_for_Papers/tree/main/Tofu)
