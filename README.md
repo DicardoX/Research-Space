@@ -89,7 +89,7 @@
 #### 2.4.1 集群中多任务（模型） Job-level (bs, lr) 和 cluster-level (resource allocation) 的 modeling 和 co-optimization
 
 - ***Pollux: Co-adaptive Cluster Scheduling for Goodput-Optimized Deep Learning***
-    - Abstract: *(2021 OSDI)*. Petuum 提出的将分布式训练中的任务（模型）粒度的 metric modeling 和集群层面的 resource scheduling 结合起来 co-optimize 的分布式训练和调度架构。
+    - Abstract: *(2021 OSDI)*. Petuum 提出的将分布式训练中的任务（模型）粒度的 metric modeling 和集群层面的 resource scheduling 结合起来 co-optimize 的分布式训练和调度架构。注意，与以往工作（如 BytePS）不同的是，Pollux 不再是在考虑集群通信拓扑和算力的前提下被动地适应，而是用 metric modeling 来为 resource allocation 提供依据，进而主动地共优化。
     
     - Link: [Note for Pollux](https://github.com/DicardoX/Notes_for_Papers/tree/main/Pollux)
 
