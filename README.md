@@ -84,7 +84,7 @@
 
 
 
-### 2.4 Metric Modeling & Resource Allocation: Co-optimizing at Job-level and Cluster-level
+### 2.4 Multi-Model Schedule: Co-optimizing at Job-level and Cluster-level
 
 #### 2.4.1 集群中多任务（模型） Job-level (bs, lr) 和 cluster-level (resource allocation) 的 modeling 和 co-optimization
 
