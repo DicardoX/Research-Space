@@ -111,11 +111,11 @@
 
 
 
-### 2.6  Automated Hybird Parallelism: Exploration on Other Parallelizing Dimensions
+### 2.6  Automated Hybrid Parallelism: Exploration on Other Parallelizing Dimensions
 
 #### 2.6.1 Layer-wise Parallelism Based on Reduction & Search in Computation Graph
 
-- ***(OptCNN) Exploring Hidden Dimensions in Parallelizing Convolutional Neural Networks***
+- ***(OptCNN) Exploring Hidden Dizmensions in Parallelizing Convolutional Neural Networks***
 
     - Abstract: *(2018 ICML)*. OptCNN 提出 layer 内部级别的并行，允许每个 layer 有各自的并行策略，通过解决图搜索问题来共优化。OptCNN 能够提高训练吞吐，减少通信开销并达到更好的扩展性。
 
@@ -152,3 +152,15 @@
     - Abstract: *(2019 EuroSys)*. Tofu 和 OptCNN 及 FlexFlow 想解决的问题一样，是同时期对自动化并行的探索。相较于 layer-wise，Tofu 以 OP 级别的 tensor 为粒度，将大模型的数据流图以 partition-n-reduce 的方式，等分划分到多个 GPU（仅划分各类 tensor，每个 GPU 都拷贝一份完整的图 OP），以减少 GPU 的内存足迹，同时达到并行化的效果；Tofu 使用一个简单的 Halide-like 语言 TDL 来描述 OP 的语义；在划分 OP 时，Tofu 使用一个 DP 套递归的搜索算法来最小化通信开销。
 
     - Link: [Note for Tofu](https://github.com/DicardoX/Notes_for_Papers/tree/main/Tofu)
+
+------
+
+
+
+### 2.7 Pipeline Parallelism: Considered with Other Dimensions
+
+#### 2.7.1 流水线并行和数据并行混合的 stage 划分、replica 数目以及设备放置 DP 搜索，以及面向流水线内存开销的优化调度
+
+- ***DAPPLE: A Pipelined Data Parallel Approach for Training Large Models***
+    - Abstract: *(2021 PPoPP)*. DAPPLE 是一个同步训练框架，将大模型的数据并行（stage-level replica）和流水线并行统一，在保证训练收敛性的同时提高内存效率。DAPPLE 由 DAPPLE profiler**，**DAPPLE planner 和 DAPPLE runtime 组成。Planner 尝试求解 stage 划分，replica 数目和设备放置问题，探索数据和流水线并行的最优混合策略；runtime 包括一个基于依赖关系的 early backward scheduling & warmup 调度算法，在减少设备内存使用的同时保证不影响吞吐。
+    - Link: [Note for DAPPLE](https://github.com/DicardoX/Notes_for_Papers/tree/main/DAPPLE)
