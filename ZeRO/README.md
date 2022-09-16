@@ -1,6 +1,6 @@
 # ZeRO: Memory Optimization Towards Training A Trillion Parameter Models
 
-**ZeRO 优化器**提出了 **weight update sharing** 方法，可以**优化内存，消除 data parallelism 和 model parallelism 的内存冗余**；同时，ZeRO 可以在加快训练速度的同时，**增大可有效训练的模型 size，并使其与设备数目成比例增加**；此外，ZeRO 可以保持**较低的额外通信开销（为了换取内存优化）**，且指出 **ZeRO 对于通信延迟的影响较小**，且相较于通信量和通信带宽，延迟对训练速度的限制更小。
+**ZeRO 优化器**提出了 **weight update sharding** 方法，可以**优化内存，消除 data parallelism 和 model parallelism 的内存冗余**；同时，ZeRO 可以在加快训练速度的同时，**增大可有效训练的模型 size，并使其与设备数目成比例增加**；此外，ZeRO 可以保持**较低的额外通信开销（为了换取内存优化）**，且指出 **ZeRO 对于通信延迟的影响较小**，且相较于通信量和通信带宽，延迟对训练速度的限制更小。
 
 ZeRO 优化器由 ZeRO-DP 和 ZeRO-R 两类应用场景组成：
 
