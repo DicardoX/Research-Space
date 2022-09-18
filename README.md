@@ -167,12 +167,24 @@
 
     - Link: [Note for DAPPLE](https://github.com/DicardoX/Notes_for_Papers/tree/main/DAPPLE)
 
+#### 2.7.2 流水线并行和 OP (data, model, ZeRO, etc) 并行混合的 intra-op (ILP 优化) + inter-op (DP 优化) 两级并行编译架构
+
+- ***Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning***
+
+    - Abstract: *(2022 OSDI)*. Alpa 将 pipeline parallelism 和已有并行方法相统一，提出 intra-op (data, model, ZeRO, etc) 和 inter-op (pipeline) 的两级并行架构。在 intra-op level，Alpa 通过整数线性规划 (ILP, merge simple op) 优化 intra-op parallelism，通过通信量/带宽来评估通信 & reshard 开销，最小化 stage（包含多 OPs）在给定 device mesh 上的执行开销；在 inter-op level，Alpa 基于 intra-op pass 返回的 cost，基于 intra-op plan 将 stage-mesh pair 编译为可执行文件，profile 以获得精确的 stage latency，stage 所需内存和中间激励存储的所需内存，通过一个动态规划 (DP) 算法 (early-pruning & op clustering) 考虑如何切分模型/设备集群为 stages/device meshes，和如何映射为 stage-mesh pair，最小化 end-to-end pipeline latency。
+
+    - Link: [Note for Alpa](https://github.com/DicardoX/Notes_for_Papers/tree/main/Alpa)
+
+---------
+
+
+
 ### 2.8 Weight Update Sharding: Partition Optimizer States (Momentum, Variance, FP32 Weights), Gradients and Parameters
 
 #### 2.8.1 面向内存显著优化和有限额外通信开销的 DP worker 优化器状态、梯度和参数共享方法
 
 - ***ZeRO: Memory Optimization Towards Training A Trillion Parameter Models***
 - Abstract: *(2020 SC)*. ZeRO 优化器提出了 weight update sharding 方法，可以优化内存，消除 data parallelism 和 model parallelism 的内存冗余；同时，ZeRO 可以在加快训练速度的同时，增大可有效训练的模型 size，并使其与设备数目成比例增加；此外，ZeRO 可以保持较低的额外通信开销（为了换取内存优化），且指出 ZeRO 对于通信延迟的影响较小，且相较于通信量和通信带宽，延迟对训练速度的限制更小。
-    
+  
 - Link: [Note for ZeRO](https://github.com/DicardoX/Notes_for_Papers/tree/main/ZeRO)
 
