@@ -48,7 +48,7 @@ Alpa 将 **pipeline parallelism** 和**已有并行方法**相统一，提出 **
     - 一个例子：对于矩阵乘操作，可以并行 loop i，loop j，loop k 或它们的组合，这会带来不同的计算和通信开销，需要输入 tensors 的不同 layout，并带来不同 layout 的输入 tensors。此时，若输入 tensor 不满足 layout 要求，则需要进行 reshard，这会带来额外的通信开销。
     
 - 整数线性规划 **ILP Formulation**：
-    
+  
     - **cost 模型**：类似 Tofu，由于 Alpa **对大 OP 进行均匀切分**，所有的并行方法有**相同的算数复杂性**；同时，**小 OP** 设备间存在的部分**重复计算开销可忽略**。因此，Alpa 仅关注**通信开销**和 **reshard 开销**，而**非计算开销**。在 **intra-op pass** 中，不对通信开销和 reshard 开销进行 profile，而是用**通信量 / 带宽来评估**；
     
     - **目标函数**：最小化图内**所有节点的通信开销和所有边的 reshard 开销之和**。
