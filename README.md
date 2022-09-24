@@ -175,6 +175,14 @@
 
     - Link: [Note for Alpa](https://github.com/DicardoX/Notes_for_Papers/tree/main/Alpa)
 
+#### 2.7.3 基于 user 的少量 tensor sharding 标注，intra-op 混合并行，将 pipeline 规约为 tensor 划分问题
+
+- ***GSPMD: General and Scalable Parallelization for ML Computation Graphs***
+
+    - Abstract: GSPMD 是一个自动化，compiler-based 的并行系统，允许 users 通过少量指示如何 distribute tensors 的标注，像单机那样编程。GSPMD 的 OP 划分表示简单有效，可表示不同或混合类别的并行，包括 DP，in-layer MP，spatial parallelism 和 weight update sharding，并通过一个 wrapper library 将 pipeline reduce 为一个 tensor/OP 划分问题。
+
+    - Link: [Note for GSPMD](https://github.com/DicardoX/Notes_for_Papers/tree/main/GSPMD)
+
 ---------
 
 
