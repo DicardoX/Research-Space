@@ -8,7 +8,7 @@ Contributions：
 
 - GSPMD 支持非均衡划分的维度，允许任何 tensor 在任意 device meshes 上划分；
 
-- GSPMD 被使纤维 XLA 编译器的扩展，后者是一个涵盖多架构和多硬件平台的统一抽象，这使得 GSPMD 是可复用的；
+- GSPMD 被实现为 XLA 编译器的扩展，后者是一个涵盖多架构和多硬件平台的统一抽象，这使得 GSPMD 是可复用的；
 
 - GSPMD 支持嵌套模式的并行：在 OP level，不同类别的维度可以在正交的 devices 组间划分。GSPMD 使用一个递归方法来实现上述嵌套模式，在无需手写额外划分规则的同时最大化通用性。
 
