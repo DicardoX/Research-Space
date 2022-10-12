@@ -35,10 +35,11 @@ Alpa 将 **pipeline parallelism** 和**已有并行方法**相统一，提出 **
         - **一个 tensor dimension 能对应多个 mesh dimensions**（$S^{01}RR$，仅在 tensor dim_1 切成四份，然后分别在 mesh dim_1 和 dim_2 均匀分布和 replicate），**一个 mesh dimension 仅能对应一个 tensor dimensions**（$S^0S^0R$ 不合理，因为 inter-op pass 会在决定 mesh shape 时将该方案转换为 $S^0S^1R$）。
     
     - **Resharding (layout conversion)**：当**某个 OP 的输入 tensor 不符合该 OP 的 sharding spec 时进行**。根据 **cross-device 通信的方式**可分为三类：
+        
         - **No communication**：例如 $RR \rightarrow S^0S^1$，切分不需要通信，只要舍弃每个 device 上的部分参数；
         - **All-gather**：例如 $S^0R \rightarrow RR$，把划分后的模型块 gather 成完整的；
         - **All-to-all**：例如 $S^0R \rightarrow RS^0$，mesh 不同划分区域内的 devices 间互相交换部分参数，但并没有 gather 在一起。
-    
+        
     - **OP 的并行策略**：类似 tensor，**对部分维度进行 partition，其他维度进行 replicate**。根据**是否需要 cross-device 通信**也可分为两类（以 batched matmul $C_{b,i,j} = \sum_k A_{b,i,k}B_{b,k,j}$ 为例）：
         - **No communication**：划分后每个部分可单独计算，即每个设备有全部所需的输入 tiles，则无额外的通信开销（例如沿 i、j 或 b 维度划分）；
         - **All-reduce**：需要用 all-reduce 来将 partial sum 的结果聚合在一起（例如沿 k 维度划分，没有完整的将 A 的一行和 B 的一列做矩阵乘，而是各自的一半）。
