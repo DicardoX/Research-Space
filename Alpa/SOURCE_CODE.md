@@ -537,7 +537,32 @@ A mesh executable **contains one or several XLA executables**. For each type of 
 
     - **The worker part of a gradient accumulation mesh executable.**
 
-- `PartialGradAccMeshDriverExecutable(NormalMeshDriverExecutable)`:
+- `class PartialGradAccMeshDriverExecutable(NormalMeshDriverExecutable)`:
 
-    - **The driver part of a mesh executable that can optionally skip the gradient synchronization step.**
-    - **This executable is used for computation stages in pipeline, such as forward, backward and apply_grad**.
+    - **The driver part of a mesh executable that can optionally skip the gradient synchronization step.** **This executable is used for computation stages in pipeline, such as forward, backward and apply_grad**.
+    - **In forward/backward/apply_grad process, no need to consider the gradient sync, more light than normal executable**.
+
+- `class PartialGradAccMeshWorkerExecutable(NormalMeshWorkerExecutable)`:
+
+    - **The worker part of a mesh executable that can optionally skip the gradient synchronization step.** **This executable is used for computation stages in pipeline, such as forward, backward and apply_grad**.
+
+- `class AllocZeroBufferDriverExecutable(MeshDriverExecutable)`:
+
+    - **The driver part of a buffer-allocation executable.**
+    - Don't know what for.
+
+- `class AllocZeroBufferWorkerExecutable(MeshWorkerExecutable)`:
+
+    - **The worker part of a buffer-allocation executable.**
+    - Don't know what for.
+
+- `class MemzeroWorkerExecutable(MeshWorkerExecutable)`:
+
+    - The worker part of an executable that sets all input tensors to zeros.
+
+- `class UtilMeshWorkerExecutable(MeshWorkerExecutable)`:
+
+    - **Worker executable that runs a manually generated function. It is lighter than NoralMeshWorkerExecutable as it does not have a StagePlan**.
+
+        Currently, it is used for concatenate (will be deprecated after we move it to apply_grad) and allgather.
+
