@@ -17,12 +17,115 @@ Components of adaptDL:
 
 Several Problems to be solved:
 
-- How Pollux Agent (job-level) retrieve information?
-    - 怎么实现：**PolluxAgent 收集 bs 和 $T_{iter}$ 等信息**，基于信息**获取 efficiency 和拟合 throughput 的函数**，进而**获取每个 job 的 goodput 函数**
-- How Pollux Agent: 通过**最大化 job 的 goodput 来动态调整 bs 和 lr**，以更好地利用资源
-- How PolluxSched (cluster-level): **基于 jobs 的 goodput 动态重分配资源**，通过**最大化 fitness 函数（由相较于 fair allocation 的 speedup 构造）来获取理论最优的分配**。
-- How PolluxSched: **考虑多个集群层面的目标**，包括 fairness，goodput，reallocataion penalty，interference slowdown 等。
-- How Pollux interact with hardware resources (maybe K8S pods)？
+1. How PolluxAgent (job-level) retrieve information?
+
+    - 怎么实现：**PolluxAgent 收集 bs 和 $T_{iter}$ 等信息**，基于信息**获取 efficiency 和拟合 throughput 的函数**，进而**获取每个 job 的 goodput 函数**，在**动态调整 bs 和 lr 以获取最大的 job goodput**？
+
+    - In `./goodput.py/class GoodputFunction`: 
+        - **Call Flow**: `throughput()` & `efficiency()` $\Rightarrow$ `evaluate()` $\Rightarrow$ `optimize()`
+
+2. How PolluxAgent: **基于 dataloader (`./torch/data.py`) 的 profile 结果**，**维护用于拟合 iteration time 和 throughput 的一系列参数**，并**周期性向 PolluxSched (cluster-level) 报告 goodput 函数和 scheduling hints**？
+
+    - **Call Flow**: `_fit_perf_params()(fit_perf_params())` + `_report_sched_hints()` $\Rightarrow$ `profile_step_commit()` + `profile_step_start()` $\Rightarrow$ `profile()`
+
+    - In `./goodput.py/def fit_perf_params()`: 
+        - **PolluxAgent 对本地拟合 throughput 的参数进行更新，基于 profile 得到的真实执行时间数据**，给定不同 configurations of num_nodes, num_replicas, and atomic_bsz 下的 accum time and optim time measurements；
+
+
+    - In `./torch/_metrics.py/def _fit_perf_params()`:
+        - A warpper function of `fit_perf_params()` in `./goodput.py`, **Get the profile info and convert to array**, **update & average to get the per-step time**.
+
+
+    - In `./torch/_metrics.py/def _report_sched_hints()`:
+        - **Construct scheduling hint from metrics state and report to the PolluxSched**.
+
+    - **PolluxSched 对 goodput 函数的调用是直接声明 goodput 类的 instance 来使用的**。
+
+    - In `./torch/_metrics.py/def profile_step_start()`:
+        - Start the profile in this step, called by dataloader in `./torch/data.py`.
+
+
+    - In `./torch/_metrics.py/def profile_step_commit()`:
+        - **Get nodes and replicas num from the outer env**, **update profile info into metrics state**, and **fit parameters and periodically report schedule hints**.
+        - Called by dataloader in `./torch/data.py`.
+
+    - In `./torch/data.py/class AdaptiveDataLoaderHelper(object)/def profile() `:
+        - **Every iteration of every epoch should be profiled under this context**.
+        - 是 **profile 的实际操作者**，**自己实现了 allreduce 等通信操作（用于同步 profile exit signal），用 socket 和 threading** (`./collective.py` -> `./reducer.py`)。
+
+
+3. How PolluxSched (cluster-level): **基于 jobs 的 goodput 动态重分配资源**，通过**最大化 fitness 函数（由相较于 fair allocation 的 speedup 构造）来获取理论最优的分配**（指多 nodes 上的多 GPUs 到多 jobs 的映射），并**考虑多个集群层面的目标**，包括 fairness，goodput，reallocataion penalty，interference slowdown 等。
+
+    - In `./sched/adaptdl_sched/allocator.py/class AdaptDLAllocator(object)`:
+
+        - The **run function** of this class is:
+
+            ```python
+            async def run(self):
+              await asyncio.gather(
+                # 1) Watch for new job and start if possible.
+                self._allocate_one_loop(),
+                # 2) Periodically optimize existing jobs.
+                self._optimize_all_loop()
+              )
+            ```
+
+        - `self._allocate_one_loop()`: **Watch `kubernetes.watch.Watch().stream()` to watch and allocate events** (as jobs). 
+
+        - `self._allocate_one(event)` : allocate one job, called by `self._allocate_one_loop()`. 
+
+            - Read job from stream, parse job info, find available nodes, get allocation plan (calling `policy.allocate_job`). 
+
+        - `self._optimize_all_loop()`: **Periodically access global lock and optimize existing jobs, then sleep for a time interval.**
+        - `self._optimize_all()`: optimizing existing jobs allocation, called by `self._optimize_all_loop()`.
+            - Find available nodes, get jobs and prev allocation, get allocation plan for all jobs considering prev allocations (calling `self._allocate()`), update current allocations.
+        - `self._allocate()`: Get allocation plan for all jobs knowing nodes, jobs and prev allocation, called by `self._optimize_all()`.
+            - Remove too-big jobs, try shrink the cluster (if need, expander), optimize the allocation (calling `policy.optimize()`), expand the cluster (if need).
+
+    - In `./sched/adaptdl_sched/policy/pollux.py/class PolluxPolicy(object)`:
+
+        - `def allocate_job(self, job_info, nodes):`
+            - A simple strategy that **find the first available node for a new job**. 
+        - `def optimize(self, jobs, nodes, base_allocations, node_template):`
+            - **Sort jobs based on**: 1) **is_pinned state**; 2) **less min_replicas** (FIFO if the same); 3) **earlier creation timestamp**.
+            - Sort nodes based on preemptible.
+            - **Problem formulation and optimization**: [NSGA2 algorithm](https://baike.baidu.com/item/NSGA-Ⅱ/8524196?fr=aladdin) (多目标遗传算法) (In `class Problem(pymoo.core.problem.Problem)`, based on [pymoo: Multi-objective Optimization in Python](https://pymoo.org))
+                - **Multi-objective optimization problem** used by PolluxPolicy to **determine resource allocations and desired cluster size**.  The **cluster performance** and **N** are the **two objectives being optimized**, resulting in **a set of Pareto-optimal solutions**.
+                - **对 cluster autoscaling 的利用率设置上下阈值。** **Calculates the cluster utility for each state**, defined as **the average percentage of ideal speedup for each job (ie. speedup / num_replicas)**, **weighted by the job's share of the most congested cluster resource**. (**cluster util 的定义**).
+                    - 在决定 nodes num 时尽可能使 cluster util 最优，进而在 `optimize()` 中决定 allocation (fairness).
+
+4. How Pollux **interact with hardware resources (maybe K8S pods)**？
+
+    - `./sched/adaptdl_sched/allocator.py/class AdaptDLAllocator(object)/async def _find_nodes():`
+
+        - **Find available nodes**
+        - Get node list, find all pods qualified by the pod_label_selector, update node info dict based on `node_list` and `pod_list` (calling `get_node_unrequested` in `resources.py`), construct node template and return.
+
+    - `./sched/adaptdl_sched/allocator.py/class AdaptDLAllocator(object)/def _get_job_info():`
+
+        - **Get jobs info**
+        - Get resources of this job (calling `get_pod_requests()` in `resources.py`), Get scheduling hints, Construct speedup function of this job, etc. Return JobInfo object.
+
+    - `./sched/adaptdl_sched/resources.py/def get_node_unrequested()`:
+
+        - **Get the amount of node resources which are unrequested (还未被 pods 请求使用的，但后面可能会向 node 请求资源) by a list of pods**.
+
+        - Args:
+
+            - **node (kubernetes.client.V1Node)**: The node to get unrequested resources for.
+
+            - **pods (List[kubernetes.client.V1Pod])**: Pods which may request resources from the node. 
+
+        - Call `get_pod_requests()` and remove the already requested resources unit.
+
+    - `./sched/adaptdl_sched/resources.py/def get_pod_requests()`: 
+
+        - **Get the aggregate amount of resources requested by all containers in a pod**.
+
+    - `./sched/adaptdl_sched/cluster_expander.py/class ClusterExpander(object):`
+
+        - ClusterExpander tries to **keep expected node count available to the allocator**. It does that by **spawning equal number of placeholder pods (one of each node)**. **The pods have anti-affinity which prevents them from getting scheduled on the same node**. This pushes the cluster autoscaler to provision one node for each Pending placeholder.
+        - Called by `allocator.py` based on the shrink trial and the optimization result.
 
 -------
 
@@ -67,13 +170,14 @@ Several Problems to be solved:
 
     - `def evaluate(self, num_nodes, num_replicas, atomic_bsz, accum_steps):`
 
-        - Calculate overall batch size;
-        - Call `self.throughput()` and `self.efficiency()`, return the goodput of this job.
+        - **调用 `throughput()` 和 `efficiency()` 函数，构造获取每个 job 的 goodput 函数**。
+        - Calculate overall batch size for calculating the statistical efficiency in `efficiency()`.
 
     - `def throughput(self, num_nodes, num_replicas, atomic_bsz, accum_steps):`
 
         - Call `_predict_accum_time()` (for one-step per-GPU compute time, which is accum_time), `_predict_network_time()` (for network time), `_predict_log_optim_time()` (for total time, combine the two above).
-        - **total time = accum_steps * accum_time + opt_time**;
+            - **收集 batch size 和 $T_{iter}$ 等信息**，基于信息**拟合 throughput 的函数**。
+        - **total time = accum_steps * accum_time + opt_time**; 
             - Since each step gradient accumulation would also perform the fp and bp process, just not to perform weight update, **all the m+1 steps hold the same computing time**.
         - **opt_time = (accume_time ^ \gamma + network_time ^ {1 - \gamma}) ^ {1 / \gamma}**
         - Return batch size / total time = throughput.
@@ -81,10 +185,11 @@ Several Problems to be solved:
     - `def efficiency(self, batch_size):`
 
         - Calculate statistical efficiency;
+        - **基于 grad_params 和 batch size，计算 statistical efficiency**。
 
     - `def optimize(self, num_nodes, num_replicas, max_batch_size=None, atomic_bsz_range=None, accumulation=False):`
 
-        - **PolluxAgent 收集 bs 和 $T_{iter}$ 等信息**，基于信息**获取 efficiency 和拟合 throughput 的函数**，进而**获取每个 job 的 goodput 函数**；通过**最大化 job 的 goodput 来动态调整 bs 和 lr（最大化操作通过多点 sample 并取最大来实现）**.
+        - **根据 batch size 范围进行多次采样，模拟 function，并调用 evaluate() 函数计算相应的 goodput，返回最好的结果。**
 
         - **Called in `./torch/data.py`**.
 
@@ -111,7 +216,7 @@ Several Problems to be solved:
             local_bsz = batch_size / num_replicas
             ```
 
-            Then call the goodput evalutation func:
+            Then call the goodput evaluation func:
 
             ```python
             # Evaluate the goodput of all candidate configurations.
@@ -128,7 +233,7 @@ Several Problems to be solved:
 
     - **PolluxAgent 对本地拟合 throughput 的参数进行更新，基于 profile 得到的真实执行时间数据**。
         - `./torch/_metrics.py` 里定义了 `_metric_state()` 并调用 `fit_perf_params()`，`./torch/metrics_test.py` 进行了 profile 的测试，`./torch/data.py` 内进行 runtime 时的 profile (`profile() in class AdaptiveDataLoaderHelper(object)`)；
-    - Fit the performance model (**paramters include alpha and beta**) given accum time and optim time measurements for different configurations of num_nodes, num_replicas, and atomic_bsz.
+    - Fit the performance model (**paramters include alpha and beta**) given **accum time and optim time measurements for different configurations of num_nodes, num_replicas, and atomic_bsz**.
     - Call `_obj_fn()`.
     - Locally use the `autograd.numpy` to use the differentiate func of `autograd`.
 
@@ -202,7 +307,7 @@ Several Problems to be solved:
         num_replicas = adaptdl.env.num_replicas()
         ```
 
-    - **Update profile info**:
+    - **Update profile info into metrics state**:
 
         ```python
         if accumulation_step:
@@ -214,7 +319,7 @@ Several Problems to be solved:
         	state.profile[key]["optim_count"] += 1
         ```
 
-    - **Fit parameters and report schedule hints**:
+    - **Fit parameters and periodically report schedule hints**:
 
         ```python
         if not accumulation_step:
@@ -242,7 +347,7 @@ Several Problems to be solved:
 
     - A warpper function of `fit_perf_params()` in `./goodput.py`.
 
-    - Get the profile info and convert to array.
+    - **Get the profile info and convert to array**.
 
     - Update & average to get the per-step time:
 
@@ -477,17 +582,18 @@ Several Problems to be solved:
     - **Watch for new jobs and start if possible**:
 
         ```python
-        async with kubernetes.watch.Watch() as watch:
-                    while True:
-                        async for event in watch.stream(
-                                self._objs_api.list_namespaced_custom_object,
-                                *self._custom_resource, timeout_seconds=60):
-                            # We only consider newly-added preemptible jobs
-                            # because this allocation may not be final.
-                            if (event["type"] == "ADDED" and
-                                    event["object"]["spec"].get("preemptible", True)):
-                                async with self._lock:
-                                    await self._allocate_one(event)
+        async def _allocate_one_loop(self):
+        	async with kubernetes.watch.Watch() as watch:
+            while True:
+              async for event in watch.stream(
+                self._objs_api.list_namespaced_custom_object,
+                *self._custom_resource, timeout_seconds=60):
+                # We only consider newly-added preemptible jobs
+                # because this allocation may not be final.
+                if (event["type"] == "ADDED" and
+                    event["object"]["spec"].get("preemptible", True)):
+                  async with self._lock:
+                    await self._allocate_one(event)
         ```
 
         **从 K8S 的 watch stream 中监听 events**.
@@ -498,6 +604,7 @@ Several Problems to be solved:
         - Parse the job info: `job_info = self._get_job_info(job)`
         - Find available nodes: `node_infos, _ = await self._find_nodes()`
         - Get allocation plan for new jobs: `new_allocation = self._policy.allocate_job(job_info, node_infos)`
+            - `policy.allocate_job()` is improted from `./policy/pollux.py`
         - Patch job status: `await patch_job_status(self._objs_api, namespace, name, patch)`
 
     - **Periodically optimize existing jobs**:

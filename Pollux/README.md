@@ -7,7 +7,7 @@ Pollux 可以同时用在 parameter server 和 all-reduce 两类分布式架构�
 考虑的主要 metrics 为 **statistical efficiency**（表征每一轮迭代模型精度能够进步多少） 和 **throughput**，并分别**对这两个 metric 的 estimate 进行了 modeling**。Pollux 使用 **gradient accumulation 来进一步扩大 batch size**，经过 s 轮的 GPU 本地梯度聚合后再进行全局的梯度聚合。基于这两个 metric，Pollux 提出了**自己的调度和优化 metric，即每个job 的 goodput**。整个 Pollux 的架构分为两层：
 
 -  **Job 层面**：Job 指某个完整的 training model，每个 job 内部采用 data parallelism 等并行方式。**PolluxAgent 收集 bs 和 $T_{iter}$ 等信息**，基于信息**获取 efficiency 和拟合 throughput 的函数**，进而**获取每个 job 的 goodput 函数**；通过**最大化 job 的 goodput 来动态调整 bs 和 lr**，以更好地利用资源。最后，**周期地向 PolluxSched 报告 goodput 函数**，等待**新一轮资源分配后再调整 bs 和 lr**（lr 随 bs 线性变化）。需要注意的是，Pollux 采用 **online model fitting** 而非 profiling 的方式进行**在线的 thr 函数拟合**（使用之前所有的 thr 数据），再用 goodput = efficiency * thr 来获取拟合后的 goodput 函数。
--  **Cluster 层面**：**PolluxSched 基于 jobs 的 goodput 动态重分配资源**，通过**最大化 fitness 函数（由相较于 fair allocation 的 speedup 构造）来获取理论最优的分配**，并**考虑多个集群层面的目标**，包括 fairness，goodput，reallocataion penalty，interference slowdown 等。
+-  **Cluster 层面**：**PolluxSched 基于 jobs 的 goodput 动态重分配资源**，通过**最大化 fitness 函数（由相较于 fair allocation 的 speedup 构造）来获取理论最优的分配**（指多 nodes 上的多 GPUs 到多 jobs 的映射），并**考虑多个集群层面的目标**，包括 fairness，goodput，reallocataion penalty，interference slowdown 等。
 
 注意，与以往工作（如 BytePS）不同的是，Pollux 不再是**在考虑集群通信拓扑和算力的前提下被动地适应**，而是**用 metric modeling 来为 resource allocation 提供依据，进而主动地共优化**。
 
