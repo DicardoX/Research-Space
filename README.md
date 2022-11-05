@@ -197,3 +197,16 @@
 
     - Link: [Note for ZeRO](https://github.com/DicardoX/Notes_for_Papers/tree/main/ZeRO)
 
+---------
+
+
+
+### 2.9 Resource Allocation Framework
+
+#### 2.9.1 基于 DLT job 资源使用周期可预测性，profile 和贪心启发式的资源动态分配
+
+- ***Gandiva: Introspective Cluster Scheduling for Deep Learning***
+
+    - Abstract: *(2018 OSDI)*. Gandiva 是一个集群调度框架，通过利用 profile 信息来优化延迟，提高训练效率和集群利用率。考虑如下 DL 特点：1) Feedback-driven exploration -> simultaneous early feedback；2) DL jobs 在资源利用上的异构性 (locality & interference)；3) Intra-job predictability。Gandiva 基于以上特点，设计 suspend-resume (time-slice with weighted round robin), pack (对应单 GPU 混布多任务), migration (去碎片化), grow-shrink (提高集群利用率 & 为新 job 提供资源以共优化) 等机制，通过 profile 监控：1) 资源使用情况；2) job progress rate (mini-batch time) 来判断调度策略的有效性。在调度策略上 (reactive mode -> 事件处理，introspective mode -> 持续监听并优化 job replacement)，Gandiva 倾向于将 job 分配到相同 affinity (相同需占 GPU 数目) 的 server 上，并通过 over-subscription (time-slice & suspend-resume) 来尽可能消除新 job 的排队时间，保证 early feedback；基于 profile 和一个贪心启发式算法，利用 packing, migration, grow-shrink 等方法来 runtime 优化 cluster efficiency (包括 util)。注意，Cluster fairness (servers 间 load 均衡) 并不考虑，仅考虑 server 内 job fairness (time-slice weighted RR 来避免 job 长时间等待)。
+
+    - Link: [Note for Gandiva](https://github.com/DicardoX/Notes_for_Papers/tree/main/Gandiva)
