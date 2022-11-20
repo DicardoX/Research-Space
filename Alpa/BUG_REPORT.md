@@ -306,3 +306,106 @@ In this way, the worker node can also get the correct ip addr and all things goe
 (ProfileWorker pid=1121827, ip=10.2.64.52) [I] Hosts num: 1 | Devices num: 4
 ```
 
+-----
+
+
+
+merrymercy: The error "NotImplementedError: automatically slicing layers with existing physical meshes is not supported yet." is probably because you are doing multiple auto-parallelization search runs in a single script (process).
+Currently, after alpa is initialized, we only allow a single run of auto-parallelization search.
+To fix your problem, you can either separate your benchmark into multiple scripts or manually re-initialize alpa using `alpa.init` and `alpa.shutdown` (see an example [here](https://github.com/alpa-projects/alpa/blob/90fc12ac1bf123f47fbe559a31455abb76e86ee7/docs/gallery/tutorials/pipeshard_parallelism.py#L181-L210))
+
+
+
+----------
+
+@merrymercy  Actually, I just increase the batch size from 16 to 32... And the error occurred when the auto-parallelization search was finished. Why this error won't occur when the batch size equals to 16? (num_micro_batches = 16, layer_num=16).
+
+```bash
+Result forward_stage_layer_ids: [[0, 1, 2, 3], [4, 5, 6], [7, 8, 9, 10], [11, 12, 13, 14, 15]]
+Result mesh_shapes: [(1, 1), (1, 1), (1, 1), (1, 1)]
+Result logical_mesh_shapes: [(1, 1), (1, 1), (1, 1), (1, 1)]
+Result autosharding_option_dicts: [{'force_batch_dim_to_mesh_dim': 0}, {'force_batch_dim_to_mesh_dim': 0}, {'force_batch_dim_to_mesh_dim': 0}, {'force_batch_dim_to_mesh_dim': 0}]
+[I] Lanuching distributed XLA servers...
+[I] The selected port is 22118 while the used port is as follows:
+[I] Lanuching distributed XLA servers...
+    - {22118, None}
+[I] Lanuching distributed XLA servers...
+[I] Lanuching distributed XLA servers...
+[I] The selected port is 23185 while the used port is as follows:
+[I] The selected port is 23127 while the used port is as follows:
+    - {22118, 23185, None, 23127, 22750}
+    - {22118, 23185, None, 23127, 22750}
+[I] The selected port is 22750 while the used port is as follows:
+    - {22118, 23185, None, 23127, 22750}
+[I] Current IP address: 10.2.64.52
+[I] The target server address is: 10.2.64.52:22118
+[I] Querying XLA API client to get XLA gRPC server...
+[I] XLA gRPC server is started successfully.
+[I] Current IP address: 10.2.64.52
+[I] The target server address is: 10.2.64.52:23185
+[I] Querying XLA API client to get XLA gRPC server...
+[I] XLA gRPC server is started successfully.
+[I] Current IP address: 10.2.64.52
+[I] The target server address is: 10.2.64.52:23127
+[I] Querying XLA API client to get XLA gRPC server...
+[I] XLA gRPC server is started successfully.
+[I] Current IP address: 10.2.64.52
+[I] The target server address is: 10.2.64.52:22750
+[I] Querying XLA API client to get XLA gRPC server...
+[I] XLA gRPC server is started successfully.
+[I] Hosts num: 1 | Devices num: 1
+[I] Hosts num: 1 | Devices num: 1
+[I] Hosts num: 1 | Devices num: 1
+[I] Hosts num: 1 | Devices num: 1
+ - Compile (driver): 1589.72 s
+compilation time breakdown: {'stage-construction': '1565.05', 'stage-construction-dp': '1.99', 'stage-construction-compilation': '500.11', 'stage-construction-profiling': '1061.78'}
+ - Compile (worker): 5.37 s
+[I] Training process warmup with dummy input batch...
+[I] Ready to perform training process.
+[I] Batch (iteration) num 1564 | Batched data shape: (32, 32, 32, 3) | Batched labels shape: (32,)
+[I] Benchmark the training process with entire dataset and profile with driver overhead...
+    - Iteration 500 / 1564 is performed...
+    - Iteration 1000 / 1564 is performed...
+    - Iteration 1500 / 1564 is performed...
+Traceback (most recent call last):
+
+### NotImplementedError ###
+```
+
+------
+
+
+
+@merrymercy I think I know the reason why this error occurred. When batch size equals to 32, the last batch of the dataset is in the shape of (16, ...), which will lead alpa to restart the auto-parallelization search and cause 'NotImplementedError'. So I add a small judgement in the `./benchmark_parallel_utils.py/benchmark_training_executable()` to skip this batch:
+
+```python
+# Supported data shape
+supported_data_shape = batches[0]['images'].shape
+
+# Train 
+for i in range(niter):
+  if (i > 0 and i % LOG_INTERVAL == 0):
+    print("    - Iteration {} / {} is performed...".format(i, niter))
+    
+    # NOTE: Skip the batch with different batch shape, since it will cause lead alpa
+    #       to restart the auto-parallelization search and cause the following error:
+    #       - 'NotImplementedError: automatically slicing layers with existing physical 
+    #         meshes is notsupported yet'.
+    #       Note that currently after alpa is initialized, we only allow a single run of 
+    #       auto-parallelization search.
+  if i > 0 and supported_data_shape is not None and batches[i]['images'].shape != supported_data_shape:
+    print("    - Warning: Data shape of batch {} mismatched (which will lead alpa to restart the auto-parallelization search \
+                        and cause 'NotImplementedError',so we skip this batch). The current data shape is {}, while the proper data shape is: {}" \
+            .format(i, batches[i]['images'].shape, supported_data_shape))
+    continue
+
+  state = train_step(state, batches[i])
+  if isinstance(state, tuple):
+    state = state[0]
+
+print("[I] Wait for the executable to sync...")
+
+executable.sync()
+```
+
+After applying this judgement, the error is eliminated.
