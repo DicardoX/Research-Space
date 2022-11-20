@@ -19,6 +19,7 @@ AntMan 是一个 **co-design cluster scheduler 和 DL 框架的深度学习架�
     - **Memory Management**：AntMan 通过监控 mini-batch 中的 app 性能和内存需求，**scale GPU 内存上限**，甚至可低于需求。**当 GPU 内存不够时，tensors 被分配 (直接生成，从 GPU 算然后传到 host 内存) 到 host 内存**，会产生**多 mini-batches 下可忽略的性能开销**。在下一个 mini-batch 边界，尝试提高 GPU 内存上限，以将 tensors 分配回 GPU 内存。类似于 OS 里的分页 (Paging) 机制
 
         - 注意，这里 memory brust 在一般的 training process 里的 mini-batch 内不会发生，只会在 user-defined 的 validation (一般会使用更大的 batch size 来进行 validation) mini-batch 内发生。因此与 training process mini-batches 间的周期规律性和可预测性不矛盾。
+        - 还有一类场景是 RG job 需要开始运行并占用部分 GPU 内存，此时之前该 GPU 上 steal cycles 的 OT job 的 GPU 内存上限就要下降，相对地需要 shrink.
 
         <img src="./figures/memory_scale.png" alt="avatar" style="zoom:40%;" />
 
