@@ -225,3 +225,9 @@
     - Abstract: *(2020 OSDI)*. AntMan 是一个 **co-design cluster scheduler 和 DL 框架的深度学习架构**，利用 DL training 的特性，在 **local coordinator** 中引入 **memory 和 computation 动态 scale 机制**，收集 **DL 框架和硬件的相关信息**，利用 **GPU Operator Manager 动态管理 Resource-Guarantee (RG) jobs 和 Opportunistic (OT) jobs 执行流的 GPU sharing**，避免对 RG jobs 的性能干扰；在 **global scheduler** 中为每个用户**维护一个支持 job arrival 的队列**，并分别**以不同的策略调度 RG jobs 和 OT jobs**，从而**分配 GPU 资源** (GPU 内存，计算单元)。
 
     - Link: [Note for AntMan](https://github.com/DicardoX/Notes_for_Papers/tree/main/AntMan)
+
+#### 2.9.3 固定 job GPU allocation，根据 profiled sensitivity 动态决定 CPU 和内存的分配量
+
+- ***(Synergy) Looking Beyond GPUs for DNN Scheduling on Multi-Tenant Clusters***
+    - Abstract: *(2022 OSDI)*. Synergy 是一个**资源敏感的，round-based 的多租户 GPU 集群资源调度器**，支持**集成到多类调度策略** (e.g., LAS, FTF)，使用 **optimistic profiling 来获取 job 对其他资源 (CPU, 内存) 的敏感性信息** (部分 jobs 能从高于 GPU 数目成比例的其他资源分配中获利，部分 jobs 则不会受低于该比例其他资源分配的影响)，通过一个**近似最优的在线调度算法 Synergy-TUNE**，实现**多类资源 workload-aware 分配**，且保证所有 jobs 性能不差于 GPU-proportional share (其他资源的划分和 GPU 划分成比例)。Synergy 被限制在: 1) 同构集群；2) job GPU allocation 固定；3) 使用 MinIO cache.
+    - Link: [Note for Synergy](https://github.com/DicardoX/Notes_for_Papers/tree/main/Synergy)
