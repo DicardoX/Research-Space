@@ -230,4 +230,5 @@
 
 - ***(Synergy) Looking Beyond GPUs for DNN Scheduling on Multi-Tenant Clusters***
     - Abstract: *(2022 OSDI)*. Synergy 是一个**资源敏感的，round-based 的多租户 GPU 集群资源调度器**，支持**集成到多类调度策略** (e.g., LAS, FTF)，使用 **optimistic profiling 来获取 job 对其他资源 (CPU, 内存) 的敏感性信息** (部分 jobs 能从高于 GPU 数目成比例的其他资源分配中获利，部分 jobs 则不会受低于该比例其他资源分配的影响)，通过一个**近似最优的在线调度算法 Synergy-TUNE**，实现**多类资源 workload-aware 分配**，且保证所有 jobs 性能不差于 GPU-proportional share (其他资源的划分和 GPU 划分成比例)。Synergy 被限制在: 1) 同构集群；2) job GPU allocation 固定；3) 使用 MinIO cache.
+    
     - Link: [Note for Synergy](https://github.com/DicardoX/Notes_for_Papers/tree/main/Synergy)
