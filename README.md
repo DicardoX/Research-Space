@@ -232,3 +232,14 @@
     - Abstract: *(2022 OSDI)*. Synergy 是一个**资源敏感的，round-based 的多租户 GPU 集群资源调度器**，支持**集成到多类调度策略** (e.g., LAS, FTF)，使用 **optimistic profiling 来获取 job 对其他资源 (CPU, 内存) 的敏感性信息** (部分 jobs 能从高于 GPU 数目成比例的其他资源分配中获利，部分 jobs 则不会受低于该比例其他资源分配的影响)，通过一个**近似最优的在线调度算法 Synergy-TUNE**，实现**多类资源 workload-aware 分配**，且保证所有 jobs 性能不差于 GPU-proportional share (其他资源的划分和 GPU 划分成比例)。Synergy 被限制在: 1) 同构集群；2) job GPU allocation 固定；3) 使用 MinIO cache.
     
     - Link: [Note for Synergy](https://github.com/DicardoX/Notes_for_Papers/tree/main/Synergy)
+
+#### 2.9.4 考虑硬件异构性的 load balancing in parallelism，以及 model annotation 的编程接口
+
+- ***Whale: Efficient Giant Model Training over Heterogeneous GPUs***
+
+    - Abstract: *(2022 ATC)*. Whale 是一个**通用高效的大模型分布式训练框架**，通过定义两个 model annotation 形式的 primitives，同时支持 **user hints 定义混合并行**和**基于 num_task_graph 和硬件信息定义混合并行**。注意，前者需要**在 code 中人工划分 Task Graph (TG)，并分别标注并行方式**；后者仅实现了 **Task Graph 内部 group ShardingUnit 并顺序匹配通信开销最小的 predefined parallelism pattern**，以及 **hardware-aware 探索 uneven parallelism** (即 intra-TaskGraph load balancing)，并未考虑如何将 model 划分为 num_task_graph 个 TG。
+
+        基于 model annotations (user hints / automatically generated)，Whale 通过 **hardware-aware loading balancing** 进行考虑异构的调整，包括 **intra-TaskGraph** (最小化 TG 内的空闲时间，通过和设备算力成比例地平衡负载来实现 (考虑内存限制，replicate 则调整各 replica 的 bs，split 则 uneven partition)，考虑内存的算法核心是将 OOM 设备上的负载迁移到内存未超出限制且负载最低的设备上) 和 **inter-TaskGraph** (earlier TG 放在内存更大的 VirtualDevice (VG) 上，应用上述考虑内存的算法来处理某些 later TG 可能包含过大 layer 的情况)。
+
+    - Link: [Note for Whale](https://github.com/DicardoX/Notes_for_Papers/tree/main/Whale)
+

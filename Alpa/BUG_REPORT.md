@@ -409,3 +409,61 @@ executable.sync()
 ```
 
 After applying this judgement, the error is eliminated.
+
+-------
+
+
+
+Sorry to bother you again, but when I running batch size = 128 alpa experiment among two servers, the following error occurred (the same batch size on the single server is successfully completed): 
+
+```bash
+File "train.py", line 358, in <module>
+(MeshHostWorker pid=70242) Exception ignored in: <function NormalMeshWorkerExecutable.__del__ at 0x7f943534d3a0>
+(MeshHostWorker pid=70242) Traceback (most recent call last):
+(MeshHostWorker pid=70242)   File "/home/cyxue/Projects/playground/alpa/alpa/alpa/mesh_executable.py", line 477, in __del__
+(MeshHostWorker pid=70242)     self.compiled.delete()
+(MeshHostWorker pid=70242) AttributeError: 'PartialGradAccMeshWorkerExecutable' object has no attribute 'compiled'
+    trainer.train()
+  File "train.py", line 295, in train
+    executable) = compile_and_benchmark_pipeshard_training_executable(
+  File "/home/cyxue/Projects/playground/slice_profile/jax/benchmark_parallel_utils.py", line 423, in compile_and_benchmark_pipeshard_training_executable
+    executable, compilation_times = compile_pipeshard_executable(
+  File "/home/cyxue/Projects/playground/slice_profile/jax/benchmark_parallel_utils.py", line 380, in compile_pipeshard_executable
+    executable.dump_debug_info("tmp")
+  File "/home/cyxue/Projects/playground/alpa/alpa/alpa/pipeline_parallel/pipeshard_executable.py", line 364, in dump_debug_info
+    fully_optimized_hlo_texts = self.get_hlo_text(HloStatus.FULLY_OPTIMIZED)
+  File "/home/cyxue/Projects/playground/alpa/alpa/alpa/pipeline_parallel/pipeshard_executable.py", line 332, in get_hlo_text
+    self.fully_optimized_hlo_texts = ray.get(hlo_texts)
+  File "/home/cyxue/miniconda3/envs/alpa/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "/home/cyxue/miniconda3/envs/alpa/lib/python3.8/site-packages/ray/worker.py", line 1831, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(KeyError): ray::MeshHostWorker.get_exec_hlo_text() (pid=70242, ip=10.2.64.51, repr=<alpa.device_mesh.MeshHostWorker object at 0x7f942f6d2d30>)
+  File "/home/cyxue/Projects/playground/alpa/alpa/alpa/device_mesh.py", line 275, in get_exec_hlo_text
+    return self.executables[uuid].get_hlo_text()
+KeyError: 1
+```
+
+In `./mesh_executable.py`, this class is inherited from `NormalMeshWorkerExecutable`, which has the `compiled` attribute:
+
+```python
+class PartialGradAccMeshWorkerExecutable(NormalMeshWorkerExecutable):
+  def __init__(self, worker: "MeshHostWorker", uuid: int, hlo_proto: bytes,
+                 stage_plan: StagePlan, donated_invars: Sequence[bool]):
+        super().__init__(worker, uuid, hlo_proto, stage_plan, donated_invars)
+```
+
+```python
+class NormalMeshWorkerExecutable(MeshWorkerExecutable):
+    """The worker part of a normal mesh executable."""
+
+    def __init__(self, worker: "MeshHostWorker", uuid: int, hlo_proto: bytes,
+                 stage_plan: StagePlan, donated_invars: Sequence[bool]):
+        num_devices = np.prod(stage_plan.logical_mesh_shape)
+        assert num_devices == len(worker.backend.devices())
+
+        self.compiled = run_backend_compilation(worker.backend, hlo_proto,
+                                                stage_plan, num_devices)
+```
+
+So, why this error occurred?
