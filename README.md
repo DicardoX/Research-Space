@@ -243,3 +243,14 @@
 
     - Link: [Note for Whale](https://github.com/DicardoX/Notes_for_Papers/tree/main/Whale)
 
+#### 2.9.5 对 job 资源需求的模型预测，以及考虑网络带宽的集群资源调度
+
+- ***Liquid: Intelligent Resource Estimation and Network-Efficient Scheduling for Deep Learning
+    Jobs on Distributed GPU Clusters***
+
+    - Abstract: *(2022 TPDS)*. 背景：1) 现有 GPU 资源管理需要用户指定，不准确导致低利用率；2) 未考虑集群的网络特性，导致低 job 性能。
+
+        Liquid 是一个**高效的 GPU 资源管理平台**，**面向容器**实现，基于**参数服务器 (PS) 架构**，支持**智能资源需求评估**和**考虑网络带宽的集群资源调度**。Liquid 使用一个**回归模型 (随机森林算法)** 来评估 job 的资源需求；提出集群网络高效的调度策略，包括**即时模式** (jobs 逐个到来，使用**基于贪心和自建 metric (考虑 PS 通信 cost + node 内 GPU 利用率) 的 best-fit 算法**) 和**批模式** (jobs 批量到来，群组调度形成**多维装箱问题** (NP-C)，使用**组遗传算法**来求解并迭代优化)；提出包括**预调度数据传输** (前一个任务刚结束训练进入保存阶段，后一个立即开始训练，减少 GPU idle，需要模型预测各阶段时间)，**细粒度 GPU 共享** (需要模型预测 GPU 利用率和占用显存) 和**事件驱动通信** (不由 global 调度器周期性检查，而是 local 资源管理器实时监控，并在资源状态改变时立即汇报，**靠谱**) 在内的三个系统级优化。
+
+    - Link: [Note for Liquid](https://github.com/DicardoX/Notes_for_Papers/tree/main/Liquid)
+
