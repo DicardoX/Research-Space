@@ -467,3 +467,14 @@ class NormalMeshWorkerExecutable(MeshWorkerExecutable):
 ```
 
 So, why this error occurred?
+
+---------
+
+
+
+@ZYHowell The new error seems from `__del__` of `NorMeshWorkerExecutable`, which means that another error occurred before or during `self.compiled = ...` and was not caught. The ray worker process then exited with an error code. But during the process's exiting, all existing objects will be deleted, and that's the point where you met the `compiled` not found error.
+
+------
+
+
+
