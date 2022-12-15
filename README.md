@@ -187,9 +187,19 @@
 
 - ***GSPMD: General and Scalable Parallelization for ML Computation Graphs***
 
-    - Abstract: GSPMD 是一个自动化，compiler-based 的并行系统，允许 users 通过少量指示如何 distribute tensors 的标注，像单机那样编程。GSPMD 的 OP 划分表示简单有效，可表示不同或混合类别的并行，包括 DP，in-layer MP，spatial parallelism 和 weight update sharding，并通过一个 wrapper library 将 pipeline reduce 为一个 tensor/OP 划分问题。
+    - Abstract: *(2021 arxiv)* GSPMD 是一个自动化，compiler-based 的并行系统，允许 users 通过少量指示如何 distribute tensors 的标注，像单机那样编程。GSPMD 的 OP 划分表示简单有效，可表示不同或混合类别的并行，包括 DP，in-layer MP，spatial parallelism 和 weight update sharding，并通过一个 wrapper library 将 pipeline reduce 为一个 tensor/OP 划分问题。
 
     - Link: [Note for GSPMD](https://github.com/DicardoX/Notes_for_Papers/tree/main/GSPMD)
+
+#### 2.7.4 面向 MoE layer 的自适应 Parallel 和自适应 Pipeline (更侧重)，以及两级 All-to-All 通信优化
+
+- ***TUTEL: Adaptive Mixture-of-Experts at Scale***
+
+    - Abstract: *(2022 arxiv)* 背景：MoE 的动态特性和系统的静态并行/ pipeline 方式不匹配，限制了大规模 MoE model 的实现。
+
+        TUTEL 是一个**高可扩展的 MoE 全栈系统**，实现了 **MoE model** 实时的**自适应并行策略** (高效的 expert 执行，基于 cost function 动态决定并切换并行策略 (Expert parallelism, DP, MP)，单个 expert <- 多 GPUs) 和**自适应 pipeline 策略** (高效的 MoE dispatch 和 combine，利用 multi-stream 将 tokens 沿 batch 维度切得更细，进而在通信 stream 和计算 stream 间进行 pipeline，并离散化 capacity factor f 的取值，以减少 workload 动态变化 (f 相应变化) 导致需要重新搜索最优时间的 pipeline 策略的次数)；同时，TUTEL 还包括一个**用来加速 MoE 通信的二维多级 all-to-all 算法** (多个小 data chunks 聚合成一个大 data chunk group 一起发，利用 **stride memory copy (消除非连续内存访问带来的额外延迟)** 来将 GPU 上目标 GPU / node (分两次 align) 相同的 chunks align 成为一个 group，提高 intra-node GPU 通信网络利用率，且保证除最后一步 inter-node all-to-all 之外前面步骤与总 GPUs 数目无关 (通信延迟不随规模增大而上升)，仅与 node 内 local GPUs 数目有关，保证了可扩展性；inter-node 不变)，以及一个 **flexible all-to-all 算法** (reshape tensor shape 让某些 operator 算得更快)。
+
+    - Link: [Note for TUTEL](https://github.com/DicardoX/Notes_for_Papers/tree/main/TUTEL)
 
 ---------
 
