@@ -264,3 +264,16 @@
 
     - Link: [Note for Liquid](https://github.com/DicardoX/Notes_for_Papers/tree/main/Liquid)
 
+#### 2.9.6 面向多租户共享集群设计资源 Reservation 机制，构建保证 Safety 且高利用率的虚拟私有集群，并设计算法管理 Logical Cluster 到 Physical Cluster 的动态映射关系
+
+- ***HiveD: Sharing a GPU Cluster for Deep Learning with Guarantees***
+
+    - Abstract: *(2020 OSDI)*. 多租户集群中的 jobs 面临更长的排队延迟，原因是租户**使用 quota (GPU 数目) 来 reserve 资源**，而这**无法保证 GPU affinity 需求 (网络拓扑和通信带宽)**，导致**更长的排队延迟** (资源需求类型为 guaranteed) 或**更差的模型训练性能** (relaxed affinity, 资源需求类型为 best-effort)。
+
+        HiveD 是一个**支持安全共享 GPU 集群的资源 reservation 框架** (面向 **K8S** 实现)，同时具有**私有集群的资源独立可用性**，和**共享集群的高利用率和资源用量动态可扩展性**，**在 VC 内应用已有调度器**进行考虑 affinity 的资源调度 (考虑集群利用率，JCT 等目标)，本身**专注于资源 reservation 机制** (如何构建并部署 VC，即如何构建 VC cells 和 physical cells 之间的动态映射)，旨在**消除 Sharding Anomaly** 的现象 (产生原因是**集群资源的碎片化**)，
+
+        在 HiveD 中，每个租户通过 **Virtual Private Cluster (VC)** 来 reserve 资源，基于**和不同 GPU affinity 等级 (e.g., GPU level，PCIe switch level) 对应的多级 logical cell 结构**定义，彼此相互**严格独立**，拥有私有集群那样的资源独立性，通过**动态映射到物理集群中的 physical cells** 进行实际部署。
+
+        HiveD 还提出了一个 **buddy cell allocation 算法**，通过高效**管理 VC cells 和 physical cells 的绑定 (映射) 关系**，保证**安全的共享** (在**整个集群 VC 划分合法** (存在 logical cell 和 physical cell 的一一映射) 的前提下，并提供了理论证明)。该算法的一个拓展是，**支持低优先级 jobs 利用未使用的 GPU 资源 (physical cells)**，在**不影响 VC safety** 的前提下**提高集群利用率**。
+
+    - Link: [Note for HiveD](https://github.com/DicardoX/Notes_for_Papers/tree/main/HiveD)
