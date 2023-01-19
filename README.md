@@ -277,3 +277,17 @@
         HiveD 还提出了一个 **buddy cell allocation 算法**，通过高效**管理 VC cells 和 physical cells 的绑定 (映射) 关系**，保证**安全的共享** (在**整个集群 VC 划分合法** (存在 logical cell 和 physical cell 的一一映射) 的前提下，并提供了理论证明)。该算法的一个拓展是，**支持低优先级 jobs 利用未使用的 GPU 资源 (physical cells)**，在**不影响 VC safety** 的前提下**提高集群利用率**。
 
     - Link: [Note for HiveD](https://github.com/DicardoX/Notes_for_Papers/tree/main/HiveD)
+
+-----
+
+
+
+## 3. Cluster-wide Workload Analysis
+
+### 3.1 Ailibaba PAI Trace
+
+- ***MLaaS in the Wild: Workload Analysis and Scheduling in Large-Scale Heterogeneous GPU Clusters***
+
+    - Abstract: *(2022 NSDI)*. 本文研究了 Alibaba 工业 MLaaS 集群 (超过 6,000 GPUs) 下两个月的负载 trace，已开源。集群调度的挑战包括：(1) 低 GPU 利用率；(2) 长排队时间；(3) 资源需求严格，难以调度的任务的存在；(4) 异构设备间的负载不均衡；(5) CPU 潜在的算力瓶颈.
+
+    - Link: [Note for PAI Trace](https://github.com/DicardoX/Notes_for_Papers/tree/main/PAI_trace)
