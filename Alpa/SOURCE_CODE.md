@@ -376,9 +376,11 @@
 
     - **Convert hlo sharding to sharding spec**.
 
-- (<font color=red>VITAL</font>) `_call_solver_serialized_args()`:
+- (<font color=red>VITAL</font>) `call_solver_serialized_args()`:
 
-    - **Call the solver with serialized arguments, optimize for the intra-op paralleliem plan for stage-mesh pair**. 
+    - **Called by the xla compiler code in TensorFlow**.
+    - Inline Function: `_call_solver_serialized_args()`:
+        - **Call the solver with serialized arguments, optimize for the intra-op paralleliem plan for stage-mesh pair**. 
 
 - `set_auto_sharded_hlo_stages()`:
     - Set the sliced auto-sharded stages. This is **called in XLA SliceAutoShardedStages pass (in tensorflow-alpa)**.

@@ -291,3 +291,11 @@
     - Abstract: *(2022 NSDI)*. 本文研究了 Alibaba 工业 MLaaS 集群 (超过 6,000 GPUs) 下两个月的负载 trace，已开源。集群调度的挑战包括：(1) 低 GPU 利用率；(2) 长排队时间；(3) 资源需求严格，难以调度的任务的存在；(4) 异构设备间的负载不均衡；(5) CPU 潜在的算力瓶颈.
 
     - Link: [Note for PAI Trace](https://github.com/DicardoX/Notes_for_Papers/tree/main/PAI_trace)
+
+### 3.2 SenseTime Helios Trace
+
+- ***Characterization and Prediction of Deep Learning Workloads in Large-Scale GPU Datacenters***
+
+    - Abstract: *(2021 SC)*. 本文研究了 DL jobs 和资源管理的特性，基于 SenseTime 提供的真实 trace 进行大规模分析，并引入一个基于历史数据管理资源的通用框架。作为 case study，本文设计了 Quasi-Shortest-Service-First (最小化平均 JCT) 和 Cluster Energy Saving Service (提高集群利用率) 两类服务 (即调度策略，不同优化目标)。
+
+    - Link: [Note for Helios Trace](https://github.com/DicardoX/Notes_for_Papers/tree/main/Helios_trace)
