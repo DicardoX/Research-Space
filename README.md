@@ -282,6 +282,18 @@
 
 
 
+### 2.10 Cluster-wide Communication Topology Optimization
+
+#### 2.10.1 基于物理层的网络动态拓扑和并行策略 (AllReduce / MP) 的共优化
+
+- ***TOPOOPT: Co-optimizing Network Topology and Parallelization Strategy for Distributed Training Jobs***
+    - Abstract: *(2023 NSDI)*. TOPOOPT 是一个**面向 DNN 训练负载的直连架构**，在**计算、通信和网络拓扑三个维度共优化分布式训练**过程 (即共优化网络拓扑和并行策略)。本文证明了 **AllReduce 流量的可变性**，以此构建 **DNN 训练 jobs 的高效网络拓扑**。TOPOOPT 使用一个**优化技术**和 **TorientPerms (group theory-based) 算法**，来**发现最佳网络拓扑，routing plan 和并行策略**。
+    - Link: [Note for TOPOOPT](https://github.com/DicardoX/Notes_for_Papers/tree/main/TOPOOPT)
+
+-----
+
+
+
 ## 3. Cluster-wide Workload Analysis
 
 ### 3.1 Ailibaba PAI Trace
