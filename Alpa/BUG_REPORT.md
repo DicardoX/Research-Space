@@ -1,4 +1,4 @@
-Title: Encounter a 'profile worker forcely killed' & NotImplementedError (auto-slicing layers with existing physical meshes) when trying to enlarge the global batch size.
+### 1. Title: Encounter a 'profile worker forcely killed' & NotImplementedError (auto-slicing layers with existing physical meshes) when trying to enlarge the global batch size.
 
 
 
@@ -475,6 +475,107 @@ So, why this error occurred?
 @ZYHowell The new error seems from `__del__` of `NorMeshWorkerExecutable`, which means that another error occurred before or during `self.compiled = ...` and was not caught. The ray worker process then exited with an error code. But during the process's exiting, all existing objects will be deleted, and that's the point where you met the `compiled` not found error.
 
 ------
+
+
+
+### 2. Title: Encounter a 'no solution in auto stage construction' assertion error when running benchmarks with specified configurations.
+
+Hi, there. I'm trying to run Alpa PipeShardParallel training on the basis of alpa official benchmarks on a Distributed Ray Cluster with two a40 (2-GPU each) servers. 
+
+When I run the WideResNet benchmark with the following configurations (`500M`):
+
+```python
+trainer_cfgs = {
+            # Basic
+            'model_name': args.model_name,
+            'dataset_name': args.dataset_name,
+            'batch_size': args.batch_size,
+            'lr': 1e-3,
+            'momentum': 0.9,
+            'rand_seed': 123,
+            'dtype': jnp.float32,
+            # For WideResNet
+            'resnet_layer_num': args.resnet_layer_num,
+            'width_factor': 2,
+            'num_classes': 1024,
+            'image_size': 224,
+            'num_channels': 224,
+            # Other
+            'num_micro_batches': args.num_micro_batches,
+            'pipeline_layer_num': args.pipeline_layer_num,
+            'parallel_mode': 'search',
+            'niter': args.niter,
+            'profile_driver_time': True,
+        }
+```
+
+I can obtain a optimized solution for PipeShard parallelism. However, when I enlarge the params from `500M` to `1.3B` (according to `suite_wideresnet.py`)，I got the following error:
+
+```bash
+# ...
+  File "/[PATH]/alpa/alpa/alpa/pipeline_parallel/stage_construction.py", line 780, in cluster_layers_and_slice_mesh
+    assert solution is not None, "no solution in auto stage construction."
+AssertionError: no solution in auto stage construction.
+```
+
+The same assertion error occurred when I tried to run Bert benchmark with the following configurations:
+
+```python
+trainer_cfgs = {
+            # Basic
+            'model_name': args.model_name,
+            'dataset_name': args.dataset_name,
+            'batch_size': args.batch_size,
+            'lr': 1e-3,
+            'momentum': 0.9,
+            'rand_seed': 123,
+            'dtype': jnp.float16,
+            # For GPT & Bert & MoE
+            'seq_len': 1024,
+            'hidden_size': 768,
+            'num_layers': 12,
+            'num_heads': 12,
+            'vocab_size': 51200,
+            # Other
+            'num_micro_batches': args.num_micro_batches,
+            'pipeline_layer_num': args.pipeline_layer_num,
+            'parallel_mode': 'search',
+            'niter': args.niter,
+            'profile_driver_time': True,
+        }
+```
+
+I have added some prints in `stage_construction.py` and found that although the following prints are output (which I believe there indeed exists a feasible solution): 
+
+```bash
+# ...
+cost[2, 2, 1]=0.122, max_n_succ_stage=-1, Mem: avail=13.250GB, peak=7.893GB, intermediate=7.553GB, init=0.211GB, as_config=((1, 1), {})
+cost[1, 5, 1]=inf, max_n_succ_stage=-1, Mem: avail=13.250GB, peak=48.773GB, intermediate=44.981GB, init=1.371GB, as_config=((1, 1), {})
+cost[2, 3, 0]=inf, max_n_succ_stage=-1, Mem: avail=13.250GB, peak=16.242GB, intermediate=15.763GB, init=0.396GB, as_config=((1, 1), {'force_batch_dim_to_mesh_dim': 0})
+# ...
+```
+
+The `dp_impl()` function in `stage_construction.py` still returns an `inf` cost and `None` best solution. Is the model under the above configuration too large to run on 2 * 2 GPUs? 
+
+P.S. When I shrink the params of Bert to:
+
+```python
+trainer_cfgs = {
+            # Basic (same as prev)
+            # For GPT & Bert & MoE
+            'seq_len': 1024,
+            # 'hidden_size': 768,
+            'hidden_size': 128,
+            # 'num_layers': 12,
+            'num_layers': 8,
+            # 'num_heads': 12,
+            'num_heads': 8,
+            'vocab_size': 51200,
+            # Other (same as prev)
+        }
+```
+
+I can also obtain a optimized solution for PipeShard parallelism.
 
 
 

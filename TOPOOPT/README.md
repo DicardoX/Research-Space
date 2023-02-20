@@ -1,12 +1,12 @@
 # TOPOOPT: Co-optimizing Network Topology and Parallelization Strategy for Distributed Training Jobs
 
-TOPOOPT 是一个**面向 DNN 训练负载的直连架构**，在**计算、通信和网络拓扑三个维度共优化分布式训练**过程 (即共优化网络拓扑和并行策略)。本文证明了 **AllReduce 流量的可变性**，以此构建 **DNN 训练 jobs 的高效网络拓扑**。TOPOOPT 使用一个**优化技术**和 **TorientPerms (group theory-based) 算法**，来**发现最佳网络拓扑，routing plan 和并行策略**。
+TOPOOPT 是一个**面向 DNN 训练负载的直连架构**，在**计算、通信和网络拓扑三个维度共优化分布式训练**过程 (即共优化网络拓扑和并行策略)。本文证明了 **AllReduce 流量的可变性**，以此构建 **DNN 训练 jobs 的高效网络拓扑**。TOPOOPT 使用一个**优化技术**和 **TotientPerms (group theory-based) 算法**，来**发现最佳网络拓扑，routing plan 和并行策略**。
 
 可以 cite 它说它考虑的是 Swith - server 两级架构，而大多数产业集群为多级架构，情况更复杂。
 
 ###### Motivation
 
-**查找最优网络拓扑很困难**，必须同时满足：(1) 高效的大规模 AllReduce 传输；(2) 保证较少的模型并行传输的跳数。因此提出 TotientPerms，一个 group theory-based 技术，来利用 AllReduce 的流量可变性，构建一系列 AllReduce 组合，在高效完成 AllReduce 传输的同时合理放置以进行模型并行传输，进而提高整体训练性能。
+**查找最优网络拓扑很困难**，必须同时满足：(1) 高效的大规模 AllReduce 传输；(2) 保证较少的模型并行传输的跳数 (**这里的 MP 指某些 layers 在 nodes 间切分，而非某台 server 内部，目的是为了减少 AllReduce 的通信开销**)。因此提出 TotientPerms，一个 group theory-based 技术，来利用 AllReduce 的流量可变性，构建一系列 AllReduce 组合，在高效完成 AllReduce 传输的同时合理放置以进行模型并行传输，进而提高整体训练性能。
 
 先前工作未考虑物理层拓扑作为优化维度。
 
@@ -28,7 +28,7 @@ Server 的度一般小于 server 需要通信的邻居，为了保证两台没�
 - Step 1. 根据 traffic share 按比例为 AllReduce (DP) 和 MP 的子拓扑划分连接端口 (即度 d).
 - Step 2. 为了获取 AllReduce 子拓扑，算法根据环内每个 group k 的 traffic amount 来成比例地划分连接端口，并使得集群的直径 (集群内所有 ring (一个 ring 最小可以对应一个 layer) replicas 数目，通过每个 replica 连接多个邻居，这样就能保证单个连接通信量不变的情况下，每个 replica 尽管需要同步的 weights 更多，但整体速度和更多 replicas 的情况保持一致) 最小，具体包括 TotientPerms 和 SelectPermutations 两个算法
 - Step 3. 为了获取 MP 子拓扑，使用 Blossom 最大权重匹配算法来根据并行策略找到子拓扑；
-- Step 4. 将两类子拓扑结合，AllReduce 子拓扑用修改版 coin-change 算法，MP 子拓扑用 k-shortest path 算法。
+- Step 4. 将两类子拓扑结合，AllReduce 用修改版 coin-change 算法来在 AllReduce 子拓扑内 route，MP 用 k-shortest path 算法在 MP 子拓扑内 route。
 
 ###### Traffic Mutability
 
