@@ -577,5 +577,7 @@ trainer_cfgs = {
 
 I can also obtain a optimized solution for PipeShard parallelism.
 
+----
 
+When I enlarge the allocated memory by setting `echo 'export XLA_PYTHON_CLIENT_MEM_FRACTION=0.6' >> ~/.bashrc` (from 0.3 to 0.6) and enlarge the `--object-store-memory` from 5GB to 10GB, the configuration that previously not runable can pass the auto-parallel and get the optimized result.
 

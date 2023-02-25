@@ -278,6 +278,15 @@
 
     - Link: [Note for HiveD](https://github.com/DicardoX/Notes_for_Papers/tree/main/HiveD)
 
+#### 2.9.7 Serverless Elastic 的分布式训练平台，利用 Marginal Return 和集群拓扑设计策略，进行 Admission Control
+
+- ***ElasticFlow: An Elastic Serverless Training Platform for Distributed Deep Learning***
+
+    - Abstract: *(2023 ASPLOS)*. 本文提出了 **ElasticFlow**，一个面向分布式训练的弹性无服务训练平台，支持 user **仅指定 model，超参** (not GPU num) 和 **job DDL** (not GPU time)，从而**在提供满足 DLL 性能保证的同时隐藏底层资源管理**。
+        分布式训练的两个挑战包括：(1) 训练吞吐随 GPU num 非线性增长 (**non-linear scaling curve**)；(2) Worker placement 影响 scale 效率 (**Topology-aware**)。为了解决上述挑战，提出 **Minimum Satisfactory Share** 来判断**满足 job DDL 所需的最少资源量**，并基于此进行**准入控制 Admission Control** (判断 job admit or drop)。ElasticFlow 还设计了一个**贪心算法**，来**基于 marginal return 设置优先级动态分配资源**，在 worker placement 上使用 **Buddy Allocation + Job migration 来消除拓扑的影响**。
+
+    - Link: [Note for ElasticFlow](https://github.com/DicardoX/Notes_for_Papers/tree/main/ElasticFlow)
+
 -----
 
 
