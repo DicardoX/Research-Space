@@ -24,7 +24,7 @@
 -  用户只需指定 job DDL，无需考虑资源释放，这也方便了系统来基于 DDL 和终止条件动态调度资源。
 - 用户可以通过多种方式指定终止条件，ElasticFlow 使用最大迭代轮数来作为主要的终止条件，也支持不带 DDL jobs 的调度。
 - Incoming jobs 的两种状态：admit or drop。
-    - <font color=blue>为啥不 queue? 如何判断该 queue 还是该丢弃？即判断在未来是否可能存在一定的资源量来满足该 job 的 DDL 需求。</font>
+    - <font color=blue>为啥不 queue? 如何判断该 queue 还是该丢弃？即判断在未来是否可能存在一定的资源量来满足该 job 的 DDL 需求。不存在这种可能，因为求解的时候已经考虑了所有情况，如果 Job A 一直占用资源，Job B 等 Job A 结束后就能在 DDL_B 前完成，则求解器一定能考虑到这种情况，进而对 Job B 进行 admit.</font>
 - **性能保证**：若 job 被系统接收，则其 DDL 被保证。
 
 -----
