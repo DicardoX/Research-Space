@@ -322,3 +322,11 @@
     - Abstract: *(2021 SC)*. 本文研究了 DL jobs 和资源管理的特性，基于 SenseTime 提供的真实 trace 进行大规模分析，并引入一个基于历史数据管理资源的通用框架。作为 case study，本文设计了 Quasi-Shortest-Service-First (最小化平均 JCT) 和 Cluster Energy Saving Service (提高集群利用率) 两类服务 (即调度策略，不同优化目标)。
 
     - Link: [Note for Helios Trace](https://github.com/DicardoX/Notes_for_Papers/tree/main/Helios_trace)
+
+### 3.3 Microsoft Philly Trace
+
+- ***Analysis of Large-Scale Multi-Tenant GPU Clusters for DNN Training Workloads***
+
+    - Abstract: *(2019 ATC)*. 本文研究 **locality-aware 的调度如何影响性能和利用率**，给出了调度器设计策略的建议，并分析了 Failure Handle.
+
+    - Link: [Note for Philly Trace](https://github.com/DicardoX/Notes_for_Papers/tree/main/Philly)
