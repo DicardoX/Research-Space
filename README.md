@@ -43,7 +43,7 @@
 #### 2.1.3 面向无信息和部分信息场景的离散优先级抢占式调度算法及合并放置约束的深入讨论
 
 - ***Tiresias: A GPU Cluster Manager for Distributed Deep Learning***
-    - Abstract: *(2019 NSDI)*. Tiresias 是一个面向参数服务器（Parameter Server）架构下分布式训练 job 的调度器，主要包括一个 2DAS 调度器，以及基于模型结构对合并放置约束的放宽策略。
+    - Abstract: *(2019 NSDI)*. Tiresias 是一个面向参数服务器（Parameter Server）架构下分布式训练 job 的调度器，主要包括一个 2DAS 调度器，以及基于模型结构对合并放置约束的放宽策略。整篇 paper 最 fancy 的地方在于**面向无 JCT 分布信息和部分信息抢占式 2D 调度算法设计**，**参考多级反馈队列设计的优先级离散化架构**，以及**基于网络通信对模型 tensors 倾斜信息的监控方法**。
     
     - Link: [Note for Tiresias](https://github.com/DicardoX/Notes_for_Papers/tree/main/Tiresias)
 
