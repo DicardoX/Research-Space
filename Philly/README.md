@@ -7,4 +7,4 @@
         - 乱序调度 (e.g., 某需求量大的 job 排队时，先让小 job 暂时占用) 对资源密集型 jobs 的排队时间影响不大。
         - 放松 locality 需求来缓解排队延迟对于分布式训练是合理的。<font color=blue> 这对我们的工作也是一个可以引用的观点。</font>
 - **调度器设计策略的建议**：(1) locality 差同时影响性能和硬件利用率，用排队延迟来换取遵守 locality 约束，但也可以适当 relax locality 来降低延迟 (等待一段时间后再放松)，对于长时任务可以适当严格 locality 要求，或者进行 runtime migration 来改善 locality；(2) 使用任务迁移等技术让多 GPU jobs 尽量独占 servers (缓解小任务之间的干扰，提高大任务 intra-job locality，优先保证后者)；(3) 许多错误应该被提早发现，使用少量资源来预验证多 GPU jobs 程序和配置的正确性
-- **Failure Handle**.
+- **Failure Handle**. 
