@@ -40,7 +40,7 @@
     
     - Link: [Note for Parameter Server (3rd)](https://github.com/DicardoX/Notes_for_Papers/tree/main/Parameter_Server_3rd)
 
-*** 2.1.2 面向对分布式训练任务收敛时间及速度的在线预测***
+***2.1.2 面向对分布式训练任务收敛时间及速度的在线预测***
 
 - ***Optimus: An Efficient Dynamic Resource Scheduler for Deep Learning Clusters***
 
