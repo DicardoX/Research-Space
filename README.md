@@ -4,7 +4,7 @@
 
 > This repository is established to **record individual notes for reading papers.**
 >
-> **Involving Field**: AI System, Distributed Training, Cluster Schduling, Trace Analysis, Inference.
+> **Involving Field**: *AI System, Distributed Training, Cluster Schduling, Workload Trace Analysis, Inference.*
 
 ----
 
@@ -33,14 +33,14 @@
 
 ### 2.1 Data Parallelism: Parameter Server
 
-#### 2.1.1 第三代参数服务器架构
+***2.1.1 第三代参数服务器架构***
 
 - ***Scaling Distributed Machine Learning with the Parameter Server***
     - Abstract: *(2014 OSDI)*. 第三代参数服务器架构，支持 scale 和 fault tolerance，异步通信，网络参数切分，灵活的一致性模型
     
     - Link: [Note for Parameter Server (3rd)](https://github.com/DicardoX/Notes_for_Papers/tree/main/Parameter_Server_3rd)
 
-#### 2.1.2 面向对分布式训练任务收敛时间及速度的在线预测
+*** 2.1.2 面向对分布式训练任务收敛时间及速度的在线预测***
 
 - ***Optimus: An Efficient Dynamic Resource Scheduler for Deep Learning Clusters***
 
@@ -48,14 +48,14 @@
 
     - Link: [Note for Optimus](https://github.com/DicardoX/Notes_for_Papers/tree/main/Optimus)
 
-#### 2.1.3 面向无信息和部分信息场景的离散优先级抢占式调度算法及合并放置约束的深入讨论
+***2.1.3 面向无信息和部分信息场景的离散优先级抢占式调度算法及合并放置约束的深入讨论***
 
 - ***Tiresias: A GPU Cluster Manager for Distributed Deep Learning***
     - Abstract: *(2019 NSDI)*. Tiresias 是一个面向参数服务器（Parameter Server）架构下分布式训练 job 的调度器，主要包括一个 2DAS 调度器，以及基于模型结构对合并放置约束的放宽策略。整篇 paper 最 fancy 的地方在于**面向无 JCT 分布信息和部分信息抢占式 2D 调度算法设计**，**参考多级反馈队列设计的优先级离散化架构**，以及**基于网络通信对模型 tensors 倾斜信息的监控方法**。
     
     - Link: [Note for Tiresias](https://github.com/DicardoX/Notes_for_Papers/tree/main/Tiresias)
 
-#### 2.1.4 异构集群中探索 intra-job 和 inter-job (非 model slice) 调度方式，同步 PS，支持 GPU 抢占并优化 task switching 开销
+***2.1.4 异构集群中探索 intra-job 和 inter-job (非 model slice) 调度方式，同步 PS，支持 GPU 抢占并优化 task switching 开销***
 
 - ***Hare: Exploiting Inter-job and Intra-job Parallelism of Distributed Machine Learning on Heterogeneous GPUs***
 
@@ -69,14 +69,14 @@
 
 ### 2.2 Data Parallelism: Ring All-reduce
 
-#### 2.2.1 通信量优化的 Ring All-reduce 工具
+***2.2.1 通信量优化的 Ring All-reduce 工具***
 
 - ***Horovod: fast and easy distributed deep learning in TensorFlow***
     - Abstract: *(2018 arxiv)*. 基于 Baidu Ring Allreduce 框架进行代码实现和改进，python package，使用 Nvidia NCCL 内置的优化版本 ring allreduce，支持单模型在单服务器上的多 GPU 部署，部分 API 改进
     
     - Link: [Note for Horovod](https://github.com/DicardoX/Notes_for_Papers/tree/main/Horovod)
 
-#### 2.2.2 分布式训练时 SGD 的 Large Minibatch 实现，可集成到 Ring All-reduce 方法
+***2.2.2 分布式训练时 SGD 的 Large Minibatch 实现，可集成到 Ring All-reduce 方法***
 
 - ***Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour***
     - Abstract: *(2017 arxiv)*. Facebook 提出的分布式训练下 Distributed SGD 过程在应用大的 minibatch 的同时，保证训练准确性的方法。
@@ -89,7 +89,7 @@
 
 ### 2.3 Data Parallelism: Combination of PS and Ring All-reduce
 
-#### 2.3.1 PS 和 Ring All-reduce 算法的统一架构
+***2.3.1 PS 和 Ring All-reduce 算法的统一架构***
 
 - ***(BytePS) A Unified Architecture for Accelerating Distributed DNN Training in Heterogeneous GPU/CPU Clusters***
     - Abstract: *(2020 OSDI)*. ByteDance 提出的将 PS 和 Ring All-reduce 两种架构综合考虑的一种统一集群内通信架构，利用集群中空闲的 CPU 和带宽资源，并将 PS 和 Ring All-reduce 成功表述为统一架构下的特殊情况。
@@ -102,7 +102,7 @@
 
 ### 2.4 Multi-Model Schedule: Co-optimizing at Job-level and Cluster-level
 
-#### 2.4.1 集群中多任务（模型） Job-level (bs, lr) 和 cluster-level (resource allocation) 的 modeling 和 co-optimization
+***2.4.1 集群中多任务（模型） Job-level (bs, lr) 和 cluster-level (resource allocation) 的 modeling 和 co-optimization***
 
 - ***Pollux: Co-adaptive Cluster Scheduling for Goodput-Optimized Deep Learning***
     - Abstract: *(2021 OSDI)*. Petuum 提出的将分布式训练中的任务（模型）粒度的 metric modeling 和集群层面的 resource scheduling 结合起来 co-optimize 的分布式训练和调度架构。注意，与以往工作（如 BytePS）不同的是，Pollux 不再是在考虑集群通信拓扑和算力的前提下被动地适应，而是用 metric modeling 来为 resource allocation 提供依据，进而主动地共优化。
@@ -115,7 +115,7 @@
 
 ### 2.5 Model Parallelism: The Foundation of Model Parallelism
 
-#### 2.5.1 局部 worker 上的 Model Parallelism 及第二代参数服务器架构
+***2.5.1 局部 worker 上的 Model Parallelism 及第二代参数服务器架构***
 
 - ***(DistBelief) Large Scale Distributed Deep Networks***
 
@@ -129,7 +129,7 @@
 
 ### 2.6  Automated Hybrid Parallelism: Exploration on Other Parallelizing Dimensions
 
-#### 2.6.1 Layer-wise Parallelism Based on Reduction & Search in Computation Graph
+***2.6.1 Layer-wise Parallelism Based on Reduction & Search in Computation Graph***
 
 - ***(OptCNN) Exploring Hidden Dizmensions in Parallelizing Convolutional Neural Networks***
 
@@ -137,7 +137,7 @@
 
     - Link: [Note for OptCNN](https://github.com/DicardoX/Notes_for_Papers/tree/main/OptCNN)
 
-#### 2.6.2 SOAP 并行策略搜索空间及基于引导随机和 MCMC 采样实现的增量搜索算法
+***2.6.2 SOAP 并行策略搜索空间及基于引导随机和 MCMC 采样实现的增量搜索算法***
 
 - ***(FlexFlow) Beyond Data and Model Parallelism for Deep Neural Networks***
 
@@ -145,7 +145,7 @@
 
     - Link: [Note for FlexFlow](https://github.com/DicardoX/Notes_for_Papers/tree/main/FlexFlow)
 
-#### 2.6.3 代数变换和并行化在并行计算图中的统一表示及作为图替代的共优化（设备映射独立底层优化）
+***2.6.3 代数变换和并行化在并行计算图中的统一表示及作为图替代的共优化（设备映射独立底层优化）***
 
 - ***Unity: Accelerating DNN Training Through Joint Optimization of Algebraic Transformations and Parallelization***
 
@@ -153,7 +153,7 @@
 
     - Link: [Note for Unity](https://github.com/DicardoX/Notes_for_Papers/tree/main/Unity)
 
-#### 2.6.4 图替代的生成、验证和剪枝，以及  (MetaFlow) 基于开销的回溯搜索算法
+***2.6.4 图替代的生成、验证和剪枝，以及  (MetaFlow) 基于开销的回溯搜索算法***
 
 - ***TASO: Optimizing Deep Learning Computation with Automatic Generation of Graph Substitutions***
 
@@ -161,7 +161,7 @@
 
     - Link: [Note for TASO (& MetaFlow)](https://github.com/DicardoX/Notes_for_Papers/tree/main/TASO_MetaFlow)
 
-#### 2.6.5 面向 OP 粒度的 tensor partion-n-reduce 划分，基于 TDL 的 OP 描述，以及最小化通信开销的 recursive DP 搜索算法
+***2.6.5 面向 OP 粒度的 tensor partion-n-reduce 划分，基于 TDL 的 OP 描述，以及最小化通信开销的 recursive DP 搜索算法***
 
 - ***(Tofu) Supporting Very Large Models using AutomaticDataflow Graph Partitioning***
 
@@ -175,7 +175,7 @@
 
 ### 2.7 Pipeline Parallelism: Considered with Other Dimensions
 
-#### 2.7.1 流水线并行和数据并行混合的 stage 划分、replica 数目以及设备放置 DP 搜索，以及面向流水线内存开销的优化调度
+***2.7.1 流水线并行和数据并行混合的 stage 划分、replica 数目以及设备放置 DP 搜索，以及面向流水线内存开销的优化调度***
 
 - ***DAPPLE: A Pipelined Data Parallel Approach for Training Large Models***
 
@@ -183,7 +183,7 @@
 
     - Link: [Note for DAPPLE](https://github.com/DicardoX/Notes_for_Papers/tree/main/DAPPLE)
 
-#### 2.7.2 流水线并行和 OP (data, model, ZeRO, etc) 并行混合的 intra-op (ILP 优化) + inter-op (DP 优化) 两级并行编译架构
+***2.7.2 流水线并行和 OP (data, model, ZeRO, etc) 并行混合的 intra-op (ILP 优化) + inter-op (DP 优化) 两级并行编译架构***
 
 - ***Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning***
 
@@ -191,7 +191,7 @@
 
     - Link: [Note for Alpa](https://github.com/DicardoX/Notes_for_Papers/tree/main/Alpa)
 
-#### 2.7.3 基于 user 的少量 tensor sharding 标注，intra-op 混合并行，将 pipeline 规约为 tensor 划分问题
+***2.7.3 基于 user 的少量 tensor sharding 标注，intra-op 混合并行，将 pipeline 规约为 tensor 划分问题***
 
 - ***GSPMD: General and Scalable Parallelization for ML Computation Graphs***
 
@@ -199,7 +199,7 @@
 
     - Link: [Note for GSPMD](https://github.com/DicardoX/Notes_for_Papers/tree/main/GSPMD)
 
-#### 2.7.4 面向 MoE layer 的自适应 Parallel 和自适应 Pipeline (更侧重)，以及两级 All-to-All 通信优化
+***2.7.4 面向 MoE layer 的自适应 Parallel 和自适应 Pipeline (更侧重)，以及两级 All-to-All 通信优化***
 
 - ***TUTEL: Adaptive Mixture-of-Experts at Scale***
 
@@ -215,7 +215,7 @@
 
 ### 2.8 Weight Update Sharding: Partition Optimizer States (Momentum, Variance, FP32 Weights), Gradients and Parameters
 
-#### 2.8.1 面向内存显著优化和有限额外通信开销的 DP worker 优化器状态、梯度和参数共享方法
+***2.8.1 面向内存显著优化和有限额外通信开销的 DP worker 优化器状态、梯度和参数共享方法***
 
 - ***ZeRO: Memory Optimization Towards Training A Trillion Parameter Models***
 
@@ -229,7 +229,7 @@
 
 ### 2.9 Resource Allocation Framework
 
-#### 2.9.1 基于 DLT job 资源使用周期可预测性，profile 和贪心启发式的资源动态分配
+***2.9.1 基于 DLT job 资源使用周期可预测性，profile 和贪心启发式的资源动态分配***
 
 - ***Gandiva: Introspective Cluster Scheduling for Deep Learning***
 
@@ -237,21 +237,21 @@
 
     - Link: [Note for Gandiva](https://github.com/DicardoX/Notes_for_Papers/tree/main/Gandiva)
 
-#### 2.9.2 Co-design Cluster Scheduler 和 DL 框架，动态 scale 资源量，单 GPU 混布多 jobs
+***2.9.2 Co-design Cluster Scheduler 和 DL 框架，动态 scale 资源量，单 GPU 混布多 jobs***
 
 - ***AntMan: Dynamic Scaling on GPU Clusters for Deep Learning***
     - Abstract: *(2020 OSDI)*. AntMan 是一个 **co-design cluster scheduler 和 DL 框架的深度学习架构**，利用 DL training 的特性，在 **local coordinator** 中引入 **memory 和 computation 动态 scale 机制**，收集 **DL 框架和硬件的相关信息**，利用 **GPU Operator Manager 动态管理 Resource-Guarantee (RG) jobs 和 Opportunistic (OT) jobs 执行流的 GPU sharing**，避免对 RG jobs 的性能干扰；在 **global scheduler** 中为每个用户**维护一个支持 job arrival 的队列**，并分别**以不同的策略调度 RG jobs 和 OT jobs**，从而**分配 GPU 资源** (GPU 内存，计算单元)。
 
     - Link: [Note for AntMan](https://github.com/DicardoX/Notes_for_Papers/tree/main/AntMan)
 
-#### 2.9.3 固定 job GPU allocation，根据 profiled sensitivity 动态决定 CPU 和内存的分配量
+***2.9.3 固定 job GPU allocation，根据 profiled sensitivity 动态决定 CPU 和内存的分配量***
 
 - ***(Synergy) Looking Beyond GPUs for DNN Scheduling on Multi-Tenant Clusters***
     - Abstract: *(2022 OSDI)*. Synergy 是一个**资源敏感的，round-based 的多租户 GPU 集群资源调度器**，支持**集成到多类调度策略** (e.g., LAS, FTF)，使用 **optimistic profiling 来获取 job 对其他资源 (CPU, 内存) 的敏感性信息** (部分 jobs 能从高于 GPU 数目成比例的其他资源分配中获利，部分 jobs 则不会受低于该比例其他资源分配的影响)，通过一个**近似最优的在线调度算法 Synergy-TUNE**，实现**多类资源 workload-aware 分配**，且保证所有 jobs 性能不差于 GPU-proportional share (其他资源的划分和 GPU 划分成比例)。Synergy 被限制在: 1) 同构集群；2) job GPU allocation 固定；3) 使用 MinIO cache.
     
     - Link: [Note for Synergy](https://github.com/DicardoX/Notes_for_Papers/tree/main/Synergy)
 
-#### 2.9.4 考虑硬件异构性的 load balancing in parallelism，以及 model annotation 的编程接口
+***2.9.4 考虑硬件异构性的 load balancing in parallelism，以及 model annotation 的编程接口***
 
 - ***Whale: Efficient Giant Model Training over Heterogeneous GPUs***
 
@@ -261,7 +261,7 @@
 
     - Link: [Note for Whale](https://github.com/DicardoX/Notes_for_Papers/tree/main/Whale)
 
-#### 2.9.5 对 job 资源需求的模型预测，以及考虑网络带宽的集群资源调度
+***2.9.5 对 job 资源需求的模型预测，以及考虑网络带宽的集群资源调度***
 
 - ***Liquid: Intelligent Resource Estimation and Network-Efficient Scheduling for Deep Learning
     Jobs on Distributed GPU Clusters***
@@ -272,7 +272,7 @@
 
     - Link: [Note for Liquid](https://github.com/DicardoX/Notes_for_Papers/tree/main/Liquid)
 
-#### 2.9.6 面向多租户共享集群设计资源 Reservation 机制，构建保证 Safety 且高利用率的虚拟私有集群，并设计算法管理 Logical Cluster 到 Physical Cluster 的动态映射关系
+***2.9.6 面向多租户共享集群设计资源 Reservation 机制，构建保证 Safety 且高利用率的虚拟私有集群，并设计算法管理 Logical Cluster 到 Physical Cluster 的动态映射关系***
 
 - ***HiveD: Sharing a GPU Cluster for Deep Learning with Guarantees***
 
@@ -286,7 +286,7 @@
 
     - Link: [Note for HiveD](https://github.com/DicardoX/Notes_for_Papers/tree/main/HiveD)
 
-#### 2.9.7 Serverless Elastic 的分布式训练平台，利用 Marginal Return 和集群拓扑设计策略，进行 Admission Control
+***2.9.7 Serverless Elastic 的分布式训练平台，利用 Marginal Return 和集群拓扑设计策略，进行 Admission Control***
 
 - ***ElasticFlow: An Elastic Serverless Training Platform for Distributed Deep Learning***
 
@@ -301,7 +301,7 @@
 
 ### 2.10 Cluster-wide Communication Topology Optimization
 
-#### 2.10.1 基于物理层的网络动态拓扑和并行策略 (AllReduce / MP) 的共优化
+***2.10.1 基于物理层的网络动态拓扑和并行策略 (AllReduce / MP) 的共优化***
 
 - ***TOPOOPT: Co-optimizing Network Topology and Parallelization Strategy for Distributed Training Jobs***
 
