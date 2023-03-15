@@ -2,7 +2,7 @@
 
 TOPOOPT 是一个**面向 DNN 训练负载的直连架构**，在**计算、通信和网络拓扑三个维度共优化分布式训练**过程 (即共优化网络拓扑和并行策略)。本文证明了 **AllReduce 流量的可变性**，以此构建 **DNN 训练 jobs 的高效网络拓扑**。TOPOOPT 使用一个**优化技术**和 **TotientPerms (group theory-based) 算法**，来**发现最佳网络拓扑，routing plan 和并行策略**。
 
-可以 cite 它说它考虑的是 Swith - server 两级架构，而大多数产业集群为多级架构，情况更复杂。
+可以 cite 它说它考虑的是 Switch - server 两级架构，而大多数产业集群为多级架构，情况更复杂。
 
 ###### Motivation
 
