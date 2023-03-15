@@ -1,10 +1,18 @@
-# Notes for Papers
+# Individual Paper Notes
 
-[https://github.com/DicardoX/Notes_for_Papers](https://github.com/DicardoX/Notes_for_Papers)
+[https://github.com/DicardoX/Individual_Paper_Notes](https://github.com/DicardoX/Individual_Paper_Notes)
 
-> This repository is designed to record personal notes for reading papers.
+> This repository is established to **record individual notes for reading papers.**
+>
+> **Involving Field**: AI System, Distributed Training, Cluster Schduling, Trace Analysis, Inference.
 
------
+----
+
+***Content***
+
+[TOC]
+
+---------
 
 
 
