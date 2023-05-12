@@ -48,21 +48,6 @@
 
     - Link: [Note for Optimus](https://github.com/DicardoX/Notes_for_Papers/tree/main/Optimus)
 
-***2.1.3 面向无信息和部分信息场景的离散优先级抢占式调度算法及合并放置约束的深入讨论***
-
-- ***Tiresias: A GPU Cluster Manager for Distributed Deep Learning***
-    - Abstract: *(2019 NSDI)*. Tiresias 是一个面向参数服务器（Parameter Server）架构下分布式训练 job 的调度器，主要包括一个 2DAS 调度器，以及基于模型结构对合并放置约束的放宽策略。整篇 paper 最 fancy 的地方在于**面向无 JCT 分布信息和部分信息抢占式 2D 调度算法设计**，**参考多级反馈队列设计的优先级离散化架构**，以及**基于网络通信对模型 tensors 倾斜信息的监控方法**。
-    
-    - Link: [Note for Tiresias](https://github.com/DicardoX/Notes_for_Papers/tree/main/Tiresias)
-
-***2.1.4 异构集群中探索 intra-job 和 inter-job (非 model slice) 调度方式，同步 PS，支持 GPU 抢占并优化 task switching 开销***
-
-- ***Hare: Exploiting Inter-job and Intra-job Parallelism of Distributed Machine Learning on Heterogeneous GPUs***
-
-    - Abstract: *(2022 HPDC)*. 本工作**与 model slice 无关，是针对多 jobs slice 出来的 tasks 在异构集群中的调度方式**。Inter-job parallelism 指不同 jobs 的 tasks 在多个异构 GPUs 上并行；intra-job parallelism 指相同 job 的 tasks 在多个异构 GPUs 上并行。Hare 是一个可以**在异构 GPU 集群中探索 inter-job 和 intra-job 并行方式的 job 调度器**，包括：(1) 利用 DML 调度的特性优化 GPU 执行环境以**减少 task 切换开销** (借鉴 **PipeSwitch** (pipeline model 传输和执行 + 预创建 CUDA context)，**early task cleaning** 在每个 layer 后向完成后即清理，**speculative memory management** 保存 task seq 中已训练完单后面还有相同 job 的 task 的 data)；(2) 一个 **relaxed scal-fixed** (其实就是同步 PS) 的同步策略，允许相同训练轮次内独立 tasks 被灵活调度 (支持抢占)；(3) 一个考虑 job 特性和硬件异构的**快速启发式调度算法**，以**最小化 total 加权 JCT**. (数学建模推导较多，后面可以看一下).
-
-    - Link: [Note for Hare](https://github.com/DicardoX/Notes_for_Papers/tree/main/Hare)
-
 --------
 
 
@@ -294,6 +279,21 @@
         分布式训练的两个挑战包括：(1) 训练吞吐随 GPU num 非线性增长 (**non-linear scaling curve**)；(2) Worker placement 影响 scale 效率 (**Topology-aware**)。为了解决上述挑战，提出 **Minimum Satisfactory Share** 来判断**满足 job DDL 所需的最少资源量**，并基于此进行**准入控制 Admission Control** (判断 job admit or drop)。ElasticFlow 还设计了一个**贪心算法**，来**基于 marginal return 设置优先级动态分配资源**，在 worker placement 上使用 **Buddy Allocation + Job migration 来消除拓扑的影响**。
 
     - Link: [Note for ElasticFlow](https://github.com/DicardoX/Notes_for_Papers/tree/main/ElasticFlow)
+
+***2.9.8 面向无信息和部分信息场景的离散优先级抢占式调度算法及合并放置约束的深入讨论***
+
+- ***Tiresias: A GPU Cluster Manager for Distributed Deep Learning***
+    - Abstract: *(2019 NSDI)*. Tiresias 是一个面向参数服务器（Parameter Server）架构下分布式训练 job 的调度器，主要包括一个 2DAS 调度器，以及基于模型结构对合并放置约束的放宽策略。整篇 paper 最 fancy 的地方在于**面向无 JCT 分布信息和部分信息抢占式 2D 调度算法设计**，**参考多级反馈队列设计的优先级离散化架构**，以及**基于网络通信对模型 tensors 倾斜信息的监控方法**。
+
+    - Link: [Note for Tiresias](https://github.com/DicardoX/Notes_for_Papers/tree/main/Tiresias)
+
+***2.9.9 异构集群中探索 intra-job 和 inter-job (非 model slice) 调度方式，同步 PS，支持 GPU 抢占并优化 task switching 开销***
+
+- ***Hare: Exploiting Inter-job and Intra-job Parallelism of Distributed Machine Learning on Heterogeneous GPUs***
+
+    - Abstract: *(2022 HPDC)*. 本工作**与 model slice 无关，是针对多 jobs slice 出来的 tasks 在异构集群中的调度方式**。Inter-job parallelism 指不同 jobs 的 tasks 在多个异构 GPUs 上并行；intra-job parallelism 指相同 job 的 tasks 在多个异构 GPUs 上并行。Hare 是一个可以**在异构 GPU 集群中探索 inter-job 和 intra-job 并行方式的 job 调度器**，包括：(1) 利用 DML 调度的特性优化 GPU 执行环境以**减少 task 切换开销** (借鉴 **PipeSwitch** (pipeline model 传输和执行 + 预创建 CUDA context)，**early task cleaning** 在每个 layer 后向完成后即清理，**speculative memory management** 保存 task seq 中已训练完单后面还有相同 job 的 task 的 data)；(2) 一个 **relaxed scal-fixed** (其实就是同步 PS) 的同步策略，允许相同训练轮次内独立 tasks 被灵活调度 (支持抢占)；(3) 一个考虑 job 特性和硬件异构的**快速启发式调度算法**，以**最小化 total 加权 JCT**. (数学建模推导较多，后面可以看一下).
+
+    - Link: [Note for Hare](https://github.com/DicardoX/Notes_for_Papers/tree/main/Hare)
 
 -----
 
