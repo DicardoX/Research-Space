@@ -43,10 +43,9 @@
 ***2.1.2 面向对分布式训练任务收敛时间及速度的在线预测***
 
 - ***Optimus: An Efficient Dynamic Resource Scheduler for Deep Learning Clusters***
-
-    - Abstract: *(2018 EuroSys)*. Optimus 是一个面向分布式训练 job 的调度器，主要目标是最小化 JCT，主要分为对 DL 模型收敛时间的预测，对模型训练速度的评估，以及一个考虑资源分配和 task（相较于 job 的更小级别）放置三个部分。
-
-    - Link: [Note for Optimus](https://github.com/DicardoX/Notes_for_Papers/tree/main/Optimus)
+- Abstract: *(2018 EuroSys)*. Optimus 是一个面向分布式训练 job 的调度器，主要目标是最小化 JCT，主要分为对 DL 模型收敛时间的预测，对模型训练速度的评估，以及一个考虑资源分配和 task（相较于 job 的更小级别）放置三个部分。
+  
+- Link: [Note for Optimus](https://github.com/DicardoX/Notes_for_Papers/tree/main/Optimus)
 
 --------
 
@@ -148,7 +147,7 @@
 
 ***2.6.5 面向 OP 粒度的 tensor partion-n-reduce 划分，基于 TDL 的 OP 描述，以及最小化通信开销的 recursive DP 搜索算法***
 
-- ***(Tofu) Supporting Very Large Models using AutomaticDataflow Graph Partitioning***
+- ***(Tofu) Supporting Very Large Models using Automatic Dataflow Graph Partitioning***
 
     - Abstract: *(2019 EuroSys)*. Tofu 和 OptCNN 及 FlexFlow 想解决的问题一样，是同时期对自动化并行的探索。相较于 layer-wise，Tofu 以 OP 级别的 tensor 为粒度，将大模型的数据流图以 partition-n-reduce 的方式，等分划分到多个 GPU（仅划分各类 tensor，每个 GPU 都拷贝一份完整的图 OP），以减少 GPU 的内存足迹，同时达到并行化的效果；Tofu 使用一个简单的 Halide-like 语言 TDL 来描述 OP 的语义；在划分 OP 时，Tofu 使用一个 DP 套递归的搜索算法来最小化通信开销。
 
@@ -263,7 +262,7 @@
 
     - Abstract: *(2020 OSDI)*. 多租户集群中的 jobs 面临更长的排队延迟，原因是租户**使用 quota (GPU 数目) 来 reserve 资源**，而这**无法保证 GPU affinity 需求 (网络拓扑和通信带宽)**，导致**更长的排队延迟** (资源需求类型为 guaranteed) 或**更差的模型训练性能** (relaxed affinity, 资源需求类型为 best-effort)。
 
-        HiveD 是一个**支持安全共享 GPU 集群的资源 reservation 框架** (面向 **K8S** 实现)，同时具有**私有集群的资源独立可用性**，和**共享集群的高利用率和资源用量动态可扩展性**，**在 VC 内应用已有调度器**进行考虑 affinity 的资源调度 (考虑集群利用率，JCT 等目标)，本身**专注于资源 reservation 机制** (如何构建并部署 VC，即如何构建 VC cells 和 physical cells 之间的动态映射)，旨在**消除 Sharding Anomaly** 的现象 (产生原因是**集群资源的碎片化**)，
+        HiveD 是一个**支持安全共享 GPU 集群的资源 reservation 框架** (面向 **K8S** 实现)，同时具有**私有集群的资源独立可用性**，和**共享集群的高利用率和资源用量动态可扩展性**，**在 VC 内应用已有调度器**进行考虑 affinity 的资源调度 (考虑集群利用率，JCT 等目标)，本身**专注于资源 reservation 机制** (如何构建并部署 VC，即如何构建 VC cells 和 physical cells 之间的动态映射)，旨在**消除 Sharding Anomaly** 的现象 (产生原因是**集群资源的碎片化**)。
 
         在 HiveD 中，每个租户通过 **Virtual Private Cluster (VC)** 来 reserve 资源，基于**和不同 GPU affinity 等级 (e.g., GPU level，PCIe switch level) 对应的多级 logical cell 结构**定义，彼此相互**严格独立**，拥有私有集群那样的资源独立性，通过**动态映射到物理集群中的 physical cells** 进行实际部署。
 
