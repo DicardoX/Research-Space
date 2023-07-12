@@ -43,9 +43,19 @@
 
 根据 JAX 官方文档中关于 Jaxprs 的介绍 [3]，一个 **Jaxpr 实例**表示具有一个或多个输入变量 (typed) 和一个或多个结果 (typed) 的函数，其结果仅依赖于输入变量。输入和输出变量具有类型，在 JAX 中表示为抽象值。
 
+在 Jaxpr 的帮助下，JAX 既能够为 DL 开发者提供用户友好的 Pythonic 编程接口 (Pytorch 的长处)，也能够支持高效的编译优化和程序执行 (TensorFlow 的长处)。
+
 #### 1.3 HLO IR in XLA
 
+HLO (High-Level Optimizer) 是**作为 XLA compiler 输入的一种中间表示 (IR)**，负责将输入的计算图转换为一种中间表示形式，该表示形式可以进行各种优化操作 (e.g., 算子融合、常量折叠、循环展开、内存重用、并行化)。
 
+参考 [4] 中对 HLO 的架构进行了如下总结：HLO IR 表示为**分层嵌套的结构**：HloModule, HloComputation和HloInstruction。
+
+- HloModule 是 HLO IR 最顶层的表示，相当于整个程序。比如，我们可以用一个 HloModule 来表示一整个model。一个 HloModule 可以包含很多个 HloComputation。
+- HloComputation 是 HLO IR 中间层的表示，相当于程序中的一个函数。一个 HloModule 只能有一个 entry_conputation，其他的 computation 是被 entry_computation 调用的。我们可以把 entry_computation 类比作main函数。每个 HloComputation 可以包含多个 HloInstruction.
+- HloInstruction 是 HLO IR 最底层的表示，相当于程序中的一条指令。每个 HloComputation 只能有一个 root_instruction。root_instruction 的 output 就是该 computation 的 output。computation 的 input 用parameter 表示。HloInstruction 也可以调用 HloComputation。
+
+一个 HLO fusion 的例子：在做 fusion 优化时，可以把多个要 fuse 的 instruction 添加到 fusion computation 中，然后在原来的 computation 中用一个 HloFusionInstruction 代替所有被 fuse 掉的 instruction，然后让这个 fusion instruction 去调用这个 fusion computation。这样，被 fuse 掉的 instruction 还会保留在 fusion computation 中，在 codegen 的时候才可以根据这些详细的信息去生成 code。
 
 #### 1.4 XLA Compilation
 
@@ -75,7 +85,7 @@
 
 [3] Understanding Jaxprs. https://jax.readthedocs.io/en/latest/jaxpr.html
 
-[4] HLO-XLA. https://blog.csdn.net/weixin_45387966/article/details/121994883
+[4] XLA笔记(1) -- HLO IR Introduction. https://zhuanlan.zhihu.com/p/396309457
 
 
 
