@@ -14,7 +14,7 @@
 
 需要注意的是，与 TensorFlow 框架下直接在代码中定义静态图，再启用 `session.run()` 进入迭代运算不同，JAX 与 Pytorch 类似使用**动态图**的形式，将运算与搭建过程同时进行 (这也符合 NumPy 数学运算的实现逻辑)。虽然上述特性使得 JAX 编程框架拥有与 Pytorch 近似的用户亲和性和灵活性，但也存在一个问题，即**动态图无法直接利用 ML compiler JIT 编译时面向计算图的图优化** (e.g., 算子融合)，从而错失代码高效编译和执行的机会。
 
-#### 1.2 Jaxprs
+#### 1.2 Jaxprs IR
 
 为了解决 1.1 节中 JAX 框架动态图设计带来的问题，JAX team 提出了一类**面向 JAX 框架下程序计算特性的抽象：Jaxpr 中间表示** (IR)。Jaxpr 提供了一项十分重要的功能：**追踪 (trace) JAX 程序的 API 调用链**。Jaxpr 的表达形式类似于汇编语言，如下所示：
 
@@ -59,25 +59,60 @@ HLO (High-Level Optimizer) 是**作为 XLA compiler 输入的一种中间表示 
 
 #### 1.4 XLA Compilation
 
+XLA 官方文档 [5] 中给出如下介绍：**XLA 接受在 HLO 中定义的计算图（“计算”）并将其编译为适用于各种架构的机器指令**。XLA 采用模块化设计，可以轻松融入其他后端以[针对某些新颖的硬件架构](https://www.tensorflow.org/xla/developing_new_backend?hl=zh-cn)。XLA 提供了多种**与目标无关的优化和分析过程**（例如 [CSE](https://en.wikipedia.org/wiki/Common_subexpression_elimination)）、与目标无关的运算融合，以及用于为计算分配运行时内存的缓冲区分析。
 
+完成与目标无关的步骤之后，XLA 会将 HLO 计算发送到后端。后端可以执行进一步的 HLO 级优化，而此时将**考虑目标特定的信息和需求而进行进一步的分析优化**。例如，XLA GPU 后端可以执行特别有利于 GPU 编程模型的运算融合，并确定如何将计算划分为计算流。在此阶段，后端还可能对某些运算或运算组合针对优化库调用执行模式匹配。
 
-#### 1.5 XLA Runtime
+下一步是针对特定目标生成代码。XLA 所含的 CPU 和 GPU 后端使用 [LLVM](http://llvm.org/) 进行低级 IR、优化和代码生成。这些后端发出有效表示 XLA HLO 计算所需的 LLVM IR，然后调用 LLVM 以从此 LLVM IR 中发出原生代码。
 
+#### 1.5 Operator Fusion in XLA
 
+下面，我们参考论文 [6] 给出编译过程中 XLA 在 Operator Fusion 方面的详细设计。
+
+##### 1.5.1 Background
+
+传统的 ML 框架 (e.g., PyTorch, TensorFlow, MXNet) 一般将 DL operations 映射到 cuDNN/cuBLAS primitives 或预实现的 CUDA kernels，但这样无法保证 ML 程序的完整优化。随后，一些 DL 优化框架 (e.g., XLA, TensorRT, TVM, Tensor Comprehensions) 被设计以支持生成或使用 **workload-specific kernels**。例如，XLA 和 TensorRT **使用一些人工定义的规则来 fuse 一些简单的 operations**，而**复杂 operations (e.g., 卷积，矩阵乘) 依然依赖于 cuDNN/cuBLAS primitives**。另一方面，TVM / Tensor Comprehensions 的 codegen 更为灵活，可以使用一些学习算法 (e.g., GBM, genetic) 自动地 tune fused kernels。
+
+##### 1.5.2 XLA 计算图优化
+
+XLA 的计算图优化发生在 TF 或 JAX 的 traced computational graph 被输入到 XLA compiler 时。一些优化 passes 会被复用，例如 Dead Code Elimination (DCE) 和 Common Subexpression Elimination (CSE)。
+
+Optimization passes 被组织为 **Pass Pipelines**，包括如下 pass：
+
+- **SPMD partitioner**: 将 tensors 划分以在多设备上并行执行。
+- Optimization: 包括 canonicalization, expansion, and simplification 等 passes。
+- Simplification: 对特定操作执行简化，例如内联和常量传播。
+- **Collective optimizations**: 优化 SPMD 多设备划分产生的 collective 操作 (e.g., reduce, gather)。
+- Conv canonicalization.
+- Layout assignment: 预先分配一些操作数的 layout，以满足 layout 约束和库调用的结果 (e.g., cuDNN, cuBLAS)。
+- **Post layout assignment**: 在 layout assignment 后执行特定于目标的 HLO 优化过程，例如，优化 cuBLAS 的 padding 和选择 GEMM 或 Conv 算法。
+- **Fusion**: 进行多种纵向 operation fusion，包括简单的 instruction fusion, fusion merger 和 multi-output fusion。
+- **Horizontal fusion**: 进行横向 operation fusion，包括横向 loop fusion 和 input fusion。
+- **Post fusion optimization**: 将小的独立 collective operations 组合为更大的 operations。
+- GPU IR emit prepare: 对给定的 HLO 模块进行清洁 sanitize，以便其被 IR Emitter 接受。
+
+##### 1.5.3 XLA Fusion Strategies
+
+<img src="./figures/截屏2023-07-13 17.15.11.png" alt="avatar" style="zoom:50%;" />
+
+- **Instruction Fusion**: 简单的纵向 fusion，producer instructions 被 fuse 进其 consumers。XLA 在此步骤中执行反向后序遍历，以确定是否应融合两个相关 operations。注意，XLA 会检查 fused kernel 对于 GPU 是否过大 (即**检查 GPU 硬件信息**)，并保证不会超过 threads per block, shared memory per block, and threads per SM 等 **GPU 硬件限制**。因此，**XLA 的图优化与 GPU 硬件相关**。
+- **Fusion Merger**: 试图合并 fusion instructions 以减少内存带宽需求和内核启动开销。
+- **Multi-Output Fusion**: GPU backend 的 sibling instruction 和 producer-comsumer instruction 的多输出融合也旨在降低内存带宽需求。
+- **Horizontal Fusion**: 以减少 kernel lanuch 开销，同时增加 GPU 的 kernel lanuch 维度。例如，考虑具有单独输入 shape 的乘法运算和加法运算，但它们的输出被一个公共运算所使用。
+
+#### 1.6 XLA Runtime
+
+论文 [6] 中对 XLA kernel scheduling 和 CUDA streams 有如下讨论：
+
+> At compile time, XLA’s IrEmitter also generates KernelThunks which contain necessary arguments for launching kernels. At run- time, GpuExecutable launches the kernel using the KernelThunk which specifies the buffer addresses of the data needed for the kernel launch. An initial finding is that the function BFSLaunchOrder() computes a topological launch order that is close to a breadth-first order. This enables the possibility of launching kernels concurrently in different CUDA streams. The function CanRunConcurrently() returns whether the two HLOs can run concurrently, however in practice we have not seen multiple streams utilized by XLA.
+
+一言蔽之，**XLA runtime 使用 `BFSLanuchOrder()` 来以广度优先搜索 BFS 的方式计算一个拓扑上的 lancuh 顺序，从而支持在不同 CUDA streams 上并行地 lanuch kernels，但实际上 multi-streams 在 XLA 的使用不多**。
 
 ---------
 
 
 
-### 2. Workflow
-
-
-
----------
-
-
-
-### 3. References
+### 2. References
 
 [1] Jax Official Documentation. https://jax.readthedocs.io/en/latest/index.html
 
@@ -87,6 +122,6 @@ HLO (High-Level Optimizer) 是**作为 XLA compiler 输入的一种中间表示 
 
 [4] XLA笔记(1) -- HLO IR Introduction. https://zhuanlan.zhihu.com/p/396309457
 
+[5] XLA Official Documentation. https://www.tensorflow.org/xla
 
-
-[x] XLA Official Documentation. https://www.tensorflow.org/xla
+[6] Operator Fusion in XLA: Analysis and Evaluation. https://arxiv.org/abs/2301.13062
