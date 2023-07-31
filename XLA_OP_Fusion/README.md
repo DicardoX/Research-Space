@@ -106,7 +106,8 @@ Optimization passes 被组织为 **Pass Pipelines**，包括如下 pass：
 
 > At compile time, XLA’s IrEmitter also generates KernelThunks which contain necessary arguments for launching kernels. At run- time, GpuExecutable launches the kernel using the KernelThunk which specifies the buffer addresses of the data needed for the kernel launch. An initial finding is that the function BFSLaunchOrder() computes a topological launch order that is close to a breadth-first order. This enables the possibility of launching kernels concurrently in different CUDA streams. The function CanRunConcurrently() returns whether the two HLOs can run concurrently, however in practice we have not seen multiple streams utilized by XLA.
 
-一言蔽之，**XLA runtime 使用 `BFSLanuchOrder()` 来以广度优先搜索 BFS 的方式计算一个拓扑上的 lancuh 顺序，从而支持在不同 CUDA streams 上并行地 lanuch kernels，但实际上 multi-streams 在 XLA 的使用不多**。
+一言蔽之，**XLA runtime 使用 `BFSLanuchOrder()` 来以广度优先搜索 BFS 的方式计算一个拓扑上的 lancuh 顺序，从而支持在不同 CUDA streams 上并行地 lanuch kernels，但实际上 multi-streams 在 XLA 的使用不多**。根据论文 [7] 中的 observation："We make the observation that fine-grained tasks in DNN
+training workloads are highly sequential"，上述结论也可得到进一步的佐证。  
 
 ---------
 
@@ -125,3 +126,5 @@ Optimization passes 被组织为 **Pass Pipelines**，包括如下 pass：
 [5] XLA Official Documentation. https://www.tensorflow.org/xla
 
 [6] Operator Fusion in XLA: Analysis and Evaluation. https://arxiv.org/abs/2301.13062
+
+[7] Daydream: Accurately Estimating the Efficacy of Optimizations for DNN Training. https://www.usenix.org/conference/atc20/presentation/zhu-hongyu
