@@ -47,7 +47,7 @@
     - *(MetaFlow) OPTIMIZING DNN COMPUTATION WITH RELAXED GRAPH SUBSTITUTIONS* (SysML19)
     - *Unity: Accelerating DNN Training Through Joint Optimization of Algebraic Transformations  and Parallelization* (OSDI22)
     - *Whale: Efficient Giant Model Training over Heterogeneous GPUs* (ATC22)
-7. **Memory Storage**:
+7. **Memory/Cache Storage**:
     - *ZeRO: Memory Optimizations Toward Training Trillion Parameter Models* (arxiv20)
     - *Gemini: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints* (SOSP23)
 8. **AI Compilation**:
