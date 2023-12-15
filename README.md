@@ -61,6 +61,7 @@
     - *TOPOOPT: Co-optimizing Network Topology and Parallelization Strategy for Distributed Training Jobs* (NSDI23)
 11. **Inference**:
     - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
+    - *(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention* (SOSP23)
 12. **Cluster Trace Analysis**:
     - *(Helios) Characterization and Prediction of Deep Learning Workloads in Large-Scale GPU Datacenters* (SC21)
     - *(PAI) MLaaS in the Wild: Workload Analysis and Scheduling in Large-Scale Heterogeneous GPU Clusters* (NSDI22)
