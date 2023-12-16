@@ -28,6 +28,7 @@
 2. **Hybrid Parallelism**:
     - *Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning* (OSDI22)
     - *Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism* (arxiv20)
+    - *Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates* (SOSP23)
     - *TUTEL: Adaptive Mixture-of-Experts at Scale* (arxiv22)
 3. **Data Parallelism**:
     - *(BytePS) A Unified Architecture for Accelerating Distributed DNN Training in Heterogeneous GPU/CPU Clusters* (OSDI20)
@@ -61,6 +62,7 @@
     - *TOPOOPT: Co-optimizing Network Topology and Parallelization Strategy for Distributed Training Jobs* (NSDI23)
 11. **Inference**:
     - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
+    - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
     - *(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention* (SOSP23)
 12. **Cluster Trace Analysis**:
     - *(Helios) Characterization and Prediction of Deep Learning Workloads in Large-Scale GPU Datacenters* (SC21)
