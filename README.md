@@ -49,8 +49,10 @@
     - *Unity: Accelerating DNN Training Through Joint Optimization of Algebraic Transformations  and Parallelization* (OSDI22)
     - *Whale: Efficient Giant Model Training over Heterogeneous GPUs* (ATC22)
 7. **Memory/Cache Storage**:
-    - *ZeRO: Memory Optimizations Toward Training Trillion Parameter Models* (arxiv20)
+    - *Bagpipe: Accelerating Deep Recommendation Model Training* (SOSP23)
     - *Gemini: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints* (SOSP23)
+    - *UGache: A Unified GPU Cache for Embedding-based Deep Learning* (SOSP23)
+    - *ZeRO: Memory Optimizations Toward Training Trillion Parameter Models* (arxiv20)
 8. **AI Compilation**:
     - *Operator Fusion in XLA: Analysis and Evaluation* (arxiv23)
 9. **Training Hyperparameters**:
