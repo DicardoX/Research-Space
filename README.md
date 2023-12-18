@@ -23,6 +23,7 @@
     - *Optimus: An Efficient Dynamic Resource Scheduler for Deep Learning Clusters* (EuroSys18)
     - *Pollux: Co-adaptive Cluster Scheduling  for Goodput-Optimized Deep Learning* (OSDI21)
     - *Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling* (SOSP23)
+    - *SiloD: A Co-design of Caching and Scheduling for Deep Learning Clusters* (EuroSys23)
     - *(Synergy) Looking Beyond GPUs for DNN Scheduling  on Multi-Tenant Clusters* (OSDI22)
     - *Tiresias: A GPU Cluster Manager  for Distributed Deep Learning* (NSDI19)
 2. **Hybrid Parallelism**:
