@@ -63,25 +63,27 @@
     - *Optimus-CC: Efficient Large NLP Model Training with 3D Parallelism Aware Communication Compression* (ASPLOS23)
     - *Overlap Communication with Dependent Computation via Decomposition in Large Deep Learning Models* (ASPLOS23)
     - *TOPOOPT: Co-optimizing Network Topology and Parallelization Strategy for Distributed Training Jobs* (NSDI23)
-11. **Inference**:
-    - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
-    - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
-    - *(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention* (SOSP23)
-12. **Cluster Trace Analysis**:
-    - *(Helios) Characterization and Prediction of Deep Learning Workloads in Large-Scale GPU Datacenters* (SC21)
-    - *(PAI) MLaaS in the Wild: Workload Analysis and Scheduling in Large-Scale Heterogeneous GPU Clusters* (NSDI22)
-    - *(Philly) Analysis of Large-Scale Multi-Tenant GPU Clusters for DNN Training Workloads* (ATC19)
-13. **Serverless**:
-    - *AQUATOPE: QoS-and-Uncertainty-Aware Resource Management for Multi-stage Serverless Workflows* (ASPLOS23)
-14. **HPC**:
-    - *(ESLURM) Towards Scalable Resource Management for Supercomputers* (SC22)
-15. **Performance Modeling**:
-    - *Daydream: Accurately Estimating the Efficacy of Optimizations for DNN Training* (ATC20)
-    - *DistSim: A performance model of large-scale hybrid distributed DNN training* (CF23)
-    - *dPRO: A Generic Performance Diagnosis and Optimization Toolkit for Expediting Distributed DNN Training* (MLSys22)
-    - *FasterMoE: Modeling and Optimizing Training of Large-Scale Dynamic Pre-Trained Models* (PPoPP22)
-    - *Habitat: A Runtime-Based Computational Performance Predictor for Deep Neural Network Training* (ATC21)
-    - *MAD Max Beyond Single-Node: Enabling Large Machine Learning Model Acceleration on Distributed Systems* (arxiv23)
-    - *Machine Learning-enabled Performance Model for DNN Applications and AI Accelerator* (HPCC22)
-    - *(MPE) Fast Performance Prediction for Efficient Distributed DNN Training* (x)
-    - *PALEO: A PERFORMANCE MODEL FOR DEEP NEURAL NETWORKS* (ICLR17)
+11. **Training**:
+     - *Egeria: Efficient DNN Training with Knowledge-Guided Layer Freezing* (EuroSys23)
+12. **Inference**:
+     - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
+     - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
+     - *(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention* (SOSP23)
+13. **Cluster Trace Analysis**:
+     - *(Helios) Characterization and Prediction of Deep Learning Workloads in Large-Scale GPU Datacenters* (SC21)
+     - *(PAI) MLaaS in the Wild: Workload Analysis and Scheduling in Large-Scale Heterogeneous GPU Clusters* (NSDI22)
+     - *(Philly) Analysis of Large-Scale Multi-Tenant GPU Clusters for DNN Training Workloads* (ATC19)
+14. **Serverless**:
+     - *AQUATOPE: QoS-and-Uncertainty-Aware Resource Management for Multi-stage Serverless Workflows* (ASPLOS23)
+15. **HPC**:
+     - *(ESLURM) Towards Scalable Resource Management for Supercomputers* (SC22)
+16. **Performance Modeling**:
+     - *Daydream: Accurately Estimating the Efficacy of Optimizations for DNN Training* (ATC20)
+     - *DistSim: A performance model of large-scale hybrid distributed DNN training* (CF23)
+     - *dPRO: A Generic Performance Diagnosis and Optimization Toolkit for Expediting Distributed DNN Training* (MLSys22)
+     - *FasterMoE: Modeling and Optimizing Training of Large-Scale Dynamic Pre-Trained Models* (PPoPP22)
+     - *Habitat: A Runtime-Based Computational Performance Predictor for Deep Neural Network Training* (ATC21)
+     - *MAD Max Beyond Single-Node: Enabling Large Machine Learning Model Acceleration on Distributed Systems* (arxiv23)
+     - *Machine Learning-enabled Performance Model for DNN Applications and AI Accelerator* (HPCC22)
+     - *(MPE) Fast Performance Prediction for Efficient Distributed DNN Training* (x)
+     - *PALEO: A PERFORMANCE MODEL FOR DEEP NEURAL NETWORKS* (ICLR17)
