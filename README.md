@@ -68,6 +68,7 @@
 12. **Inference**:
      - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
      - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
+     - *Tabi: An Efficient Multi-Level Inference System for Large Language Models* (EuroSys23)
      - *(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention* (SOSP23)
 13. **Cluster Trace Analysis**:
      - *(Helios) Characterization and Prediction of Deep Learning Workloads in Large-Scale GPU Datacenters* (SC21)
