@@ -66,6 +66,7 @@
 11. **Training**:
      - *Egeria: Efficient DNN Training with Knowledge-Guided Layer Freezing* (EuroSys23)
 12. **Inference**:
+     - *FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU* (ICML23)
      - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
      - *ORCA: A Distributed Serving System for Transformer-Based Generative Models* (OSDI22)
      - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
