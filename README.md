@@ -65,6 +65,7 @@
     - *TOPOOPT: Co-optimizing Network Topology and Parallelization Strategy for Distributed Training Jobs* (NSDI23)
 11. **Training**:
      - *Egeria: Efficient DNN Training with Knowledge-Guided Layer Freezing* (EuroSys23)
+     - *Hydro: Surrogate-Based Hyperparameter Tuning Service in Datacenters* (OSDI23)
 12. **Inference**:
      - *FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU* (ICML23)
      - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
