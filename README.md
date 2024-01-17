@@ -66,11 +66,13 @@
 11. **Training**:
      - *Egeria: Efficient DNN Training with Knowledge-Guided Layer Freezing* (EuroSys23)
      - *Hydro: Surrogate-Based Hyperparameter Tuning Service in Datacenters* (OSDI23)
+     - *Retiarii: A Deep Learning Exploratory-Training Framework* (OSDI20)
 12. **Inference**:
      - *FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU* (ICML23)
      - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
      - *ORCA: A Distributed Serving System for Transformer-Based Generative Models* (OSDI22)
      - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
+     - *PETALS: Collaborative Inference and Fine-tuning of Large Models* (arxiv23)
      - *Tabi: An Efficient Multi-Level Inference System for Large Language Models* (EuroSys23)
      - *(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention* (SOSP23)
 13. **Cluster Trace Analysis**:
