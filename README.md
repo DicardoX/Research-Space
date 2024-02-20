@@ -65,11 +65,13 @@
     - *Overlap Communication with Dependent Computation via Decomposition in Large Deep Learning Models* (ASPLOS23)
     - *TOPOOPT: Co-optimizing Network Topology and Parallelization Strategy for Distributed Training Jobs* (NSDI23)
 11. **Training**:
+     - *AMSP: Super-Scaling LLM Training via Advanced Model States Partitioning* (arxiv23)
      - *Capuchin: Tensor-based GPU Memory Management for Deep Learning* (ASPLOS20)
      - *Egeria: Efficient DNN Training with Knowledge-Guided Layer Freezing* (EuroSys23)
      - *Harmony: Overcoming the Hurdles of GPU Memory Capacity to Train Massive DNN Models on Commodity Servers* (VLDB22)
      - *Hydro: Surrogate-Based Hyperparameter Tuning Service in Datacenters* (OSDI23)
      - *Retiarii: A Deep Learning Exploratory-Training Framework* (OSDI20)
+     - *ZeRO-Offload: Democratizing Billion-Scale Model Training* (ATC21)
 12. **Inference**:
      - *(DeepPlan) Fast and Efficient Model Serving Using Multi-GPUs with Direct-Host-Access* (EuroSys23)
      - *FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU* (ICML23)
