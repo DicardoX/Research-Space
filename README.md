@@ -79,6 +79,8 @@
      - *ORCA: A Distributed Serving System for Transformer-Based Generative Models* (OSDI22)
      - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
      - *PETALS: Collaborative Inference and Fine-tuning of Large Models* (arxiv23)
+     - *PUNICA: MULTI-TENANT LORA SERVING* (arxiv23)
+     - *S-LORA: SERVING THOUSANDS OF CONCURRENT LORA ADAPTERS* (arxiv23)
      - *Tabi: An Efficient Multi-Level Inference System for Large Language Models* (EuroSys23)
      - *(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention* (SOSP23)
 13. **Cluster Trace Analysis**:
