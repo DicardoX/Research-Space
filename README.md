@@ -42,6 +42,7 @@
     - *DAPPLE: A Pipelined Data Parallel Approach for Training Large Models* (PPoPP21)
     - *GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism* (NIPS19)
     - *PipeDream: Generalized Pipeline Parallelism for DNN Training* (SOSP19)
+    - *(ZeroBubble) NEAR ZERO BUBBLE PIPELINE PARALLELISM* (ICLR24)
 6. **Graph Optimization**:
     - *(FlexFlow) BEYOND DATA AND MODEL PARALLELISM FOR DEEP NEURAL NETWORKS* (SysML19)
     - *(OptCNN) Exploring Hidden Dimensions in Parallelizing Convolutional Neural Networks* (ICML18)
