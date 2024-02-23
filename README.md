@@ -75,6 +75,7 @@
      - *ZeRO-Offload: Democratizing Billion-Scale Model Training* (ATC21)
 12. **Inference**:
      - *(DeepPlan) Fast and Efficient Model Serving Using Multi-GPUs with Direct-Host-Access* (EuroSys23)
+     - *FaaSwap: SLO-Aware, GPU-Efficient Serverless Inference via Model Swapping* (arxiv24)
      - *FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU* (ICML23)
      - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
      - *ORCA: A Distributed Serving System for Transformer-Based Generative Models* (OSDI22)
