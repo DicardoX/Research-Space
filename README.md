@@ -71,6 +71,7 @@
      - *Egeria: Efficient DNN Training with Knowledge-Guided Layer Freezing* (EuroSys23)
      - *Harmony: Overcoming the Hurdles of GPU Memory Capacity to Train Massive DNN Models on Commodity Servers* (VLDB22)
      - *Hydro: Surrogate-Based Hyperparameter Tuning Service in Datacenters* (OSDI23)
+     - *InternEvo: Efficient Long-Sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding* (arxiv24)
      - *Retiarii: A Deep Learning Exploratory-Training Framework* (OSDI20)
      - *(SeqParallel) Reducing Activation Recomputation in Large Transformer Models* (arxiv22)
      - *ZeRO-Offload: Democratizing Billion-Scale Model Training* (ATC21)
