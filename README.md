@@ -72,6 +72,7 @@
      - *Harmony: Overcoming the Hurdles of GPU Memory Capacity to Train Massive DNN Models on Commodity Servers* (VLDB22)
      - *Hydro: Surrogate-Based Hyperparameter Tuning Service in Datacenters* (OSDI23)
      - *Retiarii: A Deep Learning Exploratory-Training Framework* (OSDI20)
+     - *(SeqParallel) Reducing Activation Recomputation in Large Transformer Models* (arxiv22)
      - *ZeRO-Offload: Democratizing Billion-Scale Model Training* (ATC21)
 12. **Inference**:
      - *(DeepPlan) Fast and Efficient Model Serving Using Multi-GPUs with Direct-Host-Access* (EuroSys23)
