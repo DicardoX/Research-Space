@@ -1,8 +1,8 @@
-# Individual Paper Notes
+# Research Space
 
 [https://github.com/DicardoX/Individual_Paper_Notes](https://github.com/DicardoX/Individual_Paper_Notes)
 
-> This repository is established to **record individual notes for reading papers.**
+> This repository is established to store personal notes and annotated papers during research.
 >
 > **Involving Field**: *AI System, Distributed Training, Cluster Schduling, Workload Trace Analysis, Inference, AI Compilation, Memory Storage, etc.*
 
