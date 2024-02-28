@@ -86,6 +86,7 @@
      - *PETALS: Collaborative Inference and Fine-tuning of Large Models* (arxiv23)
      - *PetS: A Unified Framework for Parameter-Efficient Transformers Serving* (ATC22)
      - *PUNICA: MULTI-TENANT LORA SERVING* (arxiv23)
+     - *Shepherd: Serving DNNs in the Wild* (NSDI23)
      - *S-LORA: SERVING THOUSANDS OF CONCURRENT LORA ADAPTERS* (arxiv23)
      - *Tabi: An Efficient Multi-Level Inference System for Large Language Models* (EuroSys23)
      - *(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention* (SOSP23)
