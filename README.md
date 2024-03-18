@@ -4,7 +4,7 @@
 
 > This repository is established to store personal notes and annotated papers during daily research.
 >
-> **Involving Field**: *AI System, Distributed Training, Cluster Schduling, Workload Trace Analysis, Inference, AI Compilation, Memory Storage, etc.*
+> **Involving Field**: *ML System, LLM, Distributed Training, Cluster Schduling, Inference, Workload Trace Analysis, AI Compilation, Memory/Cache Storage, etc.*
 
 
 
