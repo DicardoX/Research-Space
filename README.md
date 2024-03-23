@@ -119,3 +119,4 @@
       - *(fine-tuning survey) Learn From Model Beyond Fine-Tuning: A Survey* (arxiv23)
 18. **Quantization**:
      - *LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale* (NIPS22)
+     - *8-BIT OPTIMIZERS VIA BLOCK-WISE QUANTIZATION* (ICLR22)
