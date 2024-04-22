@@ -95,6 +95,7 @@
        - *Shepherd: Serving DNNs in the Wild* (NSDI23)
        - *S-LORA: SERVING THOUSANDS OF CONCURRENT LORA ADAPTERS* (arxiv23)
        - *Tabi: An Efficient Multi-Level Inference System for Large Language Models* (EuroSys23)
+       - *(TetriInfer) Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads* (arxiv24)
        - *TurboTransformers: An Efficient GPU Serving System For Transformer Models* (PPoPP21)
        - *(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention* (SOSP23)
        - *(VTC) Fairness in Serving Large Language Models* (arxiv23)
