@@ -119,6 +119,7 @@
        - *PALEO: A PERFORMANCE MODEL FOR DEEP NEURAL NETWORKS* (ICLR17)
 17. **Survey**:
       - *(fine-tuning survey) Learn From Model Beyond Fine-Tuning: A Survey* (arxiv23)
+      - *(peft survey) Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey* (arxiv24)
 18. **Quantization**:
      - *LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale* (NIPS22)
      - *8-BIT OPTIMIZERS VIA BLOCK-WISE QUANTIZATION* (ICLR22)
