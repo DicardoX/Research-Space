@@ -69,6 +69,7 @@
 11. **Training**:
        - *AMSP: Super-Scaling LLM Training via Advanced Model States Partitioning* (arxiv23)
        - *Capuchin: Tensor-based GPU Memory Management for Deep Learning* (ASPLOS20)
+       - *DLoRA: Distributed Parameter-Efficient Fine-Tuning Solution for Large Language Model* (arxiv24)
        - *Egeria: Efficient DNN Training with Knowledge-Guided Layer Freezing* (EuroSys23)
        - *FlexLLM: A System for Co-Serving Large Language Model Inference and Parameter-Efficient Finetuning* (arxiv24)
        - *(Fuyou) Adding NVMe SSDs to Enable and Accelerate 100B Model Fine-tuning on a Single GPU* (arxiv24)
