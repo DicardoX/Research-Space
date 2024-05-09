@@ -81,6 +81,7 @@
        - *MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs* (NSDI24)
        - *Retiarii: A Deep Learning Exploratory-Training Framework* (OSDI20)
        - *(SeqParallel) Reducing Activation Recomputation in Large Transformer Models* (arxiv22)
+       - *Ymir: A Scheduler for Foundation Model Fine-tuning Workloads* (ICS24)
        - *ZeRO-Offload: Democratizing Billion-Scale Model Training* (ATC21)
 12. **Inference**:
        - *AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving* (OSDI23)
