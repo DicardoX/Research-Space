@@ -79,6 +79,7 @@
        - *Hydro: Surrogate-Based Hyperparameter Tuning Service in Datacenters* (OSDI23)
        - *InternEvo: Efficient Long-Sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding* (arxiv24)
        - *MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs* (NSDI24)
+       - *Mobius: Fine Tuning Large-Scale Models on Commodity GPU Servers* (ASPLOS23)
        - *Retiarii: A Deep Learning Exploratory-Training Framework* (OSDI20)
        - *(SeqParallel) Reducing Activation Recomputation in Large Transformer Models* (arxiv22)
        - *Ymir: A Scheduler for Foundation Model Fine-tuning Workloads* (ICS24)
