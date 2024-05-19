@@ -55,6 +55,7 @@
 7. **Memory/Cache Storage**:
     - *Bagpipe: Accelerating Deep Recommendation Model Training* (SOSP23)
     - *Gemini: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints* (SOSP23)
+    - *MAGIS: Memory Optimization via Coordinated Graph Transformation and Scheduling for DNN* (ASPLOS24)
     - *UGache: A Unified GPU Cache for Embedding-based Deep Learning* (SOSP23)
     - *ZeRO: Memory Optimizations Toward Training Trillion Parameter Models* (arxiv20)
 8. **AI Compilation**:
