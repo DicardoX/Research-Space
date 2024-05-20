@@ -82,6 +82,7 @@
      - *InternEvo: Efficient Long-Sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding* (arxiv24)
      - *MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs* (NSDI24)
      - *Mobius: Fine Tuning Large-Scale Models on Commodity GPU Servers* (ASPLOS23)
+     - *(ProPETL) One Network, Many Masks: Towards More Parameter-Efficient Transfer Learning* (arxiv23)
      - *Retiarii: A Deep Learning Exploratory-Training Framework* (OSDI20)
      - *(SeqParallel) Reducing Activation Recomputation in Large Transformer Models* (arxiv22)
      - *(Unified-PEFT) TOWARDS A UNIFIED VIEW OF PARAMETER-EFFICIENT TRANSFER LEARNING* (ICLR22)
