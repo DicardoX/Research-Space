@@ -117,6 +117,7 @@
       - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
       - *ORCA: A Distributed Serving System for Transformer-Based Generative Models* (OSDI22)
       - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
+      - *Parrot: Efficient Serving of LLM-based Applications with Semantic Variable* (OSDI24)
       - *PETALS: Collaborative Inference and Fine-tuning of Large Models* (arxiv23)
       - *PetS: A Unified Framework for Parameter-Efficient Transformers Serving* (ATC22)
       - *PUNICA: MULTI-TENANT LORA SERVING* (arxiv23)
@@ -129,7 +130,7 @@
       - *TurboTransformers: An Efficient GPU Serving System For Transformer Models* (PPoPP21)
       - *(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention* (SOSP23)
       - *(VTC) Fairness in Serving Large Language Models* (arxiv23)
-
+    
 13. **Cluster Trace Analysis**:
       - *(Helios) Characterization and Prediction of Deep Learning Workloads in Large-Scale GPU Datacenters* (SC21)
       - *(PAI) MLaaS in the Wild: Workload Analysis and Scheduling in Large-Scale Heterogeneous GPU Clusters* (NSDI22)
