@@ -98,6 +98,7 @@
       - *Hydro: Surrogate-Based Hyperparameter Tuning Service in Datacenters* (OSDI23)
       - *InternEvo: Efficient Long-Sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding* (arxiv24)
       - *MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs* (NSDI24)
+      - *(Megatron-LM-Large-Scale) Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM* (arxiv21)
       - *Mobius: Fine Tuning Large-Scale Models on Commodity GPU Servers* (ASPLOS23)
       - *(ProPETL) One Network, Many Masks: Towards More Parameter-Efficient Transfer Learning* (arxiv23)
       - *Retiarii: A Deep Learning Exploratory-Training Framework* (OSDI20)
