@@ -114,6 +114,7 @@
       - *FaaSwap: SLO-Aware, GPU-Efficient Serverless Inference via Model Swapping* (arxiv24)
       - *(FastServe) Fast Distributed Inference Serving for Large Language Models* (arxiv23)
       - *FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU* (ICML23)
+      - *Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs* (arxiv24)
       - *Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache* (arxiv24)
       - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
       - *ORCA: A Distributed Serving System for Transformer-Based Generative Models* (OSDI22)
