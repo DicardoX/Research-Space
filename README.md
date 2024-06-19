@@ -111,6 +111,7 @@
       - *AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving* (OSDI23)
       - *(Brainstorm) Optimizing Dynamic Neural Networks with Brainstorm* (OSDI23)
       - *(DeepPlan) Fast and Efficient Model Serving Using Multi-GPUs with Direct-Host-Access* (EuroSys23)
+      - *DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving* (arxiv24)
       - *FaaSwap: SLO-Aware, GPU-Efficient Serverless Inference via Model Swapping* (arxiv24)
       - *(FastServe) Fast Distributed Inference Serving for Large Language Models* (arxiv23)
       - *FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU* (ICML23)
