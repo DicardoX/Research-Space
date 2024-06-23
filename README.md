@@ -127,6 +127,7 @@
       - *PUNICA: MULTI-TENANT LORA SERVING* (arxiv23)
       - *SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills* (arxiv23)
       - *(Sarathi-Serve) Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve* (arxiv24)
+      - *(SGLang) Efficiently Programming Large Language Models using SGLang* (arxiv24)
       - *Shepherd: Serving DNNs in the Wild* (NSDI23)
       - *S-LORA: SERVING THOUSANDS OF CONCURRENT LORA ADAPTERS* (arxiv23)
       - *Tabi: An Efficient Multi-Level Inference System for Large Language Models* (EuroSys23)
