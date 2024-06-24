@@ -151,6 +151,7 @@
       - *(ESLURM) Towards Scalable Resource Management for Supercomputers* (SC22)
 
 16. **Performance Modeling**:
+      - *CDMPP: A Device-Model Agnostic Framework for Latency Prediction of Tensor Programs* (EuroSys24)
       - *Daydream: Accurately Estimating the Efficacy of Optimizations for DNN Training* (ATC20)
       - *DistSim: A performance model of large-scale hybrid distributed DNN training* (CF23)
       - *dPRO: A Generic Performance Diagnosis and Optimization Toolkit for Expediting Distributed DNN Training* (MLSys22)
@@ -160,7 +161,7 @@
       - *Machine Learning-enabled Performance Model for DNN Applications and AI Accelerator* (HPCC22)
       - *(MPE) Fast Performance Prediction for Efficient Distributed DNN Training* (x)
       - *PALEO: A PERFORMANCE MODEL FOR DEEP NEURAL NETWORKS* (ICLR17)
-
+    
 17. **Survey**:
          - *(fine-tuning survey) Learn From Model Beyond Fine-Tuning: A Survey* (arxiv23)
          - *(peft survey) Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey* (arxiv24)
