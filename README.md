@@ -105,6 +105,7 @@
       - *(ProPETL) One Network, Many Masks: Towards More Parameter-Efficient Transfer Learning* (arxiv23)
       - *Retiarii: A Deep Learning Exploratory-Training Framework* (OSDI20)
       - *(SeqParallel) Reducing Activation Recomputation in Large Transformer Models* (arxiv22)
+      - *ScheMoE: An Extensible Mixture-of-Experts Distributed Training System with Tasks Scheduling* (EuroSys24)
       - *(Unified-PEFT) TOWARDS A UNIFIED VIEW OF PARAMETER-EFFICIENT TRANSFER LEARNING* (ICLR22)
       - *Ymir: A Scheduler for Foundation Model Fine-tuning Workloads* (ICS24)
       - *ZeRO-Offload: Democratizing Billion-Scale Model Training* (ATC21)
