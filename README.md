@@ -26,23 +26,19 @@
     - *SiloD: A Co-design of Caching and Scheduling for Deep Learning Clusters* (EuroSys23)
     - *(Synergy) Looking Beyond GPUs for DNN Scheduling  on Multi-Tenant Clusters* (OSDI22)
     - *Tiresias: A GPU Cluster Manager  for Distributed Deep Learning* (NSDI19)
-
 2. **Hybrid Parallelism**:
     - *Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning* (OSDI22)
     - *Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism* (arxiv20)
     - *Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates* (SOSP23)
     - *Piper: Multidimensional Planner for DNN Parallelization* (NIPS21)
     - *TUTEL: Adaptive Mixture-of-Experts at Scale* (arxiv22)
-
 3. **Data Parallelism**:
     - *(BytePS) A Unified Architecture for Accelerating Distributed DNN Training in Heterogeneous GPU/CPU Clusters* (OSDI20)
     - *Horovod: fast and easy distributed deep learning in TensorFlow* (arxiv20)
     - *Scaling Distributed Machine Learning  with the Parameter Server* (OSDI14)
-
 4. **Tensor Parallelism**:
     - *GSPMD: General and Scalable Parallelization for ML Computation Graphs* (arxiv21)
     - *(Tofu) Supporting Very Large Models using Automatic Dataflow Graph Partitioning* (EuroSys19)
-
 5. **Pipeline**:
     - *DAPPLE: A Pipelined Data Parallel Approach for Training Large Models* (PPoPP21)
     - *DynaPipe: Optimizing Multi-task Training through Dynamic Pipelines* (EuroSys24)
@@ -50,7 +46,6 @@
     - *PipeDream: Generalized Pipeline Parallelism for DNN Training* (SOSP19)
     - *Tessel: Boosting Distributed Execution of Large DNN Models via Flexible Schedule Search* (arxiv23)
     - *(ZeroBubble) NEAR ZERO BUBBLE PIPELINE PARALLELISM* (ICLR24)
-    
 6. **Graph Optimization**:
     - *(FlexFlow) BEYOND DATA AND MODEL PARALLELISM FOR DEEP NEURAL NETWORKS* (SysML19)
     - *(OptCNN) Exploring Hidden Dimensions in Parallelizing Convolutional Neural Networks* (ICML18)
@@ -58,30 +53,26 @@
     - *(MetaFlow) OPTIMIZING DNN COMPUTATION WITH RELAXED GRAPH SUBSTITUTIONS* (SysML19)
     - *Unity: Accelerating DNN Training Through Joint Optimization of Algebraic Transformations  and Parallelization* (OSDI22)
     - *Whale: Efficient Giant Model Training over Heterogeneous GPUs* (ATC22)
-
 7. **Memory/Cache Storage**:
     - *Bagpipe: Accelerating Deep Recommendation Model Training* (SOSP23)
     - *Gemini: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints* (SOSP23)
+    - *(JIT-ckpt)  Just-In-Time Checkpointing: Low Cost Error Recovery from Deep Learning Training Failures* (EuroSys24)
     - *MAGIS: Memory Optimization via Coordinated Graph Transformation and Scheduling for DNN* (ASPLOS24)
     - *UGache: A Unified GPU Cache for Embedding-based Deep Learning* (SOSP23)
     - *ZeRO: Memory Optimizations Toward Training Trillion Parameter Models* (arxiv20)
-
 8. **AI Compilation**:
 
     - *FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System* (ASPLOS20)
 
     - *Welder: Scheduling Deep Learning Memory Access via Tile-graph* (OSDI23)
     - *Operator Fusion in XLA: Analysis and Evaluation* (arxiv23)
-
 9. **Training Hyperparameters**:
     - *(DistBelief) Large Scale Distributed Deep Networks* (x)
     - *Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour* (arxiv18)
-
 10. **Communication**:
     - *Optimus-CC: Efficient Large NLP Model Training with 3D Parallelism Aware Communication Compression* (ASPLOS23)
     - *Overlap Communication with Dependent Computation via Decomposition in Large Deep Learning Models* (ASPLOS23)
     - *TOPOOPT: Co-optimizing Network Topology and Parallelization Strategy for Distributed Training Jobs* (NSDI23)
-
 11. **Training**:
       - *Aceso: Efficient Parallel DNN Training through Iterative Bottleneck Alleviation* (EuroSys24)
       - *AdapterFusion: Non-Destructive Task Composition for Transfer Learning* (arxiv21)
@@ -109,7 +100,6 @@
       - *(Unified-PEFT) TOWARDS A UNIFIED VIEW OF PARAMETER-EFFICIENT TRANSFER LEARNING* (ICLR22)
       - *Ymir: A Scheduler for Foundation Model Fine-tuning Workloads* (ICS24)
       - *ZeRO-Offload: Democratizing Billion-Scale Model Training* (ATC21)
-    
 12. **Inference**:
       - *AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving* (OSDI23)
       - *(Brainstorm) Optimizing Dynamic Neural Networks with Brainstorm* (OSDI23)
@@ -138,18 +128,14 @@
       - *TurboTransformers: An Efficient GPU Serving System For Transformer Models* (PPoPP21)
       - *(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention* (SOSP23)
       - *(VTC) Fairness in Serving Large Language Models* (arxiv23)
-    
 13. **Cluster Trace Analysis**:
       - *(Helios) Characterization and Prediction of Deep Learning Workloads in Large-Scale GPU Datacenters* (SC21)
       - *(PAI) MLaaS in the Wild: Workload Analysis and Scheduling in Large-Scale Heterogeneous GPU Clusters* (NSDI22)
       - (Philly) Analysis of Large-Scale Multi-Tenant GPU Clusters for DNN Training Workloads* (ATC19)
-
 14. **Serverless**:
       - *AQUATOPE: QoS-and-Uncertainty-Aware Resource Management for Multi-stage Serverless Workflows* (ASPLOS23)
-
 15. **HPC**:
       - *(ESLURM) Towards Scalable Resource Management for Supercomputers* (SC22)
-
 16. **Performance Modeling**:
       - *CDMPP: A Device-Model Agnostic Framework for Latency Prediction of Tensor Programs* (EuroSys24)
       - *Daydream: Accurately Estimating the Efficacy of Optimizations for DNN Training* (ATC20)
@@ -161,14 +147,11 @@
       - *Machine Learning-enabled Performance Model for DNN Applications and AI Accelerator* (HPCC22)
       - *(MPE) Fast Performance Prediction for Efficient Distributed DNN Training* (x)
       - *PALEO: A PERFORMANCE MODEL FOR DEEP NEURAL NETWORKS* (ICLR17)
-    
 17. **Survey**:
          - *(fine-tuning survey) Learn From Model Beyond Fine-Tuning: A Survey* (arxiv23)
          - *(peft survey) Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey* (arxiv24)
-
 18. **Quantization**:
         - *LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale* (NIPS22)
         - *8-BIT OPTIMIZERS VIA BLOCK-WISE QUANTIZATION* (ICLR22)
-
 19. **Sparsity**
        - *PIT: Optimization of Dynamic Sparse Deep Learning Models via Permutation Invariant Transformation* (SOSP23)
