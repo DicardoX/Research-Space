@@ -104,6 +104,7 @@
 12. **Inference**:
       - *AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving* (OSDI23)
       - *(Brainstorm) Optimizing Dynamic Neural Networks with Brainstorm* (OSDI23)
+      - *ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition* (arxiv24)
       - *(DeepPlan) Fast and Efficient Model Serving Using Multi-GPUs with Direct-Host-Access* (EuroSys23)
       - *DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving* (arxiv24)
       - *FaaSwap: SLO-Aware, GPU-Efficient Serverless Inference via Model Swapping* (arxiv24)
