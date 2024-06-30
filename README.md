@@ -43,6 +43,7 @@
     - *DAPPLE: A Pipelined Data Parallel Approach for Training Large Models* (PPoPP21)
     - *DynaPipe: Optimizing Multi-task Training through Dynamic Pipelines* (EuroSys24)
     - *GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism* (NIPS19)
+    - *Hanayo: Harnessing Wave-like Pipeline Parallelism for Enhanced Large Model Training Efficiency* (SC23)
     - *PipeDream: Generalized Pipeline Parallelism for DNN Training* (SOSP19)
     - *Tessel: Boosting Distributed Execution of Large DNN Models via Flexible Schedule Search* (arxiv23)
     - *(ZeroBubble) NEAR ZERO BUBBLE PIPELINE PARALLELISM* (ICLR24)
