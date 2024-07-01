@@ -45,6 +45,7 @@
     - *GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism* (NIPS19)
     - *Hanayo: Harnessing Wave-like Pipeline Parallelism for Enhanced Large Model Training Efficiency* (SC23)
     - *PipeDream: Generalized Pipeline Parallelism for DNN Training* (SOSP19)
+    - *TeraPipe: Token-Level Pipeline Parallelism for Training Large-Scale Language Models* (ICML21)
     - *Tessel: Boosting Distributed Execution of Large DNN Models via Flexible Schedule Search* (arxiv23)
     - *(ZeroBubble) NEAR ZERO BUBBLE PIPELINE PARALLELISM* (ICLR24)
 6. **Graph Optimization**:
