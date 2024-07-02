@@ -130,6 +130,7 @@
       - *(SGLang) Efficiently Programming Large Language Models using SGLang* (arxiv24)
       - *Shepherd: Serving DNNs in the Wild* (NSDI23)
       - *S-LORA: SERVING THOUSANDS OF CONCURRENT LORA ADAPTERS* (arxiv23)
+      - *Splitwise: Efficient Generative LLM Inference Using Phase Splitting* (ISCA24)
       - *Tabi: An Efficient Multi-Level Inference System for Large Language Models* (EuroSys23)
       - *(TetriInfer) Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads* (OSDI24)
       - *TurboTransformers: An Efficient GPU Serving System For Transformer Models* (PPoPP21)
