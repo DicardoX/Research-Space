@@ -119,6 +119,7 @@
       - *LoongServe: Efficiently Serving Long-context Large Language Models with Elastic Sequence Parallelism* (arxiv24)
       - *Llumnix: Dynamic Scheduling for Large Language Model Serving* (OSDI24)
       - *MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool* (arxiv24)
+      - *Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving* (arxiv24)
       - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
       - *ORCA: A Distributed Serving System for Transformer-Based Generative Models* (OSDI22)
       - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
