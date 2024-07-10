@@ -112,6 +112,7 @@
       - *ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition* (arxiv24)
       - *(DeepPlan) Fast and Efficient Model Serving Using Multi-GPUs with Direct-Host-Access* (EuroSys23)
       - *DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving* (arxiv24)
+      - *ExeGPT: Constraint-Aware Resource Scheduling for LLM Inference* (ASPLOS24)
       - *FaaSwap: SLO-Aware, GPU-Efficient Serverless Inference via Model Swapping* (arxiv24)
       - *(FastServe) Fast Distributed Inference Serving for Large Language Models* (arxiv23)
       - *FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU* (ICML23)
