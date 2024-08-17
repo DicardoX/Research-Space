@@ -29,11 +29,12 @@
 
 2. **Hybrid Parallelism**:
     - *Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning* (OSDI22)
+    - *AMP: Automatically Finding Model Parallel Strategies with Heterogeneity Awareness* (NIPS22)
     - *Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism* (arxiv20)
     - *Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates* (SOSP23)
     - *Piper: Multidimensional Planner for DNN Parallelization* (NIPS21)
     - *TUTEL: Adaptive Mixture-of-Experts at Scale* (arxiv22)
-
+    
 3. **Data Parallelism**:
     - *(BytePS) A Unified Architecture for Accelerating Distributed DNN Training in Heterogeneous GPU/CPU Clusters* (OSDI20)
     - *Horovod: fast and easy distributed deep learning in TensorFlow* (arxiv20)
