@@ -30,6 +30,7 @@
     - *Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning* (OSDI22)
     - *AMP: Automatically Finding Model Parallel Strategies with Heterogeneity Awareness* (NIPS22)
     - *Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism* (arxiv20)
+    - *Metis: Fast Automatic Distributed Training  on Heterogeneous GPUs* (ATC24)
     - *Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates* (SOSP23)
     - *Piper: Multidimensional Planner for DNN Parallelization* (NIPS21)
     - *TUTEL: Adaptive Mixture-of-Experts at Scale* (arxiv22)
