@@ -39,6 +39,7 @@
     - *Horovod: fast and easy distributed deep learning in TensorFlow* (arxiv20)
     - *Scaling Distributed Machine Learning  with the Parameter Server* (OSDI14)
 4. **Tensor Parallelism**:
+    - *FLUX: Fast Software-based Communication Overlap On GPUs Through Kernel Fusion* (arxiv24)
     - *GSPMD: General and Scalable Parallelization for ML Computation Graphs* (arxiv21)
     - *(Tofu) Supporting Very Large Models using Automatic Dataflow Graph Partitioning* (EuroSys19)
 5. **Pipeline**:
