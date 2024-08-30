@@ -129,6 +129,7 @@
        - *Llumnix: Dynamic Scheduling for Large Language Model Serving* (OSDI24)
        - *MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool* (arxiv24)
        - *Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving* (arxiv24)
+       - *NanoFlow: Towards Optimal Large Language Model Serving Throughput* (arxiv24)
        - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
        - *ORCA: A Distributed Serving System for Transformer-Based Generative Models* (OSDI22)
        - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
