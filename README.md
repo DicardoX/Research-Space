@@ -114,6 +114,7 @@
        - *ZeRO-Offload: Democratizing Billion-Scale Model Training* (ATC21)
 12. **Inference**:
        - *AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving* (OSDI23)
+       - *Andes: Defining and Enhancing Quality-of-Experience in LLM-Based Text Streaming Services* (arxiv24)
        - *(Brainstorm) Optimizing Dynamic Neural Networks with Brainstorm* (OSDI23)
        - *(CachedAttention) Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention* (ATC24)
        - *ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition* (arxiv24)
