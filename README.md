@@ -112,6 +112,7 @@
        - *(SeqParallel) Reducing Activation Recomputation in Large Transformer Models* (arxiv22)
        - *SMARTMOE: Efficiently Training Sparsely-Activated Models through Combining Offline and Online Parallelization* (ATC23)
        - *(Unified-PEFT) TOWARDS A UNIFIED VIEW OF PARAMETER-EFFICIENT TRANSFER LEARNING* (ICLR22)
+       - *Varuna: Scalable, Low-cost Training of Massive Deep Learning Models* (EuroSys22)
        - *Ymir: A Scheduler for Foundation Model Fine-tuning Workloads* (ICS24)
        - *ZeRO-Offload: Democratizing Billion-Scale Model Training* (ATC21)
 12. **Inference**:
