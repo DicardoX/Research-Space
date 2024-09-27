@@ -31,6 +31,7 @@
     - *AMP: Automatically Finding Model Parallel Strategies with Heterogeneity Awareness* (NIPS22)
     - *Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism* (arxiv20)
     - *Metis: Fast Automatic Distributed Training  on Heterogeneous GPUs* (ATC24)
+    - *nnScaler: Constraint-Guided Parallelization Plan Generation for Deep Learning Training* (OSDI24)
     - *Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates* (SOSP23)
     - *Piper: Multidimensional Planner for DNN Parallelization* (NIPS21)
     - *TUTEL: Adaptive Mixture-of-Experts at Scale* (arxiv22)
@@ -62,6 +63,7 @@
     - *Whale: Efficient Giant Model Training over Heterogeneous GPUs* (ATC22)
 7. **Memory/Cache Storage**:
     - *Bagpipe: Accelerating Deep Recommendation Model Training* (SOSP23)
+    - *ByteCheckpoint: A Unified Checkpointing System for LLM Development* (arxiv24)
     - *Gemini: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints* (SOSP23)
     - *(JIT-ckpt)  Just-In-Time Checkpointing: Low Cost Error Recovery from Deep Learning Training Failures* (EuroSys24)
     - *MAGIS: Memory Optimization via Coordinated Graph Transformation and Scheduling for DNN* (ASPLOS24)
