@@ -50,6 +50,7 @@
     - *Hanayo: Harnessing Wave-like Pipeline Parallelism for Enhanced Large Model Training Efficiency* (SC23)
     - *PipeDream: Generalized Pipeline Parallelism for DNN Training* (SOSP19)
     - *PipeLLM: Pipeline LLM Inference on Heterogeneous Devices with Sequence Slicing* (arxiv24)
+    - *PipeSwitch: Fast Pipelined Context Switching for Deep Learning Applications* (OSDI20)
     - *Seq1F1B: Efficient Sequence-Level Pipeline Parallelism for Large Language Model Training* (arxiv24)
     - *TeraPipe: Token-Level Pipeline Parallelism for Training Large-Scale Language Models* (ICML21)
     - *Tessel: Boosting Distributed Execution of Large DNN Models via Flexible Schedule Search* (arxiv23)
@@ -63,7 +64,7 @@
     - *Whale: Efficient Giant Model Training over Heterogeneous GPUs* (ATC22)
 7. **Memory/Cache Storage**:
     - *Bagpipe: Accelerating Deep Recommendation Model Training* (SOSP23)
-    - *ByteCheckpoint: A Unified Checkpointing System for LLM Development* (arxiv24)
+    - *ByteCheckpoint: A Unified Checkpointing System for LLM Development* (arxiv24) vll
     - *Gemini: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints* (SOSP23)
     - *(JIT-ckpt)  Just-In-Time Checkpointing: Low Cost Error Recovery from Deep Learning Training Failures* (EuroSys24)
     - *MAGIS: Memory Optimization via Coordinated Graph Transformation and Scheduling for DNN* (ASPLOS24)
