@@ -191,6 +191,7 @@
        - *(peft survey) Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey* (arxiv24)
 19. **Quantization**:
        - *LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale* (NIPS22)
+       - *Quant-LLM: Accelerating the Serving of Large Language Models via FP6-Centric Algorithm-System Co-Design on Modern GPUs* (ATC24)
        - *8-BIT OPTIMIZERS VIA BLOCK-WISE QUANTIZATION* (ICLR22)
 20. **Sparsity**
       - *PIT: Optimization of Dynamic Sparse Deep Learning Models via Permutation Invariant Transformation* (SOSP23)
