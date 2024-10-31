@@ -78,9 +78,8 @@
 9. **AI Compilation**:
 
     - *FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System* (ASPLOS20)
-
     - *MAGPY: Compiling Eager Mode DNN Programs by Monitoring Execution States* (ATC24)
-
+    - *(TLM) Enabling Tensor Language Model to Assist in Generating High-Performance Tensor Programs for Deep Learning* (OSDI24)
     - *Welder: Scheduling Deep Learning Memory Access via Tile-graph* (OSDI23)
     - *Operator Fusion in XLA: Analysis and Evaluation* (arxiv23)
 10. **Training Hyperparameters**:
