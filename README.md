@@ -121,6 +121,7 @@
      - *(Unified-PEFT) TOWARDS A UNIFIED VIEW OF PARAMETER-EFFICIENT TRANSFER LEARNING* (ICLR22)
      - *Varuna: Scalable, Low-cost Training of Massive Deep Learning Models* (EuroSys22)
      -  *Ymir: A Scheduler for Foundation Model Fine-tuning Workloads* (ICS24)
+     -  *ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning* (arxiv21)
      - *ZeRO-Offload: Democratizing Billion-Scale Model Training* (ATC21)
 13. **Inference**:
      - *AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving* (OSDI23)
