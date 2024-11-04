@@ -165,6 +165,7 @@
      - *TurboTransformers: An Efficient GPU Serving System For Transformer Models* (PPoPP21)
      - *(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention* (SOSP23)
      - *(VTC) Fairness in Serving Large Language Models* (arxiv23)
+     - *(μ-Serve) Power-aware Deep Learning Model Serving  with μ-Serve* (ATC24)
 14. **Cluster Trace Analysis**:
      - *(Helios) Characterization and Prediction of Deep Learning Workloads in Large-Scale GPU Datacenters* (SC21)
      - *(PAI) MLaaS in the Wild: Workload Analysis and Scheduling in Large-Scale Heterogeneous GPU Clusters* (NSDI22)
