@@ -193,6 +193,7 @@
        - *(peft guide) Scaling Down to Scale Up: A Guide to Parameter-Efficient Fine-Tuning* (arxiv23)
        - *(peft survey) Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey* (arxiv24)
 19. **Quantization**:
+       - *AWQ: Activation-aware Weight Quantization for On-Device LLM Compression and Acceleration* (MLSys24)
        - *LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale* (NIPS22)
        - *Quant-LLM: Accelerating the Serving of Large Language Models via FP6-Centric Algorithm-System Co-Design on Modern GPUs* (ATC24)
        - *8-BIT OPTIMIZERS VIA BLOCK-WISE QUANTIZATION* (ICLR22)
