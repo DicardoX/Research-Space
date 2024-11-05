@@ -35,6 +35,7 @@
     - *nnScaler: Constraint-Guided Parallelization Plan Generation for Deep Learning Training* (OSDI24)
     - *Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates* (SOSP23)
     - *Piper: Multidimensional Planner for DNN Parallelization* (NIPS21)
+    - *(remat-opt-parallel) Accelerating the Training of Large Language Models using Efficient Activation Rematerialization and Optimal Hybrid Parallelism* (ATC24)
     - *TUTEL: Adaptive Mixture-of-Experts at Scale* (arxiv22)
 3. **Data Parallelism**:
     - *(BytePS) A Unified Architecture for Accelerating Distributed DNN Training in Heterogeneous GPU/CPU Clusters* (OSDI20)
