@@ -75,6 +75,7 @@
     - *(JIT-ckpt)  Just-In-Time Checkpointing: Low Cost Error Recovery from Deep Learning Training Failures* (EuroSys24)
     - *MAGIS: Memory Optimization via Coordinated Graph Transformation and Scheduling for DNN* (ASPLOS24)
     - *UGache: A Unified GPU Cache for Embedding-based Deep Learning* (SOSP23)
+    - *vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention* (arxiv24)
     - *ZeRO: Memory Optimizations Toward Training Trillion Parameter Models* (arxiv20)
 9. **AI Compilation**:
 
