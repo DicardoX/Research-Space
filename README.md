@@ -164,6 +164,7 @@
      - *SkyPilot: An Intercloud Broker for Sky Computing* (NSDI23)
      - *S-LORA: SERVING THOUSANDS OF CONCURRENT LORA ADAPTERS* (arxiv23)
      - *Splitwise: Efficient Generative LLM Inference Using Phase Splitting* (ISCA24)
+     - *SpotServe: Serving Generative Large Language Models on Preemptible Instances* (ASPLOS24)
      - *(StreamingLLM) Efficient Streaming Language Models with Attention Sinks* (ICLR24)
      - *Tabi: An Efficient Multi-Level Inference System for Large Language Models* (EuroSys23)
      - *(TetriInfer) Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads* (arxiv24)
