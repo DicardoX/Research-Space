@@ -146,6 +146,7 @@
      - *LoongServe: Efficiently Serving Long-context Large Language Models with Elastic Sequence Parallelism* (arxiv24)
      - *Llumnix: Dynamic Scheduling for Large Language Model Serving* (OSDI24)
      - *MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool* (arxiv24)
+     - *MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention* (NIPS24)
      - *Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving* (arxiv24)
      - *MuxServe: Flexible Multiplexing for Efficient Multiple LLM Serving* (arxiv24)
      - *NanoFlow: Towards Optimal Large Language Model Serving Throughput* (arxiv24)
