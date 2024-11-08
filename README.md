@@ -200,6 +200,7 @@
 19. **Quantization**:
        - *AWQ: Activation-aware Weight Quantization for On-Device LLM Compression and Acceleration* (MLSys24)
        - *LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale* (NIPS22)
+       - *QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving* (arxiv24)
        - *Quant-LLM: Accelerating the Serving of Large Language Models via FP6-Centric Algorithm-System Co-Design on Modern GPUs* (ATC24)
        - *8-BIT OPTIMIZERS VIA BLOCK-WISE QUANTIZATION* (ICLR22)
 20. **Sparsity**
