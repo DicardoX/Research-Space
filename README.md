@@ -115,6 +115,7 @@
      - *MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs* (NSDI24)
      - *(Megatron-LM-Large-Scale) Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM* (arxiv21)
      - *Mobius: Fine Tuning Large-Scale Models on Commodity GPU Servers* (ASPLOS23)
+     - *Mixture-of-Depths: Dynamically allocating compute in transformer-based language models* (arxiv24)
      - *PUZZLE: Efficiently Aligning Large Language Models through Light-Weight Context Switch* (atc24)
      - *(ProPETL) One Network, Many Masks: Towards More Parameter-Efficient Transfer Learning* (arxiv23)
      - *Retiarii: A Deep Learning Exploratory-Training Framework* (OSDI20)
