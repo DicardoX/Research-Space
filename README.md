@@ -156,6 +156,7 @@
      - *Parrot: Efficient Serving of LLM-based Applications with Semantic Variable* (OSDI24)
      - *PETALS: Collaborative Inference and Fine-tuning of Large Models* (arxiv23)
      - *PetS: A Unified Framework for Parameter-Efficient Transformers Serving* (ATC22)
+     - *POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference* (arxiv24)
      - *PUNICA: MULTI-TENANT LORA SERVING* (arxiv23)
      - *SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills* (arxiv23)
      - *(Sarathi-Serve) Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve* (arxiv24)
