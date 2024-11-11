@@ -133,6 +133,7 @@
      - *(Brainstorm) Optimizing Dynamic Neural Networks with Brainstorm* (OSDI23)
      - *(CachedAttention) Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention* (ATC24)
      - *ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition* (arxiv24)
+     - *ConServe: Harvesting GPUs for Low-Latency and High-Throughput Large Language Model Serving* (arxiv24)
      - *(DeepPlan) Fast and Efficient Model Serving Using Multi-GPUs with Direct-Host-Access* (EuroSys23)
      - *DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving* (arxiv24)
      - *dLoRA: Dynamically Orchestrating Requests and Adapters for LoRA LLM Serving* (OSDI24)
