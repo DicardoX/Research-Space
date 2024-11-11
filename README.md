@@ -154,6 +154,7 @@
      - *MuxServe: Flexible Multiplexing for Efficient Multiple LLM Serving* (arxiv24)
      - *NanoFlow: Towards Optimal Large Language Model Serving Throughput* (arxiv24)
      - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
+     - *NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference* (arxiv24)
      - *ORCA: A Distributed Serving System for Transformer-Based Generative Models* (OSDI22)
      - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
      - *Parrot: Efficient Serving of LLM-based Applications with Semantic Variable* (OSDI24)
