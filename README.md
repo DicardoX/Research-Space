@@ -139,6 +139,7 @@
      - *ExeGPT: Constraint-Aware Resource Scheduling for LLM Inference* (ASPLOS24)
      - *FaaSwap: SLO-Aware, GPU-Efficient Serverless Inference via Model Swapping* (arxiv24)
      - *(FastServe) Fast Distributed Inference Serving for Large Language Models* (arxiv23)
+     - *Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity* (arxiv24)
      - *FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU* (ICML23)
      - *GMorph: Accelerating Multi-DNN Inference via Model Fusion* (EuroSys24)
      - *Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs* (arxiv24)
