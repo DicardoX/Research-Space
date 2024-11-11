@@ -138,6 +138,8 @@
      - *dLoRA: Dynamically Orchestrating Requests and Adapters for LoRA LLM Serving* (OSDI24)
      - *ExeGPT: Constraint-Aware Resource Scheduling for LLM Inference* (ASPLOS24)
      - *FaaSwap: SLO-Aware, GPU-Efficient Serverless Inference via Model Swapping* (arxiv24)
+     - *FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous
+        Pipelines* (arxiv24)
      - *(FastServe) Fast Distributed Inference Serving for Large Language Models* (arxiv23)
      - *Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity* (arxiv24)
      - *FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU* (ICML23)
