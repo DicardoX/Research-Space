@@ -128,6 +128,7 @@
      -  *ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning* (arxiv21)
      - *ZeRO-Offload: Democratizing Billion-Scale Model Training* (ATC21)
 13. **Inference**:
+     - *AcceLLM: Accelerating LLM Inference Using Redundancy for Load Balancing And Data Locality* (arxiv24)
      - *AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving* (OSDI23)
      - *Andes: Defining and Enhancing Quality-of-Experience in LLM-Based Text Streaming Services* (arxiv24)
      - *(Brainstorm) Optimizing Dynamic Neural Networks with Brainstorm* (OSDI23)
