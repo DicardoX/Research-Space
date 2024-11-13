@@ -140,6 +140,7 @@
      - *DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving* (arxiv24)
      - *dLoRA: Dynamically Orchestrating Requests and Adapters for LoRA LLM Serving* (OSDI24)
      - *DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency* (arxiv24)
+     - *EcoServe: Maximizing Multi-Resource Utilization with SLO Guarantees in LLM Serving* (arxiv24)
      - *ExeGPT: Constraint-Aware Resource Scheduling for LLM Inference* (ASPLOS24)
      - *FaaSwap: SLO-Aware, GPU-Efficient Serverless Inference via Model Swapping* (arxiv24)
      - *FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous
