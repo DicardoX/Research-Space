@@ -72,6 +72,7 @@
     - *Bagpipe: Accelerating Deep Recommendation Model Training* (SOSP23)
     - *ByteCheckpoint: A Unified Checkpointing System for LLM Development* (arxiv24) vll
     - *Gemini: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints* (SOSP23)
+    - *GMLake: Efficient and Transparent GPU Memory Defragmentation for Large-scale DNN Training with Virtual Memory Stitching* (ASPLOS24)
     - *(JIT-ckpt)  Just-In-Time Checkpointing: Low Cost Error Recovery from Deep Learning Training Failures* (EuroSys24)
     - *MAGIS: Memory Optimization via Coordinated Graph Transformation and Scheduling for DNN* (ASPLOS24)
     - *UGache: A Unified GPU Cache for Embedding-based Deep Learning* (SOSP23)
