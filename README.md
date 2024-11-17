@@ -18,6 +18,7 @@
     - *(Gavel) Heterogeneity-Aware Cluster Scheduling Policies for Deep Learning Workloads* (OSDI20)
     - *Hare: Exploiting Inter-job and Intra-job Parallelism of Distributed Machine Learning on Heterogeneous GPUs* (HPDC22)
     - *HiveD: Sharing a GPU Cluster for Deep Learning with Guarantees* (OSDI20)
+    - *(InferMax) The Effect of Scheduling and Preemption on the Efficiency of LLM Inference Serving* (MLSys24)
     - *Liquid: Intelligent Resource Estimation and Network-Efficient Scheduling for Deep Learning Jobs on Distributed GPU Clusters* (TPDS22)
     - *Llumnix: Dynamic Scheduling for Large Language Model Serving* (OSDI24)
     - *Lucid: A Non-intrusive, Scalable and Interpretable Scheduler for Deep Learning Training Jobs* (ASPLOS23)
