@@ -78,6 +78,7 @@
     - *GMLake: Efficient and Transparent GPU Memory Defragmentation for Large-scale DNN Training with Virtual Memory Stitching* (ASPLOS24)
     - *(JIT-ckpt)  Just-In-Time Checkpointing: Low Cost Error Recovery from Deep Learning Training Failures* (EuroSys24)
     - *MAGIS: Memory Optimization via Coordinated Graph Transformation and Scheduling for DNN* (ASPLOS24)
+    - *Pie: Pooling CPU Memory for LLM Inference* (arxiv24)
     - *UGache: A Unified GPU Cache for Embedding-based Deep Learning* (SOSP23)
     - *vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention* (arxiv24)
     - *vTensor: Flexible Virtual Tensor Management for Efficient LLM Serving* (arxiv24)
