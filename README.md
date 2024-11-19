@@ -28,10 +28,11 @@
     - *Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling* (SOSP23)
     - *SiloD: A Co-design of Caching and Scheduling for Deep Learning Clusters* (EuroSys23)
     - *(Synergy) Looking Beyond GPUs for DNN Scheduling  on Multi-Tenant Clusters* (OSDI22)
-    - *Tiresias: A GPU Cluster Manager  for Distributed Deep Learning* (NSDI19)
+    - *Tiresias: A GPU Cluster Manager for Distributed Deep Learning* (NSDI19)
 2. **Hybrid Parallelism**:
     - *Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning* (OSDI22)
     - *AMP: Automatically Finding Model Parallel Strategies with Heterogeneity Awareness* (NIPS22)
+    - *HETHUB: A Distributed Training System with Heterogeneous Cluster for Large-Scale Models* (arxiv24)
     - *Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism* (arxiv20)
     - *Metis: Fast Automatic Distributed Training  on Heterogeneous GPUs* (ATC24)
     - *nnScaler: Constraint-Guided Parallelization Plan Generation for Deep Learning Training* (OSDI24)
