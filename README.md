@@ -139,6 +139,7 @@
      - *ALISE: Accelerating Large Language Model Serving with Speculative Scheduling* (ICCAD24)
      - *AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving* (OSDI23)
      - *Andes: Defining and Enhancing Quality-of-Experience in LLM-Based Text Streaming Services* (arxiv24)
+     - *BlockLLM: Multi-tenant Finer-grained Serving for Large Language Models* (arxiv24)
      - *(Brainstorm) Optimizing Dynamic Neural Networks with Brainstorm* (OSDI23)
      - *(CachedAttention) Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention* (ATC24)
      - *CARASERVE: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference* (arxiv24)
