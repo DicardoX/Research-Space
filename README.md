@@ -177,6 +177,7 @@
      - *PetS: A Unified Framework for Parameter-Efficient Transformers Serving* (ATC22)
      - *POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference* (arxiv24)
      - *PUNICA: MULTI-TENANT LORA SERVING* (arxiv23)
+     - *PyramidInfer: Pyramid KV Cache Compression for High-throughput LLM Inference* (arxiv24)
      - *SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills* (arxiv23)
      - *(Sarathi-Serve) Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve* (arxiv24)
      - *(SGLang) Efficiently Programming Large Language Models using SGLang* (arxiv24)
