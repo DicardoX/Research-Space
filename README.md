@@ -113,6 +113,7 @@
      - *(Fuyou) Adding NVMe SSDs to Enable and Accelerate 100B Model Fine-tuning on a Single GPU* (arxiv24)
      - *FwdLLM: Efficient Federated Finetuning  of Large Language Models with Perturbed Inferences* (ATC24)
      - *HAP: SPMD DNN Training on Heterogeneous GPU Clusters with Automated Program Synthesis* (EuroSys24)
+     - *(hardware-scaling) Hardware Scaling Trends and Diminishing Returns in Large-Scale Distributed Training* (arxiv24)
      - *Harmony: Overcoming the Hurdles of GPU Memory Capacity to Train Massive DNN Models on Commodity Servers* (VLDB22)
      - *HiFT: A Hierarchical Full Parameter Fine-Tuning Strategy* (arxiv24)
      - *Hydro: Surrogate-Based Hyperparameter Tuning Service in Datacenters* (OSDI23)
