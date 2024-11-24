@@ -162,6 +162,7 @@
      - *FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU* (ICML23)
      - *GMorph: Accelerating Multi-DNN Inference via Model Fusion* (EuroSys24)
      - *Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs* (arxiv24)
+     - *InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management* (OSDI24)
      - *Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache* (arxiv24)
      - *LoongServe: Efficiently Serving Long-context Large Language Models with Elastic Sequence Parallelism* (arxiv24)
      - *Mélange: Cost Efficient Large Language Model Serving by Exploiting GPU Heterogeneity* (arxiv24)
