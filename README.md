@@ -119,6 +119,7 @@
      - *HiFT: A Hierarchical Full Parameter Fine-Tuning Strategy* (arxiv24)
      - *Hydro: Surrogate-Based Hyperparameter Tuning Service in Datacenters* (OSDI23)
      - *InternEvo: Efficient Long-Sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding* (arxiv24)
+     - *LightSeq: Sequence Level Parallelism for Distributed Training of Long Context Transformers* (NIPS23)
      - *LoongTrain: Efficient Training of Long-Sequence LLMs with Head-Context Parallelism* (arxiv24)
      - *MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs* (NSDI24)
      - *(Megatron-LM-Large-Scale) Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM* (arxiv21)
