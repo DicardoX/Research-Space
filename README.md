@@ -143,6 +143,7 @@
      - *ALISE: Accelerating Large Language Model Serving with Speculative Scheduling* (ICCAD24)
      - *AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving* (OSDI23)
      - *Andes: Defining and Enhancing Quality-of-Experience in LLM-Based Text Streaming Services* (arxiv24)
+     - *(AnLLMs) Anchor-based Large Language Models* (arxiv24)
      - *(AttentionOffload) Efficient and Economic Large Language Model Inference with Attention Offloading* (arxiv24)
      - *BlockLLM: Multi-tenant Finer-grained Serving for Large Language Models* (arxiv24)
      - *(Brainstorm) Optimizing Dynamic Neural Networks with Brainstorm* (OSDI23)
