@@ -201,6 +201,7 @@
      - *TurboTransformers: An Efficient GPU Serving System For Transformer Models* (PPoPP21)
      - *(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention* (SOSP23)
      - *(VTC) Fairness in Serving Large Language Models* (arxiv23)
+     - *XGrammar: Flexible and Efficient Structured Generation Engine for Large Language Models* (arxiv24)
      - *(μ-Serve) Power-aware Deep Learning Model Serving  with μ-Serve* (ATC24)
 14. **Cluster Trace Analysis**:
      - *(Helios) Characterization and Prediction of Deep Learning Workloads in Large-Scale GPU Datacenters* (SC21)
