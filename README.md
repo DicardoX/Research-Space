@@ -106,6 +106,7 @@
      - *Capuchin: Tensor-based GPU Memory Management for Deep Learning* (ASPLOS20)
      - *Centauri: Enabling Efficient Scheduling for Communication-Computation Overlap in Large Model Training via Communication Partitioning* (ASPLOS24)
      - *Crux: GPU-Efficient Communication Scheduling for Deep Learning Training* (SIGCOMM24)
+     - *(DHelix) Hiding Communication Cost in Distributed LLM Training via Micro-batch Co-execution* (arxiv24)
      - *(Diff-Pruning) Parameter-Efficient Transfer Learning with Diff Pruning* (ACL21)
      - *DistMM: Accelerating Distributed Multimodal  Model Training* (NSDI24)
      - *DLoRA: Distributed Parameter-Efficient Fine-Tuning Solution for Large Language Model* (arxiv24)
