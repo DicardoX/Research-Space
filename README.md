@@ -152,6 +152,7 @@
      - *(CachedAttention) Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention* (ATC24)
      - *CARASERVE: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference* (arxiv24)
      - *ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition* (arxiv24)
+     - *CodeTree: Agent-guided Tree Search for Code Generation with Large Language Models* (arxiv24)
      - *ConServe: Harvesting GPUs for Low-Latency and High-Throughput Large Language Model Serving* (arxiv24)
      - *(DeepPlan) Fast and Efficient Model Serving Using Multi-GPUs with Direct-Host-Access* (EuroSys23)
      - *DeltaZip: Efficient Serving of Multiple Full-Model-Tuned LLMs* (arxiv24)
