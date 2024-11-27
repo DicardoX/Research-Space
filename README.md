@@ -32,6 +32,7 @@
 2. **Hybrid Parallelism**:
     - *Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning* (OSDI22)
     - *AMP: Automatically Finding Model Parallel Strategies with Heterogeneity Awareness* (NIPS22)
+    - *(APEX) Toward High-Performance LLM Serving: A Simulation-Based Approach for Identifying Optimal Parallelism* (arxiv24)
     - *HETHUB: A Distributed Training System with Heterogeneous Cluster for Large-Scale Models* (arxiv24)
     - *Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism* (arxiv20)
     - *Metis: Fast Automatic Distributed Training  on Heterogeneous GPUs* (ATC24)
