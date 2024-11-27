@@ -67,10 +67,11 @@
     - *(MetaFlow) OPTIMIZING DNN COMPUTATION WITH RELAXED GRAPH SUBSTITUTIONS* (SysML19)
     - *Unity: Accelerating DNN Training Through Joint Optimization of Algebraic Transformations  and Parallelization* (OSDI22)
     - *Whale: Efficient Giant Model Training over Heterogeneous GPUs* (ATC22)
-7. **Co-location**:
+7. **Co-location/GPU Scheduling**:
     - *(FineInfer) Deferred Continuous Batching in Resource-Efficient Large Language Model Serving* (EuroMLSys24)
     - *FlexLLM: A System for Co-Serving Large Language Model Inference and Parameter-Efficient Finetuning* (arxiv24)
     - *Orion: Interference-aware, Fine-grained GPU Sharing for ML Applications* (EuroSys24)
+    - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
 8. **Memory/Cache Storage**:
     - *Bagpipe: Accelerating Deep Recommendation Model Training* (SOSP23)
     - *ByteCheckpoint: A Unified Checkpointing System for LLM Development* (arxiv24) vll
@@ -183,7 +184,6 @@
      - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
      - *NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference* (arxiv24)
      - *ORCA: A Distributed Serving System for Transformer-Based Generative Models* (OSDI22)
-     - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
      - *Parrot: Efficient Serving of LLM-based Applications with Semantic Variable* (OSDI24)
      - *PETALS: Collaborative Inference and Fine-tuning of Large Models* (arxiv23)
      - *PetS: A Unified Framework for Parameter-Efficient Transformers Serving* (ATC22)
