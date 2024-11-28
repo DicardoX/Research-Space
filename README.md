@@ -174,6 +174,7 @@
      - *Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs* (arxiv24)
      - *InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management* (OSDI24)
      - *Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache* (arxiv24)
+     - *(IOInfer) Efficient LLM Inference with I/O-Aware Partial KV Cache Recomputation* (arxiv24)
      - *LoongServe: Efficiently Serving Long-context Large Language Models with Elastic Sequence Parallelism* (arxiv24)
      - *Mélange: Cost Efficient Large Language Model Serving by Exploiting GPU Heterogeneity* (arxiv24)
      - *MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool* (arxiv24)
