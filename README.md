@@ -159,6 +159,7 @@
      - *ConServe: Harvesting GPUs for Low-Latency and High-Throughput Large Language Model Serving* (arxiv24)
      - *(DeepPlan) Fast and Efficient Model Serving Using Multi-GPUs with Direct-Host-Access* (EuroSys23)
      - *DeltaZip: Efficient Serving of Multiple Full-Model-Tuned LLMs* (arxiv24)
+     - *DistFlashAttn: Distributed Memory-efficient Attention for Long-context LLMs Training* (arxiv24)
      - *DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving* (arxiv24)
      - *dLoRA: Dynamically Orchestrating Requests and Adapters for LoRA LLM Serving* (OSDI24)
      - *DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency* (arxiv24)
