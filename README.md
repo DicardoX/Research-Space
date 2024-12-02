@@ -193,6 +193,7 @@
      - *PETALS: Collaborative Inference and Fine-tuning of Large Models* (arxiv23)
      - *PetS: A Unified Framework for Parameter-Efficient Transformers Serving* (ATC22)
      - *POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference* (arxiv24)
+     - *PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU* (SOSP24)
      - *PUNICA: MULTI-TENANT LORA SERVING* (arxiv23)
      - *PyramidInfer: Pyramid KV Cache Compression for High-throughput LLM Inference* (arxiv24)
      - *RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval* (arxiv24)
