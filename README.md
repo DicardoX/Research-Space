@@ -203,6 +203,7 @@
      - *Shepherd: Serving DNNs in the Wild* (NSDI23)
      - *SkyPilot: An Intercloud Broker for Sky Computing* (NSDI23)
      - *S-LORA: SERVING THOUSANDS OF CONCURRENT LORA ADAPTERS* (arxiv23)
+     - *SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification* (ASLOPS24)
      - *Splitwise: Efficient Generative LLM Inference Using Phase Splitting* (ISCA24)
      - *SpotServe: Serving Generative Large Language Models on Preemptible Instances* (ASPLOS24)
      - *Star Attention: Efficient LLM Inference over Long Sequences* (arxiv24) 
