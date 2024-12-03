@@ -75,7 +75,7 @@
     - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
 8. **Memory/Cache Storage**:
     - *Bagpipe: Accelerating Deep Recommendation Model Training* (SOSP23)
-    - *ByteCheckpoint: A Unified Checkpointing System for LLM Development* (arxiv24) vll
+    - *ByteCheckpoint: A Unified Checkpointing System for LLM Development* (arxiv24)
     - *Gemini: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints* (SOSP23)
     - *GMLake: Efficient and Transparent GPU Memory Defragmentation for Large-scale DNN Training with Virtual Memory Stitching* (ASPLOS24)
     - *(JIT-ckpt)  Just-In-Time Checkpointing: Low Cost Error Recovery from Deep Learning Training Failures* (EuroSys24)
@@ -195,6 +195,7 @@
      - *POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference* (arxiv24)
      - *PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU* (SOSP24)
      - *PUNICA: MULTI-TENANT LORA SERVING* (arxiv23)
+     - *(PuzzleNAS) Puzzle: Distillation-Based NAS for Inference-Optimized LLMs* (arxiv24)
      - *PyramidInfer: Pyramid KV Cache Compression for High-throughput LLM Inference* (arxiv24)
      - *RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval* (arxiv24)
      - *SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills* (arxiv23)
@@ -237,9 +238,8 @@
      - *(MPE) Fast Performance Prediction for Efficient Distributed DNN Training* (x)
      - *PALEO: A PERFORMANCE MODEL FOR DEEP NEURAL NETWORKS* (ICLR17)
 18. **Survey**:
-
        - *(DLSched survey) Deep Learning Workload Scheduling in GPU Datacenters: A Survey* (arxiv24)
-
+    
        - *(fine-tuning survey) Learn From Model Beyond Fine-Tuning: A Survey* (arxiv23)
        - *(peft guide) Scaling Down to Scale Up: A Guide to Parameter-Efficient Fine-Tuning* (arxiv23)
        - *(peft survey) Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey* (arxiv24)
