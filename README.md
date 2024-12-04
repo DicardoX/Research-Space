@@ -241,8 +241,8 @@
      - *PALEO: A PERFORMANCE MODEL FOR DEEP NEURAL NETWORKS* (ICLR17)
 18. **Survey**:
        - *(DLSched survey) Deep Learning Workload Scheduling in GPU Datacenters: A Survey* (arxiv24)
-    
        - *(fine-tuning survey) Learn From Model Beyond Fine-Tuning: A Survey* (arxiv23)
+       - *(KVCache survey) Keep the Cost Down: A Review on Methods to Optimize LLM’s KV Cache Consumption* (arxiv24)
        - *(peft guide) Scaling Down to Scale Up: A Guide to Parameter-Efficient Fine-Tuning* (arxiv23)
        - *(peft survey) Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey* (arxiv24)
 19. **Quantization**:
