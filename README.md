@@ -175,6 +175,7 @@
       - *FastSwitch: Optimizing Context Switching Efficiency in Fairness-aware Large Language Model Serving* (arxiv24)
       - *Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity* (arxiv24)
       - *FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU* (ICML23)
+      - *GUIDE: A Global Unified Inference Engine for Deploying Large Language Models in Heterogeneous Environments* (arxiv24)
       - *GMorph: Accelerating Multi-DNN Inference via Model Fusion* (EuroSys24)
       - *Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs* (arxiv24)
       - *(InferScaling) Efficiently Scaling Transformer Inference* (arxiv22)
