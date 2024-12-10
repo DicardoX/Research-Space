@@ -160,6 +160,7 @@
       - *ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition* (arxiv24)
       - *CodeTree: Agent-guided Tree Search for Code Generation with Large Language Models* (arxiv24)
       - *ConServe: Harvesting GPUs for Low-Latency and High-Throughput Large Language Model Serving* (arxiv24)
+      - *(CSP) Cross-Self KV Cache Pruning for Efficient Vision-Language Inference* (arxiv24)
       - *(DeepPlan) Fast and Efficient Model Serving Using Multi-GPUs with Direct-Host-Access* (EuroSys23)
       - *DeltaZip: Efficient Serving of Multiple Full-Model-Tuned LLMs* (arxiv24)
       - *DistFlashAttn: Distributed Memory-efficient Attention for Long-context LLMs Training* (arxiv24)
