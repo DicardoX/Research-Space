@@ -185,6 +185,7 @@
       - *(InferScaling) Efficiently Scaling Transformer Inference* (arxiv22)
       - *InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management* (OSDI24)
       - *Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache* (arxiv24)
+      - *(InstaInfer) Pre-Warming is Not Enough: Accelerating Serverless Inference With Opportunistic Pre-Loading* (SoCC24)
       - *(IOInfer) Efficient LLM Inference with I/O-Aware Partial KV Cache Recomputation* (arxiv24)
       - *LoongServe: Efficiently Serving Long-context Large Language Models with Elastic Sequence Parallelism* (arxiv24)
       - *Mélange: Cost Efficient Large Language Model Serving by Exploiting GPU Heterogeneity* (arxiv24)
