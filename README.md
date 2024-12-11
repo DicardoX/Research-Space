@@ -217,6 +217,7 @@
       - *SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification* (ASLOPS24)
       - *Splitwise: Efficient Generative LLM Inference Using Phase Splitting* (ISCA24)
       - *SpotServe: Serving Generative Large Language Models on Preemptible Instances* (ASPLOS24)
+      - *(SSJF) Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction* (arxiv24)
       - *Star Attention: Efficient LLM Inference over Long Sequences* (arxiv24) 
       - *(StreamingLLM) Efficient Streaming Language Models with Attention Sinks* (ICLR24)
       - *Tabi: An Efficient Multi-Level Inference System for Large Language Models* (EuroSys23)
