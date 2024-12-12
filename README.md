@@ -12,6 +12,7 @@
 
 1. **Cluster Scheduling**: 
     - *AntMan: Dynamic Scaling on GPU Clusters for Deep Learning* (OSDI20)
+    - *AWARE: Automate Workload Autoscaling with Reinforcement Learning in Production Cloud Systems* (ATC23)
     - *EasyScale: Elastic Training with Consistent Accuracy and Improved Utilization on GPUs* (SC23)
     - *ElasticFlow: An Elastic Serverless Training Platform for Distributed Deep Learning* (ASPLOS23)
     - *Gandiva: Introspective Cluster Scheduling  for Deep Learning* (OSDI18)
