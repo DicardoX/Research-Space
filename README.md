@@ -135,6 +135,7 @@
       - *Mobius: Fine Tuning Large-Scale Models on Commodity GPU Servers* (ASPLOS23)
       - *Mixture-of-Depths: Dynamically allocating compute in transformer-based language models* (arxiv24)
       - *Mixture-of-Transformers: A Sparse and Scalable Architecture for Multi-Modal Foundation Models* (arxiv24)
+      - *Pecan: Cost-Efficient ML Data Preprocessing  with Automatic Transformation Ordering  and Hybrid Placement* (ATC24)
       - *PUZZLE: Efficiently Aligning Large Language Models through Light-Weight Context Switch* (atc24)
       - *(ProPETL) One Network, Many Masks: Towards More Parameter-Efficient Transfer Learning* (arxiv23)
       - *Retiarii: A Deep Learning Exploratory-Training Framework* (OSDI20)
