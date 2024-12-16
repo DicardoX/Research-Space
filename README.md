@@ -108,6 +108,7 @@
       - *Aceso: Efficient Parallel DNN Training through Iterative Bottleneck Alleviation* (EuroSys24)
       -  *AdapterFusion: Non-Destructive Task Composition for Transfer Learning* (arxiv21)
       - *AMSP: Super-Scaling LLM Training via Advanced Model States Partitioning* (arxiv23)
+      - *ASLoRA: Adaptive Sharing Low-Rank Adaptation Across Layers* (arxiv24)
       - *(AWSNeuronSDK) Distributed Training of Large Language Models on AWS Trainium* (SoCC24) 
       - *(ByteScheduler) A Generic Communication Scheduler for Distributed DNN Training Acceleration* (SOSP19)
       - *Capuchin: Tensor-based GPU Memory Management for Deep Learning* (ASPLOS20)
