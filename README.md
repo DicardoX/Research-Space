@@ -120,7 +120,7 @@
       - *DistMM: Accelerating Distributed Multimodal  Model Training* (NSDI24)
       - *DLoRA: Distributed Parameter-Efficient Fine-Tuning Solution for Large Language Model* (arxiv24)
       - *Egeria: Efficient DNN Training with Knowledge-Guided Layer Freezing* (EuroSys23)
-      - *FlexLLM: A System for Co-Serving Large Language Model Inference and Parameter-Efficient Finetuning* (arxiv24)
+      - *Falcon: Pinpointing and Mitigating Stragglers for Large-Scale Hybrid-Parallel Training* (arxiv24)
       - *(Fuyou) Adding NVMe SSDs to Enable and Accelerate 100B Model Fine-tuning on a Single GPU* (arxiv24)
       - *FwdLLM: Efficient Federated Finetuning  of Large Language Models with Perturbed Inferences* (ATC24)
       - *HAP: SPMD DNN Training on Heterogeneous GPU Clusters with Automated Program Synthesis* (EuroSys24)
