@@ -131,6 +131,7 @@
       - *InternEvo: Efficient Long-Sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding* (arxiv24)
       - *LightSeq: Sequence Level Parallelism for Distributed Training of Long Context Transformers* (NIPS23)
       - *LoongTrain: Efficient Training of Long-Sequence LLMs with Head-Context Parallelism* (arxiv24)
+      - *Malleus: Straggler-Resilient Hybrid Parallel Training of Large-scale Models via Malleable Data and Model Parallelization* (arxiv24)
       - *MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs* (NSDI24)
       - *(Megatron-LM-Large-Scale) Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM* (arxiv21)
       - *Mobius: Fine Tuning Large-Scale Models on Commodity GPU Servers* (ASPLOS23)
