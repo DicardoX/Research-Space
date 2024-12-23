@@ -194,6 +194,7 @@
        - *Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache* (arxiv24)
        - *(InstaInfer) Pre-Warming is Not Enough: Accelerating Serverless Inference With Opportunistic Pre-Loading* (SoCC24)
        - *(IOInfer) Efficient LLM Inference with I/O-Aware Partial KV Cache Recomputation* (arxiv24)
+       - *(LLMMicroServe) A System for Microserving of LLMs* (arxiv24)
        - *LoongServe: Efficiently Serving Long-context Large Language Models with Elastic Sequence Parallelism* (arxiv24)
        - *Mélange: Cost Efficient Large Language Model Serving by Exploiting GPU Heterogeneity* (arxiv24)
        - *MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool* (arxiv24)
