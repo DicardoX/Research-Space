@@ -15,6 +15,7 @@
     - *AWARE: Automate Workload Autoscaling with Reinforcement Learning in Production Cloud Systems* (ATC23)
     - *EasyScale: Elastic Training with Consistent Accuracy and Improved Utilization on GPUs* (SC23)
     - *ElasticFlow: An Elastic Serverless Training Platform for Distributed Deep Learning* (ASPLOS23)
+    - *Frenzy: A Memory-Aware Serverless LLM Training System for Heterogeneous GPU Clusters* (arxiv24)
     - *Gandiva: Introspective Cluster Scheduling  for Deep Learning* (OSDI18)
     - *(Gavel) Heterogeneity-Aware Cluster Scheduling Policies for Deep Learning Workloads* (OSDI20)
     - *Hare: Exploiting Inter-job and Intra-job Parallelism of Distributed Machine Learning on Heterogeneous GPUs* (HPDC22)
