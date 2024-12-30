@@ -211,6 +211,7 @@
      - *Parrot: Efficient Serving of LLM-based Applications with Semantic Variable* (OSDI24)
      - *PETALS: Collaborative Inference and Fine-tuning of Large Models* (arxiv23)
      - *PetS: A Unified Framework for Parameter-Efficient Transformers Serving* (ATC22)
+     - *PickLLM: Context-Aware RL-Assisted Large Language Model Routing* (arxiv24)
      - *POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference* (arxiv24)
      - *PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU* (SOSP24)
      - *PUNICA: MULTI-TENANT LORA SERVING* (arxiv23)
