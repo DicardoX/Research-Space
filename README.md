@@ -181,6 +181,7 @@
      - *Epic: Efficient Position-Independent Context Caching for Serving Large Language Models* (arxiv24)
      - *ExeGPT: Constraint-Aware Resource Scheduling for LLM Inference* (ASPLOS24)
      - *FaaSwap: SLO-Aware, GPU-Efficient Serverless Inference via Model Swapping* (arxiv24)
+     - *(FairSched) Locality-aware Fair Scheduling in LLM Serving* (arxiv25)
      - *FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous
        Pipelines* (arxiv24)
      - *(FastServe) Fast Distributed Inference Serving for Large Language Models* (arxiv23)
