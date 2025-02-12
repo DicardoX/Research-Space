@@ -218,6 +218,7 @@
        - *PickLLM: Context-Aware RL-Assisted Large Language Model Routing* (arxiv24)
        - *POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference* (arxiv24)
        - *PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU* (SOSP24)
+       - *PreServe: Prefetching Model Weights and KV-Cache in Distributed LLM Serving* (arxiv25)
        - *PUNICA: MULTI-TENANT LORA SERVING* (arxiv23)
        - *(PuzzleNAS) Puzzle: Distillation-Based NAS for Inference-Optimized LLMs* (arxiv24)
        - *PyramidInfer: Pyramid KV Cache Compression for High-throughput LLM Inference* (arxiv24)
