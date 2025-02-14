@@ -245,6 +245,7 @@
     - *(VTC) Fairness in Serving Large Language Models* (arxiv23)
     - *WebLLM: A High-Performance In-Browser LLM Inference Engine* (arxiv24)
     - *XGrammar: Flexible and Efficient Structured Generation Engine for Large Language Models* (arxiv24)
+    - *(XY-Serve) Tackling the Dynamicity in a Production LLM Serving System with SOTA Optimizations via Hybrid Prefill/Decode/Verify Scheduling on Efficient Meta-kernels* (arxiv24)
     - *(μ-Serve) Power-aware Deep Learning Model Serving  with μ-Serve* (ATC24)
 14. **Cluster Trace Analysis**:
     - *(Helios) Characterization and Prediction of Deep Learning Workloads in Large-Scale GPU Datacenters* (SC21)
