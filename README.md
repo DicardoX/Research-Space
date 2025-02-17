@@ -225,6 +225,7 @@
     - *RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval* (arxiv24)
     - *SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills* (arxiv23)
     - *(Sarathi-Serve) Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve* (arxiv24)
+    - *(Select-N) Memory Offloading for Large Language Model Inference with Latency SLO Guarantees* (arxiv25)
     - *(SGLang) Efficiently Programming Large Language Models using SGLang* (arxiv24)
     - *ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference* (arxiv24)
     - *Shepherd: Serving DNNs in the Wild* (NSDI23)
