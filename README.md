@@ -120,6 +120,7 @@
     - *(DHelix) Hiding Communication Cost in Distributed LLM Training via Micro-batch Co-execution* (arxiv24)
     - *(Diff-Pruning) Parameter-Efficient Transfer Learning with Diff Pruning* (ACL21)
     - *DistMM: Accelerating Distributed Multimodal  Model Training* (NSDI24)
+    - *DistTrain: Addressing Model and Data Heterogeneity with Disaggregated Training for Multimodal Large Language Models* (arxiv24)
     - *DLoRA: Distributed Parameter-Efficient Fine-Tuning Solution for Large Language Model* (arxiv24)
     - *Egeria: Efficient DNN Training with Knowledge-Guided Layer Freezing* (EuroSys23)
     - *Falcon: Pinpointing and Mitigating Stragglers for Large-Scale Hybrid-Parallel Training* (arxiv24)
