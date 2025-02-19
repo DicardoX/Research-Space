@@ -148,6 +148,7 @@
     - *(SeqParallel) Reducing Activation Recomputation in Large Transformer Models* (arxiv22)
     - *SMARTMOE: Efficiently Training Sparsely-Activated Models through Combining Offline and Online Parallelization* (ATC23)
     - *SpeedLoader: An I/O efficient scheme for heterogeneous and distributed LLM operation* (arxiv24)
+    - *(Spindle) Efficient Multi-Task Large Model Training via Data Heterogeneity-aware Model Management* (arxiv24)
     - *(TokenTune) Memory-Efficient Fine-Tuning of Transformers via Token Selection* (arxiv24)
     - *(Unified-PEFT) TOWARDS A UNIFIED VIEW OF PARAMETER-EFFICIENT TRANSFER LEARNING* (ICLR22)
     - *Varuna: Scalable, Low-cost Training of Massive Deep Learning Models* (EuroSys22)
