@@ -226,6 +226,7 @@
     - *(PuzzleNAS) Puzzle: Distillation-Based NAS for Inference-Optimized LLMs* (arxiv24)
     - *PyramidInfer: Pyramid KV Cache Compression for High-throughput LLM Inference* (arxiv24)
     - *RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval* (arxiv24)
+    - *(SageServe) Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale* (arxiv25)
     - *SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills* (arxiv23)
     - *(Sarathi-Serve) Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve* (arxiv24)
     - *(Select-N) Memory Offloading for Large Language Model Inference with Latency SLO Guarantees* (arxiv25)
