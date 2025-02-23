@@ -194,6 +194,7 @@
     - *FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU* (ICML23)
     - *GUIDE: A Global Unified Inference Engine for Deploying Large Language Models in Heterogeneous Environments* (arxiv24)
     - *GMorph: Accelerating Multi-DNN Inference via Model Fusion* (EuroSys24)
+    - *HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading* (arxiv25)
     - *Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs* (arxiv24)
     - *(HybridServe) Efficient LLM Inference with Activation Checkpointing and Hybrid Caching* (arxiv25)
     - *(InferScaling) Efficiently Scaling Transformer Inference* (arxiv22)
