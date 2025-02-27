@@ -218,6 +218,7 @@
     - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
     - *NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference* (arxiv24)
     - *ORCA: A Distributed Serving System for Transformer-Based Generative Models* (OSDI22)
+    - *(ParaServe) Towards Swift Serverless LLM Cold Starts with ParaServe* (arxiv25)
     - *Parrot: Efficient Serving of LLM-based Applications with Semantic Variable* (OSDI24)
     - *PETALS: Collaborative Inference and Fine-tuning of Large Models* (arxiv23)
     - *PetS: A Unified Framework for Parameter-Efficient Transformers Serving* (ATC22)
