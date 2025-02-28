@@ -94,6 +94,7 @@
     - *ZeRO: Memory Optimizations Toward Training Trillion Parameter Models* (arxiv20)
 9. **AI Compilation**:
 
+    - *AttentionEngine: A Versatile Framework for Efficient Attention Mechanisms on Diverse Hardware Platforms* (arxiv25)
     - *FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System* (ASPLOS20)
     - *MAGPY: Compiling Eager Mode DNN Programs by Monitoring Execution States* (ATC24)
     - *(TLM) Enabling Tensor Language Model to Assist in Generating High-Performance Tensor Programs for Deep Learning* (OSDI24)
