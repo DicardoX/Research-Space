@@ -154,6 +154,7 @@
     - *(TokenTune) Memory-Efficient Fine-Tuning of Transformers via Token Selection* (arxiv24)
     - *(Unified-PEFT) TOWARDS A UNIFIED VIEW OF PARAMETER-EFFICIENT TRANSFER LEARNING* (ICLR22)
     - *Varuna: Scalable, Low-cost Training of Massive Deep Learning Models* (EuroSys22)
+    - *XPUTimer: Anomaly Diagnostics for Divergent LLM Training in GPU Clusters of Thousand-Plus Scale* (arxiv25)
     - *Ymir: A Scheduler for Foundation Model Fine-tuning Workloads* (ICS24)
     - *ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning* (arxiv21)
     - *ZeRO-Offload: Democratizing Billion-Scale Model Training* (ATC21)
