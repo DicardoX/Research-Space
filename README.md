@@ -113,6 +113,7 @@
     - *AMSP: Super-Scaling LLM Training via Advanced Model States Partitioning* (arxiv23)
     - *ASLoRA: Adaptive Sharing Low-Rank Adaptation Across Layers* (arxiv24)
     - *(AWSNeuronSDK) Distributed Training of Large Language Models on AWS Trainium* (SoCC24) 
+    - *ByteScale: Efficient Scaling of LLM Training with a 2048K Context Length on More Than 12,000 GPUs* (arxiv25)
     - *(ByteScheduler) A Generic Communication Scheduler for Distributed DNN Training Acceleration* (SOSP19)
     - *Capuchin: Tensor-based GPU Memory Management for Deep Learning* (ASPLOS20)
     - *Centauri: Enabling Efficient Scheduling for Communication-Computation Overlap in Large Model Training via Communication Partitioning* (ASPLOS24)
