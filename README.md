@@ -57,6 +57,7 @@
     - *(Tofu) Supporting Very Large Models using Automatic Dataflow Graph Partitioning* (EuroSys19)
 5. **Pipeline**:
     - *DAPPLE: A Pipelined Data Parallel Approach for Training Large Models* (PPoPP21)
+    - *DiffusionPipe: Training Large Diffusion Models with Efficient Pipelines* (MLSys24)
     - *DynaPipe: Optimizing Multi-task Training through Dynamic Pipelines* (EuroSys24)
     - *GraphPipe: Improving Performance and Scalability of DNN Training with Graph Pipeline Parallelism* (ASPLOS25)
     - *GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism* (NIPS19)
