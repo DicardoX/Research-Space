@@ -213,6 +213,7 @@
     - *Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache* (arxiv24)
     - *(InstaInfer) Pre-Warming is Not Enough: Accelerating Serverless Inference With Opportunistic Pre-Loading* (SoCC24)
     - *(IOInfer) Efficient LLM Inference with I/O-Aware Partial KV Cache Recomputation* (arxiv24)
+    - *Jenga: Effective Memory Management for Serving LLM with Heterogeneity* (arxiv25)
     - *KunServe: Elastic and Efficient Large Language Model Serving with Parameter-centric Memory Management* (arxiv24)
     - *KVDirect: Distributed Disaggregated LLM Inference* (arxiv25)
     - *(LLMMicroServe) A System for Microserving of LLMs* (arxiv24)
