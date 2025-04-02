@@ -309,6 +309,7 @@
     - *PIT: Optimization of Dynamic Sparse Deep Learning Models via Permutation Invariant Transformation* (SOSP23)
 21. **Retrieval-Augmented Generation (RAG) / LLM Applications**
       - *Autellix: An Efficient Serving Engine for LLM Agents as General Programs* (arxiv25)
+      - *CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion* (EuroSys25) 
       - *(Conveyor) Conveyor: Efficient Tool-aware LLM Serving with Tool Partial Execution* (arxiv24)
       - *(LAMPS) Fast Inference for Augmented Large Language Models* (arxiv24)
       - *RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation* (arxiv24)
