@@ -307,6 +307,7 @@
      - *8-BIT OPTIMIZERS VIA BLOCK-WISE QUANTIZATION* (ICLR22)
 20. **Sparsity**
     - *PIT: Optimization of Dynamic Sparse Deep Learning Models via Permutation Invariant Transformation* (SOSP23)
+    - *SpInfer: Leveraging Low-Level Sparsity for Efficient Large Language Model Inference on GPUs* (EuroSys25)
 21. **Retrieval-Augmented Generation (RAG) / LLM Applications**
       - *Autellix: An Efficient Serving Engine for LLM Agents as General Programs* (arxiv25)
       - *CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion* (EuroSys25) 
@@ -315,7 +316,7 @@
       - *RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation* (arxiv24)
       - *Teola: Towards End-to-End Optimization of LLM-based Applications* (arxiv24)
 22. **Edge Computing**
-         - *TinyLLM: A Framework for Training and Deploying Language Models at the Edge Computers* (arxiv24)
+    - *TinyLLM: A Framework for Training and Deploying Language Models at the Edge Computers* (arxiv24)
 23. **RLHF**
        - *HybridFlow: A Flexible and Efficient RLHF Framework* (EuroSys25)
 24. **Data Processing**
