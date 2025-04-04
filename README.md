@@ -256,6 +256,7 @@
     - *ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference* (arxiv24)
     - *Shepherd: Serving DNNs in the Wild* (NSDI23)
     - *SkyPilot: An Intercloud Broker for Sky Computing* (NSDI23)
+    - *SkyServe: Serving AI Models across Regions and Clouds with Spot Instances* (EuroSys25)
     - *S-LORA: SERVING THOUSANDS OF CONCURRENT LORA ADAPTERS* (arxiv23)
     - *SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification* (ASLOPS24)
     - *Splitwise: Efficient Generative LLM Inference Using Phase Splitting* (ISCA24)
