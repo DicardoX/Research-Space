@@ -140,6 +140,7 @@
     - *HiFT: A Hierarchical Full Parameter Fine-Tuning Strategy* (arxiv24)
     - *Hydro: Surrogate-Based Hyperparameter Tuning Service in Datacenters* (OSDI23)
     - *InternEvo: Efficient Long-Sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding* (arxiv24)
+    - *JABAS: Joint Adaptive Batching and Automatic Scaling for DNN Training on Heterogeneous GPUs* (EuroSys25)
     - *LightSeq: Sequence Level Parallelism for Distributed Training of Long Context Transformers* (NIPS23)
     - *LoongTrain: Efficient Training of Long-Sequence LLMs with Head-Context Parallelism* (arxiv24)
     - *Malleus: Straggler-Resilient Hybrid Parallel Training of Large-scale Models via Malleable Data and Model Parallelization* (arxiv24)
