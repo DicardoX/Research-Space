@@ -323,6 +323,7 @@
        - *HybridFlow: A Flexible and Efficient RLHF Framework* (EuroSys25)
        - *ReaLHF: Optimized RLHF Training for Large Language Models through Parameter Reallocation* (arxiv24)
        - *RLHFuse: Efficient RLHF Training for Large Language Models with Inter- and Intra-Stage Fusion* (arxiv24)
+       - *(RLHF-workshop) Systems Opportunities for LLM Fine-Tuning using Reinforcement Learning* (EuryMLSys25)
 24. **Data Processing**
      - *Pecan: Cost-Efficient ML Data Preprocessing  with Automatic Transformation Ordering  and Hybrid Placement* (ATC24)
      - *(Ray Data) The Streaming Batch Model for Efficient and Fault-Tolerant Heterogeneous Execution* (arxiv25)
