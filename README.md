@@ -321,6 +321,7 @@
     - *TinyLLM: A Framework for Training and Deploying Language Models at the Edge Computers* (arxiv24)
 23. **RLHF**
        - *HybridFlow: A Flexible and Efficient RLHF Framework* (EuroSys25)
+       - *ReaLHF: Optimized RLHF Training for Large Language Models through Parameter Reallocation* (arxiv24)
        - *RLHFuse: Efficient RLHF Training for Large Language Models with Inter- and Intra-Stage Fusion* (arxiv24)
 24. **Data Processing**
      - *Pecan: Cost-Efficient ML Data Preprocessing  with Automatic Transformation Ordering  and Hybrid Placement* (ATC24)
