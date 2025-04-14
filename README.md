@@ -225,6 +225,7 @@
     - *KVDirect: Distributed Disaggregated LLM Inference* (arxiv25)
     - *(LLMMicroServe) A System for Microserving of LLMs* (arxiv24)
     - *LoongServe: Efficiently Serving Long-context Large Language Models with Elastic Sequence Parallelism* (arxiv24)
+    - *MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism* (arxiv25)
     - *Mélange: Cost Efficient Large Language Model Serving by Exploiting GPU Heterogeneity* (arxiv24)
     - *MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool* (arxiv24)
     - *MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention* (NIPS24)
