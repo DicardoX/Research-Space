@@ -229,6 +229,7 @@
     - *Mélange: Cost Efficient Large Language Model Serving by Exploiting GPU Heterogeneity* (arxiv24)
     - *MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool* (arxiv24)
     - *MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention* (NIPS24)
+    - *ModServe: Scalable and Resource-Efficient Large Multimodal Model Serving* (arxiv25)
     - *MoE-Lightning: High-Throughput MoE Inference on Memory-constrained GPUs* (arxiv24)
     - *Mooncake: Trading More Storage for Less Computation – A KVCache-centric Architecture for Serving LLM Chatbot* (FAST25)
     - *MuxServe: Flexible Multiplexing for Efficient Multiple LLM Serving* (arxiv24)
