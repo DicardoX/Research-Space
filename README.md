@@ -123,6 +123,7 @@
     - *COAP: Memory-Efficient Training with Correlation-Aware Gradient Projection* (arxiv24)
     - *Cornstarch: Distributed Multimodal Training Must Be Multimodality-Aware* (arxiv25)
     - *Crux: GPU-Efficient Communication Scheduling for Deep Learning Training* (SIGCOMM24)
+    - *DeepCompile: A Compiler-Driven Approach to Optimizing Distributed Deep Learning Training* (arxiv25)
     - *(DHelix) Hiding Communication Cost in Distributed LLM Training via Micro-batch Co-execution* (arxiv24)
     - *(Diff-Pruning) Parameter-Efficient Transfer Learning with Diff Pruning* (ACL21)
     - *DistMM: Accelerating Distributed Multimodal  Model Training* (NSDI24)
