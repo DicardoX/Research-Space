@@ -153,6 +153,7 @@
     - *Mobius: Fine Tuning Large-Scale Models on Commodity GPU Servers* (ASPLOS23)
     - *Optimus: Accelerating Large-Scale Multi-Modal LLM Training by Bubble Exploitation* (arxiv24)
     - *OrchMLLM: Orchestrate Multimodal Data with Batch Post-Balancing to Accelerate Multimodal Large Language Model Training* (arxiv25)
+    - *PipeWeaver: Addressing Data Dynamicity in Large Multimodal Model Training with Dynamic Interleaved Pipeline* (arxiv25)
     - *PUZZLE: Efficiently Aligning Large Language Models through Light-Weight Context Switch* (atc24)
     - *(ProPETL) One Network, Many Masks: Towards More Parameter-Efficient Transfer Learning* (arxiv23)
     - *Retiarii: A Deep Learning Exploratory-Training Framework* (OSDI20)
