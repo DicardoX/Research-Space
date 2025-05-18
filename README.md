@@ -255,6 +255,7 @@
     - *(SageServe) Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale* (arxiv25)
     - *SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills* (arxiv23)
     - *(Sarathi-Serve) Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve* (arxiv24)
+    - *SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference* (arxiv25)
     - *(Select-N) Memory Offloading for Large Language Model Inference with Latency SLO Guarantees* (arxiv25)
     - *(SGLang) Efficiently Programming Large Language Models using SGLang* (arxiv24)
     - *ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference* (arxiv24)
