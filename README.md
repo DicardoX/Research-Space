@@ -177,6 +177,7 @@
     - *AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving* (OSDI23)
     - *Andes: Defining and Enhancing Quality-of-Experience in LLM-Based Text Streaming Services* (arxiv24)
     - *(AnLLMs) Anchor-based Large Language Models* (arxiv24)
+    - *Ascendra: Dynamic Request Prioritization for Efficient LLM Serving* (arxiv25)
     - *(AttentionOffload) Efficient and Economic Large Language Model Inference with Attention Offloading* (arxiv24)
     - *BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching* (arxiv24)
     - *BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching* (arxiv24)
