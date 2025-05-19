@@ -155,6 +155,7 @@
     - *OrchMLLM: Orchestrate Multimodal Data with Batch Post-Balancing to Accelerate Multimodal Large Language Model Training* (arxiv25)
     - *PipeWeaver: Addressing Data Dynamicity in Large Multimodal Model Training with Dynamic Interleaved Pipeline* (arxiv25)
     - *PUZZLE: Efficiently Aligning Large Language Models through Light-Weight Context Switch* (atc24)
+    - *PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications* (arxiv25)
     - *(ProPETL) One Network, Many Masks: Towards More Parameter-Efficient Transfer Learning* (arxiv23)
     - *Retiarii: A Deep Learning Exploratory-Training Framework* (OSDI20)
     - *ScheMoE: An Extensible Mixture-of-Experts Distributed Training System with Tasks Scheduling* (EuroSys24)
