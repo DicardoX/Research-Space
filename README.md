@@ -197,6 +197,7 @@
     - *DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving* (arxiv24)
     - *Dilu: Enabling GPU Resourcing-on-Demand for Serverless DL Serving via Introspective Elasticity* (ASPLOS25)
     - *dLoRA: Dynamically Orchestrating Requests and Adapters for LoRA LLM Serving* (OSDI24)
+    - *DynaServe: Unified and Elastic Tandem-Style Execution for Dynamic Disaggregated LLM Serving* (arxiv25)
     - *DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency* (arxiv24)
     - *EcoServe: Maximizing Multi-Resource Utilization with SLO Guarantees in LLM Serving* (arxiv24)
     - *Epic: Efficient Position-Independent Context Caching for Serving Large Language Models* (arxiv24)
