@@ -306,6 +306,7 @@
     - *Machine Learning-enabled Performance Model for DNN Applications and AI Accelerator* (HPCC22)
     - *(MPE) Fast Performance Prediction for Efficient Distributed DNN Training* (x)
     - *PALEO: A PERFORMANCE MODEL FOR DEEP NEURAL NETWORKS* (ICLR17)
+    - *Phantora: Live GPU Cluster Simulation for Machine Learning System Performance Estimation* (arxiv25)
 18. **Survey**:
       - *(DLSched survey) Deep Learning Workload Scheduling in GPU Datacenters: A Survey* (arxiv24)
       - *(fine-tuning survey) Learn From Model Beyond Fine-Tuning: A Survey* (arxiv23)
