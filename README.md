@@ -87,6 +87,7 @@
     - *ByteCheckpoint: A Unified Checkpointing System for LLM Development* (arxiv24)
     - *Gemini: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints* (SOSP23)
     - *GMLake: Efficient and Transparent GPU Memory Defragmentation for Large-scale DNN Training with Virtual Memory Stitching* (ASPLOS24)
+    - *(H2M2) Hardware-based Heterogeneous Memory Management for Large Language Model Inference* (arxiv25)
     - *(JIT-ckpt)  Just-In-Time Checkpointing: Low Cost Error Recovery from Deep Learning Training Failures* (EuroSys24)
     - *LayerKV: Optimizing Large Language Model Serving with Layer-wise KV Cache Management* (arxiv24)
     - *MAGIS: Memory Optimization via Coordinated Graph Transformation and Scheduling for DNN* (ASPLOS24)
