@@ -176,6 +176,7 @@
     - *AcceLLM: Accelerating LLM Inference Using Redundancy for Load Balancing And Data Locality* (arxiv24)
     - *ALISE: Accelerating Large Language Model Serving with Speculative Scheduling* (ICCAD24)
     - *AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving* (OSDI23)
+    - *(AMoE) Toward Cost-Efficient Serving of Mixture-of-Experts with Asynchrony* (arxiv25)
     - *Andes: Defining and Enhancing Quality-of-Experience in LLM-Based Text Streaming Services* (arxiv24)
     - *(AnLLMs) Anchor-based Large Language Models* (arxiv24)
     - *Ascendra: Dynamic Request Prioritization for Efficient LLM Serving* (arxiv25)
