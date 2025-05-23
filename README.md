@@ -171,6 +171,7 @@
     - *WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training* (OSDI25)
     - *XPUTimer: Anomaly Diagnostics for Divergent LLM Training in GPU Clusters of Thousand-Plus Scale* (arxiv25)
     - *Ymir: A Scheduler for Foundation Model Fine-tuning Workloads* (ICS24)
+    - *ZenFlow: Enabling Stall-Free Offloading Training via Asynchronous Updates* (arxiv25)
     - *ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning* (arxiv21)
     - *ZeRO-Offload: Democratizing Billion-Scale Model Training* (ATC21)
 13. **Inference**:
