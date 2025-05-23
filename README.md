@@ -223,6 +223,7 @@
     - *HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading* (arxiv25)
     - *Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs* (arxiv24)
     - *(HybridServe) Efficient LLM Inference with Activation Checkpointing and Hybrid Caching* (arxiv25)
+    - *HydraInfer: Hybrid Disaggregated Scheduling for Multimodal Large Language Model Serving* (arxiv25)
     - *Impress: An Importance-Informed Multi-Tier Prefix KV Storage System for Large Language 
          Model Inference* (FAST25)
     - *(InferScaling) Efficiently Scaling Transformer Inference* (arxiv22)
