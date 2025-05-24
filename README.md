@@ -181,6 +181,7 @@
     - *(AMoE) Toward Cost-Efficient Serving of Mixture-of-Experts with Asynchrony* (arxiv25)
     - *Andes: Defining and Enhancing Quality-of-Experience in LLM-Based Text Streaming Services* (arxiv24)
     - *(AnLLMs) Anchor-based Large Language Models* (arxiv24)
+    - *Arrow: Adaptive Scheduling Mechanisms for Disaggregated LLM Inference Architecture* (arxiv25)
     - *Ascendra: Dynamic Request Prioritization for Efficient LLM Serving* (arxiv25)
     - *(AttentionOffload) Efficient and Economic Large Language Model Inference with Attention Offloading* (arxiv24)
     - *BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching* (arxiv24)
