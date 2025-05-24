@@ -268,6 +268,7 @@
     - *(Sarathi-Serve) Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve* (arxiv24)
     - *SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference* (arxiv25)
     - *(Select-N) Memory Offloading for Large Language Model Inference with Latency SLO Guarantees* (arxiv25)
+    - *ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs* (arxiv25)
     - *(SGLang) Efficiently Programming Large Language Models using SGLang* (arxiv24)
     - *ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference* (arxiv24)
     - *Shepherd: Serving DNNs in the Wild* (NSDI23)
