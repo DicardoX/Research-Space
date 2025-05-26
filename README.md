@@ -142,6 +142,7 @@
     - *Harmony: Overcoming the Hurdles of GPU Memory Capacity to Train Massive DNN Models on Commodity Servers* (VLDB22)
     - *HiFT: A Hierarchical Full Parameter Fine-Tuning Strategy* (arxiv24)
     - *Hydro: Surrogate-Based Hyperparameter Tuning Service in Datacenters* (OSDI23)
+    - *H2: Towards Efficient Large-Scale LLM Training on Hyper-Heterogeneous Cluster over 1,000 Chips* (arxiv25)
     - *InternEvo: Efficient Long-Sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding* (arxiv24)
     - *JABAS: Joint Adaptive Batching and Automatic Scaling for DNN Training on Heterogeneous GPUs* (EuroSys25)
     - *LightSeq: Sequence Level Parallelism for Distributed Training of Long Context Transformers* (NIPS23)
