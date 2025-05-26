@@ -208,6 +208,7 @@
     - *DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency* (arxiv24)
     - *EcoServe: Maximizing Multi-Resource Utilization with SLO Guarantees in LLM Serving* (arxiv24)
     - *EcoServe(-PD): Enabling Cost-effective LLM Serving with Proactive Intra- and Inter-Instance Orchestration* (arxiv25)
+    - *ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor* (arxiv25)
     - *Epic: Efficient Position-Independent Context Caching for Serving Large Language Models* (arxiv24)
     - *ExeGPT: Constraint-Aware Resource Scheduling for LLM Inference* (ASPLOS24)
     - *FaaSwap: SLO-Aware, GPU-Efficient Serverless Inference via Model Swapping* (arxiv24)
