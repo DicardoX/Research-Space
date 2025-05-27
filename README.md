@@ -54,6 +54,7 @@
     - *(FlashComm) Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference* (arxiv24)
     - *FLUX: Fast Software-based Communication Overlap On GPUs Through Kernel Fusion* (arxiv24)
     - *GSPMD: General and Scalable Parallelization for ML Computation Graphs* (arxiv21)
+    - *Nonuniform-Tensor-Parallelism: Mitigating GPU failure impact for Scaled-up LLM Training* (arxiv25)
     - *(Tofu) Supporting Very Large Models using Automatic Dataflow Graph Partitioning* (EuroSys19)
 5. **Pipeline**:
     - *ADAPTRA: Straggler-Resilient Hybrid-Parallel Training with Pipeline Adaptation* (arxiv25)
