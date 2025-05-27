@@ -56,6 +56,7 @@
     - *GSPMD: General and Scalable Parallelization for ML Computation Graphs* (arxiv21)
     - *(Tofu) Supporting Very Large Models using Automatic Dataflow Graph Partitioning* (EuroSys19)
 5. **Pipeline**:
+    - *ADAPTRA: Straggler-Resilient Hybrid-Parallel Training with Pipeline Adaptation* (arxiv25)
     - *(ChronosPipe) Enhancing Memory Efficiency in Large Language Model Training Through Chronos-aware Pipeline Parallelism* (ASPLOS25)
     - *DAPPLE: A Pipelined Data Parallel Approach for Training Large Models* (PPoPP21)
     - *DiffusionPipe: Training Large Diffusion Models with Efficient Pipelines* (MLSys24)
