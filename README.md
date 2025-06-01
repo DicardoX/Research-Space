@@ -221,6 +221,7 @@
               Pipelines* (arxiv24)
     - *(FastServe) Fast Distributed Inference Serving for Large Language Models* (arxiv23)
     - *FastSwitch: Optimizing Context Switching Efficiency in Fairness-aware Large Language Model Serving* (arxiv24)
+    - *FlashForge: Ultra-Efficient Prefix-Aware Attention for LLM Decoding* (arxiv25)
     - *FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving* (arxiv25)
     - *Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity* (arxiv24)
     - *FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU* (ICML23)
