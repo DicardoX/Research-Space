@@ -279,6 +279,7 @@
     - *(SGLang) Efficiently Programming Large Language Models using SGLang* (arxiv24)
     - *ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference* (arxiv24)
     - *Shepherd: Serving DNNs in the Wild* (NSDI23)
+    - *SkyLB: A Locality-Aware Cross-Region Load Balancer for LLM Inference* (arxiv25)
     - *SkyPilot: An Intercloud Broker for Sky Computing* (NSDI23)
     - *SkyServe: Serving AI Models across Regions and Clouds with Spot Instances* (EuroSys25)
     - *S-LORA: SERVING THOUSANDS OF CONCURRENT LORA ADAPTERS* (arxiv23)
@@ -304,6 +305,7 @@
     - *(Helios) Characterization and Prediction of Deep Learning Workloads in Large-Scale GPU Datacenters* (SC21)
     - *(PAI) MLaaS in the Wild: Workload Analysis and Scheduling in Large-Scale Heterogeneous GPU Clusters* (NSDI22)
     - *(Philly) Analysis of Large-Scale Multi-Tenant GPU Clusters for DNN Training Workloads* (ATC19)
+    - *ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production* (arxiv25)
 15. **Serverless**:
     - *AQUATOPE: QoS-and-Uncertainty-Aware Resource Management for Multi-stage Serverless Workflows* (ASPLOS23)
 16. **HPC**:
