@@ -192,6 +192,7 @@
     - *(AttentionOffload) Efficient and Economic Large Language Model Inference with Attention Offloading* (arxiv24)
     - *BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching* (arxiv24)
     - *BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching* (arxiv24)
+    - *(BlitzScale) Fast and Live Model Auto Scaling with O(1) Host Caching* (OSDI25)
     - *BlockLLM: Multi-tenant Finer-grained Serving for Large Language Models* (arxiv24)
     - *(Brainstorm) Optimizing Dynamic Neural Networks with Brainstorm* (OSDI23)
     - *(CachedAttention) Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention* (ATC24)
