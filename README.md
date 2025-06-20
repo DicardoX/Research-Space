@@ -88,6 +88,7 @@
 8. **Memory/Cache Storage**:
     - *Bagpipe: Accelerating Deep Recommendation Model Training* (SOSP23)
     - *ByteCheckpoint: A Unified Checkpointing System for LLM Development* (arxiv24)
+    - *eLLM: Elastic Memory Management Framework for Efficient LLM Serving* (arxiv25)
     - *Gemini: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints* (SOSP23)
     - *GMLake: Efficient and Transparent GPU Memory Defragmentation for Large-scale DNN Training with Virtual Memory Stitching* (ASPLOS24)
     - *(H2M2) Hardware-based Heterogeneous Memory Management for Large Language Model Inference* (arxiv25)
