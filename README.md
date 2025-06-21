@@ -83,6 +83,7 @@
 7. **Co-location/GPU Scheduling**:
     - *(FineInfer) Deferred Continuous Batching in Resource-Efficient Large Language Model Serving* (EuroMLSys24)
     - *FlexLLM: A System for Co-Serving Large Language Model Inference and Parameter-Efficient Finetuning* (arxiv24)
+    - *(Mudi) Multiplexing Dynamic Deep Learning Workloads with SLO-awareness in GPU Clusters* (EuroSys25)
     - *Orion: Interference-aware, Fine-grained GPU Sharing for ML Applications* (EuroSys24)
     - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
 8. **Memory/Cache Storage**:
