@@ -145,6 +145,7 @@
     - *HAP: SPMD DNN Training on Heterogeneous GPU Clusters with Automated Program Synthesis* (EuroSys24)
     - *(hardware-scaling) Hardware Scaling Trends and Diminishing Returns in Large-Scale Distributed Training* (arxiv24)
     - *Harmony: Overcoming the Hurdles of GPU Memory Capacity to Train Massive DNN Models on Commodity Servers* (VLDB22)
+    - *HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs* (arxiv25)
     - *HiFT: A Hierarchical Full Parameter Fine-Tuning Strategy* (arxiv24)
     - *Hydro: Surrogate-Based Hyperparameter Tuning Service in Datacenters* (OSDI23)
     - *H2: Towards Efficient Large-Scale LLM Training on Hyper-Heterogeneous Cluster over 1,000 Chips* (arxiv25)
