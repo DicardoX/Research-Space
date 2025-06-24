@@ -274,6 +274,7 @@
     - *PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU* (SOSP24)
     - *PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications* (arxiv25)
     - *PreServe: Prefetching Model Weights and KV-Cache in Distributed LLM Serving* (arxiv25)
+    - *Prism: Unleashing GPU Sharing for Cost-Efficient Multi-LLM Serving* (arxiv25)
     - *PUNICA: MULTI-TENANT LORA SERVING* (arxiv23)
     - *(PuzzleNAS) Puzzle: Distillation-Based NAS for Inference-Optimized LLMs* (arxiv24)
     - *PyramidInfer: Pyramid KV Cache Compression for High-throughput LLM Inference* (arxiv24)
