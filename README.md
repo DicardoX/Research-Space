@@ -157,6 +157,7 @@
     - *MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs* (NSDI24)
     - *MegaScale-MoE: Large-Scale Communication-Efficient Training of Mixture-of-Experts Models in Production* (arxiv25)
     - *(Megatron-LM-Large-Scale) Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM* (arxiv21)
+    - *Minder: Faulty Machine Detection for Large-scale Distributed Model Training* (NSDI25)
     - *Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization* (EuroSys25)
     - *Mixture-of-Depths: Dynamically allocating compute in transformer-based language models* (arxiv24)
     - *Mixture-of-Transformers: A Sparse and Scalable Architecture for Multi-Modal Foundation Models* (arxiv24)
