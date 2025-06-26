@@ -305,6 +305,7 @@
     - *(TetriInfer) Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads* (arxiv24)
     - *TokenSelect: Efficient Long-Context Inference and Length Extrapolation for LLMs via Dynamic Token-Level KV Cache Selection* (arxiv24)
     - *TurboTransformers: An Efficient GPU Serving System For Transformer Models* (PPoPP21)
+    - *(VaLoRA) Empower Vision Applications with LoRA LMM* (EuroSys25)
     - *(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention* (OSP23)
     - *(VTC) Fairness in Serving Large Language Models* (arxiv23)
     - *WebLLM: A High-Performance In-Browser LLM Inference Engine* (arxiv24)
