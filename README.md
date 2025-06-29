@@ -238,6 +238,7 @@
     - *GMorph: Accelerating Multi-DNN Inference via Model Fusion* (EuroSys24)
     - *GUIDE: A Global Unified Inference Engine for Deploying Large Language Models in Heterogeneous Environments* (arxiv24)
     - *HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading* (arxiv25)
+    - *HELIOS: Adaptive Model And Early-Exit Selection for Efficient LLM Inference Serving* (arxiv25)
     - *Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs* (arxiv24)
     - *(HybridServe) Efficient LLM Inference with Activation Checkpointing and Hybrid Caching* (arxiv25)
     - *HydraInfer: Hybrid Disaggregated Scheduling for Multimodal Large Language Model Serving* (arxiv25)
