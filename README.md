@@ -291,6 +291,7 @@
     - *(SGLang) Efficiently Programming Large Language Models using SGLang* (arxiv24)
     - *ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference* (arxiv24)
     - *Shepherd: Serving DNNs in the Wild* (NSDI23)
+    - *SiPipe: Bridging the CPU–GPU Utilization Gap for Efficient Pipeline-Parallel LLM Inference* (arxiv25)
     - *SkyLB: A Locality-Aware Cross-Region Load Balancer for LLM Inference* (arxiv25)
     - *SkyPilot: An Intercloud Broker for Sky Computing* (NSDI23)
     - *SkyServe: Serving AI Models across Regions and Clouds with Spot Instances* (EuroSys25)
