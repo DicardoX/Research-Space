@@ -312,6 +312,7 @@
     - *(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention* (OSP23)
     - *(VTC) Fairness in Serving Large Language Models* (arxiv23)
     - *WebLLM: A High-Performance In-Browser LLM Inference Engine* (arxiv24)
+    - *WindServe: Efficient Phase-Disaggregated LLM Serving with Stream-based Dynamic Scheduling* (ISCA25)
     - *XGrammar: Flexible and Efficient Structured Generation Engine for Large Language Models* (arxiv24)
     - *(XY-Serve) Tackling the Dynamicity in a Production LLM Serving System with SOTA Optimizations via Hybrid Prefill/Decode/Verify Scheduling on Efficient Meta-kernels* (arxiv24)
     - 𝜆Scale: Enabling Fast Scaling for Serverless Large Language Model Inference (arxiv25)
