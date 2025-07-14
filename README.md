@@ -254,6 +254,7 @@
     - *Jenga: Effective Memory Management for Serving LLM with Heterogeneity* (arxiv25)
     - *KunServe: Elastic and Efficient Large Language Model Serving with Parameter-centric Memory Management* (arxiv24)
     - *KVDirect: Distributed Disaggregated LLM Inference* (arxiv25)
+    - *LLM-Mesh: Enabling Elastic Sharing for Serverless LLM Inference* (arxiv25)
     - *(LLMMicroServe) A System for Microserving of LLMs* (arxiv24)
     - *LoongServe: Efficiently Serving Long-context Large Language Models with Elastic Sequence Parallelism* (arxiv24)
     - *MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism* (arxiv25)
