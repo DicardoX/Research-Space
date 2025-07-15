@@ -187,6 +187,7 @@
     - *ZenFlow: Enabling Stall-Free Offloading Training via Asynchronous Updates* (arxiv25)
     - *ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning* (arxiv21)
     - *ZeRO-Offload: Democratizing Billion-Scale Model Training* (ATC21)
+    - *Zorse: Optimizing LLM Training Efficiency on Heterogeneous GPU Clusters* (arxiv25)
 13. **Inference**:
     - *AcceLLM: Accelerating LLM Inference Using Redundancy for Load Balancing And Data Locality* (arxiv24)
     - *ALISE: Accelerating Large Language Model Serving with Speculative Scheduling* (ICCAD24)
