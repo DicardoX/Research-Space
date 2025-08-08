@@ -84,6 +84,7 @@
 7. **Co-location/GPU Scheduling**:
     - *(FineInfer) Deferred Continuous Batching in Resource-Efficient Large Language Model Serving* (EuroMLSys24)
     - *FlexLLM: A System for Co-Serving Large Language Model Inference and Parameter-Efficient Finetuning* (arxiv24)
+    - *(LLMStation) Resource Multiplexing in Tuning and Serving Large Language Models* (ATC25)
     - *(Mudi) Multiplexing Dynamic Deep Learning Workloads with SLO-awareness in GPU Clusters* (EuroSys25)
     - *Orion: Interference-aware, Fine-grained GPU Sharing for ML Applications* (EuroSys24)
     - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
@@ -115,9 +116,9 @@
     - *(DistBelief) Large Scale Distributed Deep Networks* (x)
     - *Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour* (arxiv18)
 11. **Communication**:
-             - *Optimus-CC: Efficient Large NLP Model Training with 3D Parallelism Aware Communication Compression* (ASPLOS23)
-             - *Overlap Communication with Dependent Computation via Decomposition in Large Deep Learning Models* (ASPLOS23)
-             - *TOPOOPT: Co-optimizing Network Topology and Parallelization Strategy for Distributed Training Jobs* (NSDI23)
+    - *Optimus-CC: Efficient Large NLP Model Training with 3D Parallelism Aware Communication Compression* (ASPLOS23)
+    - *Overlap Communication with Dependent Computation via Decomposition in Large Deep Learning Models* (ASPLOS23)
+    -  *TOPOOPT: Co-optimizing Network Topology and Parallelization Strategy for Distributed Training Jobs* (NSDI23)
 12. **Training**:
     - *Aceso: Efficient Parallel DNN Training through Iterative Bottleneck Alleviation* (EuroSys24)
     - *AdapterFusion: Non-Destructive Task Composition for Transfer Learning* (arxiv21)
