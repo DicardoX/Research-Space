@@ -182,6 +182,7 @@
     - *(TokenTune) Memory-Efficient Fine-Tuning of Transformers via Token Selection* (arxiv24)
     - *(Unified-PEFT) TOWARDS A UNIFIED VIEW OF PARAMETER-EFFICIENT TRANSFER LEARNING* (ICLR22)
     - *Varuna: Scalable, Low-cost Training of Massive Deep Learning Models* (EuroSys22)
+    - *VeOmni: Scaling Any Modality Model Training with Model-Centric Distributed Recipe Zoo* (arxiv25) 
     - *WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training* (OSDI25)
     - *XPUTimer: Anomaly Diagnostics for Divergent LLM Training in GPU Clusters of Thousand-Plus Scale* (arxiv25)
     - *Ymir: A Scheduler  for Foundation Model Fine-tuning Workloads* (ICS24)
