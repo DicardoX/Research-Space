@@ -242,6 +242,7 @@
     - *Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity* (arxiv24)
     - *FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU* (ICML23)
     - *Glinthawk: A Two-Tiered Architecture for High-Throughput LLM Inference* (arxiv25)
+    - *Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference* (arxiv25)
     - *gLLM: Global Balanced Pipeline Parallelism System for Distributed LLM Serving with Token Throttling* (arxiv25)
     - *GMorph: Accelerating Multi-DNN Inference via Model Fusion* (EuroSys24)
     - *GUIDE: A Global Unified Inference Engine for Deploying Large Language Models in Heterogeneous Environments* (arxiv24)
