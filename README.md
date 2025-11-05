@@ -318,6 +318,7 @@
     - *Tabi: An Efficient Multi-Level Inference System for Large Language Models* (EuroSys23)
     - *TD-Pipe: Temporally-Disaggregated Pipeline Parallelism Architecture for High-Throughput LLM Inference* (ICPP25)
     - *(TetriInfer) Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads* (arxiv24)
+    - *TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling* (EuroSys26)
     - *TokenSelect: Efficient Long-Context Inference and Length Extrapolation for LLMs via Dynamic Token-Level KV Cache Selection* (arxiv24)
     - *TurboTransformers: An Efficient GPU Serving System For Transformer Models* (PPoPP21)
     - *(VaLoRA) Empower Vision Applications with LoRA LMM* (EuroSys25)
