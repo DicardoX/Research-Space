@@ -57,6 +57,7 @@
     - *Nonuniform-Tensor-Parallelism: Mitigating GPU failure impact for Scaled-up LLM Training* (arxiv25)
     - *(Tofu) Supporting Very Large Models using Automatic Dataflow Graph Partitioning* (EuroSys19)
 5. **Pipeline**:
+    - *AdaPtis: Reducing Pipeline Bubbles with Adaptive Pipeline Parallelism on Heterogeneous Models* (arxiv25)
     - *ADAPTRA: Straggler-Resilient Hybrid-Parallel Training with Pipeline Adaptation* (arxiv25)
     - *(ChronosPipe) Enhancing Memory Efficiency in Large Language Model Training Through Chronos-aware Pipeline Parallelism* (ASPLOS25)
     - *DAPPLE: A Pipelined Data Parallel Approach for Training Large Models* (PPoPP21)
