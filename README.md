@@ -280,6 +280,7 @@
     - *NanoFlow: Towards Optimal Large Language Model Serving Throughput* (arxiv24)
     - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
     - *NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference* (arxiv24)
+    - *(OPScale) From Models to Operators: Rethinking Autoscaling Granularity for Large Generative Models* (arxiv25)
     - *ORCA: A Distributed Serving System for Transformer-Based Generative Models* (OSDI22)
     - *(ParaServe) Towards Swift Serverless LLM Cold Starts with ParaServe* (arxiv25)
     - *Parrot: Efficient Serving of LLM-based Applications with Semantic Variable* (OSDI24)
