@@ -314,6 +314,7 @@
     - *SkyPilot: An Intercloud Broker for Sky Computing* (NSDI23)
     - *SkyServe: Serving AI Models across Regions and Clouds with Spot Instances* (EuroSys25)
     - *S-LORA: SERVING THOUSANDS OF CONCURRENT LORA ADAPTERS* (arxiv23)
+    - *SLOs-Serve: Optimized Serving of Multi-SLO LLMs* (arxiv25)
     - *SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification* (ASLOPS24)
     - *Splitwise: Efficient Generative LLM Inference Using Phase Splitting* (ISCA24)
     - *SpotServe: Serving Generative Large Language Models on Preemptible Instances* (ASPLOS24)
