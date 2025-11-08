@@ -264,6 +264,7 @@
     - *(InstaInfer) Pre-Warming is Not Enough: Accelerating Serverless Inference With Opportunistic Pre-Loading* (SoCC24)
     - *(IOInfer) Efficient LLM Inference with I/O-Aware Partial KV Cache Recomputation* (arxiv24)
     - *Jenga: Effective Memory Management for Serving LLM with Heterogeneity* (arxiv25)
+    - *KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models* (SOSP25)
     - *KunServe: Elastic and Efficient Large Language Model Serving with Parameter-centric Memory Management* (arxiv24)
     - *KVDirect: Distributed Disaggregated LLM Inference* (arxiv25)
     - *LLM-Mesh: Enabling Elastic Sharing for Serverless LLM Inference* (arxiv25)
