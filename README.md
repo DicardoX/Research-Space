@@ -291,6 +291,7 @@
     - *PickLLM: Context-Aware RL-Assisted Large Language Model Routing* (arxiv24)
     - *PipeBoost: Resilient Pipelined Architecture for Fast Serverless LLM Scaling* (arxiv25)
     - *POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference* (arxiv24)
+    - *PolyServe: Efficient Multi-SLO Serving at Scale* (arxiv25)
     - *PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU* (SOSP24)
     - *PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications* (arxiv25)
     - *PreServe: Prefetching Model Weights and KV-Cache in Distributed LLM Serving* (arxiv25)
