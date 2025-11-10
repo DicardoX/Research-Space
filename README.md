@@ -138,6 +138,7 @@
     - *Cosmic: Enabling Full-Stack Co-Design and Optimization of Distributed Machine Learning Systems* (arxiv25)
     - *CrossPipe: Towards Optimal Pipeline Schedules for Cross-Datacenter Training* (arxiv25)
     - *Crux: GPU-Efficient Communication Scheduling for Deep Learning Training* (SIGCOMM24)
+    - *DCP: Addressing Input Dynamism In Long-Context Training via Dynamic Context Parallelism* (SOSP25) 
     - *DeepCompile: A Compiler-Driven Approach to Optimizing Distributed Deep Learning Training* (arxiv25)
     - *(DHelix) Hiding Communication Cost in Distributed LLM Training via Micro-batch Co-execution* (arxiv24)
     - *(Diff-Pruning) Parameter-Efficient Transfer Learning with Diff Pruning* (ACL21)
