@@ -114,6 +114,7 @@
 
     - *AttentionEngine: A Versatile Framework for Efficient Attention Mechanisms on Diverse Hardware Platforms* (arxiv25)
     - *FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System* (ASPLOS20)
+    - *FuseFlow: A Fusion-Centric Compilation Framework for Sparse Deep Learning on Streaming Dataflow* (arxiv25)
     - *MAGPY: Compiling Eager Mode DNN Programs by Monitoring Execution States* (ATC24)
     - *(TLM) Enabling Tensor Language Model to Assist in Generating High-Performance Tensor Programs for Deep Learning* (OSDI24)
     - *Welder: Scheduling Deep Learning Memory Access via Tile-graph* (OSDI23)
