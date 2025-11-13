@@ -149,6 +149,7 @@
     - *DistTrain: Addressing Model and Data Heterogeneity with Disaggregated Training for Multimodal Large Language Models* (arxiv24)
     - *DLoRA: Distributed Parameter-Efficient Fine-Tuning Solution for Large Language Model* (arxiv24)
     - *Egeria: Efficient DNN Training with Knowledge-Guided Layer Freezing* (EuroSys23)
+    - *ElasWave: An Elastic-Native System for Scalable Hybrid-Parallel Training* (arxiv25)
     - *Falcon: Pinpointing and Mitigating Stragglers for Large-Scale Hybrid-Parallel Training* (arxiv24)
     - *FlexSP: Accelerating Large Language Model Training via Flexible Sequence Parallelism* (ASPLOS25)
     - *FSMoE: A Flexible and Scalable Training System for Sparse Mixture-of-Experts Models* (ASPLOS25)
