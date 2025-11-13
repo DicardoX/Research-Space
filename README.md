@@ -204,6 +204,7 @@
     - *Zorse: Optimizing LLM Training Efficiency on Heterogeneous GPU Clusters* (arxiv25)
 13. **Inference**:
     - *AcceLLM: Accelerating LLM Inference Using Redundancy for Load Balancing And Data Locality* (arxiv24)
+    - *Aegaeon: Effective GPU Pooling for Concurrent LLM Serving on the Market* (SOSP25)
     - *ALISE: Accelerating Large Language Model Serving with Speculative Scheduling* (ICCAD24)
     - *AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving* (OSDI23)
     - *(AMoE) Toward Cost-Efficient Serving of Mixture-of-Experts with Asynchrony* (arxiv25)
