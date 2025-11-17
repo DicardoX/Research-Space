@@ -186,6 +186,7 @@
     - *Sailor: Automating Distributed Training over Dynamic, Heterogeneous, and Geo-distributed Clusters* (arxiv25) 
     - *ScheMoE: An Extensible Mixture-of-Experts Distributed Training System with Tasks Scheduling* (EuroSys24)
     - *(SeqParallel) Reducing Activation Recomputation in Large Transformer Models* (arxiv22)
+    - *SlimPack: Fine-Grained Asymmetric Packing for Balanced and Efficient Variable-Length LLM Training* (arxiv25)
     - *SMARTMOE: Efficiently Training Sparsely-Activated Models through Combining Offline and Online Parallelization* (ATC23)
     - *SpeedLoader: An I/O efficient scheme for heterogeneous and distributed LLM operation* (arxiv24)
     - *(Spindle) Efficient Multi-Task Large Model Training via Data Heterogeneity-aware Model Management* (ASPLOS25)
