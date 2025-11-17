@@ -114,6 +114,7 @@
     - *FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System* (ASPLOS20)
     - *FuseFlow: A Fusion-Centric Compilation Framework for Sparse Deep Learning on Streaming Dataflow* (arxiv25)
     - *MAGPY: Compiling Eager Mode DNN Programs by Monitoring Execution States* (ATC24)
+    - *Tempo: Compiled Dynamic Deep Learning with Symbolic Dependence Graphs* (SOSP25)
     - *(TLM) Enabling Tensor Language Model to Assist in Generating High-Performance Tensor Programs for Deep Learning* (OSDI24)
     - *Welder: Scheduling Deep Learning Memory Access via Tile-graph* (OSDI23)
     - *Operator Fusion in XLA: Analysis and Evaluation* (arxiv23)
@@ -239,6 +240,7 @@
          - *EcoServe(-PD): Enabling Cost-effective LLM Serving with Proactive Intra- and Inter-Instance Orchestration* (arxiv25)
     - **Model-as-a-Service (Serverless-for-LLM):**
          - *Aegaeon: Effective GPU Pooling for Concurrent LLM Serving on the Market* (SOSP25)
+         - *AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving* (OSDI23)
          - *Andes: Defining and Enhancing Quality-of-Experience in LLM-Based Text Streaming Services* (arxiv24)
          - *Ascendra: Dynamic Request Prioritization for Efficient LLM Serving* (arxiv25)
          - *(BlitzScale) Fast and Live Model Auto Scaling with O(1) Host Caching* (OSDI25)
@@ -282,7 +284,6 @@
          - *(VaLoRA) Empower Vision Applications with LoRA LMM* (EuroSys25)
     - *AcceLLM: Accelerating LLM Inference Using Redundancy for Load Balancing And Data Locality* (arxiv24)
     - *ALISE: Accelerating Large Language Model Serving with Speculative Scheduling* (ICCAD24)
-    - *AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving* (OSDI23)
     - *(AnLLMs) Anchor-based Large Language Models* (arxiv24)
     - *(AttentionOffload) Efficient and Economic Large Language Model Inference with Attention Offloading* (arxiv24)
     - *BlockLLM: Multi-tenant Finer-grained Serving for Large Language Models* (arxiv24)
