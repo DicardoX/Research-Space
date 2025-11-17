@@ -220,6 +220,7 @@
     - *(BlitzScale) Fast and Live Model Auto Scaling with O(1) Host Caching* (OSDI25)
     - *BlockLLM: Multi-tenant Finer-grained Serving for Large Language Models* (arxiv24)
     - *(Brainstorm) Optimizing Dynamic Neural Networks with Brainstorm* (OSDI23)
+    - *BuddyMoE: Exploiting Expert Redundancy to Accelerate Memory-Constrained Mixture-of-Experts Inference* (arxiv25)
     - *Bullet: Boosting GPU Utilization for LLM Serving via Dynamic Spatial-Temporal Orchestration* (arxiv25)
     - *(CachedAttention) Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention* (ATC24)
     - *CARASERVE: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference* (arxiv24)
