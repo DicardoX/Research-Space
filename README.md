@@ -135,6 +135,7 @@
     - *(ByteScheduler) A Generic Communication Scheduler for Distributed DNN Training Acceleration* (SOSP19)
     - *Capuchin: Tensor-based GPU Memory Management for Deep Learning* (ASPLOS20)
     - *Centauri: Enabling Efficient Scheduling for Communication-Computation Overlap in Large Model Training via Communication Partitioning* (ASPLOS24)
+    - *Chameleon: Taming Dynamic Operator Sequences for Memory-Intensive LLM Training* (arxiv25)
     - *COAP: Memory-Efficient Training with Correlation-Aware Gradient Projection* (arxiv24)
     - *Cornstarch: Distributed Multimodal Training Must Be Multimodality-Aware* (arxiv25)
     - *Cosmic: Enabling Full-Stack Co-Design and Optimization of Distributed Machine Learning Systems* (arxiv25)
