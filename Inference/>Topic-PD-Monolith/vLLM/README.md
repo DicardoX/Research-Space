@@ -1,0 +1,5 @@
+# Efficient Memory Management for Large Language Model Serving with PagedAttention
+
+vLLM 是一个面向 LLM 推理 KV cache 内存优化的推理系统，其核心 design 是 PagedAttention 机制，即像 OS 中 virtual memory + paging 那样去管理庞大的 KV cache (1.6 GB for one request)。具体来说，vLLM 将 KV cache 占用的 GPU memory 划分为了更细粒度的 KV blocks，每个 block 可以存储一部分 KV cache，且通过一个 block table 实现了 logical KV blocks 和 physical KV blocks 的动态映射，以支持为一个 sequence 分配非连续 memory space。针对该 design，PagedAttention 算法提出了将 attention computation 拓展为 block-wise，以进一步减少推理延迟。此外，相同 request 的不同 sequences (由 parallel sampling 等不同的 decoding 算法产生) 可以共享相同的 sequence 子部分 (类似于 prefix，各自的 logical blocks 映射到相同的 physical blocks)，并在产生不同部分时进行 copy-on-write 操作产生独立的 physical blocks。不同的 requests 之间不可以 co-locate 在相同的 physical blocks 内。注意，上述过程仅适用于 autoregressive generation phase (即第一个 token 及其 KV cache 已经生成后)，对于 prefill phase (生成第一个 token) 则还是用传统的 attention computation。
+
+此外，vLLM 采用 FCFS 进行调度，在负载超过系统容量时通过启发式算法预测哪个 block 最晚被访问，并将该 block 对应 request 的所有 sequences 进行抢占，将它们所有的 blocks 全部换出。对于换出的 blocks，vLLM 设计了两种策略，一种是 swap 到 CPU memory (一旦存在被抢占的 sequence，则停止接收新的 request)，另一种是 recompute 被抢占 sequences 的 KV cache (仅一次就可恢复)。
