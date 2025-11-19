@@ -346,6 +346,7 @@
     - *(Select-N) Memory Offloading for Large Language Model Inference with Latency SLO Guarantees* (arxiv25)
     - *ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference* (arxiv24)
     - *SiPipe: Bridging the CPU–GPU Utilization Gap for Efficient Pipeline-Parallel LLM Inference* (arxiv25)
+    - *(SISO) Rethinking Caching for LLM Serving Systems: Beyond Traditional Heuristics* (arxiv25)
     - *SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification* (ASLOPS24)
     - *SpotServe: Serving Generative Large Language Models on Preemptible Instances* (ASPLOS24)
     - *(SSJF) Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction* (arxiv24)
