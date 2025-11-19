@@ -214,6 +214,7 @@
          - *KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models* (SOSP25)
          - *MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints* (arxiv25)
          - *MoE-Lightning: High-Throughput MoE Inference on Memory-constrained GPUs* (arxiv24)
+         - *MoE-SpeQ: Speculative Quantized Decoding with Proactive Expert Prefetching and Offloading for Mixture-of-Experts* (arxiv25)
          - *TUTEL: Adaptive Mixture-of-Experts at Scale* (arxiv22)
     - **PD-Monolith:** 
          - *FairBatching: Fairness-Aware Batch Formation for LLM Inference* (arxiv25)
