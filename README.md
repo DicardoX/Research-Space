@@ -242,6 +242,7 @@
          - *Bullet: Boosting GPU Utilization for LLM Serving via Dynamic Spatial-Temporal Orchestration* (arxiv25)
          - *(Drift) Optimizing SLO-oriented LLM Serving with PD-Multiplexing* (arxiv25)
          - *EcoServe(-PD): Enabling Cost-effective LLM Serving with Proactive Intra- and Inter-Instance Orchestration* (arxiv25)
+         - *(Taichi) Prefill-Decode Aggregation or Disaggregation? Unifying Both for Goodput-Optimized LLM Serving* (arxiv25)
     - **Model-as-a-Service (Serverless-for-LLM):**
          - *Aegaeon: Effective GPU Pooling for Concurrent LLM Serving on the Market* (SOSP25)
          - *AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving* (OSDI23)
