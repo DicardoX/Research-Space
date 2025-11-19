@@ -91,6 +91,7 @@
     - *(Mudi) Multiplexing Dynamic Deep Learning Workloads with SLO-awareness in GPU Clusters* (EuroSys25)
     - *Orion: Interference-aware, Fine-grained GPU Sharing for ML Applications* (EuroSys24)
     - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
+    - *(Sirius) Colocating ML Inference and Training with Fast GPU Memory Handover* (ATC25)
 8. **Memory/Cache Storage**:
     - *Bagpipe: Accelerating Deep Recommendation Model Training* (SOSP23)
     - *ByteCheckpoint: A Unified Checkpointing System for LLM Development* (arxiv24)
