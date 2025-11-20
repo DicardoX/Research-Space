@@ -263,6 +263,7 @@
          - *PipeBoost: Resilient Pipelined Architecture for Fast Serverless LLM Scaling* (arxiv25)
          - *PolyServe: Efficient Multi-SLO Serving at Scale* (arxiv25)
          - *Prism: Unleashing GPU Sharing for Cost-Efficient Multi-LLM Serving* (arxiv25)
+         - *Proteus: A High-Throughput Inference-Serving System with Accuracy Scaling* (ASPLOS24)
          - *(SageServe) Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale* (arxiv25)
          - *ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs* (arxiv25)
          - *Shepherd: Serving DNNs in the Wild* (NSDI23)
