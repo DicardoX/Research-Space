@@ -274,6 +274,7 @@
          - *(SmoothGoodput) Revisiting Service Level Objectives and System Level Metrics in Large Language Model Serving* (arxiv25)
          - *SuperServe: Fine-Grained Inference Serving for Unpredictable Workloads* (NSDI25)
          - *TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling* (EuroSys26)
+         - *Weaver: Efficient Multi-LLM Serving with Attention Offloading* (ATC25)
          - 𝜆Scale: Enabling Fast Scaling for Serverless Large Language Model Inference (arxiv25)
     - **Offline:**
          - *BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching* (arxiv24)
