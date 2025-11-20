@@ -272,6 +272,7 @@
          - *SkyServe: Serving AI Models across Regions and Clouds with Spot Instances* (EuroSys25)
          - *SLOs-Serve: Optimized Serving of Multi-SLO LLMs* (arxiv25)
          - *(SmoothGoodput) Revisiting Service Level Objectives and System Level Metrics in Large Language Model Serving* (arxiv25)
+         - *SuperServe: Fine-Grained Inference Serving for Unpredictable Workloads* (NSDI25)
          - *TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling* (EuroSys26)
          - 𝜆Scale: Enabling Fast Scaling for Serverless Large Language Model Inference (arxiv25)
     - **Offline:**
