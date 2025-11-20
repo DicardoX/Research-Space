@@ -415,3 +415,4 @@
 24. **Data Processing**
      - *Pecan: Cost-Efficient ML Data Preprocessing  with Automatic Transformation Ordering  and Hybrid Placement* (ATC24)
      - *(Ray Data) The Streaming Batch Model for Efficient and Fault-Tolerant Heterogeneous Execution* (arxiv25)
+     - *(Seneca) Preparation Meets Opportunity: Enhancing Data Preprocessing for ML Training With Seneca* (FAST25)
