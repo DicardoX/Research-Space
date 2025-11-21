@@ -303,6 +303,7 @@
     - *EcoServe: Maximizing Multi-Resource Utilization with SLO Guarantees in LLM Serving* (arxiv24)
     - *ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor* (arxiv25)
     - *Epic: Efficient Position-Independent Context Caching for Serving Large Language Models* (arxiv24)
+    - *Equinox: Holistic Fair Scheduling in Serving Large Language Models* (arxiv25)
     - *ExeGPT: Constraint-Aware Resource Scheduling for LLM Inference* (ASPLOS24)
     - *(FairSched) Locality-aware Fair Scheduling in LLM Serving* (arxiv25)
     - *FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines* (arxiv24)
