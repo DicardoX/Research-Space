@@ -211,6 +211,7 @@
          - *(AMoE) Toward Cost-Efficient Serving of Mixture-of-Experts with Asynchrony* (arxiv25)
          - *(Brainstorm) Optimizing Dynamic Neural Networks with Brainstorm* (OSDI23)
          - *BuddyMoE: Exploiting Expert Redundancy to Accelerate Memory-Constrained Mixture-of-Experts Inference* (arxiv25)
+         - *(EaaS) Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving* (arxiv25)
          - *ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models* (arxiv25)
          - *KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models* (SOSP25)
          - *MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints* (arxiv25)
