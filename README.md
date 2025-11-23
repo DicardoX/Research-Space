@@ -318,6 +318,7 @@
     - *Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference* (arxiv25)
     - *gLLM: Global Balanced Pipeline Parallelism System for Distributed LLM Serving with Token Throttling* (arxiv25)
     - *GMorph: Accelerating Multi-DNN Inference via Model Fusion* (EuroSys24)
+    - *GreenLLM: SLO-Aware Dynamic Frequency Scaling for Energy-Efficient LLM Serving* (arxiv25)
     - *GUIDE: A Global Unified Inference Engine for Deploying Large Language Models in Heterogeneous Environments* (arxiv24)
     - *HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading* (arxiv25)
     - *HELIOS: Adaptive Model And Early-Exit Selection for Efficient LLM Inference Serving* (arxiv25)
