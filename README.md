@@ -352,6 +352,7 @@
     - *SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference* (arxiv25)
     - *(Select-N) Memory Offloading for Large Language Model Inference with Latency SLO Guarantees* (arxiv25)
     - *ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference* (arxiv24)
+    - *Shift Parallelism: Low-Latency, High-Throughput LLM Inference for Dynamic Workloads* (arxiv25)
     - *SiPipe: Bridging the CPU–GPU Utilization Gap for Efficient Pipeline-Parallel LLM Inference* (arxiv25)
     - *(SISO) Rethinking Caching for LLM Serving Systems: Beyond Traditional Heuristics* (arxiv25)
     - *SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification* (ASLOPS24)
