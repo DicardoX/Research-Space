@@ -169,6 +169,7 @@
     - *InternEvo: Efficient Long-Sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding* (arxiv24)
     - *JABAS: Joint Adaptive Batching and Automatic Scaling for DNN Training on Heterogeneous GPUs* (EuroSys25)
     - *LightSeq: Sequence Level Parallelism for Distributed Training of Long Context Transformers* (NIPS23)
+    - *LobRA: Multi-tenant Fine-tuning over Heterogeneous Data* (VLDB25)
     - *LoongTrain: Efficient Training of Long-Sequence LLMs with Head-Context Parallelism* (arxiv24)
     - *Malleus: Straggler-Resilient Hybrid Parallel Training of Large-scale Models via Malleable Data and Model Parallelization* (arxiv24)
     - *MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs* (NSDI24)
