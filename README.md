@@ -270,6 +270,7 @@
          - *Proteus: A High-Throughput Inference-Serving System with Accuracy Scaling* (ASPLOS24)
          - *(SageServe) Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale* (arxiv25)
          - *ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs* (arxiv25)
+         - *ShadowServe: Interference-Free KV Cache Fetching for Distributed Prefix Caching* (arxiv25)
          - *Shepherd: Serving DNNs in the Wild* (NSDI23)
          - *SkyLB: A Locality-Aware Cross-Region Load Balancer for LLM Inference* (arxiv25)
          - *SkyPilot: An Intercloud Broker for Sky Computing* (NSDI23)
