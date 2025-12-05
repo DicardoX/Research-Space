@@ -258,6 +258,7 @@
          - *Dilu: Enabling GPU Resourcing-on-Demand for Serverless DL Serving via Introspective Elasticity* (ASPLOS25)
          - *FaaSwap: SLO-Aware, GPU-Efficient Serverless Inference via Model Swapping* (arxiv24)
          - *FlexPipe: Adapting Dynamic LLM Serving Through Inflight Pipeline Refactoring in Fragmented Serverless Clusters* (EuroSys26)
+         - *HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds* (NSDI26)
          - *(InstaInfer) Pre-Warming is Not Enough: Accelerating Serverless Inference With Opportunistic Pre-Loading* (SoCC24)
          - *LLM-Mesh: Enabling Elastic Sharing for Serverless LLM Inference* (arxiv25)
          - *(LLMMicroServe) A System for Microserving of LLMs* (arxiv24)
