@@ -218,6 +218,7 @@
          - *(EaaS) Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving* (arxiv25)
          - *ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models* (arxiv25)
          - *KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models* (SOSP25)
+         - *Klotski: Efficient Mixture-of-Expert Inference via Expert-Aware Multi-Batch Pipeline* (ASPLOS25)
          - *MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints* (arxiv25)
          - *MoE-Lightning: High-Throughput MoE Inference on Memory-constrained GPUs* (arxiv24)
          - *MoE-SpeQ: Speculative Quantized Decoding with Proactive Expert Prefetching and Offloading for Mixture-of-Experts* (arxiv25)
