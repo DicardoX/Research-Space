@@ -369,6 +369,7 @@
     - *Symphony: Improving Memory Management for LLM Inference Workloads* (arxiv24)
     - *Tabi: An Efficient Multi-Level Inference System for Large Language Models* (EuroSys23)
     - *(Tetris) Optimizing Long-context LLM Serving via Fine-grained Sequence Parallelism* (arxiv25)
+    - *ThreadWeaver: Adaptive Threading for Efficient Parallel Reasoning in Language Models* (arxiv25)
     - *TokenSelect: Efficient Long-Context Inference and Length Extrapolation for LLMs via Dynamic Token-Level KV Cache Selection* (arxiv24)
     - *TurboTransformers: An Efficient GPU Serving System For Transformer Models* (PPoPP21)
     - *(VTC) Fairness in Serving Large Language Models* (arxiv23)
