@@ -218,6 +218,7 @@
          - *BuddyMoE: Exploiting Expert Redundancy to Accelerate Memory-Constrained Mixture-of-Experts Inference* (arxiv25)
          - *(EaaS) Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving* (arxiv25)
          - *ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models* (arxiv25)
+         - *Janus: Disaggregating Attention and Experts for Scalable MoE Inference* (arxiv25)
          - *KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models* (SOSP25)
          - *Klotski: Efficient Mixture-of-Expert Inference via Expert-Aware Multi-Batch Pipeline* (ASPLOS25)
          - *MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints* (arxiv25)
