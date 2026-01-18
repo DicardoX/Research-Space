@@ -103,6 +103,7 @@
     - *(JIT-ckpt)  Just-In-Time Checkpointing: Low Cost Error Recovery from Deep Learning Training Failures* (EuroSys24)
     - *LayerKV: Optimizing Large Language Model Serving with Layer-wise KV Cache Management* (arxiv24)
     - *MAGIS: Memory Optimization via Coordinated Graph Transformation and Scheduling for DNN* (ASPLOS24)
+    - *mTuner: Accelerating Parameter-Efficient Fine-Tuning with Elastic Tensor* (ATC25)
     - *Pie: Pooling CPU Memory for LLM Inference* (arxiv24)
     - *Tenplex: Dynamic Parallelism for Deep Learning using Parallelizable Tensor Collections* (SOSP24)
     - *(UCP) Universal Checkpointing: A Flexible and Efficient Distributed Checkpointing System for Large-Scale DNN Training with Reconfigurable Parallelism* (ATC25)
