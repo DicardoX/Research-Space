@@ -133,6 +133,8 @@
     - *AdapterFusion: Non-Destructive Task Composition for Transfer Learning* (arxiv21)
     - *AMSP: Super-Scaling LLM Training via Advanced Model States Partitioning* (arxiv23)
     - *ASLoRA: Adaptive Sharing Low-Rank Adaptation Across Layers* (arxiv24)
+    - *AutoOverlap: Enabling Fine-Grained Overlap of Computation and Communication
+        with Chunk-Based Scheduling* (arxiv26)
     - *(AWSNeuronSDK) Distributed Training of Large Language Models on AWS Trainium* (SoCC24) 
     - *ByteScale: Efficient Scaling of LLM Training with a 2048K Context Length on More Than 12,000 GPUs* (arxiv25)
     - *(ByteScheduler) A Generic Communication Scheduler for Distributed DNN Training Acceleration* (SOSP19)
@@ -431,7 +433,7 @@
 23. **RLHF**
        - *HybridFlow: A Flexible and Efficient RLHF Framework* (EuroSys25)
        - *ReaLHF: Optimized RLHF Training for Large Language Models through Parameter Reallocation* (arxiv24)
-       - *RLHFuse: Efficient RLHF Training for Large Language Models with Inter- and Intra-Stage Fusion* (arxiv24)
+       - *RLHFuse: Efficient RLHF Training for Large Language Models with Inter- and Intra-Stage Fusion* (arxiv24) 
        - *(RLHF-workshop) Systems Opportunities for LLM Fine-Tuning using Reinforcement Learning* (EuryMLSys25)
 24. **Data Processing**
      - *Pecan: Cost-Efficient ML Data Preprocessing  with Automatic Transformation Ordering  and Hybrid Placement* (ATC24)
