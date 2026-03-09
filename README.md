@@ -171,6 +171,7 @@
     - *H2: Towards Efficient Large-Scale LLM Training on Hyper-Heterogeneous Cluster over 1,000 Chips* (arxiv25)
     - *InternEvo: Efficient Long-Sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding* (arxiv24)
     - *JABAS: Joint Adaptive Batching and Automatic Scaling for DNN Training on Heterogeneous GPUs* (EuroSys25)
+    - *Lagom: Unleashing the Power of Communication and Computation Overlapping for Distributed LLM Training* (arxiv26)
     - *LightSeq: Sequence Level Parallelism for Distributed Training of Long Context Transformers* (NIPS23)
     - *LobRA: Multi-tenant Fine-tuning over Heterogeneous Data* (VLDB25)
     - *LoongTrain: Efficient Training of Long-Sequence LLMs with Head-Context Parallelism* (arxiv24)
