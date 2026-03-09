@@ -133,6 +133,7 @@
     - *AdapterFusion: Non-Destructive Task Composition for Transfer Learning* (arxiv21)
     - *AMSP: Super-Scaling LLM Training via Advanced Model States Partitioning* (arxiv23)
     - *ASLoRA: Adaptive Sharing Low-Rank Adaptation Across Layers* (arxiv24)
+    - *AutoCCL: Automated Collective Communication Tuning for Accelerating Distributed and Parallel DNN Training* (NSDI25)
     - *AutoOverlap: Enabling Fine-Grained Overlap of Computation and Communication
         with Chunk-Based Scheduling* (arxiv26)
     - *(AWSNeuronSDK) Distributed Training of Large Language Models on AWS Trainium* (SoCC24) 
