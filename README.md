@@ -128,6 +128,7 @@
     - *Optimus-CC: Efficient Large NLP Model Training with 3D Parallelism Aware Communication Compression* (ASPLOS23)
     - *Overlap Communication with Dependent Computation via Decomposition in Large Deep Learning Models* (ASPLOS23)
     -  *TOPOOPT: Co-optimizing Network Topology and Parallelization Strategy for Distributed Training Jobs* (NSDI23)
+    -  *UCCL-EP: Portable Expert-Parallel Communication* (arxiv25)
 12. **Training**:
     - *Aceso: Efficient Parallel DNN Training through Iterative Bottleneck Alleviation* (EuroSys24)
     - *AdapterFusion: Non-Destructive Task Composition for Transfer Learning* (arxiv21)
