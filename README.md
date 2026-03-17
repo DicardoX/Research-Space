@@ -427,6 +427,7 @@
       - *CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion* (EuroSys25) 
       - *(Conveyor) Conveyor: Efficient Tool-aware LLM Serving with Tool Partial Execution* (arxiv24)
       - *(LAMPS) Fast Inference for Augmented Large Language Models* (arxiv24)
+      - *Pancake: Hierarchical Memory System for Multi-Agent LLM Serving* (arxiv26)
       - *(PDGraph) Efficient Serving of LLM Applications with Probabilistic Demand Modeling* (arxiv25)
       - *Pie: A Programmable Serving System for Emerging LLM Applications* (SOSP25)
       - *RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation* (arxiv24)
