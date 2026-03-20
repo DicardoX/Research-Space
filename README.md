@@ -436,7 +436,8 @@
 22. **Edge Computing**
     - *TinyLLM: A Framework for Training and Deploying Language Models at the Edge Computers* (arxiv24)
 23. **RLHF**
-       - *ARL-Tangram: Unleash the Resource Efficiency in Agentic Reinforcement Learning* (arxiv25)
+       - *ARL-Tangram: Unleash the Resource Efficiency in Agentic Reinforcement Learning* (arxiv26)
+       - *(FlexMARL) Rollout-Training Co-Design for Efficient LLM-Based Multi-Agent Reinforcement Learning* (arxiv26)
        - *HybridFlow: A Flexible and Efficient RLHF Framework* (EuroSys25)
        - *ReaLHF: Optimized RLHF Training for Large Language Models through Parameter Reallocation* (arxiv24)
        - *RLHFuse: Efficient RLHF Training for Large Language Models with Inter- and Intra-Stage Fusion* (arxiv24) 
