@@ -440,6 +440,7 @@
        - *(FlexMARL) Rollout-Training Co-Design for Efficient LLM-Based Multi-Agent Reinforcement Learning* (arxiv26)
        - *HybridFlow: A Flexible and Efficient RLHF Framework* (EuroSys25)
        - *ReaLHF: Optimized RLHF Training for Large Language Models through Parameter Reallocation* (arxiv24)
+       - *(RhymeRL) History Doesn’t Repeat Itself but Rollouts Rhyme: Accelerating Reinforcement Learning with RhymeRL* (ASPLOS26)
        - *RLHFuse: Efficient RLHF Training for Large Language Models with Inter- and Intra-Stage Fusion* (arxiv24) 
        - *RLHFless: Serverless Computing for Efficient RLHF* (arxiv26)
        - *(RLHF-workshop) Systems Opportunities for LLM Fine-Tuning using Reinforcement Learning* (EuryMLSys25)
