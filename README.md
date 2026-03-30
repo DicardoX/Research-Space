@@ -445,6 +445,7 @@
        - *RLHFless: Serverless Computing for Efficient RLHF* (arxiv26)
        - *(RLHF-workshop) Systems Opportunities for LLM Fine-Tuning using Reinforcement Learning* (EuryMLSys25)
        - *RollArt: Scaling Agentic RL Training via Disaggregated Infrastructure* (arxiv26)
+       - *RollPacker: Mitigating Long-Tail Rollouts for Fast, Synchronous RL Post-Training* (arxiv25)
        - *StreamRL: Scalable, Heterogeneous, and Elastic RL for LLMs with Disaggregated Stream Generation* (arxiv25)
 24. **Data Processing**
      - *Pecan: Cost-Efficient ML Data Preprocessing  with Automatic Transformation Ordering  and Hybrid Placement* (ATC24)
