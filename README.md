@@ -151,6 +151,7 @@
     - *DCP: Addressing Input Dynamism In Long-Context Training via Dynamic Context Parallelism* (SOSP25) 
     - *DeepCompile: A Compiler-Driven Approach to Optimizing Distributed Deep Learning Training* (arxiv25)
     - *(DHelix) Hiding Communication Cost in Distributed LLM Training via Micro-batch Co-execution* (arxiv24)
+    - *DHP: Efficient Scaling of MLLM Training with Dynamic Hybrid Parallelism* (arxiv26)
     - *(Diff-Pruning) Parameter-Efficient Transfer Learning with Diff Pruning* (ACL21)
     - *DistFlashAttn: Distributed Memory-efficient Attention for Long-context LLMs Training* (arxiv24)
     - *DistMM: Accelerating Distributed Multimodal  Model Training* (NSDI24)
