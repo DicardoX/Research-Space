@@ -305,6 +305,7 @@
          - *Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments* (arxiv24)
          - *DeltaZip: Efficient Serving of Multiple Full-Model-Tuned LLMs* (arxiv24)
          - *dLoRA: Dynamically Orchestrating Requests and Adapters for LoRA LLM Serving* (OSDI24)
+         - *InfiniLoRA: Disaggregated Multi-LoRA Serving for Large Language Models* (arxiv26)
          - *PETALS: Collaborative Inference and Fine-tuning of Large Models* (arxiv23)
          - *PetS: A Unified Framework for Parameter-Efficient Transformers Serving* (ATC22)
          - *PUNICA: MULTI-TENANT LORA SERVING* (arxiv23)
