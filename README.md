@@ -450,6 +450,7 @@
        - *RollArt: Scaling Agentic RL Training via Disaggregated Infrastructure* (arxiv26)
        - *RollMux: Phase-Level Multiplexing for Disaggregated RL Post-Training* (arxiv26)
        - *RollPacker: Mitigating Long-Tail Rollouts for Fast, Synchronous RL Post-Training* (arxiv25)
+       - *Seer: Online Context Learning for Fast Synchronous LLM Reinforcement Learning* (OSDI26)
        - *StreamRL: Scalable, Heterogeneous, and Elastic RL for LLMs with Disaggregated Stream Generation* (arxiv25)
 24. **Data Processing**
      - *Pecan: Cost-Efficient ML Data Preprocessing  with Automatic Transformation Ordering  and Hybrid Placement* (ATC24)
