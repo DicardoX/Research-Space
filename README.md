@@ -439,7 +439,7 @@
       - *TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing* (arxiv26)
 22. **Edge Computing**
     - *TinyLLM: A Framework for Training and Deploying Language Models at the Edge Computers* (arxiv24)
-23. **RLHF**
+23. **RL&AgentSkill**
        - *ARL-Tangram: Unleash the Resource Efficiency in Agentic Reinforcement Learning* (arxiv26)
        - *(FlexMARL) Rollout-Training Co-Design for Efficient LLM-Based Multi-Agent Reinforcement Learning* (arxiv26)
        - *HybridFlow: A Flexible and Efficient RLHF Framework* (EuroSys25)
@@ -452,6 +452,7 @@
        - *RollMux: Phase-Level Multiplexing for Disaggregated RL Post-Training* (arxiv26)
        - *RollPacker: Mitigating Long-Tail Rollouts for Fast, Synchronous RL Post-Training* (arxiv25)
        - *Seer: Online Context Learning for Fast Synchronous LLM Reinforcement Learning* (OSDI26)
+       - *SkVM: Revisiting Language VM for Skills across Heterogenous LLMs and Harnesses* (arxiv26)
        - *StreamRL: Scalable, Heterogeneous, and Elastic RL for LLMs with Disaggregated Stream Generation* (arxiv25)
 24. **Data Processing**
      - *Pecan: Cost-Efficient ML Data Preprocessing  with Automatic Transformation Ordering  and Hybrid Placement* (ATC24)
