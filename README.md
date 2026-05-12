@@ -443,6 +443,7 @@
        - *ARL-Tangram: Unleash the Resource Efficiency in Agentic Reinforcement Learning* (arxiv26)
        - *(FlexMARL) Rollout-Training Co-Design for Efficient LLM-Based Multi-Agent Reinforcement Learning* (arxiv26)
        - *HybridFlow: A Flexible and Efficient RLHF Framework* (EuroSys25)
+       - *Meta-Harness: End-to-End Optimization of Model Harnesses* (arxiv26)
        - *Natural-Language Agent Harnesses* (arxiv26)
        - *ReaLHF: Optimized RLHF Training for Large Language Models through Parameter Reallocation* (arxiv24)
        - *(RhymeRL) History Doesn’t Repeat Itself but Rollouts Rhyme: Accelerating Reinforcement Learning with RhymeRL* (ASPLOS26)
