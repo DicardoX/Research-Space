@@ -317,6 +317,7 @@
     - *(AttentionOffload) Efficient and Economic Large Language Model Inference with Attention Offloading* (arxiv24)
     - *BlockLLM: Multi-tenant Finer-grained Serving for Large Language Models* (arxiv24)
     - *(CachedAttention) Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention* (ATC24)
+    - *CacheSlide: Unlocking Cross Position-Aware KV Cache Reuse for Accelerating LLM Serving* (FAST26)
     - *Cornserve: Efficiently Serving Any-to-Any Multimodal Models* (arxiv25)
     - *ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition* (arxiv24)
     - *CodeTree: Agent-guided Tree Search for Code Generation with Large Language Models* (arxiv24)
