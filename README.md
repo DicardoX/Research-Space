@@ -448,6 +448,7 @@
        - *Meta-Harness: End-to-End Optimization of Model Harnesses* (arxiv26)
        - *Natural-Language Agent Harnesses* (arxiv26)
        - *ReaLHF: Optimized RLHF Training for Large Language Models through Parameter Reallocation* (arxiv24)
+       - *ReLibra: Routing-Replay-Guided Load Balancing for MoE Training in Reinforcement Learning* (arxiv26)
        - *(RhymeRL) History Doesn’t Repeat Itself but Rollouts Rhyme: Accelerating Reinforcement Learning with RhymeRL* (ASPLOS26)
        - *RLHFuse: Efficient RLHF Training for Large Language Models with Inter- and Intra-Stage Fusion* (arxiv24) 
        - *RLHFless: Serverless Computing for Efficient RLHF* (arxiv26)
