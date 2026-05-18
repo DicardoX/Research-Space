@@ -445,6 +445,7 @@
        - *Effective harnesses for long-running agents* (blog25)
        - *(FlexMARL) Rollout-Training Co-Design for Efficient LLM-Based Multi-Agent Reinforcement Learning* (arxiv26)
        - *HybridFlow: A Flexible and Efficient RLHF Framework* (EuroSys25)
+       - *JigsawRL: Assembling RL Pipelines for Efficient LLM Post-Training* (arxiv26)
        - *Meta-Harness: End-to-End Optimization of Model Harnesses* (arxiv26)
        - *Natural-Language Agent Harnesses* (arxiv26)
        - *ReaLHF: Optimized RLHF Training for Large Language Models through Parameter Reallocation* (arxiv24)
