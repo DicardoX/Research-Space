@@ -451,6 +451,7 @@
        - *ReaLHF: Optimized RLHF Training for Large Language Models through Parameter Reallocation* (arxiv24)
        - *ReLibra: Routing-Replay-Guided Load Balancing for MoE Training in Reinforcement Learning* (arxiv26)
        - *(RhymeRL) History Doesn’t Repeat Itself but Rollouts Rhyme: Accelerating Reinforcement Learning with RhymeRL* (ASPLOS26)
+       - *RLBoost: Harvesting Preemptible Cloud Resources for Cost-Efficient Reinforcement Learning on LLMs* (NSDI26)
        - *RLHFuse: Efficient RLHF Training for Large Language Models with Inter- and Intra-Stage Fusion* (arxiv24) 
        - *RLHFless: Serverless Computing for Efficient RLHF* (arxiv26)
        - *(RLHF-workshop) Systems Opportunities for LLM Fine-Tuning using Reinforcement Learning* (EuryMLSys25)
