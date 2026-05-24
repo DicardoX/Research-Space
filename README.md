@@ -4,7 +4,24 @@
 
 > This repository is established to store personal notes and annotated papers during daily research.
 >
-> **Involving Field**: *Cluster Resource Scheduling,*
+
+
+
+## *Outline*:
+
+- ***Cluster Resource Scheduling***
+- ***ML Training***
+    - *Hybrid/Auto Parallelism; Data Parallelism; Tensor Parallelism; Pipeline Parallelism; Graph Optimization; Training Hyperparameters; Communication; Heterogeneity-Aware; Long-Context, Variable Length; MultiModal; Fault Tolerance; Fine-Tuning; Offloading&Recomputation; Mixture-of-Experts*
+- ***Model Serving***
+    - *Mixture-of-Experts; PD-Monolith; Disaggregation; PD-Colocation; Model-as-a-Service, Scheduling, Serverless; Offline; Fine-Tuned; Long-Context, Multi-Turn, KVCache Reuse; MultiModal; Energy Optimization; Fairness; Offloading; Heterogeneous Resources; Memory Management; RAG, LLM Applications; Attention Optimization; Quantization; Sparsity; KVCache Storage; Parallelization; Speculative Decoding*
+- ***RL, AgentSkill***
+- ***Colocation, GPU Scheduing***
+- ***Checkpointing, Memory Optimization***
+- ***Compilation***
+- ***Performance Modeling***
+- ***Cluster Trace Analysis***
+- ***Survey***
+- ***Data Processing***
 
 
 
