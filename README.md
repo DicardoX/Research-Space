@@ -46,12 +46,14 @@
 - *Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning* (OSDI22)
 - *AMSP: Super-Scaling LLM Training via Advanced Model States Partitioning* (arxiv23)
 - *(APEX) Toward High-Performance LLM Serving: A Simulation-Based Approach for Identifying Optimal Parallelism* (arxiv24)
+- *Cosmic: Enabling Full-Stack Co-Design and Optimization of Distributed Machine Learning Systems* (arxiv25)
 - *Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism* (arxiv20)
 - *Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization* (EuroSys25)
 - *nnScaler: Constraint-Guided Parallelization Plan Generation for Deep Learning Training* (OSDI24)
 - *Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates* (SOSP23)
 - *Piper: Multidimensional Planner for DNN Parallelization* (NIPS21)
 - *(remat-opt-parallel) Accelerating the Training of Large Language Models using Efficient Activation Rematerialization and Optimal Hybrid Parallelism* (ATC24)
+- *Varuna: Scalable, Low-cost Training of Massive Deep Learning Models* (EuroSys22)
 
 
 
@@ -74,6 +76,7 @@
 
 ### 2.4. Pipeline Parallelism
 
+- *AdaPipe: Optimizing Pipeline Parallelism with Adaptive Recomputation and Partitioning* (ASPLOS24)
 - *AdaPtis: Reducing Pipeline Bubbles with Adaptive Pipeline Parallelism on Heterogeneous Models* (arxiv25)
 - *ADAPTRA: Straggler-Resilient Hybrid-Parallel Training with Pipeline Adaptation* (NSDI26)
 - *(ChronosPipe) Enhancing Memory Efficiency in Large Language Model Training Through Chronos-aware Pipeline Parallelism* (ASPLOS25)
@@ -126,6 +129,7 @@
 - *(ByteScheduler) A Generic Communication Scheduler for Distributed DNN Training Acceleration* (SOSP19)
 - *Centauri: Enabling Efficient Scheduling for Communication-Computation Overlap in Large Model Training via Communication Partitioning* (ASPLOS24)
 - *Crux: GPU-Efficient Communication Scheduling for Deep Learning Training* (SIGCOMM24)
+- *DeepCompile: A Compiler-Driven Approach to Optimizing Distributed Deep Learning Training* (arxiv25)
 - *(DHelix) Hiding Communication Cost in Distributed LLM Training via Micro-batch Co-execution* (arxiv24)
 - *(FlashComm) Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference* (arxiv24)
 - *FLUX: Fast Software-based Communication Overlap On GPUs Through Kernel Fusion* (arxiv24)
@@ -155,13 +159,14 @@
 
 
 
-### 2.9. Long-Context/Variable-Length
+### 2.9. Long-Context, Variable-Length
 
 - *ByteScale: Efficient Scaling of LLM Training with a 2048K Context Length on More Than 12,000 GPUs* (SIGCOMM25)
 - *Chameleon: Taming Dynamic Operator Sequences for Memory-Intensive LLM Training* (arxiv25)
 - *DCP: Addressing Input Dynamism In Long-Context Training via Dynamic Context Parallelism* (SOSP25) 
 - *DistFlashAttn: Distributed Memory-efficient Attention for Long-context LLMs Training* (arxiv24)
 - *FlexSP: Accelerating Large Language Model Training via Flexible Sequence Parallelism* (ASPLOS25)
+- *Hydraulis: Balancing Large Transformer Model Training via Co-designing Parallel Strategies and Data Assignment* (arxiv25)
 - *InternEvo: Efficient Long-Sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding* (arxiv24)
 - *LightSeq: Sequence Level Parallelism for Distributed Training of Long Context Transformers* (NIPS23)
 - *LoongTrain: Efficient Training of Long-Sequence LLMs with Head-Context Parallelism* (arxiv24)
@@ -186,6 +191,7 @@
 - *OrchMLLM: Orchestrate Multimodal Data with Batch Post-Balancing to Accelerate Multimodal Large Language Model Training* (arxiv25)
 - *PipeWeaver: Addressing Data Dynamicity in Large Multimodal Model Training with Dynamic Interleaved Pipeline* (ASPLOS26)
 - *(Spindle) Efficient Multi-Task Large Model Training via Data Heterogeneity-aware Model Management* (ASPLOS25)
+- *VeOmni: Scaling Any Modality Model Training with Model-Centric Distributed Recipe Zoo* (arxiv25) 
 
 
 
@@ -196,6 +202,7 @@
 - *Malleus: Straggler-Resilient Hybrid Parallel Training of Large-scale Models via Malleable Data and Model Parallelization* (arxiv24)
 - *MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs* (NSDI24)
 - *Minder: Faulty Machine Detection for Large-scale Distributed Model Training* (NSDI25)
+- *ReCycle: Resilient Training of Large DNNs using Pipeline Adaptation* (SOSP24)
 - *XPUTimer: Anomaly Diagnostics for Divergent LLM Training in GPU Clusters of Thousand-Plus Scale* (NSDI26)
 
 
@@ -204,6 +211,7 @@
 
 - *AdapterFusion: Non-Destructive Task Composition for Transfer Learning* (arxiv21)
 - *ASLoRA: Adaptive Sharing Low-Rank Adaptation Across Layers* (arxiv24)
+- *COAP: Memory-Efficient Training with Correlation-Aware Gradient Projection* (arxiv24)
 - *(Diff-Pruning) Parameter-Efficient Transfer Learning with Diff Pruning* (ACL21)
 - *DLoRA: Distributed Parameter-Efficient Fine-Tuning Solution for Large Language Model* (arxiv24)
 - *Egeria: Efficient DNN Training with Knowledge-Guided Layer Freezing* (EuroSys23)
@@ -221,323 +229,447 @@
 
 ### 2.13. Offloading&Recomputation
 
-- 
-
-
-
-
-
-- *(AWSNeuronSDK) Distributed Training of Large Language Models on AWS Trainium* (SoCC24) 
 - *Capuchin: Tensor-based GPU Memory Management for Deep Learning* (ASPLOS20)
-- *COAP: Memory-Efficient Training with Correlation-Aware Gradient Projection* (arxiv24)
-- *Cosmic: Enabling Full-Stack Co-Design and Optimization of Distributed Machine Learning Systems* (arxiv25)
-- *DeepCompile: A Compiler-Driven Approach to Optimizing Distributed Deep Learning Training* (arxiv25)
-- *FSMoE: A Flexible and Scalable Training System for Sparse Mixture-of-Experts Models* (ASPLOS25)
 - *(Fuyou) Adding NVMe SSDs to Enable and Accelerate 100B Model Fine-tuning on a Single GPU* (arxiv24)
-- *(hardware-scaling) Hardware Scaling Trends and Diminishing Returns in Large-Scale Distributed Training* (arxiv24)
-- *Harmony: Overcoming the Hurdles of GPU Memory Capacity to Train Massive DNN Models on Commodity Servers* (VLDB22)
-- *Hydraulis: Balancing Large Transformer Model Training via Co-designing Parallel Strategies and Data Assignment* (arxiv25)
-- *MegaScale-MoE: Large-Scale Communication-Efficient Training of Mixture-of-Experts Models in Production* (arxiv25)
-- *mFabric: An Efficient and Scalable Fabric for Mixture-of-Experts Training* (arxiv25)
-- *MicroMoE: Fine-grained Load Balancing for Mixture-of-Experts with Token Scheduling* (arxiv25)
-- *Mixture-of-Depths: Dynamically allocating compute in transformer-based language models* (arxiv24)
-- *(Perseus) Reducing Energy Bloat in Large Model Training* (SOSP24)
-- *Retiarii: A Deep Learning Exploratory-Training Framework* (OSDI20)
-- *ScheMoE: An Extensible Mixture-of-Experts Distributed Training System with Tasks Scheduling* (EuroSys24)
-- *SMARTMOE: Efficiently Training Sparsely-Activated Models through Combining Offline and Online Parallelization* (ATC23)
-- *Varuna: Scalable, Low-cost Training of Massive Deep Learning Models* (EuroSys22)
-- *VeOmni: Scaling Any Modality Model Training with Model-Centric Distributed Recipe Zoo* (arxiv25) 
 - *ZenFlow: Enabling Stall-Free Offloading Training via Asynchronous Updates* (arxiv25)
 - *ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning* (arxiv21)
 - *ZeRO-Offload: Democratizing Billion-Scale Model Training* (ATC21)
 
 
 
+### 2.14. Mixture-of-Experts
+
+- *FSMoE: A Flexible and Scalable Training System for Sparse Mixture-of-Experts Models* (ASPLOS25)
+- *Harmony: Overcoming the Hurdles of GPU Memory Capacity to Train Massive DNN Models on Commodity Servers* (VLDB22)
+- *MegaScale-MoE: Large-Scale Communication-Efficient Training of Mixture-of-Experts Models in Production* (arxiv25)
+- *mFabric: An Efficient and Scalable Fabric for Mixture-of-Experts Training* (arxiv25)
+- *MicroMoE: Fine-grained Load Balancing for Mixture-of-Experts with Token Scheduling* (arxiv25)
+- *Mixture-of-Depths: Dynamically allocating compute in transformer-based language models* (arxiv24)
+- *ScheMoE: An Extensible Mixture-of-Experts Distributed Training System with Tasks Scheduling* (EuroSys24)
+- *SMARTMOE: Efficiently Training Sparsely-Activated Models through Combining Offline and Online Parallelization* (ATC23)
 
 
 
+### 2.15. Others
 
-1. **Co-location/GPU Scheduling**:
-    - *(FineInfer) Deferred Continuous Batching in Resource-Efficient Large Language Model Serving* (EuroMLSys24)
-    - *FlexLLM: A System for Co-Serving Large Language Model Inference and Parameter-Efficient Finetuning* (arxiv24)
-    - *(LLMStation) Resource Multiplexing in Tuning and Serving Large Language Models* (ATC25)
-    - *(Mudi) Multiplexing Dynamic Deep Learning Workloads with SLO-awareness in GPU Clusters* (EuroSys25)
-    - *Orion: Interference-aware, Fine-grained GPU Sharing for ML Applications* (EuroSys24)
-    - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
-    - *(Sirius) Colocating ML Inference and Training with Fast GPU Memory Handover* (ATC25)
-2. **Checkpoint/Memory**:
-    - *Bagpipe: Accelerating Deep Recommendation Model Training* (SOSP23)
-    - *ByteCheckpoint: A Unified Checkpointing System for LLM Development* (arxiv24)
-    - *eLLM: Elastic Memory Management Framework for Efficient LLM Serving* (arxiv25)
-    - *Gemini: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints* (SOSP23)
-    - *GMLake: Efficient and Transparent GPU Memory Defragmentation for Large-scale DNN Training with Virtual Memory Stitching* (ASPLOS24)
-    - *GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training* (arxiv25)
-    - *(H2M2) Hardware-based Heterogeneous Memory Management for Large Language Model Inference* (arxiv25)
-    - *(JIT-ckpt)  Just-In-Time Checkpointing: Low Cost Error Recovery from Deep Learning Training Failures* (EuroSys24)
-    - *LayerKV: Optimizing Large Language Model Serving with Layer-wise KV Cache Management* (arxiv24)
-    - *MAGIS: Memory Optimization via Coordinated Graph Transformation and Scheduling for DNN* (ASPLOS24)
-    - *mTuner: Accelerating Parameter-Efficient Fine-Tuning with Elastic Tensor* (ATC25)
-    - *Pie: Pooling CPU Memory for LLM Inference* (arxiv24)
-    - *(STWeaver) Reducing GPU Memory Fragmentation via Spatio-Temporal Planning for Efficient Large-Scale Model Training* (arxiv25)
-    - *Tenplex: Dynamic Parallelism for Deep Learning using Parallelizable Tensor Collections* (SOSP24)
-    - *(UCP) Universal Checkpointing: A Flexible and Efficient Distributed Checkpointing System for Large-Scale DNN Training with Reconfigurable Parallelism* (ATC25)
-    - *UGache: A Unified GPU Cache for Embedding-based Deep Learning* (SOSP23)
-    - *vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention* (arxiv24)
-    - *vTensor: Flexible Virtual Tensor Management for Efficient LLM Serving* (arxiv24)
-    - *ZeRO: Memory Optimizations Toward Training Trillion Parameter Models* (arxiv20)
-3. **AI Compilation**:
+- *(AWSNeuronSDK) Distributed Training of Large Language Models on AWS Trainium* (SoCC24) 
+- *(hardware-scaling) Hardware Scaling Trends and Diminishing Returns in Large-Scale Distributed Training* (arxiv24)
+- *(Perseus) Reducing Energy Bloat in Large Model Training* (SOSP24)
+- *Retiarii: A Deep Learning Exploratory-Training Framework* (OSDI20)
 
-    - *AttentionEngine: A Versatile Framework for Efficient Attention Mechanisms on Diverse Hardware Platforms* (arxiv25)
-    - *FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System* (ASPLOS20)
-    - *FuseFlow: A Fusion-Centric Compilation Framework for Sparse Deep Learning on Streaming Dataflow* (arxiv25)
-    - *MAGPY: Compiling Eager Mode DNN Programs by Monitoring Execution States* (ATC24)
-    - *Tempo: Compiled Dynamic Deep Learning with Symbolic Dependence Graphs* (SOSP25)
-    - *(TLM) Enabling Tensor Language Model to Assist in Generating High-Performance Tensor Programs for Deep Learning* (OSDI24)
-    - *Welder: Scheduling Deep Learning Memory Access via Tile-graph* (OSDI23)
-    - *Operator Fusion in XLA: Analysis and Evaluation* (arxiv23)
-4. **Inference**:
-    - **MoE:**
-         - *(AMoE) Toward Cost-Efficient Serving of Mixture-of-Experts with Asynchrony* (arxiv25)
-         - *(Brainstorm) Optimizing Dynamic Neural Networks with Brainstorm* (OSDI23)
-         - *BuddyMoE: Exploiting Expert Redundancy to Accelerate Memory-Constrained Mixture-of-Experts Inference* (arxiv25)
-         - *(EaaS) Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving* (arxiv25)
-         - *ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models* (arxiv25)
-         - *Janus: Disaggregating Attention and Experts for Scalable MoE Inference* (arxiv25)
-         - *KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models* (SOSP25)
-         - *Klotski: Efficient Mixture-of-Expert Inference via Expert-Aware Multi-Batch Pipeline* (ASPLOS25)
-         - *MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints* (arxiv25)
-         - *MoE-Lightning: High-Throughput MoE Inference on Memory-constrained GPUs* (arxiv24)
-         - *MoE-SpeQ: Speculative Quantized Decoding with Proactive Expert Prefetching and Offloading for Mixture-of-Experts* (arxiv25)
-         - *TUTEL: Adaptive Mixture-of-Experts at Scale* (arxiv22)
-    - **PD-Monolith:** 
-         - *FairBatching: Fairness-Aware Batch Formation for LLM Inference* (arxiv25)
-         - *ORCA: A Distributed Serving System for Transformer-Based Generative Models* (OSDI22)
-         - *SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills* (arxiv23)
-         - *(Sarathi-Serve) Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve* (arxiv24)
-         - *(SGLang) Efficiently Programming Large Language Models using SGLang* (arxiv24)
-         - *(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention* (OSP23)
-    - **PD-Disaggregation:**
-         - *(ARES) Adaptive Rescheduling in Prefill-Decode Disaggregated LLM Inference* (arxiv25)
-         - *Arrow: Adaptive Scheduling Mechanisms for Disaggregated LLM Inference Architecture* (arxiv25)
-         - *DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving* (arxiv24)
-         - *DynaServe: Unified and Elastic Tandem-Style Execution for Dynamic Disaggregated LLM Serving* (arxiv25)
-         - *HydraInfer: Hybrid Disaggregated Scheduling for Multimodal Large Language Model Serving* (arxiv25)
-         - *KVDirect: Distributed Disaggregated LLM Inference* (arxiv25)
-         - *MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism* (arxiv25)
-         - *MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool* (arxiv24)
-         - *Mooncake: Trading More Storage for Less Computation – A KVCache-centric Architecture for Serving LLM Chatbot* (FAST25)
-         - *Splitwise: Efficient Generative LLM Inference Using Phase Splitting* (ISCA24)
-         - *TD-Pipe: Temporally-Disaggregated Pipeline Parallelism Architecture for High-Throughput LLM Inference* (ICPP25)
-         - *(TetriInfer) Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads* (arxiv24)
-         - *WindServe: Efficient Phase-Disaggregated LLM Serving with Stream-based Dynamic Scheduling* (ISCA25)
-    - **PD-Colocation:** 
-         - *Bullet: Boosting GPU Utilization for LLM Serving via Dynamic Spatial-Temporal Orchestration* (arxiv25)
-         - *(Drift) Optimizing SLO-oriented LLM Serving with PD-Multiplexing* (arxiv25)
-         - *EcoServe(-PD): Enabling Cost-effective LLM Serving with Proactive Intra- and Inter-Instance Orchestration* (arxiv25)
-         - *(Taichi) Prefill-Decode Aggregation or Disaggregation? Unifying Both for Goodput-Optimized LLM Serving* (arxiv25)
-    - **Model-as-a-Service (Serverless-for-LLM):**
-         - *Aegaeon: Effective GPU Pooling for Concurrent LLM Serving on the Market* (SOSP25)
-         - *AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving* (OSDI23)
-         - *Andes: Defining and Enhancing Quality-of-Experience in LLM-Based Text Streaming Services* (arxiv24)
-         - *Ascendra: Dynamic Request Prioritization for Efficient LLM Serving* (arxiv25)
-         - *(BlitzScale) Fast and Live Model Auto Scaling with O(1) Host Caching* (OSDI25)
-         - *DeepFlow: Serverless Large Language Model Serving at Scale* (arxiv25)
-         - *(DeepPlan) Fast and Efficient Model Serving Using Multi-GPUs with Direct-Host-Access* (EuroSys23)
-         - *Dilu: Enabling GPU Resourcing-on-Demand for Serverless DL Serving via Introspective Elasticity* (ASPLOS25)
-         - *FaaSwap: SLO-Aware, GPU-Efficient Serverless Inference via Model Swapping* (arxiv24)
-         - *FlexPipe: Adapting Dynamic LLM Serving Through Inflight Pipeline Refactoring in Fragmented Serverless Clusters* (EuroSys26)
-         - *FLYING SERVING: On-the-Fly Parallelism Switching for Large Language Model Serving* (arxiv26)
-         - *HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds* (NSDI26)
-         - *(InstaInfer) Pre-Warming is Not Enough: Accelerating Serverless Inference With Opportunistic Pre-Loading* (SoCC24)
-         - *LLM-Mesh: Enabling Elastic Sharing for Serverless LLM Inference* (arxiv25)
-         - *(LLMMicroServe) A System for Microserving of LLMs* (arxiv24)
-         - *MuxServe: Flexible Multiplexing for Efficient Multiple LLM Serving* (arxiv24)
-         - *(OPScale) From Models to Operators: Rethinking Autoscaling Granularity for Large Generative Models* (arxiv25)
-         - *(ParaServe) Towards Swift Serverless LLM Cold Starts with ParaServe* (arxiv25)
-         - *PipeBoost: Resilient Pipelined Architecture for Fast Serverless LLM Scaling* (arxiv25)
-         - *PolyServe: Efficient Multi-SLO Serving at Scale* (arxiv25)
-         - *Prism: Unleashing GPU Sharing for Cost-Efficient Multi-LLM Serving* (arxiv25)
-         - *Proteus: A High-Throughput Inference-Serving System with Accuracy Scaling* (ASPLOS24)
-         - *(SageServe) Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale* (arxiv25)
-         - *ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs* (arxiv25)
-         - *ShadowServe: Interference-Free KV Cache Fetching for Distributed Prefix Caching* (arxiv25)
-         - *Shepherd: Serving DNNs in the Wild* (NSDI23)
-         - *SkyLB: A Locality-Aware Cross-Region Load Balancer for LLM Inference* (arxiv25)
-         - *SkyPilot: An Intercloud Broker for Sky Computing* (NSDI23)
-         - *SkyServe: Serving AI Models across Regions and Clouds with Spot Instances* (EuroSys25)
-         - *SLOs-Serve: Optimized Serving of Multi-SLO LLMs* (arxiv25)
-         - *(SmoothGoodput) Revisiting Service Level Objectives and System Level Metrics in Large Language Model Serving* (arxiv25)
-         - *SuperServe: Fine-Grained Inference Serving for Unpredictable Workloads* (NSDI25)
-         - *TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling* (EuroSys26)
-         - *WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving* (arxiv25)
-         - *Weaver: Efficient Multi-LLM Serving with Attention Offloading* (ATC25)
-         - 𝜆Scale: Enabling Fast Scaling for Serverless Large Language Model Inference (arxiv25)
-    - **Offline:**
-         - *BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching* (arxiv24)
-         - *BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching* (arxiv24)
-         - *ConServe: Harvesting GPUs for Low-Latency and High-Throughput Large Language Model Serving* (arxiv24)
-    - **Fine-tuned:**
-         - *CARASERVE: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference* (arxiv24)
-         - *Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments* (arxiv24)
-         - *DeltaZip: Efficient Serving of Multiple Full-Model-Tuned LLMs* (arxiv24)
-         - *dLoRA: Dynamically Orchestrating Requests and Adapters for LoRA LLM Serving* (OSDI24)
-         - *InfiniLoRA: Disaggregated Multi-LoRA Serving for Large Language Models* (arxiv26)
-         - *PETALS: Collaborative Inference and Fine-tuning of Large Models* (arxiv23)
-         - *PetS: A Unified Framework for Parameter-Efficient Transformers Serving* (ATC22)
-         - *PUNICA: MULTI-TENANT LORA SERVING* (arxiv23)
-         - *S-LORA: SERVING THOUSANDS OF CONCURRENT LORA ADAPTERS* (arxiv23)
-         - *(VaLoRA) Empower Vision Applications with LoRA LMM* (EuroSys25)
-    - *AcceLLM: Accelerating LLM Inference Using Redundancy for Load Balancing And Data Locality* (arxiv24)
-    - *ALISE: Accelerating Large Language Model Serving with Speculative Scheduling* (ICCAD24)
-    - *(AnLLMs) Anchor-based Large Language Models* (arxiv24)
-    - *(AttentionOffload) Efficient and Economic Large Language Model Inference with Attention Offloading* (arxiv24)
-    - *BlockLLM: Multi-tenant Finer-grained Serving for Large Language Models* (arxiv24)
-    - *(CachedAttention) Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention* (ATC24)
-    - *CacheSlide: Unlocking Cross Position-Aware KV Cache Reuse for Accelerating LLM Serving* (FAST26)
-    - *Cornserve: Efficiently Serving Any-to-Any Multimodal Models* (arxiv25)
-    - *ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition* (arxiv24)
-    - *CodeTree: Agent-guided Tree Search for Code Generation with Large Language Models* (arxiv24)
-    - *(CSP) Cross-Self KV Cache Pruning for Efficient Vision-Language Inference* (arxiv24)
-    - *DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency* (arxiv24)
-    - *EcoServe: Maximizing Multi-Resource Utilization with SLO Guarantees in LLM Serving* (arxiv24)
-    - *ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor* (arxiv25)
-    - *Epic: Efficient Position-Independent Context Caching for Serving Large Language Models* (arxiv24)
-    - *Equinox: Holistic Fair Scheduling in Serving Large Language Models* (arxiv25)
-    - *ExeGPT: Constraint-Aware Resource Scheduling for LLM Inference* (ASPLOS24)
-    - *(FairSched) Locality-aware Fair Scheduling in LLM Serving* (arxiv25)
-    - *FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines* (arxiv24)
-    - *(FastServe) Fast Distributed Inference Serving for Large Language Models* (arxiv23)
-    - *FastSwitch: Optimizing Context Switching Efficiency in Fairness-aware Large Language Model Serving* (arxiv24)
-    - *FlashForge: Ultra-Efficient Prefix-Aware Attention for LLM Decoding* (arxiv25)
-    - *FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving* (arxiv25)
-    - *Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity* (arxiv24)
-    - *FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU* (ICML23)
-    - *Glinthawk: A Two-Tiered Architecture for High-Throughput LLM Inference* (arxiv25)
-    - *Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference* (arxiv25)
-    - *gLLM: Global Balanced Pipeline Parallelism System for Distributed LLM Serving with Token Throttling* (arxiv25)
-    - *GMorph: Accelerating Multi-DNN Inference via Model Fusion* (EuroSys24)
-    - *GreenLLM: SLO-Aware Dynamic Frequency Scaling for Energy-Efficient LLM Serving* (arxiv25)
-    - *GUIDE: A Global Unified Inference Engine for Deploying Large Language Models in Heterogeneous Environments* (arxiv24)
-    - *HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading* (arxiv25)
-    - *HELIOS: Adaptive Model And Early-Exit Selection for Efficient LLM Inference Serving* (arxiv25)
-    - *Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs* (arxiv24)
-    - *(HybridServe) Efficient LLM Inference with Activation Checkpointing and Hybrid Caching* (arxiv25)
-    - *Impress: An Importance-Informed Multi-Tier Prefix KV Storage System for Large Language 
-         Model Inference* (FAST25)
-    - *(InferScaling) Efficiently Scaling Transformer Inference* (arxiv22)
-    - *InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management* (OSDI24)
-    - *Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache* (arxiv24)
-    - *(IOInfer) Efficient LLM Inference with I/O-Aware Partial KV Cache Recomputation* (arxiv24)
-    - *Jenga: Effective Memory Management for Serving LLM with Heterogeneity* (arxiv25)
-    - *KunServe: Elastic and Efficient Large Language Model Serving with Parameter-centric Memory Management* (arxiv24)
-    - *LoongServe: Efficiently Serving Long-context Large Language Models with Elastic Sequence Parallelism* (arxiv24)
-    - *Mélange: Cost Efficient Large Language Model Serving by Exploiting GPU Heterogeneity* (arxiv24)
-    - *MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention* (NIPS24)
-    - *ModServe: Scalable and Resource-Efficient Large Multimodal Model Serving* (arxiv25)
-    - *NanoFlow: Towards Optimal Large Language Model Serving Throughput* (arxiv24)
-    - *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
-    - *NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference* (arxiv24)
-    - *Parrot: Efficient Serving of LLM-based Applications with Semantic Variable* (OSDI24)
-    - *PickLLM: Context-Aware RL-Assisted Large Language Model Routing* (arxiv24)
-    - *POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference* (arxiv24)
-    - *PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU* (SOSP24)
-    - *PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications* (arxiv25)
-    - *PreServe: Prefetching Model Weights and KV-Cache in Distributed LLM Serving* (arxiv25)
-    - *(PuzzleNAS) Puzzle: Distillation-Based NAS for Inference-Optimized LLMs* (arxiv24)
-    - *PyramidInfer: Pyramid KV Cache Compression for High-throughput LLM Inference* (arxiv24)
-    - *RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval* (arxiv24)
-    - *SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference* (arxiv25)
-    - *(Select-N) Memory Offloading for Large Language Model Inference with Latency SLO Guarantees* (arxiv25)
-    - *ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference* (arxiv24)
-    - *Shift Parallelism: Low-Latency, High-Throughput LLM Inference for Dynamic Workloads* (arxiv25)
-    - *SiPipe: Bridging the CPU–GPU Utilization Gap for Efficient Pipeline-Parallel LLM Inference* (arxiv25)
-    - *(SISO) Rethinking Caching for LLM Serving Systems: Beyond Traditional Heuristics* (arxiv25)
-    - *SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification* (ASLOPS24)
-    - *SpotServe: Serving Generative Large Language Models on Preemptible Instances* (ASPLOS24)
-    - *(SSJF) Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction* (arxiv24)
-    - *Star Attention: Efficient LLM Inference over Long Sequences* (arxiv24) 
-    - *(StreamingLLM) Efficient Streaming Language Models with Attention Sinks* (ICLR24)
-    - *Symphony: Improving Memory Management for LLM Inference Workloads* (arxiv24)
-    - *Tabi: An Efficient Multi-Level Inference System for Large Language Models* (EuroSys23)
-    - *(Tetris) Optimizing Long-context LLM Serving via Fine-grained Sequence Parallelism* (arxiv25)
-    - *ThreadWeaver: Adaptive Threading for Efficient Parallel Reasoning in Language Models* (arxiv25)
-    - *TokenSelect: Efficient Long-Context Inference and Length Extrapolation for LLMs via Dynamic Token-Level KV Cache Selection* (arxiv24)
-    - *TurboTransformers: An Efficient GPU Serving System For Transformer Models* (PPoPP21)
-    - *(VTC) Fairness in Serving Large Language Models* (arxiv23)
-    - *WebLLM: A High-Performance In-Browser LLM Inference Engine* (arxiv24)
-    - *XGrammar: Flexible and Efficient Structured Generation Engine for Large Language Models* (arxiv24)
-    - *(XY-Serve) Tackling the Dynamicity in a Production LLM Serving System with SOTA Optimizations via Hybrid Prefill/Decode/Verify Scheduling on Efficient Meta-kernels* (arxiv24)
-    - *(μ-Serve) Power-aware Deep Learning Model Serving  with μ-Serve* (ATC24)
-5. **Cluster Trace Analysis**:
-    - *(Helios) Characterization and Prediction of Deep Learning Workloads in Large-Scale GPU Datacenters* (SC21)
-    - *(PAI) MLaaS in the Wild: Workload Analysis and Scheduling in Large-Scale Heterogeneous GPU Clusters* (NSDI22)
-    - *(Philly) Analysis of Large-Scale Multi-Tenant GPU Clusters for DNN Training Workloads* (ATC19)
-    - *ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production* (arxiv25)
-6. **HPC**:
-    - *(ESLURM) Towards Scalable Resource Management for Supercomputers* (SC22)
-7. **Performance Modeling**:
-    - *CDMPP: A Device-Model Agnostic Framework for Latency Prediction of Tensor Programs* (EuroSys24)
-    - *Daydream: Accurately Estimating the Efficacy of Optimizations for DNN Training* (ATC20)
-    - *DistSim: A performance model of large-scale hybrid distributed DNN training* (CF23)
-    - *dPRO: A Generic Performance Diagnosis and Optimization Toolkit for Expediting Distributed DNN Training* (MLSys22)
-    - *FasterMoE: Modeling and Optimizing Training of Large-Scale Dynamic Pre-Trained Models* (PPoPP22)
-    - *Habitat: A Runtime-Based Computational Performance Predictor for Deep Neural Network Training* (ATC21)
-    - *MAD Max Beyond Single-Node: Enabling Large Machine Learning Model Acceleration on Distributed Systems* (arxiv23)
-    - *Machine Learning-enabled Performance Model for DNN Applications and AI Accelerator* (HPCC22)
-    - *(MPE) Fast Performance Prediction for Efficient Distributed DNN Training* (x)
-    - *PALEO: A PERFORMANCE MODEL FOR DEEP NEURAL NETWORKS* (ICLR17)
-    - *Phantora: Live GPU Cluster Simulation for Machine Learning System Performance Estimation* (arxiv25)
-8. **Survey**:
-      - *(DLSched survey) Deep Learning Workload Scheduling in GPU Datacenters: A Survey* (arxiv24)
-      - *(fine-tuning survey) Learn From Model Beyond Fine-Tuning: A Survey* (arxiv23)
-      - *(KVCache survey) Keep the Cost Down: A Review on Methods to Optimize LLM’s KV Cache Consumption* (arxiv24)
-      - *(peft guide) Scaling Down to Scale Up: A Guide to Parameter-Efficient Fine-Tuning* (arxiv23)
-      - *(peft survey) Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey* (arxiv24)
-9. **Quantization**:
-     - *AWQ: Activation-aware Weight Quantization for On-Device LLM Compression and Acceleration* (MLSys24)
-     - *LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale* (NIPS22)
-     - *QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving* (arxiv24)
-     - *Quant-LLM: Accelerating the Serving of Large Language Models via FP6-Centric Algorithm-System Co-Design on Modern GPUs* (ATC24)
-     - *8-BIT OPTIMIZERS VIA BLOCK-WISE QUANTIZATION* (ICLR22)
-10. **Sparsity**
-    - *PIT: Optimization of Dynamic Sparse Deep Learning Models via Permutation Invariant Transformation* (SOSP23)
-    - *SpInfer: Leveraging Low-Level Sparsity for Efficient Large Language Model Inference on GPUs* (EuroSys25)
-11. **Retrieval-Augmented Generation (RAG) / LLM Applications**
-       - *Autellix: An Efficient Serving Engine for LLM Agents as General Programs* (arxiv25)
-       - *CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion* (EuroSys25) 
-       - *(Conveyor) Conveyor: Efficient Tool-aware LLM Serving with Tool Partial Execution* (arxiv24)
-       - *(LAMPS) Fast Inference for Augmented Large Language Models* (arxiv24)
-       - *Pancake: Hierarchical Memory System for Multi-Agent LLM Serving* (arxiv26)
-       - *(PDGraph) Efficient Serving of LLM Applications with Probabilistic Demand Modeling* (arxiv25)
-       - *Pie: A Programmable Serving System for Emerging LLM Applications* (SOSP25)
-       - *RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation* (arxiv24)
-       - *Teola: Towards End-to-End Optimization of LLM-based Applications* (arxiv24)
-       - *Tokencake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications* (arxiv25)
-       - *TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing* (arxiv26)
-12. **RL&AgentSkill**
-        - *ARL-Tangram: Unleash the Resource Efficiency in Agentic Reinforcement Learning* (arxiv26)
-        - *Effective harnesses for long-running agents* (blog25)
-        - *(FlexMARL) Rollout-Training Co-Design for Efficient LLM-Based Multi-Agent Reinforcement Learning* (arxiv26)
-        - *HybridFlow: A Flexible and Efficient RLHF Framework* (EuroSys25)
-        - *JigsawRL: Assembling RL Pipelines for Efficient LLM Post-Training* (arxiv26)
-        - *Meta-Harness: End-to-End Optimization of Model Harnesses* (arxiv26)
-        - *Natural-Language Agent Harnesses* (arxiv26)
-        - *PUZZLE: Efficiently Aligning Large Language Models through Light-Weight Context Switch* (ATC24)
-        - *ReaLHF: Optimized RLHF Training for Large Language Models through Parameter Reallocation* (arxiv24)
-        - *ReLibra: Routing-Replay-Guided Load Balancing for MoE Training in Reinforcement Learning* (arxiv26)
-        - *(RhymeRL) History Doesn’t Repeat Itself but Rollouts Rhyme: Accelerating Reinforcement Learning with RhymeRL* (ASPLOS26)
-        - *RLBoost: Harvesting Preemptible Cloud Resources for Cost-Efficient Reinforcement Learning on LLMs* (NSDI26)
-        - *RLHFuse: Efficient RLHF Training for Large Language Models with Inter- and Intra-Stage Fusion* (arxiv24) 
-        - *RLHFless: Serverless Computing for Efficient RLHF* (arxiv26)
-        - *(RLHF-workshop) Systems Opportunities for LLM Fine-Tuning using Reinforcement Learning* (EuryMLSys25)
-        - *RollArt: Scaling Agentic RL Training via Disaggregated Infrastructure* (arxiv26)
-        - *RollMux: Phase-Level Multiplexing for Disaggregated RL Post-Training* (arxiv26)
-        - *RollPacker: Mitigating Long-Tail Rollouts for Fast, Synchronous RL Post-Training* (arxiv25)
-        - *ROSE: Rollout On Serving GPUs via Cooperative Elasticity for Agentic RL* (arxiv26)
-        - *Seer: Online Context Learning for Fast Synchronous LLM Reinforcement Learning* (OSDI26)
-        - *SkVM: Revisiting Language VM for Skills across Heterogenous LLMs and Harnesses* (arxiv26)
-        - *StreamRL: Scalable, Heterogeneous, and Elastic RL for LLMs with Disaggregated Stream Generation* (arxiv25)
-13. **Data Processing**
-      - *Pecan: Cost-Efficient ML Data Preprocessing  with Automatic Transformation Ordering  and Hybrid Placement* (ATC24)
-      - *(Ray Data) The Streaming Batch Model for Efficient and Fault-Tolerant Heterogeneous Execution* (arxiv25)
-      - *(Seneca) Preparation Meets Opportunity: Enhancing Data Preprocessing for ML Training With Seneca* (FAST25)
+
+
+## 3. Model Serving
+
+### 3.1. Mixture-of-Experts
+
+- *(AMoE) Toward Cost-Efficient Serving of Mixture-of-Experts with Asynchrony* (arxiv25)
+- *(Brainstorm) Optimizing Dynamic Neural Networks with Brainstorm* (OSDI23)
+- *BuddyMoE: Exploiting Expert Redundancy to Accelerate Memory-Constrained Mixture-of-Experts Inference* (arxiv25)
+- *(EaaS) Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving* (arxiv25)
+- *ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models* (arxiv25)
+- *Janus: Disaggregating Attention and Experts for Scalable MoE Inference* (arxiv25)
+- *KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models* (SOSP25)
+- *Klotski: Efficient Mixture-of-Expert Inference via Expert-Aware Multi-Batch Pipeline* (ASPLOS25)
+- *MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints* (arxiv25)
+- *MoE-Lightning: High-Throughput MoE Inference on Memory-constrained GPUs* (arxiv24)
+- *MoE-SpeQ: Speculative Quantized Decoding with Proactive Expert Prefetching and Offloading for Mixture-of-Experts* (arxiv25)
+- *TUTEL: Adaptive Mixture-of-Experts at Scale* (arxiv22)
+
+
+
+### 3.2. PD-Monolith
+
+- *ExeGPT: Constraint-Aware Resource Scheduling for LLM Inference* (ASPLOS24)
+- *ORCA: A Distributed Serving System for Transformer-Based Generative Models* (OSDI22)
+- *SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills* (arxiv23)
+- *(Sarathi-Serve) Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve* (arxiv24)
+- *(SGLang) Efficiently Programming Large Language Models using SGLang* (arxiv24)
+- *(vLLM) Efficient Memory Management for Large Language Model Serving with PagedAttention* (OSP23)
+
+
+
+### 3.3. Disaggregation
+
+- *(ARES) Adaptive Rescheduling in Prefill-Decode Disaggregated LLM Inference* (arxiv25)
+- *Arrow: Adaptive Scheduling Mechanisms for Disaggregated LLM Inference Architecture* (arxiv25)
+- *DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving* (arxiv24)
+- *DynaServe: Unified and Elastic Tandem-Style Execution for Dynamic Disaggregated LLM Serving* (arxiv25)
+- *Glinthawk: A Two-Tiered Architecture for High-Throughput LLM Inference* (arxiv25)
+- *HydraInfer: Hybrid Disaggregated Scheduling for Multimodal Large Language Model Serving* (arxiv25)
+- *KVDirect: Distributed Disaggregated LLM Inference* (arxiv25)
+- *MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism* (arxiv25)
+- *MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool* (arxiv24)
+- *Mooncake: Trading More Storage for Less Computation – A KVCache-centric Architecture for Serving LLM Chatbot* (FAST25)
+- *Splitwise: Efficient Generative LLM Inference Using Phase Splitting* (ISCA24)
+- *TD-Pipe: Temporally-Disaggregated Pipeline Parallelism Architecture for High-Throughput LLM Inference* (ICPP25)
+- *(TetriInfer) Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads* (arxiv24)
+- *WindServe: Efficient Phase-Disaggregated LLM Serving with Stream-based Dynamic Scheduling* (ISCA25)
+
+
+
+### 3.4. PD-Colocation
+
+- *Bullet: Boosting GPU Utilization for LLM Serving via Dynamic Spatial-Temporal Orchestration* (arxiv25)
+- *(Drift) Optimizing SLO-oriented LLM Serving with PD-Multiplexing* (ASPLOS26)
+- *EcoServe(-PD): Enabling Cost-effective LLM Serving with Proactive Intra- and Inter-Instance Orchestration* (arxiv25)
+- *(Taichi) Prefill-Decode Aggregation or Disaggregation? Unifying Both for Goodput-Optimized LLM Serving* (arxiv25)
+
+
+
+### 3.5. Model-as-a-Service (Scheduling, Serverless)
+
+- *Aegaeon: Effective GPU Pooling for Concurrent LLM Serving on the Market* (SOSP25)
+- *AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving* (OSDI23)
+- *Andes: Defining and Enhancing Quality-of-Experience in LLM-Based Text Streaming Services* (arxiv24)
+- *Ascendra: Dynamic Request Prioritization for Efficient LLM Serving* (arxiv25)
+- *(BlitzScale) Fast and Live Model Auto Scaling with O(1) Host Caching* (OSDI25)
+- *BlockLLM: Multi-tenant Finer-grained Serving for Large Language Models* (arxiv24)
+- *DeepFlow: Serverless Large Language Model Serving at Scale* (arxiv25)
+- *(DeepPlan) Fast and Efficient Model Serving Using Multi-GPUs with Direct-Host-Access* (EuroSys23)
+- *Dilu: Enabling GPU Resourcing-on-Demand for Serverless DL Serving via Introspective Elasticity* (ASPLOS25)
+- *EcoServe: Maximizing Multi-Resource Utilization with SLO Guarantees in LLM Serving* (arxiv24)
+- *ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor* (arxiv25)
+- *FaaSwap: SLO-Aware, GPU-Efficient Serverless Inference via Model Swapping* (arxiv24)
+- *(FastServe) Fast Distributed Inference Serving for Large Language Models* (arxiv23)
+- *FlexPipe: Adapting Dynamic LLM Serving Through Inflight Pipeline Refactoring in Fragmented Serverless Clusters* (EuroSys26)
+- *FLYING SERVING: On-the-Fly Parallelism Switching for Large Language Model Serving* (arxiv26)
+- *HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds* (NSDI26)
+- *(InstaInfer) Pre-Warming is Not Enough: Accelerating Serverless Inference With Opportunistic Pre-Loading* (SoCC24)
+- *LLM-Mesh: Enabling Elastic Sharing for Serverless LLM Inference* (arxiv25)
+- *(LLMMicroServe) A System for Microserving of LLMs* (arxiv24)
+- *MuxServe: Flexible Multiplexing for Efficient Multiple LLM Serving* (arxiv24)
+- *NanoFlow: Towards Optimal Large Language Model Serving Throughput* (arxiv24)
+- *(OPScale) From Models to Operators: Rethinking Autoscaling Granularity for Large Generative Models* (arxiv25)
+- *(ParaServe) Towards Swift Serverless LLM Cold Starts with ParaServe* (arxiv25)
+- *PickLLM: Context-Aware RL-Assisted Large Language Model Routing* (arxiv24)
+- *PipeBoost: Resilient Pipelined Architecture for Fast Serverless LLM Scaling* (arxiv25)
+- *PolyServe: Efficient Multi-SLO Serving at Scale* (arxiv25)
+- *PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications* (SOSP25)
+- *Prism: Unleashing GPU Sharing for Cost-Efficient Multi-LLM Serving* (arxiv25)
+- *Proteus: A High-Throughput Inference-Serving System with Accuracy Scaling* (ASPLOS24)
+- *(SageServe) Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale* (arxiv25)
+- *SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference* (arxiv25)
+- *ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs* (arxiv25)
+- *ShadowServe: Interference-Free KV Cache Fetching for Distributed Prefix Caching* (arxiv25)
+- *Shepherd: Serving DNNs in the Wild* (NSDI23)
+- *(SISO) Rethinking Caching for LLM Serving Systems: Beyond Traditional Heuristics* (arxiv25)
+- *SkyLB: A Locality-Aware Cross-Region Load Balancer for LLM Inference* (arxiv25)
+- *SkyPilot: An Intercloud Broker for Sky Computing* (NSDI23)
+- *SkyServe: Serving AI Models across Regions and Clouds with Spot Instances* (EuroSys25)
+- *SLOs-Serve: Optimized Serving of Multi-SLO LLMs* (arxiv25)
+- *(SmoothGoodput) Revisiting Service Level Objectives and System Level Metrics in Large Language Model Serving* (arxiv25)
+- *SpotServe: Serving Generative Large Language Models on Preemptible Instances* (ASPLOS24)
+- *(SSJF) Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction* (arxiv24)
+- *SuperServe: Fine-Grained Inference Serving for Unpredictable Workloads* (NSDI25)
+- *TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling* (EuroSys26)
+- *TurboTransformers: An Efficient GPU Serving System For Transformer Models* (PPoPP21)
+- *WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving* (arxiv25)
+- *Weaver: Efficient Multi-LLM Serving with Attention Offloading* (ATC25)
+- 𝜆Scale: Enabling Fast Scaling for Serverless Large Language Model Inference (arxiv25)
+
+
+
+### 3.6. Offline
+
+- *BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching* (arxiv24)
+- *BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching* (arxiv24)
+- *ConServe: Harvesting GPUs for Low-Latency and High-Throughput Large Language Model Serving* (arxiv24)
+
+
+
+### 3.7. Fine-Tuned
+
+- *CARASERVE: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference* (arxiv24)
+- *Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments* (arxiv24)
+- *DeltaZip: Efficient Serving of Multiple Full-Model-Tuned LLMs* (arxiv24)
+- *dLoRA: Dynamically Orchestrating Requests and Adapters for LoRA LLM Serving* (OSDI24)
+- *InfiniLoRA: Disaggregated Multi-LoRA Serving for Large Language Models* (arxiv26)
+- *PETALS: Collaborative Inference and Fine-tuning of Large Models* (arxiv23)
+- *PetS: A Unified Framework for Parameter-Efficient Transformers Serving* (ATC22)
+- *PUNICA: MULTI-TENANT LORA SERVING* (arxiv23)
+- *S-LORA: SERVING THOUSANDS OF CONCURRENT LORA ADAPTERS* (arxiv23)
+- *(VaLoRA) Empower Vision Applications with LoRA LMM* (EuroSys25)
+
+
+
+### 3.8. Long-Context, Multi-Turn, KVCache Reuse
+
+- *(CachedAttention) Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention* (ATC24)
+- *CacheSlide: Unlocking Cross Position-Aware KV Cache Reuse for Accelerating LLM Serving* (FAST26)
+- *Epic: Efficient Position-Independent Context Caching for Serving Large Language Models* (arxiv24)
+- *(InferScaling) Efficiently Scaling Transformer Inference* (arxiv22)
+- *InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management* (OSDI24)
+- *Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache* (arxiv24)
+- *LoongServe: Efficiently Serving Long-context Large Language Models with Elastic Sequence Parallelism* (arxiv24)
+- *ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference* (arxiv24)
+- *TokenSelect: Efficient Long-Context Inference and Length Extrapolation for LLMs via Dynamic Token-Level KV Cache Selection* (arxiv24)
+
+
+
+### 3.9. MultiModal
+
+- *Cornserve: Efficiently Serving Any-to-Any Multimodal Models* (arxiv25)
+- *(CSP) Cross-Self KV Cache Pruning for Efficient Vision-Language Inference* (arxiv24)
+- *ModServe: Scalable and Resource-Efficient Large Multimodal Model Serving* (arxiv25)
+
+
+
+### 3.10. Energy Optimization
+
+- *DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency* (arxiv24)
+- *GreenLLM: Disaggregating Large Language Model Serving on Heterogeneous GPUs for Lower Carbon Emissions* (arxiv24)
+- *GreenLLM: SLO-Aware Dynamic Frequency Scaling for Energy-Efficient LLM Serving* (arxiv25)
+- *(μ-Serve) Power-aware Deep Learning Model Serving  with μ-Serve* (ATC24)
+
+
+
+### 3.11. Fairness
+
+- *Equinox: Holistic Fair Scheduling in Serving Large Language Models* (arxiv25)
+- *FairBatching: Fairness-Aware Batch Formation for LLM Inference* (arxiv25)
+- *(FairSched) Locality-aware Fair Scheduling in LLM Serving* (arxiv25)
+- *FastSwitch: Optimizing Context Switching Efficiency in Fairness-aware Large Language Model Serving* (arxiv24)
+- *(VTC) Fairness in Serving Large Language Models* (arxiv23)
+
+
+
+### 3.12. Offloading
+
+- *FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines* (arxiv24)
+- *FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU* (ICML23)
+- *HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading* (arxiv25)
+- *(HybridServe) Efficient LLM Inference with Activation Checkpointing and Hybrid Caching* (arxiv25)
+- *(IOInfer) Efficient LLM Inference with I/O-Aware Partial KV Cache Recomputation* (arxiv24)
+- *NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference* (arxiv24)
+- *PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU* (SOSP24)
+- *(Select-N) Memory Offloading for Large Language Model Inference with Latency SLO Guarantees* (arxiv25)
+- *ShadowServe: Interference-Free KV Cache Fetching for Distributed Prefix Caching* (arxiv25)
+- *SiPipe: Bridging the CPU–GPU Utilization Gap for Efficient Pipeline-Parallel LLM Inference* (arxiv25)
+
+
+
+### 3.13. Heterogeneous Resources
+
+- *Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs* (arxiv24)
+- *Mélange: Cost Efficient Large Language Model Serving by Exploiting GPU Heterogeneity* (arxiv24)
+
+
+
+### 3.14. Memory Management
+
+- *Jenga: Effective Memory Management for Serving LLM with Heterogeneity* (SOSP25)
+- *KunServe: Elastic and Efficient Large Language Model Serving with Parameter-centric Memory Management* (arxiv24)
+- *Symphony: Improving Memory Management for LLM Inference Workloads* (arxiv24)
+
+
+
+### 3.15. Retrieval-Augmented Generation (RAG) / LLM Applications
+
+  - *Autellix: An Efficient Serving Engine for LLM Agents as General Programs* (NSDI26)
+  - *CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion* (EuroSys25) 
+  - *(Conveyor) Conveyor: Efficient Tool-aware LLM Serving with Tool Partial Execution* (arxiv24)
+  - *(LAMPS) Fast Inference for Augmented Large Language Models* (arxiv24)
+  - *Pancake: Hierarchical Memory System for Multi-Agent LLM Serving* (arxiv26)
+  - *Parrot: Efficient Serving of LLM-based Applications with Semantic Variable* (OSDI24)
+  - *(PDGraph) Efficient Serving of LLM Applications with Probabilistic Demand Modeling* (arxiv25)
+  - *Pie: A Programmable Serving System for Emerging LLM Applications* (SOSP25)
+  - *RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation* (arxiv24)
+  - *Teola: Towards End-to-End Optimization of LLM-based Applications* (arxiv24)
+  - *Tokencake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications* (arxiv25)
+  - *TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing* (arxiv26)
+  - *XGrammar: Flexible and Efficient Structured Generation Engine for Large Language Models* (arxiv24)
+
+
+
+### 3.16. Attention Optimization
+
+- *(AttentionOffload) Efficient and Economic Large Language Model Inference with Attention Offloading* (arxiv24)
+- *ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition* (arxiv24)
+- *FlashForge: Ultra-Efficient Prefix-Aware Attention for LLM Decoding* (arxiv25)
+- *FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving* (arxiv25)
+- *MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention* (NIPS24)
+- *POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference* (arxiv24)
+- *RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval* (arxiv24)
+- *Star Attention: Efficient LLM Inference over Long Sequences* (arxiv24) 
+- *(StreamingLLM) Efficient Streaming Language Models with Attention Sinks* (ICLR24)
+
+
+
+### 3.17. Quantization
+
+ - *AWQ: Activation-aware Weight Quantization for On-Device LLM Compression and Acceleration* (MLSys24)
+ - *LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale* (NIPS22)
+ - *PyramidInfer: Pyramid KV Cache Compression for High-throughput LLM Inference* (arxiv24)
+ - *QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving* (arxiv24)
+ - *Quant-LLM: Accelerating the Serving of Large Language Models via FP6-Centric Algorithm-System Co-Design on Modern GPUs* (ATC24)
+ - *8-BIT OPTIMIZERS VIA BLOCK-WISE QUANTIZATION* (ICLR22)
+
+
+
+### 3.18. Sparsity
+
+- *Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity* (arxiv24)
+- *PIT: Optimization of Dynamic Sparse Deep Learning Models via Permutation Invariant Transformation* (SOSP23)
+- *SpInfer: Leveraging Low-Level Sparsity for Efficient Large Language Model Inference on GPUs* (EuroSys25)
+
+
+
+### 3.19. KVCache Storage
+
+- *Impress: An Importance-Informed Multi-Tier Prefix KV Storage System for Large Language 
+    Model Inference* (FAST25)
+
+
+
+### 3.20. Parallelization
+
+- *FLYING SERVING: On-the-Fly Parallelism Switching for Large Language Model Serving* (arxiv26)
+- *Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference* (arxiv25)
+- *gLLM: Global Balanced Pipeline Parallelism System for Distributed LLM Serving with Token Throttling* (arxiv25)
+- *GUIDE: A Global Unified Inference Engine for Deploying Large Language Models in Heterogeneous Environments* (arxiv24)
+- *PreServe: Prefetching Model Weights and KV-Cache in Distributed LLM Serving* (arxiv25)
+- *Shift Parallelism: Low-Latency, High-Throughput LLM Inference for Dynamic Workloads* (arxiv25)
+- *(Tetris) Optimizing Long-context LLM Serving via Fine-grained Sequence Parallelism* (arxiv25)
+
+
+
+### 3.21. Speculative Decoding
+
+- *ALISE: Accelerating Large Language Model Serving with Speculative Scheduling* (ICCAD24)
+- *SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification* (ASLOPS24)
+
+
+
+### 3.22. Others
+
+- *AcceLLM: Accelerating LLM Inference Using Redundancy for Load Balancing And Data Locality* (arxiv24)
+- *(AnLLMs) Anchor-based Large Language Models* (arxiv24)
+- *CodeTree: Agent-guided Tree Search for Code Generation with Large Language Models* (arxiv24)
+- *GMorph: Accelerating Multi-DNN Inference via Model Fusion* (EuroSys24)
+- *HELIOS: Adaptive Model And Early-Exit Selection for Efficient LLM Inference Serving* (arxiv25)
+- *Nexus: A GPU Cluster Engine for Accelerating DNN-Based Video Analysis* (SOSP19)
+- *(PuzzleNAS) Puzzle: Distillation-Based NAS for Inference-Optimized LLMs* (arxiv24)
+- *Tabi: An Efficient Multi-Level Inference System for Large Language Models* (EuroSys23)
+- *ThreadWeaver: Adaptive Threading for Efficient Parallel Reasoning in Language Models* (arxiv25)
+- *WebLLM: A High-Performance In-Browser LLM Inference Engine* (arxiv24)
+- *(XY-Serve) Tackling the Dynamicity in a Production LLM Serving System with SOTA Optimizations via Hybrid Prefill/Decode/Verify Scheduling on Efficient Meta-kernels* (arxiv24)
+
+
+
+## 4. RL, AgentSkill
+
+   - *ARL-Tangram: Unleash the Resource Efficiency in Agentic Reinforcement Learning* (arxiv26)
+   - *Effective harnesses for long-running agents* (blog25)
+   - *(FlexMARL) Rollout-Training Co-Design for Efficient LLM-Based Multi-Agent Reinforcement Learning* (arxiv26)
+   - *HybridFlow: A Flexible and Efficient RLHF Framework* (EuroSys25)
+   - *JigsawRL: Assembling RL Pipelines for Efficient LLM Post-Training* (arxiv26)
+   - *Meta-Harness: End-to-End Optimization of Model Harnesses* (arxiv26)
+   - *Natural-Language Agent Harnesses* (arxiv26)
+   - *PUZZLE: Efficiently Aligning Large Language Models through Light-Weight Context Switch* (ATC24)
+   - *ReaLHF: Optimized RLHF Training for Large Language Models through Parameter Reallocation* (arxiv24)
+   - *ReLibra: Routing-Replay-Guided Load Balancing for MoE Training in Reinforcement Learning* (arxiv26)
+   - *(RhymeRL) History Doesn’t Repeat Itself but Rollouts Rhyme: Accelerating Reinforcement Learning with RhymeRL* (ASPLOS26)
+   - *RLBoost: Harvesting Preemptible Cloud Resources for Cost-Efficient Reinforcement Learning on LLMs* (NSDI26)
+   - *RLHFuse: Efficient RLHF Training for Large Language Models with Inter- and Intra-Stage Fusion* (arxiv24) 
+   - *RLHFless: Serverless Computing for Efficient RLHF* (arxiv26)
+   - *(RLHF-workshop) Systems Opportunities for LLM Fine-Tuning using Reinforcement Learning* (EuryMLSys25)
+   - *RollArt: Scaling Agentic RL Training via Disaggregated Infrastructure* (arxiv26)
+   - *RollMux: Phase-Level Multiplexing for Disaggregated RL Post-Training* (arxiv26)
+   - *RollPacker: Mitigating Long-Tail Rollouts for Fast, Synchronous RL Post-Training* (arxiv25)
+   - *ROSE: Rollout On Serving GPUs via Cooperative Elasticity for Agentic RL* (arxiv26)
+   - *Seer: Online Context Learning for Fast Synchronous LLM Reinforcement Learning* (OSDI26)
+   - *SkVM: Revisiting Language VM for Skills across Heterogenous LLMs and Harnesses* (arxiv26)
+   - *StreamRL: Scalable, Heterogeneous, and Elastic RL for LLMs with Disaggregated Stream Generation* (arxiv25)
+
+
+
+## 5. Colocation, GPU Scheduling
+
+- *(FineInfer) Deferred Continuous Batching in Resource-Efficient Large Language Model Serving* (EuroMLSys24)
+- *FlexLLM: A System for Co-Serving Large Language Model Inference and Parameter-Efficient Finetuning* (arxiv24)
+- *(LLMStation) Resource Multiplexing in Tuning and Serving Large Language Models* (ATC25)
+- *(Mudi) Multiplexing Dynamic Deep Learning Workloads with SLO-awareness in GPU Clusters* (EuroSys25)
+- *Orion: Interference-aware, Fine-grained GPU Sharing for ML Applications* (EuroSys24)
+- *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
+- *(Sirius) Colocating ML Inference and Training with Fast GPU Memory Handover* (ATC25)
+
+
+
+## 6. Checkpointing, Memory Optimization
+
+- *Bagpipe: Accelerating Deep Recommendation Model Training* (SOSP23)
+- *ByteCheckpoint: A Unified Checkpointing System for LLM Development* (arxiv24)
+- *eLLM: Elastic Memory Management Framework for Efficient LLM Serving* (arxiv25)
+- *Gemini: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints* (SOSP23)
+- *GMLake: Efficient and Transparent GPU Memory Defragmentation for Large-scale DNN Training with Virtual Memory Stitching* (ASPLOS24)
+- *GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training* (arxiv25)
+- *(H2M2) Hardware-based Heterogeneous Memory Management for Large Language Model Inference* (arxiv25)
+- *(JIT-ckpt)  Just-In-Time Checkpointing: Low Cost Error Recovery from Deep Learning Training Failures* (EuroSys24)
+- *LayerKV: Optimizing Large Language Model Serving with Layer-wise KV Cache Management* (arxiv24)
+- *MAGIS: Memory Optimization via Coordinated Graph Transformation and Scheduling for DNN* (ASPLOS24)
+- *mTuner: Accelerating Parameter-Efficient Fine-Tuning with Elastic Tensor* (ATC25)
+- *Pie: Pooling CPU Memory for LLM Inference* (arxiv24)
+- *(STWeaver) Reducing GPU Memory Fragmentation via Spatio-Temporal Planning for Efficient Large-Scale Model Training* (arxiv25)
+- *Tenplex: Dynamic Parallelism for Deep Learning using Parallelizable Tensor Collections* (SOSP24)
+- *(UCP) Universal Checkpointing: A Flexible and Efficient Distributed Checkpointing System for Large-Scale DNN Training with Reconfigurable Parallelism* (ATC25)
+- *UGache: A Unified GPU Cache for Embedding-based Deep Learning* (SOSP23)
+- *vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention* (arxiv24)
+- *vTensor: Flexible Virtual Tensor Management for Efficient LLM Serving* (arxiv24)
+- *ZeRO: Memory Optimizations Toward Training Trillion Parameter Models* (arxiv20)
+
+
+
+## 7. Compilation
+
+- *AttentionEngine: A Versatile Framework for Efficient Attention Mechanisms on Diverse Hardware Platforms* (arxiv25)
+- *FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System* (ASPLOS20)
+- *FuseFlow: A Fusion-Centric Compilation Framework for Sparse Deep Learning on Streaming Dataflow* (arxiv25)
+- *MAGPY: Compiling Eager Mode DNN Programs by Monitoring Execution States* (ATC24)
+- *Tempo: Compiled Dynamic Deep Learning with Symbolic Dependence Graphs* (SOSP25)
+- *(TLM) Enabling Tensor Language Model to Assist in Generating High-Performance Tensor Programs for Deep Learning* (OSDI24)
+- *Welder: Scheduling Deep Learning Memory Access via Tile-graph* (OSDI23)
+- *Operator Fusion in XLA: Analysis and Evaluation* (arxiv23)
+
+
+
+## 8. Performance Modeling
+
+- *CDMPP: A Device-Model Agnostic Framework for Latency Prediction of Tensor Programs* (EuroSys24)
+- *Daydream: Accurately Estimating the Efficacy of Optimizations for DNN Training* (ATC20)
+- *DistSim: A performance model of large-scale hybrid distributed DNN training* (CF23)
+- *dPRO: A Generic Performance Diagnosis and Optimization Toolkit for Expediting Distributed DNN Training* (MLSys22)
+- *FasterMoE: Modeling and Optimizing Training of Large-Scale Dynamic Pre-Trained Models* (PPoPP22)
+- *Habitat: A Runtime-Based Computational Performance Predictor for Deep Neural Network Training* (ATC21)
+- *MAD Max Beyond Single-Node: Enabling Large Machine Learning Model Acceleration on Distributed Systems* (arxiv23)
+- *Machine Learning-enabled Performance Model for DNN Applications and AI Accelerator* (HPCC22)
+- *(MPE) Fast Performance Prediction for Efficient Distributed DNN Training* (x)
+- *PALEO: A PERFORMANCE MODEL FOR DEEP NEURAL NETWORKS* (ICLR17)
+- *Phantora: Live GPU Cluster Simulation for Machine Learning System Performance Estimation* (arxiv25)
+
+
+
+## 9. Cluster Trace Analysis
+
+- *(Helios) Characterization and Prediction of Deep Learning Workloads in Large-Scale GPU Datacenters* (SC21)
+- *(PAI) MLaaS in the Wild: Workload Analysis and Scheduling in Large-Scale Heterogeneous GPU Clusters* (NSDI22)
+- *(Philly) Analysis of Large-Scale Multi-Tenant GPU Clusters for DNN Training Workloads* (ATC19)
+- *ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production* (arxiv25)
+
+
+
+## 10. Survey
+
+  - *(DLSched survey) Deep Learning Workload Scheduling in GPU Datacenters: A Survey* (arxiv24)
+  - *(fine-tuning survey) Learn From Model Beyond Fine-Tuning: A Survey* (arxiv23)
+  - *(KVCache survey) Keep the Cost Down: A Review on Methods to Optimize LLM’s KV Cache Consumption* (arxiv24)
+  - *(peft guide) Scaling Down to Scale Up: A Guide to Parameter-Efficient Fine-Tuning* (arxiv23)
+  - *(peft survey) Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey* (arxiv24)
+
+
+
+## 11. Data Processing
+
+ - *Pecan: Cost-Efficient ML Data Preprocessing  with Automatic Transformation Ordering  and Hybrid Placement* (ATC24)
+ - *(Ray Data) The Streaming Batch Model for Efficient and Fault-Tolerant Heterogeneous Execution* (arxiv25)
+ - *(Seneca) Preparation Meets Opportunity: Enhancing Data Preprocessing for ML Training With Seneca* (FAST25)
