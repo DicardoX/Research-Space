@@ -4,87 +4,260 @@
 
 > This repository is established to store personal notes and annotated papers during daily research.
 >
-> **Involving Field**: *ML System, LLM, Distributed Training, Cluster Schduling, Inference, Workload Trace Analysis, AI Compilation, Memory/Cache Storage, etc.*
+> **Involving Field**: *Cluster Resource Scheduling,*
 
 
 
-###### Content
 
-1. **Cluster Scheduling**: 
-    - *AntMan: Dynamic Scaling on GPU Clusters for Deep Learning* (OSDI20)
-    - *AWARE: Automate Workload Autoscaling with Reinforcement Learning in Production Cloud Systems* (ATC23)
-    - *EasyScale: Elastic Training with Consistent Accuracy and Improved Utilization on GPUs* (SC23)
-    - *ElasticFlow: An Elastic Serverless Training Platform for Distributed Deep Learning* (ASPLOS23)
-    - *Frenzy: A Memory-Aware Serverless LLM Training System for Heterogeneous GPU Clusters* (arxiv24)
-    - *Gandiva: Introspective Cluster Scheduling  for Deep Learning* (OSDI18)
-    - *(Gavel) Heterogeneity-Aware Cluster Scheduling Policies for Deep Learning Workloads* (OSDI20)
-    - *Hare: Exploiting Inter-job and Intra-job Parallelism of Distributed Machine Learning on Heterogeneous GPUs* (HPDC22)
-    - *HiveD: Sharing a GPU Cluster for Deep Learning with Guarantees* (OSDI20)
-    - *(InferMax) The Effect of Scheduling and Preemption on the Efficiency of LLM Inference Serving* (MLSys24)
-    - *Kale: Elastic GPU Scheduling for Online DL Model Training* (SoCC24)
-    - *Liquid: Intelligent Resource Estimation and Network-Efficient Scheduling for Deep Learning Jobs on Distributed GPU Clusters* (TPDS22)
-    - *Llumnix: Dynamic Scheduling for Large Language Model Serving* (OSDI24)
-    - *Lucid: A Non-intrusive, Scalable and Interpretable Scheduler for Deep Learning Training Jobs* (ASPLOS23)
-    - *Lyra: Elastic Scheduling for Deep Learning Clusters* (EuroSys23)
-    - *Optimus: An Efficient Dynamic Resource Scheduler for Deep Learning Clusters* (EuroSys18)
-    - *Pollux: Co-adaptive Cluster Scheduling  for Goodput-Optimized Deep Learning* (OSDI21)
-    - *(QLM) Queue Management for SLO-Oriented Large Language Model Serving* (SoCC24)
-    - *(SchedMate) Semantic-Aware Scheduling for GPU Clusters with Large Language Models* (arxiv25)
-    - *Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling* (SOSP23)
-    - *SiloD: A Co-design of Caching and Scheduling for Deep Learning Clusters* (EuroSys23)
-    - *(Synergy) Looking Beyond GPUs for DNN Scheduling  on Multi-Tenant Clusters* (OSDI22)
-    - *Tiresias: A GPU Cluster Manager for Distributed Deep Learning* (NSDI19)
-2. **Hybrid Parallelism**:
-    - *Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning* (OSDI22)
-    - *AMP: Automatically Finding Model Parallel Strategies with Heterogeneity Awareness* (NIPS22)
-    - *(APEX) Toward High-Performance LLM Serving: A Simulation-Based Approach for Identifying Optimal Parallelism* (arxiv24)
-    - *HETHUB: A Distributed Training System with Heterogeneous Cluster for Large-Scale Models* (arxiv24)
-    - *Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism* (arxiv20)
-    - *Metis: Fast Automatic Distributed Training  on Heterogeneous GPUs* (ATC24)
-    - *nnScaler: Constraint-Guided Parallelization Plan Generation for Deep Learning Training* (OSDI24)
-    - *Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates* (SOSP23)
-    - *Piper: Multidimensional Planner for DNN Parallelization* (NIPS21)
-    - *(remat-opt-parallel) Accelerating the Training of Large Language Models using Efficient Activation Rematerialization and Optimal Hybrid Parallelism* (ATC24)
-3. **Data Parallelism**:
-    - *(BytePS) A Unified Architecture for Accelerating Distributed DNN Training in Heterogeneous GPU/CPU Clusters* (OSDI20)
-    - *Horovod: fast and easy distributed deep learning in TensorFlow* (arxiv20)
-    - *Scaling Distributed Machine Learning  with the Parameter Server* (OSDI14)
-4. **Tensor Parallelism**:
-    - *Domino: Eliminating Communication in LLM Training via Generic Tensor Slicing and Overlapping* (arxiv24)
-    - *(FlashComm) Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference* (arxiv24)
-    - *FLUX: Fast Software-based Communication Overlap On GPUs Through Kernel Fusion* (arxiv24)
-    - *GSPMD: General and Scalable Parallelization for ML Computation Graphs* (arxiv21)
-    - *Nonuniform-Tensor-Parallelism: Mitigating GPU failure impact for Scaled-up LLM Training* (arxiv25)
-    - *(Tofu) Supporting Very Large Models using Automatic Dataflow Graph Partitioning* (EuroSys19)
-5. **Pipeline**:
-    - *AdaPtis: Reducing Pipeline Bubbles with Adaptive Pipeline Parallelism on Heterogeneous Models* (arxiv25)
-    - *ADAPTRA: Straggler-Resilient Hybrid-Parallel Training with Pipeline Adaptation* (arxiv25)
-    - *(ChronosPipe) Enhancing Memory Efficiency in Large Language Model Training Through Chronos-aware Pipeline Parallelism* (ASPLOS25)
-    - *DAPPLE: A Pipelined Data Parallel Approach for Training Large Models* (PPoPP21)
-    - *DiffusionPipe: Training Large Diffusion Models with Efficient Pipelines* (MLSys24)
-    - *DynaPipe: Optimizing Multi-task Training through Dynamic Pipelines* (EuroSys24)
-    - *(ElasticPipe) Data-Centric Elastic Pipeline Parallelism for Efficient Long-Context LLM Training* (arxiv25)
-    - *(FlexPipe) A Flexible Programmable Pipeline Parallelism Framework for Efficient DNN Training* (arxiv25)
-    - *GraphPipe: Improving Performance and Scalability of DNN Training with Graph Pipeline Parallelism* (ASPLOS25)
-    - *GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism* (NIPS19)
-    - *Hanayo: Harnessing Wave-like Pipeline Parallelism for Enhanced Large Model Training Efficiency* (SC23)
-    - *HelixPipe: Efficient Distributed Training of Long Sequence Transformers with Attention Parallel Pipeline Parallelism* (arxiv25)
-    - *MEPipe: Democratizing LLM Training with Memory-Efficient Slice-Level Pipeline Scheduling on Cost-Effective Accelerators* (EuroSys25)
-    - *PipeDream: Generalized Pipeline Parallelism for DNN Training* (SOSP19)
-    - *PipeLLM: Pipeline LLM Inference on Heterogeneous Devices with Sequence Slicing* (arxiv24)
-    - *PipeSwitch: Fast Pipelined Context Switching for Deep Learning Applications* (OSDI20)
-    - *Seq1F1B: Efficient Sequence-Level Pipeline Parallelism for Large Language Model Training* (arxiv24)
-    - *TeraPipe: Token-Level Pipeline Parallelism for Training Large-Scale Language Models* (ICML21)
-    - *Tessel: Boosting Distributed Execution of Large DNN Models via Flexible Schedule Search* (arxiv23)
-    - *(ZeroBubble) NEAR ZERO BUBBLE PIPELINE PARALLELISM* (ICLR24)
-6. **Graph Optimization**:
-    - *(FlexFlow) BEYOND DATA AND MODEL PARALLELISM FOR DEEP NEURAL NETWORKS* (SysML19)
-    - *(OptCNN) Exploring Hidden Dimensions in Parallelizing Convolutional Neural Networks* (ICML18)
-    - *TASO: Optimizing Deep Learning Computation with Automatic Generation of Graph Substitutions* (SOSP19)
-    - *(MetaFlow) OPTIMIZING DNN COMPUTATION WITH RELAXED GRAPH SUBSTITUTIONS* (SysML19)
-    - *Unity: Accelerating DNN Training Through Joint Optimization of Algebraic Transformations  and Parallelization* (OSDI22)
-    - *Whale: Efficient Giant Model Training over Heterogeneous GPUs* (ATC22)
-7. **Co-location/GPU Scheduling**:
+
+## 1. Cluster Resource Scheduling
+
+- *AntMan: Dynamic Scaling on GPU Clusters for Deep Learning* (OSDI20)
+- *AWARE: Automate Workload Autoscaling with Reinforcement Learning in Production Cloud Systems* (ATC23)
+- *EasyScale: Elastic Training with Consistent Accuracy and Improved Utilization on GPUs* (SC23)
+- *ElasticFlow: An Elastic Serverless Training Platform for Distributed Deep Learning* (ASPLOS23)
+- *Frenzy: A Memory-Aware Serverless LLM Training System for Heterogeneous GPU Clusters* (arxiv24)
+- *Gandiva: Introspective Cluster Scheduling  for Deep Learning* (OSDI18)
+- *(Gavel) Heterogeneity-Aware Cluster Scheduling Policies for Deep Learning Workloads* (OSDI20)
+- *Hare: Exploiting Inter-job and Intra-job Parallelism of Distributed Machine Learning on Heterogeneous GPUs* (HPDC22)
+- *HiveD: Sharing a GPU Cluster for Deep Learning with Guarantees* (OSDI20)
+- *(InferMax) The Effect of Scheduling and Preemption on the Efficiency of LLM Inference Serving* (MLSys24)
+- *Kale: Elastic GPU Scheduling for Online DL Model Training* (SoCC24)
+- *Liquid: Intelligent Resource Estimation and Network-Efficient Scheduling for Deep Learning Jobs on Distributed GPU Clusters* (TPDS22)
+- *Llumnix: Dynamic Scheduling for Large Language Model Serving* (OSDI24)
+- *Lucid: A Non-intrusive, Scalable and Interpretable Scheduler for Deep Learning Training Jobs* (ASPLOS23)
+- *Lyra: Elastic Scheduling for Deep Learning Clusters* (EuroSys23)
+- *Optimus: An Efficient Dynamic Resource Scheduler for Deep Learning Clusters* (EuroSys18)
+- *Pollux: Co-adaptive Cluster Scheduling  for Goodput-Optimized Deep Learning* (OSDI21)
+- *(QLM) Queue Management for SLO-Oriented Large Language Model Serving* (SoCC24)
+- *(SchedMate) Semantic-Aware Scheduling for GPU Clusters with Large Language Models* (arxiv25)
+- *Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling* (SOSP23)
+- *SiloD: A Co-design of Caching and Scheduling for Deep Learning Clusters* (EuroSys23)
+- *(Synergy) Looking Beyond GPUs for DNN Scheduling  on Multi-Tenant Clusters* (OSDI22)
+- *Tiresias: A GPU Cluster Manager for Distributed Deep Learning* (NSDI19)
+
+
+
+## 2. ML Training
+
+### 2.1. Hybrid/Auto Parallelism
+
+- *Aceso: Efficient Parallel DNN Training through Iterative Bottleneck Alleviation* (EuroSys24)
+- *Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning* (OSDI22)
+- *AMSP: Super-Scaling LLM Training via Advanced Model States Partitioning* (arxiv23)
+- *(APEX) Toward High-Performance LLM Serving: A Simulation-Based Approach for Identifying Optimal Parallelism* (arxiv24)
+- *Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism* (arxiv20)
+- *Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization* (EuroSys25)
+- *nnScaler: Constraint-Guided Parallelization Plan Generation for Deep Learning Training* (OSDI24)
+- *Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates* (SOSP23)
+- *Piper: Multidimensional Planner for DNN Parallelization* (NIPS21)
+- *(remat-opt-parallel) Accelerating the Training of Large Language Models using Efficient Activation Rematerialization and Optimal Hybrid Parallelism* (ATC24)
+
+
+
+### 2.2. Data Parallelism
+
+- *(BytePS) A Unified Architecture for Accelerating Distributed DNN Training in Heterogeneous GPU/CPU Clusters* (OSDI20)
+- *Horovod: fast and easy distributed deep learning in TensorFlow* (arxiv20)
+- *Scaling Distributed Machine Learning  with the Parameter Server* (OSDI14)
+
+
+
+### 2.3. Tensor Parallelism
+
+- *Domino: Eliminating Communication in LLM Training via Generic Tensor Slicing and Overlapping* (arxiv24)
+- *GSPMD: General and Scalable Parallelization for ML Computation Graphs* (arxiv21)
+- *Nonuniform-Tensor-Parallelism: Mitigating GPU failure impact for Scaled-up LLM Training* (arxiv25)
+- *(Tofu) Supporting Very Large Models using Automatic Dataflow Graph Partitioning* (EuroSys19)
+
+
+
+### 2.4. Pipeline Parallelism
+
+- *AdaPtis: Reducing Pipeline Bubbles with Adaptive Pipeline Parallelism on Heterogeneous Models* (arxiv25)
+- *ADAPTRA: Straggler-Resilient Hybrid-Parallel Training with Pipeline Adaptation* (NSDI26)
+- *(ChronosPipe) Enhancing Memory Efficiency in Large Language Model Training Through Chronos-aware Pipeline Parallelism* (ASPLOS25)
+- *CrossPipe: Towards Optimal Pipeline Schedules for Cross-Datacenter Training* (arxiv25)
+- *DAPPLE: A Pipelined Data Parallel Approach for Training Large Models* (PPoPP21)
+- *DiffusionPipe: Training Large Diffusion Models with Efficient Pipelines* (MLSys24)
+- *DynaPipe: Optimizing Multi-task Training through Dynamic Pipelines* (EuroSys24)
+- *(ElasticPipe) Data-Centric Elastic Pipeline Parallelism for Efficient Long-Context LLM Training* (arxiv25)
+- *(FlexPipe) A Flexible Programmable Pipeline Parallelism Framework for Efficient DNN Training* (arxiv25)
+- *GraphPipe: Improving Performance and Scalability of DNN Training with Graph Pipeline Parallelism* (ASPLOS25)
+- *GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism* (NIPS19)
+- *Hanayo: Harnessing Wave-like Pipeline Parallelism for Enhanced Large Model Training Efficiency* (SC23)
+- *HelixPipe: Efficient Distributed Training of Long Sequence Transformers with Attention Parallel Pipeline Parallelism* (arxiv25)
+- *(Megatron-LM-Large-Scale) Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM* (arxiv21)
+- *MEPipe: Democratizing LLM Training with Memory-Efficient Slice-Level Pipeline Scheduling on Cost-Effective Accelerators* (EuroSys25)
+- *PipeDream: Generalized Pipeline Parallelism for DNN Training* (SOSP19)
+- *PipeLLM: Pipeline LLM Inference on Heterogeneous Devices with Sequence Slicing* (arxiv24)
+- *PipeSwitch: Fast Pipelined Context Switching for Deep Learning Applications* (OSDI20)
+- *Seq1F1B: Efficient Sequence-Level Pipeline Parallelism for Large Language Model Training* (arxiv24)
+- *TeraPipe: Token-Level Pipeline Parallelism for Training Large-Scale Language Models* (ICML21)
+- *Tessel: Boosting Distributed Execution of Large DNN Models via Flexible Schedule Search* (arxiv23)
+- *(ZeroBubble) NEAR ZERO BUBBLE PIPELINE PARALLELISM* (ICLR24)
+
+
+
+### 2.5. Graph Optimization
+
+- *(FlexFlow) BEYOND DATA AND MODEL PARALLELISM FOR DEEP NEURAL NETWORKS* (SysML19)
+- *(OptCNN) Exploring Hidden Dimensions in Parallelizing Convolutional Neural Networks* (ICML18)
+- *TASO: Optimizing Deep Learning Computation with Automatic Generation of Graph Substitutions* (SOSP19)
+- *(MetaFlow) OPTIMIZING DNN COMPUTATION WITH RELAXED GRAPH SUBSTITUTIONS* (SysML19)
+- *Unity: Accelerating DNN Training Through Joint Optimization of Algebraic Transformations  and Parallelization* (OSDI22)
+- *Whale: Efficient Giant Model Training over Heterogeneous GPUs* (ATC22)
+
+
+
+### 2.6.Training Hyperparameters
+
+- *Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour* (arxiv18)
+- *(DistBelief) Large Scale Distributed Deep Networks* (x)
+- *Hydro: Surrogate-Based Hyperparameter Tuning Service in Datacenters* (OSDI23)
+
+
+
+### 2.7. Communication
+
+- *AutoCCL: Automated Collective Communication Tuning for Accelerating Distributed and Parallel DNN Training* (NSDI25)
+- *AutoOverlap: Enabling Fine-Grained Overlap of Computation and Communication
+    with Chunk-Based Scheduling* (arxiv26)
+- *(ByteScheduler) A Generic Communication Scheduler for Distributed DNN Training Acceleration* (SOSP19)
+- *Centauri: Enabling Efficient Scheduling for Communication-Computation Overlap in Large Model Training via Communication Partitioning* (ASPLOS24)
+- *Crux: GPU-Efficient Communication Scheduling for Deep Learning Training* (SIGCOMM24)
+- *(DHelix) Hiding Communication Cost in Distributed LLM Training via Micro-batch Co-execution* (arxiv24)
+- *(FlashComm) Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference* (arxiv24)
+- *FLUX: Fast Software-based Communication Overlap On GPUs Through Kernel Fusion* (arxiv24)
+- *Lagom: Unleashing the Power of Communication and Computation Overlapping for Distributed LLM Training* (arxiv26)
+- *Optimus-CC: Efficient Large NLP Model Training with 3D Parallelism Aware Communication Compression* (ASPLOS23)
+- *Overlap Communication with Dependent Computation via Decomposition in Large Deep Learning Models* (ASPLOS23)
+- *SpeedLoader: An I/O efficient scheme for heterogeneous and distributed LLM operation* (arxiv24)
+- *TOPOOPT: Co-optimizing Network Topology and Parallelization Strategy for Distributed Training Jobs* (NSDI23)
+- *UCCL-EP: Portable Expert-Parallel Communication* (arxiv25)
+
+
+
+### 2.8. Heterogeneity-Aware
+
+- *AMP: Automatically Finding Model Parallel Strategies with Heterogeneity Awareness* (NIPS22)
+- *H2: Towards Efficient Large-Scale LLM Training on Hyper-Heterogeneous Cluster over 1,000 Chips* (arxiv25)
+- *HAP: SPMD DNN Training on Heterogeneous GPU Clusters with Automated Program Synthesis* (EuroSys24)
+- *HAPT: Heterogeneity-Aware Automated Parallel Training on Heterogeneous Clusters* (arxiv25)
+- *HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs* (arxiv25)
+- *HETHUB: A Distributed Training System with Heterogeneous Cluster for Large-Scale Models* (arxiv24)
+- *JABAS: Joint Adaptive Batching and Automatic Scaling for DNN Training on Heterogeneous GPUs* (EuroSys25)
+- *Metis: Fast Automatic Distributed Training  on Heterogeneous GPUs* (ATC24)
+- *Sailor: Automating Distributed Training over Dynamic, Heterogeneous, and Geo-distributed Clusters* (arxiv25) 
+- *Zorse: Optimizing LLM Training Efficiency on Heterogeneous GPU Clusters* (arxiv25)
+
+
+
+
+
+### 2.9. Long-Context/Variable-Length
+
+- *ByteScale: Efficient Scaling of LLM Training with a 2048K Context Length on More Than 12,000 GPUs* (SIGCOMM25)
+- *Chameleon: Taming Dynamic Operator Sequences for Memory-Intensive LLM Training* (arxiv25)
+- *DCP: Addressing Input Dynamism In Long-Context Training via Dynamic Context Parallelism* (SOSP25) 
+- *DistFlashAttn: Distributed Memory-efficient Attention for Long-context LLMs Training* (arxiv24)
+- *FlexSP: Accelerating Large Language Model Training via Flexible Sequence Parallelism* (ASPLOS25)
+- *InternEvo: Efficient Long-Sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding* (arxiv24)
+- *LightSeq: Sequence Level Parallelism for Distributed Training of Long Context Transformers* (NIPS23)
+- *LoongTrain: Efficient Training of Long-Sequence LLMs with Head-Context Parallelism* (arxiv24)
+- *(SeqParallel) Reducing Activation Recomputation in Large Transformer Models* (arxiv22)
+- *SlimPack: Fine-Grained Asymmetric Packing for Balanced and Efficient Variable-Length LLM Training* (arxiv25)
+- *SPPO: Efficient Long-sequence LLM Training via Adaptive Sequence Pipeline Parallel Offloading* (arxiv25)
+- *WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training* (OSDI25)
+- *Zeppelin: Balancing Variable-length Workloads in Data Parallel Large Model Training* (EuroSys26)
+
+
+
+
+
+### 2.10. MultiModal
+
+- *Cornstarch: Distributed Multimodal Training Must Be Multimodality-Aware* (arxiv25)
+- *DistMM: Accelerating Distributed Multimodal  Model Training* (NSDI24)
+- *DistTrain: Addressing Model and Data Heterogeneity with Disaggregated Training for Multimodal Large Language Models* (arxiv24)
+- *DHP: Efficient Scaling of MLLM Training with Dynamic Hybrid Parallelism* (arxiv26)
+- *Mixture-of-Transformers: A Sparse and Scalable Architecture for Multi-Modal Foundation Models* (arxiv24)
+- *Optimus: Accelerating Large-Scale Multi-Modal LLM Training by Bubble Exploitation* (ATC25)
+- *OrchMLLM: Orchestrate Multimodal Data with Batch Post-Balancing to Accelerate Multimodal Large Language Model Training* (arxiv25)
+- *PipeWeaver: Addressing Data Dynamicity in Large Multimodal Model Training with Dynamic Interleaved Pipeline* (ASPLOS26)
+- *(Spindle) Efficient Multi-Task Large Model Training via Data Heterogeneity-aware Model Management* (ASPLOS25)
+
+
+
+### 2.11. Fault Tolerance
+
+- *ElasWave: An Elastic-Native System for Scalable Hybrid-Parallel Training* (arxiv25)
+- *Falcon: Pinpointing and Mitigating Stragglers for Large-Scale Hybrid-Parallel Training* (arxiv24)
+- *Malleus: Straggler-Resilient Hybrid Parallel Training of Large-scale Models via Malleable Data and Model Parallelization* (arxiv24)
+- *MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs* (NSDI24)
+- *Minder: Faulty Machine Detection for Large-scale Distributed Model Training* (NSDI25)
+- *XPUTimer: Anomaly Diagnostics for Divergent LLM Training in GPU Clusters of Thousand-Plus Scale* (NSDI26)
+
+
+
+### 2.12. Fine-Tuning
+
+- *AdapterFusion: Non-Destructive Task Composition for Transfer Learning* (arxiv21)
+- *ASLoRA: Adaptive Sharing Low-Rank Adaptation Across Layers* (arxiv24)
+- *(Diff-Pruning) Parameter-Efficient Transfer Learning with Diff Pruning* (ACL21)
+- *DLoRA: Distributed Parameter-Efficient Fine-Tuning Solution for Large Language Model* (arxiv24)
+- *Egeria: Efficient DNN Training with Knowledge-Guided Layer Freezing* (EuroSys23)
+- *FwdLLM: Efficient Federated Finetuning  of Large Language Models with Perturbed Inferences* (ATC24)
+- *HiFT: A Hierarchical Full Parameter Fine-Tuning Strategy* (arxiv24)
+- *LobRA: Multi-tenant Fine-tuning over Heterogeneous Data* (VLDB25)
+- *LoRAFusion: Efficient LoRA Fine-Tuning for LLMs* (EuroSys26)
+- *Mobius: Fine Tuning Large-Scale Models on Commodity GPU Servers* (ASPLOS23)
+- *(ProPETL) One Network, Many Masks: Towards More Parameter-Efficient Transfer Learning* (arxiv23)
+- *(TokenTune) Memory-Efficient Fine-Tuning of Transformers via Token Selection* (arxiv24)
+- *(Unified-PEFT) TOWARDS A UNIFIED VIEW OF PARAMETER-EFFICIENT TRANSFER LEARNING* (ICLR22)
+- *Ymir: A Scheduler  for Foundation Model Fine-tuning Workloads* (ICS24)
+
+
+
+### 2.13. Offloading&Recomputation
+
+- 
+
+
+
+
+
+- *(AWSNeuronSDK) Distributed Training of Large Language Models on AWS Trainium* (SoCC24) 
+- *Capuchin: Tensor-based GPU Memory Management for Deep Learning* (ASPLOS20)
+- *COAP: Memory-Efficient Training with Correlation-Aware Gradient Projection* (arxiv24)
+- *Cosmic: Enabling Full-Stack Co-Design and Optimization of Distributed Machine Learning Systems* (arxiv25)
+- *DeepCompile: A Compiler-Driven Approach to Optimizing Distributed Deep Learning Training* (arxiv25)
+- *FSMoE: A Flexible and Scalable Training System for Sparse Mixture-of-Experts Models* (ASPLOS25)
+- *(Fuyou) Adding NVMe SSDs to Enable and Accelerate 100B Model Fine-tuning on a Single GPU* (arxiv24)
+- *(hardware-scaling) Hardware Scaling Trends and Diminishing Returns in Large-Scale Distributed Training* (arxiv24)
+- *Harmony: Overcoming the Hurdles of GPU Memory Capacity to Train Massive DNN Models on Commodity Servers* (VLDB22)
+- *Hydraulis: Balancing Large Transformer Model Training via Co-designing Parallel Strategies and Data Assignment* (arxiv25)
+- *MegaScale-MoE: Large-Scale Communication-Efficient Training of Mixture-of-Experts Models in Production* (arxiv25)
+- *mFabric: An Efficient and Scalable Fabric for Mixture-of-Experts Training* (arxiv25)
+- *MicroMoE: Fine-grained Load Balancing for Mixture-of-Experts with Token Scheduling* (arxiv25)
+- *Mixture-of-Depths: Dynamically allocating compute in transformer-based language models* (arxiv24)
+- *(Perseus) Reducing Energy Bloat in Large Model Training* (SOSP24)
+- *Retiarii: A Deep Learning Exploratory-Training Framework* (OSDI20)
+- *ScheMoE: An Extensible Mixture-of-Experts Distributed Training System with Tasks Scheduling* (EuroSys24)
+- *SMARTMOE: Efficiently Training Sparsely-Activated Models through Combining Offline and Online Parallelization* (ATC23)
+- *Varuna: Scalable, Low-cost Training of Massive Deep Learning Models* (EuroSys22)
+- *VeOmni: Scaling Any Modality Model Training with Model-Centric Distributed Recipe Zoo* (arxiv25) 
+- *ZenFlow: Enabling Stall-Free Offloading Training via Asynchronous Updates* (arxiv25)
+- *ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning* (arxiv21)
+- *ZeRO-Offload: Democratizing Billion-Scale Model Training* (ATC21)
+
+
+
+
+
+
+
+1. **Co-location/GPU Scheduling**:
     - *(FineInfer) Deferred Continuous Batching in Resource-Efficient Large Language Model Serving* (EuroMLSys24)
     - *FlexLLM: A System for Co-Serving Large Language Model Inference and Parameter-Efficient Finetuning* (arxiv24)
     - *(LLMStation) Resource Multiplexing in Tuning and Serving Large Language Models* (ATC25)
@@ -92,7 +265,7 @@
     - *Orion: Interference-aware, Fine-grained GPU Sharing for ML Applications* (EuroSys24)
     - *Paella: Low-latency Model Serving with Software-defined GPU Scheduling* (SOSP23)
     - *(Sirius) Colocating ML Inference and Training with Fast GPU Memory Handover* (ATC25)
-8. **Memory/Cache Storage**:
+2. **Checkpoint/Memory**:
     - *Bagpipe: Accelerating Deep Recommendation Model Training* (SOSP23)
     - *ByteCheckpoint: A Unified Checkpointing System for LLM Development* (arxiv24)
     - *eLLM: Elastic Memory Management Framework for Efficient LLM Serving* (arxiv25)
@@ -105,13 +278,14 @@
     - *MAGIS: Memory Optimization via Coordinated Graph Transformation and Scheduling for DNN* (ASPLOS24)
     - *mTuner: Accelerating Parameter-Efficient Fine-Tuning with Elastic Tensor* (ATC25)
     - *Pie: Pooling CPU Memory for LLM Inference* (arxiv24)
+    - *(STWeaver) Reducing GPU Memory Fragmentation via Spatio-Temporal Planning for Efficient Large-Scale Model Training* (arxiv25)
     - *Tenplex: Dynamic Parallelism for Deep Learning using Parallelizable Tensor Collections* (SOSP24)
     - *(UCP) Universal Checkpointing: A Flexible and Efficient Distributed Checkpointing System for Large-Scale DNN Training with Reconfigurable Parallelism* (ATC25)
     - *UGache: A Unified GPU Cache for Embedding-based Deep Learning* (SOSP23)
     - *vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention* (arxiv24)
     - *vTensor: Flexible Virtual Tensor Management for Efficient LLM Serving* (arxiv24)
     - *ZeRO: Memory Optimizations Toward Training Trillion Parameter Models* (arxiv20)
-9. **AI Compilation**:
+3. **AI Compilation**:
 
     - *AttentionEngine: A Versatile Framework for Efficient Attention Mechanisms on Diverse Hardware Platforms* (arxiv25)
     - *FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System* (ASPLOS20)
@@ -121,105 +295,7 @@
     - *(TLM) Enabling Tensor Language Model to Assist in Generating High-Performance Tensor Programs for Deep Learning* (OSDI24)
     - *Welder: Scheduling Deep Learning Memory Access via Tile-graph* (OSDI23)
     - *Operator Fusion in XLA: Analysis and Evaluation* (arxiv23)
-10. **Training Hyperparameters**:
-    - *(DistBelief) Large Scale Distributed Deep Networks* (x)
-    - *Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour* (arxiv18)
-11. **Communication**:
-    - *Optimus-CC: Efficient Large NLP Model Training with 3D Parallelism Aware Communication Compression* (ASPLOS23)
-    - *Overlap Communication with Dependent Computation via Decomposition in Large Deep Learning Models* (ASPLOS23)
-    -  *TOPOOPT: Co-optimizing Network Topology and Parallelization Strategy for Distributed Training Jobs* (NSDI23)
-    -  *UCCL-EP: Portable Expert-Parallel Communication* (arxiv25)
-12. **Training**:
-    - *Aceso: Efficient Parallel DNN Training through Iterative Bottleneck Alleviation* (EuroSys24)
-    - *AdapterFusion: Non-Destructive Task Composition for Transfer Learning* (arxiv21)
-    - *AMSP: Super-Scaling LLM Training via Advanced Model States Partitioning* (arxiv23)
-    - *ASLoRA: Adaptive Sharing Low-Rank Adaptation Across Layers* (arxiv24)
-    - *AutoCCL: Automated Collective Communication Tuning for Accelerating Distributed and Parallel DNN Training* (NSDI25)
-    - *AutoOverlap: Enabling Fine-Grained Overlap of Computation and Communication
-        with Chunk-Based Scheduling* (arxiv26)
-    - *(AWSNeuronSDK) Distributed Training of Large Language Models on AWS Trainium* (SoCC24) 
-    - *ByteScale: Efficient Scaling of LLM Training with a 2048K Context Length on More Than 12,000 GPUs* (arxiv25)
-    - *(ByteScheduler) A Generic Communication Scheduler for Distributed DNN Training Acceleration* (SOSP19)
-    - *Capuchin: Tensor-based GPU Memory Management for Deep Learning* (ASPLOS20)
-    - *Centauri: Enabling Efficient Scheduling for Communication-Computation Overlap in Large Model Training via Communication Partitioning* (ASPLOS24)
-    - *Chameleon: Taming Dynamic Operator Sequences for Memory-Intensive LLM Training* (arxiv25)
-    - *COAP: Memory-Efficient Training with Correlation-Aware Gradient Projection* (arxiv24)
-    - *Cornstarch: Distributed Multimodal Training Must Be Multimodality-Aware* (arxiv25)
-    - *Cosmic: Enabling Full-Stack Co-Design and Optimization of Distributed Machine Learning Systems* (arxiv25)
-    - *CrossPipe: Towards Optimal Pipeline Schedules for Cross-Datacenter Training* (arxiv25)
-    - *Crux: GPU-Efficient Communication Scheduling for Deep Learning Training* (SIGCOMM24)
-    - *DCP: Addressing Input Dynamism In Long-Context Training via Dynamic Context Parallelism* (SOSP25) 
-    - *DeepCompile: A Compiler-Driven Approach to Optimizing Distributed Deep Learning Training* (arxiv25)
-    - *(DHelix) Hiding Communication Cost in Distributed LLM Training via Micro-batch Co-execution* (arxiv24)
-    - *DHP: Efficient Scaling of MLLM Training with Dynamic Hybrid Parallelism* (arxiv26)
-    - *(Diff-Pruning) Parameter-Efficient Transfer Learning with Diff Pruning* (ACL21)
-    - *DistFlashAttn: Distributed Memory-efficient Attention for Long-context LLMs Training* (arxiv24)
-    - *DistMM: Accelerating Distributed Multimodal  Model Training* (NSDI24)
-    - *DistTrain: Addressing Model and Data Heterogeneity with Disaggregated Training for Multimodal Large Language Models* (arxiv24)
-    - *DLoRA: Distributed Parameter-Efficient Fine-Tuning Solution for Large Language Model* (arxiv24)
-    - *Egeria: Efficient DNN Training with Knowledge-Guided Layer Freezing* (EuroSys23)
-    - *ElasWave: An Elastic-Native System for Scalable Hybrid-Parallel Training* (arxiv25)
-    - *Falcon: Pinpointing and Mitigating Stragglers for Large-Scale Hybrid-Parallel Training* (arxiv24)
-    - *FlexSP: Accelerating Large Language Model Training via Flexible Sequence Parallelism* (ASPLOS25)
-    - *FSMoE: A Flexible and Scalable Training System for Sparse Mixture-of-Experts Models* (ASPLOS25)
-    - *(Fuyou) Adding NVMe SSDs to Enable and Accelerate 100B Model Fine-tuning on a Single GPU* (arxiv24)
-    - *FwdLLM: Efficient Federated Finetuning  of Large Language Models with Perturbed Inferences* (ATC24)
-    - *HAP: SPMD DNN Training on Heterogeneous GPU Clusters with Automated Program Synthesis* (EuroSys24)
-    - *HAPT: Heterogeneity-Aware Automated Parallel Training on Heterogeneous Clusters* (arxiv25)
-    - *(hardware-scaling) Hardware Scaling Trends and Diminishing Returns in Large-Scale Distributed Training* (arxiv24)
-    - *Harmony: Overcoming the Hurdles of GPU Memory Capacity to Train Massive DNN Models on Commodity Servers* (VLDB22)
-    - *HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs* (arxiv25)
-    - *HiFT: A Hierarchical Full Parameter Fine-Tuning Strategy* (arxiv24)
-    - *Hydraulis: Balancing Large Transformer Model Training via Co-designing Parallel Strategies and Data Assignment* (arxiv25)
-    - *Hydro: Surrogate-Based Hyperparameter Tuning Service in Datacenters* (OSDI23)
-    - *H2: Towards Efficient Large-Scale LLM Training on Hyper-Heterogeneous Cluster over 1,000 Chips* (arxiv25)
-    - *InternEvo: Efficient Long-Sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding* (arxiv24)
-    - *JABAS: Joint Adaptive Batching and Automatic Scaling for DNN Training on Heterogeneous GPUs* (EuroSys25)
-    - *Lagom: Unleashing the Power of Communication and Computation Overlapping for Distributed LLM Training* (arxiv26)
-    - *LightSeq: Sequence Level Parallelism for Distributed Training of Long Context Transformers* (NIPS23)
-    - *LobRA: Multi-tenant Fine-tuning over Heterogeneous Data* (VLDB25)
-    - *LoongTrain: Efficient Training of Long-Sequence LLMs with Head-Context Parallelism* (arxiv24)
-    - *LoRAFusion: Efficient LoRA Fine-Tuning for LLMs* (EuroSys26)
-    - *Malleus: Straggler-Resilient Hybrid Parallel Training of Large-scale Models via Malleable Data and Model Parallelization* (arxiv24)
-    - *MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs* (NSDI24)
-    - *MegaScale-MoE: Large-Scale Communication-Efficient Training of Mixture-of-Experts Models in Production* (arxiv25)
-    - *(Megatron-LM-Large-Scale) Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM* (arxiv21)
-    - *mFabric: An Efficient and Scalable Fabric for Mixture-of-Experts Training* (arxiv25)
-    - *MicroMoE: Fine-grained Load Balancing for Mixture-of-Experts with Token Scheduling* (arxiv25)
-    - *Minder: Faulty Machine Detection for Large-scale Distributed Model Training* (NSDI25)
-    - *Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization* (EuroSys25)
-    - *Mixture-of-Depths: Dynamically allocating compute in transformer-based language models* (arxiv24)
-    - *Mixture-of-Transformers: A Sparse and Scalable Architecture for Multi-Modal Foundation Models* (arxiv24)
-    - *Mobius: Fine Tuning Large-Scale Models on Commodity GPU Servers* (ASPLOS23)
-    - *Optimus: Accelerating Large-Scale Multi-Modal LLM Training by Bubble Exploitation* (arxiv24)
-    - *OrchMLLM: Orchestrate Multimodal Data with Batch Post-Balancing to Accelerate Multimodal Large Language Model Training* (arxiv25)
-    - *PipeWeaver: Addressing Data Dynamicity in Large Multimodal Model Training with Dynamic Interleaved Pipeline* (arxiv25)
-    - *(Perseus) Reducing Energy Bloat in Large Model Training* (SOSP24)
-    - *PUZZLE: Efficiently Aligning Large Language Models through Light-Weight Context Switch* (atc24)
-    - *(ProPETL) One Network, Many Masks: Towards More Parameter-Efficient Transfer Learning* (arxiv23)
-    - *Retiarii: A Deep Learning Exploratory-Training Framework* (OSDI20)
-    - *Sailor: Automating Distributed Training over Dynamic, Heterogeneous, and Geo-distributed Clusters* (arxiv25) 
-    - *ScheMoE: An Extensible Mixture-of-Experts Distributed Training System with Tasks Scheduling* (EuroSys24)
-    - *(SeqParallel) Reducing Activation Recomputation in Large Transformer Models* (arxiv22)
-    - *SlimPack: Fine-Grained Asymmetric Packing for Balanced and Efficient Variable-Length LLM Training* (arxiv25)
-    - *SMARTMOE: Efficiently Training Sparsely-Activated Models through Combining Offline and Online Parallelization* (ATC23)
-    - *SpeedLoader: An I/O efficient scheme for heterogeneous and distributed LLM operation* (arxiv24)
-    - *(Spindle) Efficient Multi-Task Large Model Training via Data Heterogeneity-aware Model Management* (ASPLOS25)
-    - *SPPO: Efficient Long-sequence LLM Training via Adaptive Sequence Pipeline Parallel Offloading* (arxiv25)
-    - *(STWeaver) Reducing GPU Memory Fragmentation via Spatio-Temporal Planning for Efficient Large-Scale Model Training* (arxiv25)
-    - *(TokenTune) Memory-Efficient Fine-Tuning of Transformers via Token Selection* (arxiv24)
-    - *(Unified-PEFT) TOWARDS A UNIFIED VIEW OF PARAMETER-EFFICIENT TRANSFER LEARNING* (ICLR22)
-    - *Varuna: Scalable, Low-cost Training of Massive Deep Learning Models* (EuroSys22)
-    - *VeOmni: Scaling Any Modality Model Training with Model-Centric Distributed Recipe Zoo* (arxiv25) 
-    - *WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training* (OSDI25)
-    - *XPUTimer: Anomaly Diagnostics for Divergent LLM Training in GPU Clusters of Thousand-Plus Scale* (arxiv25)
-    - *Ymir: A Scheduler  for Foundation Model Fine-tuning Workloads* (ICS24)
-    - *ZenFlow: Enabling Stall-Free Offloading Training via Asynchronous Updates* (arxiv25)
-    - *Zeppelin: Balancing Variable-length Workloads in Data Parallel Large Model Training* (EuroSys26)
-    - *ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning* (arxiv21)
-    - * ZeRO-Offload: Democratizing Billion-Scale Model Training* (ATC21)
-    - *Zorse: Optimizing LLM Training Efficiency on Heterogeneous GPU Clusters* (arxiv25)
-13. **Inference**:
+4. **Inference**:
     - **MoE:**
          - *(AMoE) Toward Cost-Efficient Serving of Mixture-of-Experts with Asynchrony* (arxiv25)
          - *(Brainstorm) Optimizing Dynamic Neural Networks with Brainstorm* (OSDI23)
@@ -392,14 +468,14 @@
     - *XGrammar: Flexible and Efficient Structured Generation Engine for Large Language Models* (arxiv24)
     - *(XY-Serve) Tackling the Dynamicity in a Production LLM Serving System with SOTA Optimizations via Hybrid Prefill/Decode/Verify Scheduling on Efficient Meta-kernels* (arxiv24)
     - *(μ-Serve) Power-aware Deep Learning Model Serving  with μ-Serve* (ATC24)
-14. **Cluster Trace Analysis**:
+5. **Cluster Trace Analysis**:
     - *(Helios) Characterization and Prediction of Deep Learning Workloads in Large-Scale GPU Datacenters* (SC21)
     - *(PAI) MLaaS in the Wild: Workload Analysis and Scheduling in Large-Scale Heterogeneous GPU Clusters* (NSDI22)
     - *(Philly) Analysis of Large-Scale Multi-Tenant GPU Clusters for DNN Training Workloads* (ATC19)
     - *ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production* (arxiv25)
-16. **HPC**:
+6. **HPC**:
     - *(ESLURM) Towards Scalable Resource Management for Supercomputers* (SC22)
-17. **Performance Modeling**:
+7. **Performance Modeling**:
     - *CDMPP: A Device-Model Agnostic Framework for Latency Prediction of Tensor Programs* (EuroSys24)
     - *Daydream: Accurately Estimating the Efficacy of Optimizations for DNN Training* (ATC20)
     - *DistSim: A performance model of large-scale hybrid distributed DNN training* (CF23)
@@ -411,58 +487,57 @@
     - *(MPE) Fast Performance Prediction for Efficient Distributed DNN Training* (x)
     - *PALEO: A PERFORMANCE MODEL FOR DEEP NEURAL NETWORKS* (ICLR17)
     - *Phantora: Live GPU Cluster Simulation for Machine Learning System Performance Estimation* (arxiv25)
-18. **Survey**:
+8. **Survey**:
       - *(DLSched survey) Deep Learning Workload Scheduling in GPU Datacenters: A Survey* (arxiv24)
       - *(fine-tuning survey) Learn From Model Beyond Fine-Tuning: A Survey* (arxiv23)
       - *(KVCache survey) Keep the Cost Down: A Review on Methods to Optimize LLM’s KV Cache Consumption* (arxiv24)
       - *(peft guide) Scaling Down to Scale Up: A Guide to Parameter-Efficient Fine-Tuning* (arxiv23)
       - *(peft survey) Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey* (arxiv24)
-19. **Quantization**:
+9. **Quantization**:
      - *AWQ: Activation-aware Weight Quantization for On-Device LLM Compression and Acceleration* (MLSys24)
      - *LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale* (NIPS22)
      - *QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving* (arxiv24)
      - *Quant-LLM: Accelerating the Serving of Large Language Models via FP6-Centric Algorithm-System Co-Design on Modern GPUs* (ATC24)
      - *8-BIT OPTIMIZERS VIA BLOCK-WISE QUANTIZATION* (ICLR22)
-20. **Sparsity**
+10. **Sparsity**
     - *PIT: Optimization of Dynamic Sparse Deep Learning Models via Permutation Invariant Transformation* (SOSP23)
     - *SpInfer: Leveraging Low-Level Sparsity for Efficient Large Language Model Inference on GPUs* (EuroSys25)
-21. **Retrieval-Augmented Generation (RAG) / LLM Applications**
-      - *Autellix: An Efficient Serving Engine for LLM Agents as General Programs* (arxiv25)
-      - *CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion* (EuroSys25) 
-      - *(Conveyor) Conveyor: Efficient Tool-aware LLM Serving with Tool Partial Execution* (arxiv24)
-      - *(LAMPS) Fast Inference for Augmented Large Language Models* (arxiv24)
-      - *Pancake: Hierarchical Memory System for Multi-Agent LLM Serving* (arxiv26)
-      - *(PDGraph) Efficient Serving of LLM Applications with Probabilistic Demand Modeling* (arxiv25)
-      - *Pie: A Programmable Serving System for Emerging LLM Applications* (SOSP25)
-      - *RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation* (arxiv24)
-      - *Teola: Towards End-to-End Optimization of LLM-based Applications* (arxiv24)
-      - *Tokencake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications* (arxiv25)
-      - *TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing* (arxiv26)
-22. **Edge Computing**
-    - *TinyLLM: A Framework for Training and Deploying Language Models at the Edge Computers* (arxiv24)
-23. **RL&AgentSkill**
-       - *ARL-Tangram: Unleash the Resource Efficiency in Agentic Reinforcement Learning* (arxiv26)
-       - *Effective harnesses for long-running agents* (blog25)
-       - *(FlexMARL) Rollout-Training Co-Design for Efficient LLM-Based Multi-Agent Reinforcement Learning* (arxiv26)
-       - *HybridFlow: A Flexible and Efficient RLHF Framework* (EuroSys25)
-       - *JigsawRL: Assembling RL Pipelines for Efficient LLM Post-Training* (arxiv26)
-       - *Meta-Harness: End-to-End Optimization of Model Harnesses* (arxiv26)
-       - *Natural-Language Agent Harnesses* (arxiv26)
-       - *ReaLHF: Optimized RLHF Training for Large Language Models through Parameter Reallocation* (arxiv24)
-       - *ReLibra: Routing-Replay-Guided Load Balancing for MoE Training in Reinforcement Learning* (arxiv26)
-       - *(RhymeRL) History Doesn’t Repeat Itself but Rollouts Rhyme: Accelerating Reinforcement Learning with RhymeRL* (ASPLOS26)
-       - *RLBoost: Harvesting Preemptible Cloud Resources for Cost-Efficient Reinforcement Learning on LLMs* (NSDI26)
-       - *RLHFuse: Efficient RLHF Training for Large Language Models with Inter- and Intra-Stage Fusion* (arxiv24) 
-       - *RLHFless: Serverless Computing for Efficient RLHF* (arxiv26)
-       - *(RLHF-workshop) Systems Opportunities for LLM Fine-Tuning using Reinforcement Learning* (EuryMLSys25)
-       - *RollArt: Scaling Agentic RL Training via Disaggregated Infrastructure* (arxiv26)
-       - *RollMux: Phase-Level Multiplexing for Disaggregated RL Post-Training* (arxiv26)
-       - *RollPacker: Mitigating Long-Tail Rollouts for Fast, Synchronous RL Post-Training* (arxiv25)
-       - *ROSE: Rollout On Serving GPUs via Cooperative Elasticity for Agentic RL* (arxiv26)
-       - *Seer: Online Context Learning for Fast Synchronous LLM Reinforcement Learning* (OSDI26)
-       - *SkVM: Revisiting Language VM for Skills across Heterogenous LLMs and Harnesses* (arxiv26)
-       - *StreamRL: Scalable, Heterogeneous, and Elastic RL for LLMs with Disaggregated Stream Generation* (arxiv25)
-24. **Data Processing**
-     - *Pecan: Cost-Efficient ML Data Preprocessing  with Automatic Transformation Ordering  and Hybrid Placement* (ATC24)
-     - *(Ray Data) The Streaming Batch Model for Efficient and Fault-Tolerant Heterogeneous Execution* (arxiv25)
-     - *(Seneca) Preparation Meets Opportunity: Enhancing Data Preprocessing for ML Training With Seneca* (FAST25)
+11. **Retrieval-Augmented Generation (RAG) / LLM Applications**
+       - *Autellix: An Efficient Serving Engine for LLM Agents as General Programs* (arxiv25)
+       - *CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion* (EuroSys25) 
+       - *(Conveyor) Conveyor: Efficient Tool-aware LLM Serving with Tool Partial Execution* (arxiv24)
+       - *(LAMPS) Fast Inference for Augmented Large Language Models* (arxiv24)
+       - *Pancake: Hierarchical Memory System for Multi-Agent LLM Serving* (arxiv26)
+       - *(PDGraph) Efficient Serving of LLM Applications with Probabilistic Demand Modeling* (arxiv25)
+       - *Pie: A Programmable Serving System for Emerging LLM Applications* (SOSP25)
+       - *RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation* (arxiv24)
+       - *Teola: Towards End-to-End Optimization of LLM-based Applications* (arxiv24)
+       - *Tokencake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications* (arxiv25)
+       - *TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing* (arxiv26)
+12. **RL&AgentSkill**
+        - *ARL-Tangram: Unleash the Resource Efficiency in Agentic Reinforcement Learning* (arxiv26)
+        - *Effective harnesses for long-running agents* (blog25)
+        - *(FlexMARL) Rollout-Training Co-Design for Efficient LLM-Based Multi-Agent Reinforcement Learning* (arxiv26)
+        - *HybridFlow: A Flexible and Efficient RLHF Framework* (EuroSys25)
+        - *JigsawRL: Assembling RL Pipelines for Efficient LLM Post-Training* (arxiv26)
+        - *Meta-Harness: End-to-End Optimization of Model Harnesses* (arxiv26)
+        - *Natural-Language Agent Harnesses* (arxiv26)
+        - *PUZZLE: Efficiently Aligning Large Language Models through Light-Weight Context Switch* (ATC24)
+        - *ReaLHF: Optimized RLHF Training for Large Language Models through Parameter Reallocation* (arxiv24)
+        - *ReLibra: Routing-Replay-Guided Load Balancing for MoE Training in Reinforcement Learning* (arxiv26)
+        - *(RhymeRL) History Doesn’t Repeat Itself but Rollouts Rhyme: Accelerating Reinforcement Learning with RhymeRL* (ASPLOS26)
+        - *RLBoost: Harvesting Preemptible Cloud Resources for Cost-Efficient Reinforcement Learning on LLMs* (NSDI26)
+        - *RLHFuse: Efficient RLHF Training for Large Language Models with Inter- and Intra-Stage Fusion* (arxiv24) 
+        - *RLHFless: Serverless Computing for Efficient RLHF* (arxiv26)
+        - *(RLHF-workshop) Systems Opportunities for LLM Fine-Tuning using Reinforcement Learning* (EuryMLSys25)
+        - *RollArt: Scaling Agentic RL Training via Disaggregated Infrastructure* (arxiv26)
+        - *RollMux: Phase-Level Multiplexing for Disaggregated RL Post-Training* (arxiv26)
+        - *RollPacker: Mitigating Long-Tail Rollouts for Fast, Synchronous RL Post-Training* (arxiv25)
+        - *ROSE: Rollout On Serving GPUs via Cooperative Elasticity for Agentic RL* (arxiv26)
+        - *Seer: Online Context Learning for Fast Synchronous LLM Reinforcement Learning* (OSDI26)
+        - *SkVM: Revisiting Language VM for Skills across Heterogenous LLMs and Harnesses* (arxiv26)
+        - *StreamRL: Scalable, Heterogeneous, and Elastic RL for LLMs with Disaggregated Stream Generation* (arxiv25)
+13. **Data Processing**
+      - *Pecan: Cost-Efficient ML Data Preprocessing  with Automatic Transformation Ordering  and Hybrid Placement* (ATC24)
+      - *(Ray Data) The Streaming Batch Model for Efficient and Fault-Tolerant Heterogeneous Execution* (arxiv25)
+      - *(Seneca) Preparation Meets Opportunity: Enhancing Data Preprocessing for ML Training With Seneca* (FAST25)
