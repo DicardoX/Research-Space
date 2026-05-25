@@ -587,6 +587,7 @@
 - *JigsawRL: Assembling RL Pipelines for Efficient LLM Post-Training* (arxiv26)
 - *Meta-Harness: End-to-End Optimization of Model Harnesses* (arxiv26)
 - *Natural-Language Agent Harnesses* (arxiv26)
+- *OpenRLHF: An Easy-to-use, Scalable and High-performance RLHF Framework* (arxiv24)
 - *PUZZLE: Efficiently Aligning Large Language Models through Light-Weight Context Switch* (ATC24)
 - *ReaLHF: Optimized RLHF Training for Large Language Models through Parameter Reallocation* (arxiv24)
 - *ReLibra: Routing-Replay-Guided Load Balancing for MoE Training in Reinforcement Learning* (arxiv26)
