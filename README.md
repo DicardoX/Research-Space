@@ -186,6 +186,7 @@
 - *Chameleon: Taming Dynamic Operator Sequences for Memory-Intensive LLM Training* (arxiv25)
 - *DCP: Addressing Input Dynamism In Long-Context Training via Dynamic Context Parallelism* (SOSP25) 
 - *DistFlashAttn: Distributed Memory-efficient Attention for Long-context LLMs Training* (arxiv24)
+- *FlashCP: Load-Balanced Communication-Efficient Context Parallelism for LLM Training* (arxiv26)
 - *FlexSP: Accelerating Large Language Model Training via Flexible Sequence Parallelism* (ASPLOS25)
 - *Hydraulis: Balancing Large Transformer Model Training via Co-designing Parallel Strategies and Data Assignment* (arxiv25)
 - *InternEvo: Efficient Long-Sequence Large Language Model Training via Hybrid Parallelism and Redundant Sharding* (arxiv24)
