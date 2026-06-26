@@ -17,6 +17,8 @@
 - ***Model Serving***
     - *Mixture-of-Experts; PD-Monolith; Disaggregation; PD-Colocation; Model-as-a-Service, Scheduling, Serverless; Offline; Fine-Tuned; Long-Context, Multi-Turn, KVCache Reuse; MultiModal; Energy Optimization; Fairness; Offloading; Heterogeneous Resources; Memory Management; RAG, LLM Applications; Attention Optimization; Quantization; Sparsity; KVCache Storage; Parallelization; Speculative Decoding*
 - ***RL, AgentSkill***
+    - *MTP;* 
+
 - ***Colocation, GPU Scheduing***
 - ***Checkpointing, Memory Optimization***
 - ***Compilation***
@@ -580,6 +582,12 @@
 
 
 ## 4. RL, AgentSkill
+
+### 4.1. Multi-Token Prediction (MTP)
+
+- *(Bebop) Breaking Entropy Bounds: Accelerating RL Training via MTP with Rejection Sampling* (arxiv26)
+
+### 4.2. Others
 
 - *ARL-Tangram: Unleash the Resource Efficiency in Agentic Reinforcement Learning* (arxiv26)
 - *Effective harnesses for long-running agents* (blog25)
