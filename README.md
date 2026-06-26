@@ -586,6 +586,8 @@
 ### 4.1. Multi-Token Prediction (MTP)
 
 - *(Bebop) Breaking Entropy Bounds: Accelerating RL Training via MTP with Rejection Sampling* (arxiv26)
+- *ReSpec: Towards Optimizing Speculative Decoding in Reinforcement Learning Systems* (MLSys26)
+- *(RhymeRL) History Doesn’t Repeat Itself but Rollouts Rhyme: Accelerating Reinforcement Learning with RhymeRL* (ASPLOS26)
 
 ### 4.2. Others
 
@@ -600,7 +602,6 @@
 - *PUZZLE: Efficiently Aligning Large Language Models through Light-Weight Context Switch* (ATC24)
 - *ReaLHF: Optimized RLHF Training for Large Language Models through Parameter Reallocation* (arxiv24)
 - *ReLibra: Routing-Replay-Guided Load Balancing for MoE Training in Reinforcement Learning* (arxiv26)
-- *(RhymeRL) History Doesn’t Repeat Itself but Rollouts Rhyme: Accelerating Reinforcement Learning with RhymeRL* (ASPLOS26)
 - *RLBoost: Harvesting Preemptible Cloud Resources for Cost-Efficient Reinforcement Learning on LLMs* (NSDI26)
 - *RLHFuse: Efficient RLHF Training for Large Language Models with Inter- and Intra-Stage Fusion* (arxiv24) 
 - *RLHFless: Serverless Computing for Efficient RLHF* (arxiv26)
