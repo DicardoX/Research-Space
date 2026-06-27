@@ -589,6 +589,7 @@
 - *(NeMo-MTP) Accelerating RL Post-Training Rollouts via System-Integrated Speculative Decoding* (arxiv26)
 - *ReSpec: Towards Optimizing Speculative Decoding in Reinforcement Learning Systems* (MLSys26)
 - *(RhymeRL) History Doesn’t Repeat Itself but Rollouts Rhyme: Accelerating Reinforcement Learning with RhymeRL* (ASPLOS26)
+- *SPEC-RL: Accelerating On-Policy Reinforcement Learning with Speculative Rollouts* (arxiv26)
 
 ### 4.2. Others
 
